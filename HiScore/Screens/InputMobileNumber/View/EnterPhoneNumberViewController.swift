@@ -36,8 +36,40 @@ extension EnterPhoneNumberViewController{
         let networkService = HiScoreNetworkRepository()
         viewModel = OnboardingScreenViewModel(networkService: networkService)
         getOnBoadingScreens()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Remove keyboard observers
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+}
+extension EnterPhoneNumberViewController {
+    @objc func keyboardWillShow(_ notification: Notification) {
+        animateView(upward: true)
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        animateView(upward: false)
+    }
+    private func animateView(upward: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            if upward {
+                // Move the view upward and fade it out
+                self.viewCollectionPagination.transform = CGAffineTransform(translationX: 0, y: -self.viewCollectionPagination.frame.height)
+                self.viewCollectionPagination.alpha = 0.0
+                self.bottomConstraintOfLoginView.constant = 350
+            } else {
+                // Reset the view's position and fade it in
+                self.viewCollectionPagination.transform = .identity
+                self.viewCollectionPagination.alpha = 1.0
+                self.bottomConstraintOfLoginView.constant = 20
+            }
+        }
+    }
+
 }
 extension EnterPhoneNumberViewController{
     private func getOnBoadingScreens() {
@@ -109,7 +141,7 @@ extension EnterPhoneNumberViewController {
         IQKeyboardManager.shared().isEnableAutoToolbar = false
         IQKeyboardManager.shared().isEnabled = false
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
-        inputTextField.addTarget(self, action: #selector(editingText(_:)), for: .valueChanged)
+        inputTextField.addTarget(self, action: #selector(editingText(_:)), for: .editingChanged)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
         collectionSlides.dataSource = self
@@ -117,9 +149,7 @@ extension EnterPhoneNumberViewController {
 
     }
     private func initUI() {
-        viewCollectionPagination.setGradientBackground(colors: [UIColor(red: 0.475, green: 0.416, blue: 0.361, alpha: 1),
-                                                       UIColor(red: 0.078, green: 0.094, blue: 0.169, alpha: 1),
-                                                       UIColor(red: 0.408, green: 0.361, blue: 0.325, alpha: 0)])
+        viewCollectionPagination.setGradientForSliderBG()
         collectionSlides.isPagingEnabled = true
         placeholderLabel.text = ""
         viewContainer.backgroundColor = .black.withAlphaComponent(20)
@@ -134,46 +164,72 @@ extension EnterPhoneNumberViewController {
         buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
         buttonGetStarted.clipsToBounds = true
         buttonGetStarted.layer.cornerRadius = 10
-        buttonGetStarted.setGradientBackground(colors: [UIColor(red: 0.96, green: 0.89, blue: 0.72, alpha: 1),
-                                                        UIColor(red: 0.8, green: 0.62, blue: 0.32, alpha: 1)])
-       
+        buttonGetStarted.setBUttonGradientBackground()
+        inputTextField.clearButtonMode = .whileEditing
     }
 
 }
 extension EnterPhoneNumberViewController {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let xPoint = scrollView.contentOffset.x + scrollView.frame.width / 2
+        let yPoint = scrollView.frame.height / 2
+        let center = CGPoint(x: xPoint, y: yPoint)
+        if let ip = collectionSlides.indexPathForItem(at: center) {
+            self.pageControl.currentPage = ip.row
+        }
+    }
+}
+extension EnterPhoneNumberViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
-//        topConstraintOfPaginationView.constant = 0
         self.view.endEditing(true)
+    }
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        if !self.viewModel.validate(value: inputTextField.text!) {
+            showInPutError()
+        }
     }
 
 }
 extension EnterPhoneNumberViewController: UITextFieldDelegate {
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentCharacterCount = textField.text?.count ?? 0
+        if (range.length + range.location > currentCharacterCount){
+            return false
+        }
+        let newLength = currentCharacterCount + string.count - range.length
+        return newLength <= 10
+    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         placeholderLabel.text = placeHolderText
         viewCollectionPagination.layoutIfNeeded()
         self.view.layoutIfNeeded()
-        UIView.transition(with: viewCollectionPagination, duration: 2.4,
-                        //  options: .transitionCurlUp,
-                          animations: {
-            self.hideViewWithAnimation()
-            self.bottomConstraintOfLoginView.constant = 350
-
-                      })
-
     }
     @objc func editingText(_ textField: UITextField) {
-        
+        if (textField.text?.count ?? 0) == 0 {
+            placeholderLabel.text = ""
+            hideInPutError()
+        } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
+            showInPutError()
+        } else if ((textField.text?.count ?? 0) == 10 ) {
+            hideInPutError()
+        }
+
+//        if (textField.text?.count ?? 0) == 0 {
+//            hideInPutError()
+//        } else {
+//            if ((textField.text?.count ?? 0) == 10 ) {
+//                hideInPutError()
+//            }
+////            if !self.viewModel.validate(value: inputTextField.text!) {
+////                showInPutError()
+////            } else {
+////                placeholderLabel.text = ""
+////                hideInPutError()
+////            }
+//        }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.transition(with: viewCollectionPagination, duration: 2.4,
-                         // options: .transitionCurlUp,
-                          animations: {
-            self.bottomConstraintOfLoginView.constant = 0
-            self.unhideViewWithAnimation()
-//            self.topConstraintOfLoginView.constant = 0
-                      })
         if (textField.text?.count ?? 0) == 0 {
             placeholderLabel.text = ""
             hideInPutError()
