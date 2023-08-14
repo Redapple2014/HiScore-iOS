@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import UIKit
+import MHLoadingButton
+
 class GetLocationViewController: BaseViewController {
+    @IBOutlet weak var buttonShareLocation: LoadingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonShareLocation.setButtonGradientBackground()
+        buttonShareLocation.clipsToBounds = true
+        buttonShareLocation.layer.cornerRadius = 10
     }
 }
