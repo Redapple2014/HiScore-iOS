@@ -20,10 +20,13 @@ class EnterPhoneNumberViewController: BaseViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewCollectionPagination: UIView!
-
-    let placeHolderText = "Enter Phone number"
-    let errorMessage = "Invalid Phone Number"
+    @IBOutlet weak var collectionSlides: UICollectionView!
     
+    @IBOutlet weak var pageControl: UIPageControl!
+    private let placeHolderText = "Enter Phone number"
+    private let errorMessage = "Invalid Phone Number"
+    private var viewModel: OnboardingScreenViewModel!
+    private var slides = [En]()
 }
 extension EnterPhoneNumberViewController{
     override func viewDidLoad() {
@@ -31,6 +34,43 @@ extension EnterPhoneNumberViewController{
         initUI()
         initSettings()
         hideInPutError()
+        let networkService = HiScoreNetworkRepository()
+        viewModel = OnboardingScreenViewModel(networkService: networkService)
+        getOnBoadingScreens()
+        
+    }
+}
+extension EnterPhoneNumberViewController{
+    private func getOnBoadingScreens() {
+      
+            self.viewModel.getOnBoadingScreens { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let data):
+                        self.slides = data.en
+                        self.collectionSlides.reloadData()
+                        self.pageControl.numberOfPages = data.en.count
+                        print(data)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+}
+extension EnterPhoneNumberViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.slides.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        return cell
+    }
+}
+extension EnterPhoneNumberViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
 }
 extension EnterPhoneNumberViewController {
@@ -44,6 +84,27 @@ extension EnterPhoneNumberViewController {
         errorImage.isHidden = true
         errorLabel.text = ""
     }
+    private func hideViewWithAnimation() {
+        UIView.animate(withDuration: 0.3, animations: {
+            // Move the view upward and fade it out
+            self.viewCollectionPagination.transform = CGAffineTransform(translationX: 0, y: -350)
+            self.viewCollectionPagination.alpha = 0.0
+        }) { (_) in
+            // Once animation is completed, hide the view
+            self.viewCollectionPagination.isHidden = true
+        }
+    }
+    private func unhideViewWithAnimation() {
+        // Reset the view's properties
+        self.viewCollectionPagination.transform = .identity
+        self.viewCollectionPagination.alpha = 0.0
+        self.viewCollectionPagination.isHidden = false
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            // Move the view back to its original position and fade it in
+            self.viewCollectionPagination.alpha = 1.0
+        })
+    }
 
     private func initSettings() {
         IQKeyboardManager.shared().isEnableAutoToolbar = false
@@ -52,9 +113,12 @@ extension EnterPhoneNumberViewController {
         inputTextField.addTarget(self, action: #selector(editingText(_:)), for: .valueChanged)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
+        collectionSlides.dataSource = self
+        collectionSlides.delegate = self
 
     }
     private func initUI() {
+        collectionSlides.isPagingEnabled = true
         placeholderLabel.text = ""
         viewContainer.backgroundColor = .black.withAlphaComponent(20)
         inputTextField.textColor = UIColor.HSPlaceHolderColor
@@ -87,10 +151,10 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         viewCollectionPagination.layoutIfNeeded()
         self.view.layoutIfNeeded()
         UIView.transition(with: viewCollectionPagination, duration: 2.4,
-                          options: .transitionCurlUp,
+                        //  options: .transitionCurlUp,
                           animations: {
-            self.topConstraintOfLoginView.constant = 500
-            self.topConstraintOfLoginView.constant = 350
+            self.hideViewWithAnimation()
+            self.bottomConstraintOfLoginView.constant = 350
 
                       })
 
@@ -100,10 +164,11 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         UIView.transition(with: viewCollectionPagination, duration: 2.4,
-                          options: .transitionCurlUp,
+                         // options: .transitionCurlUp,
                           animations: {
-            self.topConstraintOfLoginView.constant = 0
-            self.topConstraintOfLoginView.constant = 0
+            self.bottomConstraintOfLoginView.constant = 0
+            self.unhideViewWithAnimation()
+//            self.topConstraintOfLoginView.constant = 0
                       })
         if (textField.text?.count ?? 0) == 0 {
             placeholderLabel.text = ""

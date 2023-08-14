@@ -6,14 +6,21 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Baloo2-VariableFont_wght.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
         <array key="MavenPro-Regular.ttf">
             <string>MavenPro-Regular</string>
         </array>
         <array key="MavenPro-SemiBold.ttf">
             <string>MavenPro-SemiBold</string>
+        </array>
+        <array key="Rajdhani-Regular.ttf">
+            <string>Rajdhani-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -41,20 +48,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-bF-hJM">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="564.66666666666663"/>
-                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.16034077019091472" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="564.33333333333337"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-Lb-lBy">
+                                        <rect key="frame" x="138.66666666666666" y="524.33333333333337" width="115.66666666666666" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Qse-G3-rmo"/>
+                                        </constraints>
+                                    </pageControl>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2s-FV-njl">
+                                        <rect key="frame" x="0.0" y="143.99999999999997" width="393" height="360.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ToE-yK-u6W">
+                                            <size key="itemSize" width="387" height="282"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OU0-it-3td" customClass="SlidesCollectionViewCell" customModule="HiScore" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="39" width="387" height="282"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZC-rE-K44">
+                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="282"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-hG-j3m">
+                                                            <rect key="frame" x="40" y="0.0" width="307" height="192"/>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-ZS-TVR">
+                                                            <rect key="frame" x="30" y="222" width="327" height="60"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-85-rTs">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="29"/>
+                                                                    <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                                    <color key="textColor" red="0.8901960784313725" green="0.80784313725490198" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-dx-FGr">
+                                                                    <rect key="frame" x="0.0" y="37" width="327" height="23"/>
+                                                                    <fontDescription key="fontDescription" name="Rajdhani-Regular" family="Rajdhani" pointSize="18"/>
+                                                                    <color key="textColor" red="0.73725490196078436" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Q89-ZS-TVR" firstAttribute="top" secondItem="TW8-hG-j3m" secondAttribute="bottom" constant="30" id="1t6-Zt-Ek2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Q89-ZS-TVR" secondAttribute="trailing" constant="30" id="6Eg-9Y-yo2"/>
+                                                        <constraint firstItem="TW8-hG-j3m" firstAttribute="top" secondItem="bZC-rE-K44" secondAttribute="top" id="Pre-wp-Mv9"/>
+                                                        <constraint firstItem="TW8-hG-j3m" firstAttribute="leading" secondItem="bZC-rE-K44" secondAttribute="leading" constant="40" id="UDD-45-qXl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Q89-ZS-TVR" secondAttribute="bottom" id="e87-YU-w8n"/>
+                                                        <constraint firstItem="Q89-ZS-TVR" firstAttribute="leading" secondItem="bZC-rE-K44" secondAttribute="leading" constant="30" id="p34-Nk-5R1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TW8-hG-j3m" secondAttribute="trailing" constant="40" id="qrB-yY-fU3"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="customSize" width="387" height="282"/>
+                                                <connections>
+                                                    <outlet property="imageSlides" destination="TW8-hG-j3m" id="DYK-U8-Kuv"/>
+                                                    <outlet property="labelHeader1" destination="K4a-85-rTs" id="4fC-cv-4Qk"/>
+                                                    <outlet property="labelHeader2" destination="vyo-dx-FGr" id="Puv-Zm-dSN"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="unS-fg-BKx" id="Kfe-kR-8Co"/>
+                                            <outlet property="delegate" destination="unS-fg-BKx" id="2e7-H8-O7H"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qb1-Lb-lBy" secondAttribute="bottom" constant="20" id="2i1-h3-2lt"/>
+                                    <constraint firstItem="j2s-FV-njl" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="7cm-Ww-9mB"/>
+                                    <constraint firstItem="j2s-FV-njl" firstAttribute="top" secondItem="1b5-bF-hJM" secondAttribute="top" constant="144" id="Hzq-9B-pbQ"/>
+                                    <constraint firstItem="qb1-Lb-lBy" firstAttribute="top" secondItem="j2s-FV-njl" secondAttribute="bottom" constant="20" id="PYM-Q3-RSd"/>
+                                    <constraint firstItem="qb1-Lb-lBy" firstAttribute="centerX" secondItem="1b5-bF-hJM" secondAttribute="centerX" id="xG3-7u-aY4"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2s-FV-njl" secondAttribute="trailing" id="yMQ-fV-vIL"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-ya-q1z">
-                                <rect key="frame" x="0.0" y="564.66666666666663" width="393" height="200.33333333333337"/>
+                                <rect key="frame" x="0.0" y="564.33333333333337" width="393" height="200.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login/Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-oF-7n5">
-                                        <rect key="frame" x="18" y="27" width="125" height="23.333333333333329"/>
+                                        <rect key="frame" x="18" y="27" width="125" height="23.666666666666671"/>
                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akB-9y-xjF">
-                                        <rect key="frame" x="17" y="70.333333333333371" width="359" height="66"/>
+                                        <rect key="frame" x="17" y="70.666666666666629" width="359" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-n5-H8N">
                                                 <rect key="frame" x="16.000000000000007" y="5" width="103.66666666666669" height="13"/>
@@ -85,7 +171,7 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-n7-ZSe">
-                                        <rect key="frame" x="17" y="145.66666666666671" width="10" height="7.6666666666666572"/>
+                                        <rect key="frame" x="17" y="145.99999999999997" width="10" height="7.6666666666666572"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="2h7-Oz-bsm"/>
@@ -93,13 +179,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-O9-FRd">
-                                        <rect key="frame" x="33" y="142.33333333333337" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="33" y="142.66666666666663" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZg-oX-4sP" customClass="LoadingButton" customModule="MHLoadingButton">
-                                        <rect key="frame" x="17" y="152.33333333333337" width="359" height="48"/>
+                                        <rect key="frame" x="17" y="152.66666666666663" width="359" height="48"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="6mh-oa-JEJ"/>
@@ -173,9 +259,11 @@
                     <connections>
                         <outlet property="bottomConstraintOfLoginView" destination="E6e-gs-DTr" id="fQf-kE-2Et"/>
                         <outlet property="buttonGetStarted" destination="fZg-oX-4sP" id="SIS-xJ-D0c"/>
+                        <outlet property="collectionSlides" destination="j2s-FV-njl" id="aDt-u3-izY"/>
                         <outlet property="errorImage" destination="BKm-n7-ZSe" id="xwS-c1-clu"/>
                         <outlet property="errorLabel" destination="hFw-O9-FRd" id="5yx-b3-WPT"/>
                         <outlet property="inputTextField" destination="LS0-09-qKk" id="sJ6-ug-yH0"/>
+                        <outlet property="pageControl" destination="qb1-Lb-lBy" id="NOx-z3-YMc"/>
                         <outlet property="placeholderLabel" destination="CF3-n5-H8N" id="ggW-Kv-Eck"/>
                         <outlet property="topConstraintOfLoginView" destination="rUL-vh-3ti" id="NXp-SV-4pk"/>
                         <outlet property="viewCollectionPagination" destination="1b5-bF-hJM" id="e8W-sF-fqd"/>
@@ -184,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUO-MA-fQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="-487"/>
+            <point key="canvasLocation" x="330.53435114503816" y="-891.54929577464793"/>
         </scene>
         <!--EnterOTP View Controller-->
         <scene sceneID="uca-0s-PYJ">
@@ -219,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr4-cJ-qAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613" y="-486"/>
+            <point key="canvasLocation" x="1352" y="-601"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="Jag-S2-cHr">
@@ -250,6 +338,7 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="QFe-3U-g8f"/>
         <designable name="fZg-oX-4sP">
             <size key="intrinsicContentSize" width="102.33333333333333" height="30.666666666666668"/>
         </designable>

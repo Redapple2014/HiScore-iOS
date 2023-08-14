@@ -13,6 +13,14 @@ protocol HiScoreNetworkServiceprotocol {
 }
 
 extension HiScoreNetworkServiceprotocol {
+    func getData<T:Codable>(from url: URL,
+                            model: T.Type,
+                            completion: @escaping (Result<T, APIError>) -> Void){
+        var request = URLRequest(url: url)
+        request.httpMethod = HiScoreHTTPMethods.get.rawValue
+        request.allHTTPHeaderFields = [:]
+        fetchData(with: request, model: model, completion: completion)
+    }
     func fetchData<T:Codable>(from endpoint: APIEndpoint,
                               model: T.Type,
                               completion: @escaping (Result<T, APIError>) -> Void) {
