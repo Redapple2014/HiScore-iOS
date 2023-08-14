@@ -1,0 +1,60 @@
+PODS:
+  - ButtonProgressBar-iOS (1.0.1)
+  - DTTextField (0.7.0)
+  - HGCircularSlider (2.2.0)
+  - IQKeyboardManager (6.5.11)
+  - lottie-ios (4.2.0)
+  - MarqueeLabel (4.0.5)
+  - MHLoadingButton (0.1.3)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
+  - OTPFieldView (1.0.1)
+  - Skeleton (0.4.0)
+  - SnapKit (5.0.1)
+  - SwiftLint (0.52.4)
+
+DEPENDENCIES:
+  - ButtonProgressBar-iOS
+  - DTTextField
+  - HGCircularSlider
+  - IQKeyboardManager
+  - lottie-ios
+  - MHLoadingButton
+  - NotificationBannerSwift (~> 3.0.0)
+  - OTPFieldView
+  - Skeleton
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - ButtonProgressBar-iOS
+    - DTTextField
+    - HGCircularSlider
+    - IQKeyboardManager
+    - lottie-ios
+    - MarqueeLabel
+    - MHLoadingButton
+    - NotificationBannerSwift
+    - OTPFieldView
+    - Skeleton
+    - SnapKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  ButtonProgressBar-iOS: 1127f15c7ab843648febc857fc2018c8224675c7
+  DTTextField: 768d5991211599145f289971e5936f8bb29990bb
+  HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  MHLoadingButton: 13bab47a3ce9d88df15638b7a5b73a8ac9f21077
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  Skeleton: ef0f1d1b62250ee93e3a805efd268e5fd2979b32
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
+
+PODFILE CHECKSUM: ce8919ae30526a19f7a9375a8e3d4a5d0fa3b47d
+
+COCOAPODS: 1.12.1
