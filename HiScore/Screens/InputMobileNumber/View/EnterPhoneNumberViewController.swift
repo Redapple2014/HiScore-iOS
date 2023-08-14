@@ -164,7 +164,7 @@ extension EnterPhoneNumberViewController {
         buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
         buttonGetStarted.clipsToBounds = true
         buttonGetStarted.layer.cornerRadius = 10
-        buttonGetStarted.setBUttonGradientBackground()
+        buttonGetStarted.setButtonGradientBackground()
         inputTextField.clearButtonMode = .whileEditing
     }
 
@@ -188,6 +188,7 @@ extension EnterPhoneNumberViewController {
         if !self.viewModel.validate(value: inputTextField.text!) {
             showInPutError()
         }
+        
     }
 
 }
