@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
+        <array key="MavenPro-SemiBold.ttf">
+            <string>MavenPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Get Location View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GetLocationViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patterns" translatesAutoresizingMaskIntoConstraints="NO" id="nQi-8d-iLM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geoLocation" translatesAutoresizingMaskIntoConstraints="NO" id="9HD-xN-CbT">
+                                <rect key="frame" x="142" y="159" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="g3s-k9-Foj"/>
+                                    <constraint firstAttribute="width" constant="130" id="kLT-TA-Ub8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAi-PT-AzL">
+                                <rect key="frame" x="30" y="300" width="354" height="66"/>
+                                <string key="text">Location data 
+required to proceed</string>
+                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cde-6G-cRO">
+                                <rect key="frame" x="30" y="448" width="354" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1N-Cr-0jp">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="82.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="7UN-iG-7wp">
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="42" id="QfA-Rc-6Qk"/>
+                                                    <constraint firstAttribute="height" constant="42" id="qxV-Dp-gGS"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to check your location to continue playing. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-GB-nE6">
+                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="7UN-iG-7wp" firstAttribute="leading" secondItem="Q1N-Cr-0jp" secondAttribute="leading" id="FzK-SO-GU3"/>
+                                            <constraint firstItem="kaP-GB-nE6" firstAttribute="leading" secondItem="7UN-iG-7wp" secondAttribute="trailing" constant="15" id="RQV-i6-Ix0"/>
+                                            <constraint firstAttribute="trailing" secondItem="kaP-GB-nE6" secondAttribute="trailing" constant="30" id="jCt-14-ci8"/>
+                                            <constraint firstItem="7UN-iG-7wp" firstAttribute="centerY" secondItem="Q1N-Cr-0jp" secondAttribute="centerY" id="jnW-c6-N78"/>
+                                            <constraint firstItem="kaP-GB-nE6" firstAttribute="centerY" secondItem="Q1N-Cr-0jp" secondAttribute="centerY" id="zjx-zN-x0C"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlT-N1-77D">
+                                        <rect key="frame" x="0.0" y="82.5" width="354" height="82.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-Qa-Evz">
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="42" id="gN8-kA-GBf"/>
+                                                    <constraint firstAttribute="height" constant="42" id="sit-Jb-vnt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you deny 2 times go to your phone settings and enable location services" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaP-BM-Jv4">
+                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="G1s-Qa-Evz" firstAttribute="centerY" secondItem="GlT-N1-77D" secondAttribute="centerY" id="QJw-t1-oVY"/>
+                                            <constraint firstItem="xaP-BM-Jv4" firstAttribute="leading" secondItem="G1s-Qa-Evz" secondAttribute="trailing" constant="15" id="UCb-2F-7XC"/>
+                                            <constraint firstItem="xaP-BM-Jv4" firstAttribute="centerY" secondItem="GlT-N1-77D" secondAttribute="centerY" id="Ys3-su-MGi"/>
+                                            <constraint firstAttribute="trailing" secondItem="xaP-BM-Jv4" secondAttribute="trailing" constant="30" id="nbP-8z-VKq"/>
+                                            <constraint firstItem="G1s-Qa-Evz" firstAttribute="leading" secondItem="GlT-N1-77D" secondAttribute="leading" id="rbp-rp-KkR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBE-6f-woA">
+                                        <rect key="frame" x="0.0" y="165" width="354" height="82.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwO-VY-6Pd">
+                                        <rect key="frame" x="0.0" y="247.5" width="354" height="82.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-E4-MdB">
+                                <rect key="frame" x="18" y="778" width="378" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lTg-hf-Cfj"/>
+                                </constraints>
+                                <color key="tintColor" name="ButtonTextBlackColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Share Location">
+                                    <fontDescription key="titleFontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="AppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="nQi-8d-iLM" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="4M3-UO-FUe"/>
+                            <constraint firstItem="RTM-E4-MdB" firstAttribute="top" secondItem="cde-6G-cRO" secondAttribute="bottom" id="55U-cX-832"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cde-6G-cRO" secondAttribute="trailing" constant="30" id="9Cz-yX-oue"/>
+                            <constraint firstItem="GAi-PT-AzL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="BK6-9q-htQ"/>
+                            <constraint firstItem="cde-6G-cRO" firstAttribute="top" secondItem="nQi-8d-iLM" secondAttribute="bottom" id="Pf6-vf-1ZC"/>
+                            <constraint firstItem="GAi-PT-AzL" firstAttribute="top" secondItem="9HD-xN-CbT" secondAttribute="bottom" constant="11" id="WCI-Z1-Uo7"/>
+                            <constraint firstItem="9HD-xN-CbT" firstAttribute="centerX" secondItem="nQi-8d-iLM" secondAttribute="centerX" id="WG2-Z1-Zmg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RTM-E4-MdB" secondAttribute="trailing" constant="18" id="ZAF-8p-Nqs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nQi-8d-iLM" secondAttribute="trailing" id="jf5-Hk-W5c"/>
+                            <constraint firstItem="9HD-xN-CbT" firstAttribute="centerY" secondItem="nQi-8d-iLM" secondAttribute="centerY" id="mpX-s5-AP6"/>
+                            <constraint firstItem="nQi-8d-iLM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nzq-Z0-XaF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RTM-E4-MdB" secondAttribute="bottom" constant="36" id="pvy-Bk-QgS"/>
+                            <constraint firstItem="nQi-8d-iLM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tIl-3f-3DQ"/>
+                            <constraint firstItem="RTM-E4-MdB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="tc1-YY-ieP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GAi-PT-AzL" secondAttribute="trailing" constant="30" id="u1I-fg-H1I"/>
+                            <constraint firstItem="cde-6G-cRO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="uhk-77-gak"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="64.955357142857139"/>
+        </scene>
+        <!--Disable Location View Controller-->
+        <scene sceneID="H8O-4v-riW">
+            <objects>
+                <viewController id="Uky-xY-SFR" customClass="DisableLocationViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LCj-uL-U7H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patterns" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-lC-tBc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disable_location" translatesAutoresizingMaskIntoConstraints="NO" id="nlH-92-KyC">
+                                <rect key="frame" x="142" y="159" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="831-mn-EZX"/>
+                                    <constraint firstAttribute="width" constant="130" id="gKV-8h-gGc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You cannot play Rummy from Tamil Nadu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Rg-SBq">
+                                <rect key="frame" x="30" y="300" width="354" height="66"/>
+                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-bA-Kt8">
+                                <rect key="frame" x="30" y="448" width="354" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn3-2J-wyM">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="82.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-Yl-snz">
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="42" id="6ot-T6-QWU"/>
+                                                    <constraint firstAttribute="height" constant="42" id="dqw-pL-bSj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy is banned in your location. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-ao-GFd">
+                                                <rect key="frame" x="57" y="33" width="267" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="bIC-Yl-snz" firstAttribute="leading" secondItem="Sn3-2J-wyM" secondAttribute="leading" id="Bjc-xP-MQg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ssp-ao-GFd" secondAttribute="trailing" constant="30" id="Kqb-4K-2H9"/>
+                                            <constraint firstItem="bIC-Yl-snz" firstAttribute="centerY" secondItem="Sn3-2J-wyM" secondAttribute="centerY" id="jGZ-Xi-een"/>
+                                            <constraint firstItem="ssp-ao-GFd" firstAttribute="leading" secondItem="bIC-Yl-snz" secondAttribute="trailing" constant="15" id="pU0-MZ-SMY"/>
+                                            <constraint firstItem="ssp-ao-GFd" firstAttribute="centerY" secondItem="Sn3-2J-wyM" secondAttribute="centerY" id="zHm-eu-Fcj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-Xl-7x8">
+                                        <rect key="frame" x="0.0" y="82.5" width="354" height="82.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-p6-aT5">
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="UNg-iO-mBl"/>
+                                                    <constraint firstAttribute="width" constant="42" id="ZCW-2e-FRO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you think there is an issue, please retry or helpdesk@hiscore.games" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-hl-O1Y">
+                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="oM4-hl-O1Y" firstAttribute="centerY" secondItem="QhQ-Xl-7x8" secondAttribute="centerY" id="PUa-fM-Zvq"/>
+                                            <constraint firstItem="X2N-p6-aT5" firstAttribute="centerY" secondItem="QhQ-Xl-7x8" secondAttribute="centerY" id="Rse-AR-t9E"/>
+                                            <constraint firstAttribute="trailing" secondItem="oM4-hl-O1Y" secondAttribute="trailing" constant="30" id="cWN-eX-nHO"/>
+                                            <constraint firstItem="X2N-p6-aT5" firstAttribute="leading" secondItem="QhQ-Xl-7x8" secondAttribute="leading" id="egh-Dt-nMd"/>
+                                            <constraint firstItem="oM4-hl-O1Y" firstAttribute="leading" secondItem="X2N-p6-aT5" secondAttribute="trailing" constant="15" id="thi-c7-dV8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nov-Bc-k46">
+                                        <rect key="frame" x="0.0" y="165" width="354" height="82.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-vd-9LL">
+                                        <rect key="frame" x="0.0" y="247.5" width="354" height="82.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-77-WPz">
+                                <rect key="frame" x="18" y="778" width="378" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2k7-xW-K3g"/>
+                                </constraints>
+                                <color key="tintColor" name="ButtonTextBlackColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Contact Us">
+                                    <fontDescription key="titleFontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xgK-Uo-UPe"/>
+                        <color key="backgroundColor" name="AppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="RAB-Rg-SBq" firstAttribute="leading" secondItem="xgK-Uo-UPe" secondAttribute="leading" constant="30" id="11N-lS-5hr"/>
+                            <constraint firstItem="Idi-lC-tBc" firstAttribute="leading" secondItem="xgK-Uo-UPe" secondAttribute="leading" id="3uJ-bK-Lpz"/>
+                            <constraint firstItem="dXT-bA-Kt8" firstAttribute="leading" secondItem="xgK-Uo-UPe" secondAttribute="leading" constant="30" id="4hp-By-W4r"/>
+                            <constraint firstItem="cUG-77-WPz" firstAttribute="top" secondItem="dXT-bA-Kt8" secondAttribute="bottom" id="6eh-k0-JUt"/>
+                            <constraint firstItem="nlH-92-KyC" firstAttribute="centerX" secondItem="Idi-lC-tBc" secondAttribute="centerX" id="Dzu-uM-X1c"/>
+                            <constraint firstItem="RAB-Rg-SBq" firstAttribute="top" secondItem="nlH-92-KyC" secondAttribute="bottom" constant="11" id="GCs-JG-qYT"/>
+                            <constraint firstItem="Idi-lC-tBc" firstAttribute="height" secondItem="LCj-uL-U7H" secondAttribute="height" multiplier="0.5" id="PG3-J2-PQg"/>
+                            <constraint firstItem="dXT-bA-Kt8" firstAttribute="top" secondItem="Idi-lC-tBc" secondAttribute="bottom" id="Qfk-Jb-4gY"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="Idi-lC-tBc" secondAttribute="trailing" id="UPV-G5-a3R"/>
+                            <constraint firstItem="nlH-92-KyC" firstAttribute="centerY" secondItem="Idi-lC-tBc" secondAttribute="centerY" id="VRt-MN-WnH"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="bottom" secondItem="cUG-77-WPz" secondAttribute="bottom" constant="36" id="col-7V-3kR"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="dXT-bA-Kt8" secondAttribute="trailing" constant="30" id="dWY-I4-XWa"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="cUG-77-WPz" secondAttribute="trailing" constant="18" id="fiQ-xC-kx4"/>
+                            <constraint firstItem="Idi-lC-tBc" firstAttribute="top" secondItem="LCj-uL-U7H" secondAttribute="top" id="lsj-3i-4nA"/>
+                            <constraint firstItem="cUG-77-WPz" firstAttribute="leading" secondItem="xgK-Uo-UPe" secondAttribute="leading" constant="18" id="nC4-Hy-t83"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="RAB-Rg-SBq" secondAttribute="trailing" constant="30" id="oyy-5s-omP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knH-tM-Vr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Patterns" width="363" height="353"/>
+        <image name="disable_location" width="65" height="65"/>
+        <image name="geoLocation" width="130" height="130"/>
+        <image name="info" width="42" height="42"/>
+        <namedColor name="AppThemeColor">
+            <color red="0.078431372549019607" green="0.094117647058823528" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonTextBlackColor">
+            <color red="0.070588235294117646" green="0.0039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
