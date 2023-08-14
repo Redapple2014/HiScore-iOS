@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 //extension UIButton {
-//    func setGradientBackground() {
+//    func setBUttonGradientBackground() {
 //        let colorTop =  UIColor(red: 0.96, green: 0.89, blue: 0.72, alpha: 1).cgColor
 //        let colorBottom = UIColor(red: 0.8, green: 0.62, blue: 0.32, alpha: 1).cgColor
 //        let gradientLayer = CAGradientLayer()
