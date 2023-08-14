@@ -580,7 +580,7 @@
 		06CE8A044376A979B5ABDA6934D28C38 /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift; sourceTree = "<group>"; };
 		07FC51B5C3388FCF9EC0E49081F6588F /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = Sources/Private/Utility/Interpolatable/InterpolatableExtensions.swift; sourceTree = "<group>"; };
 		08BDA7E715A0F2794D716F377A07C365 /* ImageLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayer.swift; path = Sources/Private/CoreAnimation/Layers/ImageLayer.swift; sourceTree = "<group>"; };
-		0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NotificationBannerSwift; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDEBFD3AF1F7CF9212799AFA9F632E /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
 		0AE44BF8504ED6EB73BADA76A26FB84C /* BezierPathRoundExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPathRoundExtension.swift; path = Sources/Private/Utility/Primitives/BezierPathRoundExtension.swift; sourceTree = "<group>"; };
 		0B57F2121F3B7CE8E1924EADA9900C1A /* ShapeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeAnimation.swift; path = Sources/Private/CoreAnimation/Animations/ShapeAnimation.swift; sourceTree = "<group>"; };
@@ -737,7 +737,7 @@
 		50437446127C7473875C4E6034331D9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		50DE2481CCA697120D1512F63A4168B1 /* CombinedShapeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedShapeAnimation.swift; path = Sources/Private/CoreAnimation/Animations/CombinedShapeAnimation.swift; sourceTree = "<group>"; };
 		50FD3AC8711458C347E512AF95FB5A9D /* NotificationBannerUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationBannerUtilities.swift; path = NotificationBanner/Classes/NotificationBannerUtilities.swift; sourceTree = "<group>"; };
-		51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "lottie-ios"; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CAA063458CBB5662B90D1648E164AA /* LottieAnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieAnimationViewInitializers.swift; path = Sources/Public/Animation/LottieAnimationViewInitializers.swift; sourceTree = "<group>"; };
 		520BC3826FCB7CA7AD82E3F0A9B38545 /* LottieAnimationHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieAnimationHelpers.swift; path = Sources/Public/Animation/LottieAnimationHelpers.swift; sourceTree = "<group>"; };
 		52D675D3559E23D140F319C059541DFD /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
@@ -758,7 +758,7 @@
 		58F10E35FA0E2157E2346799C68A75FD /* MHLoadingButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MHLoadingButton-umbrella.h"; sourceTree = "<group>"; };
 		59D511A9195FF18ABF77FCD25625F1C0 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		5AAC83D62A571D3FBEA2FA114B81DA3A /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
-		5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DTTextField; path = DTTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAD4EFC08ECDD624E69A5BB19646E37 /* Pods-HiScore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HiScore.modulemap"; sourceTree = "<group>"; };
 		5CFAF02C9179507369031CA3758A5541 /* LRUAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUAnimationCache.swift; path = Sources/Public/AnimationCache/LRUAnimationCache.swift; sourceTree = "<group>"; };
 		5D27DA569202BD85EFD6BB46C5A67D27 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
@@ -856,7 +856,7 @@
 		8D7E90A2CDFEF4D16D60A787EF6A2499 /* LineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineSpinFadeLoader.swift; path = LoadingButtons/Indicators/LineSpinFadeLoader.swift; sourceTree = "<group>"; };
 		8E260FD1F4D1F178E3A45A5DEF15738F /* OTPFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPFieldView.swift; path = OTPFieldView/OTPFieldView.swift; sourceTree = "<group>"; };
 		8EBC8304EB668F53077C260ABDB31BB1 /* ShapeItemLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItemLayer.swift; path = Sources/Private/CoreAnimation/Layers/ShapeItemLayer.swift; sourceTree = "<group>"; };
-		8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MHLoadingButton; path = MHLoadingButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHLoadingButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F060A825D4F5DAA11BD8D3E7D7DF5AA /* DTTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTTextField.swift; path = Sources/DTTextField/DTTextField.swift; sourceTree = "<group>"; };
 		8F2359FA1DEEEC1EBE189B1F9AF3331E /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		8F4B500BBA566A21BEB9C9964E1FD8BB /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/MarqueeLabel.swift; sourceTree = "<group>"; };
@@ -872,8 +872,8 @@
 		947067F458C89DEDD2A297239A6AC20F /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift; sourceTree = "<group>"; };
 		954755789DE24CC416D2371163B5C71C /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = Sources/Private/Utility/Interpolatable/KeyframeInterpolator.swift; sourceTree = "<group>"; };
 		9761941289CB86D705527640E5E27D61 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManager; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9971E38B62FAB3B7B680EF306AD96B53 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+IQKeyboardToolbar.h"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		998296E5CEC8C7CC07C744872D523A57 /* CustomPathAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomPathAnimation.swift; path = Sources/Private/CoreAnimation/Animations/CustomPathAnimation.swift; sourceTree = "<group>"; };
 		9A781B3D78997D7DA16EE2202C1B2B31 /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
@@ -937,7 +937,7 @@
 		B6994BC0D339A92C1C61421AD15E1E3A /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		B77131F91090185D90A4CE5AE72B0A48 /* AnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationLayer.swift; path = Sources/Private/CoreAnimation/Layers/AnimationLayer.swift; sourceTree = "<group>"; };
 		B7C312C2833895FFE2B83D5F9AA43522 /* ButtonProgressBar-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ButtonProgressBar-iOS.modulemap"; sourceTree = "<group>"; };
-		B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "ButtonProgressBar-iOS"; path = ButtonProgressBar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ButtonProgressBar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AC38986CD255469ACE4FCAA6811B01 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/PreCompositionLayer.swift; sourceTree = "<group>"; };
 		BA284BF0A6E9019E775488E46D8DC941 /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/CircularSlider+Draw.swift"; sourceTree = "<group>"; };
 		BA9FE14D563F2D3B5E40F5D8D7FB2CB2 /* Pods-HiScore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HiScore-umbrella.h"; sourceTree = "<group>"; };
@@ -979,10 +979,10 @@
 		CD7EF34D6D923A1F7F28FD777CBBFA45 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = Sources/Private/Model/Extensions/KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		CE09E5E6726314B88E633E28B9307A94 /* Entry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Sources/Private/Model/DotLottie/ZipFoundation/Entry.swift; sourceTree = "<group>"; };
 		CE33AB89412BCFA59615BB155CFF41DF /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MarqueeLabel; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF91736BB88AB293105AA8CBAC9858C0 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
 		D0B6F19F7D623C326FEA630B08D032D8 /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Skeleton; path = Skeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Skeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1ADF68453073A533738FDD92D042879 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		D28B5DE12AB223EF1239DA01352D2F78 /* Archive+ReadingDeprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+ReadingDeprecated.swift"; path = "Sources/Private/Model/DotLottie/ZipFoundation/Archive+ReadingDeprecated.swift"; sourceTree = "<group>"; };
 		D35953D62CEF9C6BA330E73DF9E19757 /* URL+ZIP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+ZIP.swift"; path = "Sources/Private/Model/DotLottie/ZipFoundation/URL+ZIP.swift"; sourceTree = "<group>"; };
@@ -997,7 +997,7 @@
 		DA8B9BD442973E7895043F9EDD9F1F6A /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Protocols/RenderNode.swift; sourceTree = "<group>"; };
 		DA9F2D9865160F1614F4B0239067D2CF /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = Sources/Private/Model/ShapeItems/Repeater.swift; sourceTree = "<group>"; };
 		DABC9A60762807AF8C630160209B6F66 /* PreCompLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayer.swift; path = Sources/Private/CoreAnimation/Layers/PreCompLayer.swift; sourceTree = "<group>"; };
-		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB49595E378559F3CBC4609EC0ACA6E1 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		DB98E4E93386609A4BF35CD8BD7A52E7 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		DBC1FCB72A943D62562A841D78957099 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
@@ -1059,7 +1059,7 @@
 		FB346D67DFA3A45453328F8FB5CE8F88 /* IQTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTextView.m; path = IQKeyboardManager/IQTextView/IQTextView.m; sourceTree = "<group>"; };
 		FC3EB28514E508D5ACBB536F2A9EAAB9 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		FCBFFE999E466B4EE41838AF44745430 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
-		FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OTPFieldView; path = OTPFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OTPFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE45EBD770BC77C8BA1E51423ECD995D /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
 		FF727FE41B37A0BF1674AE3A02AE6216 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIScrollView+Additions.h"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1940,19 +1940,19 @@
 		FE33F564174E647CDA0A908470B3F1E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar-iOS */,
-				5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField */,
-				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */,
-				98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager */,
+				B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar_iOS.framework */,
+				5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField.framework */,
+				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */,
+				98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager.framework */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
-				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */,
-				8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton */,
-				0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift */,
-				FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */,
+				8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton.framework */,
+				0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift.framework */,
+				FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView.framework */,
 				069BD185DC62A57BBC9D4DE70154499F /* Pods_HiScore.framework */,
-				D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton */,
-				979486118B3E90C08386079D57962701 /* SnapKit */,
+				D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton.framework */,
+				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2099,7 +2099,7 @@
 			);
 			name = "lottie-ios";
 			productName = Lottie;
-			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */;
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
@@ -2117,7 +2117,7 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = 979486118B3E90C08386079D57962701 /* SnapKit */;
+			productReference = 979486118B3E90C08386079D57962701 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2F2745F4FABCC3C8D07F78FE199F16EE /* NotificationBannerSwift */ = {
@@ -2137,7 +2137,7 @@
 			);
 			name = NotificationBannerSwift;
 			productName = NotificationBannerSwift;
-			productReference = 0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift */;
+			productReference = 0AB91F46DDDA5588520D012E6F4FB918 /* NotificationBannerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */ = {
@@ -2155,7 +2155,7 @@
 			);
 			name = OTPFieldView;
 			productName = OTPFieldView;
-			productReference = FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */;
+			productReference = FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		66802D2DB565AB26B03BBF87DB94F22F /* DTTextField */ = {
@@ -2173,7 +2173,7 @@
 			);
 			name = DTTextField;
 			productName = DTTextField;
-			productReference = 5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField */;
+			productReference = 5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		718318007878DBBCB1EE7F476B5D2AA3 /* Skeleton */ = {
@@ -2191,7 +2191,7 @@
 			);
 			name = Skeleton;
 			productName = Skeleton;
-			productReference = D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton */;
+			productReference = D148B1917EF05C3C8EB3CC307B5E6AD8 /* Skeleton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */ = {
@@ -2209,7 +2209,7 @@
 			);
 			name = HGCircularSlider;
 			productName = HGCircularSlider;
-			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */;
+			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */ = {
@@ -2227,7 +2227,7 @@
 			);
 			name = MarqueeLabel;
 			productName = MarqueeLabel;
-			productReference = CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */;
+			productReference = CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E53D1E91EE19C3D991BEFE98F4450F75 /* MHLoadingButton */ = {
@@ -2245,7 +2245,7 @@
 			);
 			name = MHLoadingButton;
 			productName = MHLoadingButton;
-			productReference = 8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton */;
+			productReference = 8EE3AFCCD0620656BA168D6B83247E81 /* MHLoadingButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
@@ -2281,7 +2281,7 @@
 			);
 			name = "ButtonProgressBar-iOS";
 			productName = ButtonProgressBar_iOS;
-			productReference = B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar-iOS */;
+			productReference = B89B15B8FCB8B0F9921E843A6B210F3B /* ButtonProgressBar_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F84E6AD13FAC169D86E7916644D3D8E0 /* Pods-HiScore */ = {
@@ -2330,7 +2330,7 @@
 			);
 			name = IQKeyboardManager;
 			productName = IQKeyboardManager;
-			productReference = 98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager */;
+			productReference = 98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -3050,7 +3050,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3085,7 +3085,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DTTextField/DTTextField-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DTTextField/DTTextField-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3120,7 +3120,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MHLoadingButton/MHLoadingButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MHLoadingButton/MHLoadingButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3146,12 +3146,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3172,7 +3173,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3244,7 +3245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3273,7 +3274,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3342,7 +3343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3369,7 +3370,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3404,7 +3405,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3438,7 +3439,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ButtonProgressBar-iOS/ButtonProgressBar-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ButtonProgressBar-iOS/ButtonProgressBar-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3473,7 +3474,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3508,7 +3509,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DTTextField/DTTextField-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DTTextField/DTTextField-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3544,7 +3545,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3579,7 +3580,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3614,7 +3615,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3649,7 +3650,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3685,7 +3686,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3697,7 +3698,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3719,7 +3720,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3754,7 +3755,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HiScore/Pods-HiScore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3769,6 +3770,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3791,7 +3793,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3827,7 +3829,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3863,7 +3865,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MHLoadingButton/MHLoadingButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MHLoadingButton/MHLoadingButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3899,7 +3901,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HiScore/Pods-HiScore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3914,6 +3916,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3935,7 +3938,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Skeleton/Skeleton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Skeleton/Skeleton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3970,7 +3973,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ButtonProgressBar-iOS/ButtonProgressBar-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ButtonProgressBar-iOS/ButtonProgressBar-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4004,7 +4007,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Skeleton/Skeleton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Skeleton/Skeleton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4030,12 +4033,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4056,7 +4060,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4068,7 +4072,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4092,7 +4096,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

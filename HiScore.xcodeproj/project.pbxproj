@@ -43,7 +43,6 @@
 		C7C0C1C42A8252570096E958 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0C1C32A8252570096E958 /* Logger.swift */; };
 		C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0C1C62A82528A0096E958 /* NetworkReachability.swift */; };
 		C7C5366B2A8A08D4007391FC /* OnboardingScreenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C536682A8A08D4007391FC /* OnboardingScreenDataModel.swift */; };
-		C7C5366C2A8A08D4007391FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C536692A8A08D4007391FC /* ViewController.swift */; };
 		C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */; };
 		C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */; };
 		C7C5367B2A8A3C11007391FC /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C536732A8A3C11007391FC /* Baloo2-Bold.ttf */; };
@@ -98,7 +97,6 @@
 		C7C0C1C32A8252570096E958 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C7C0C1C62A82528A0096E958 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C7C536682A8A08D4007391FC /* OnboardingScreenDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreenDataModel.swift; sourceTree = "<group>"; };
-		C7C536692A8A08D4007391FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenViewModel.swift; sourceTree = "<group>"; };
 		C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlidesCollectionViewCell.swift; path = Cell/SlidesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7C536732A8A3C11007391FC /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
@@ -185,12 +183,10 @@
 		C75F37152A791BC200925880 /* HiScore */ = {
 			isa = PBXGroup;
 			children = (
-				C7C536692A8A08D4007391FC /* ViewController.swift */,
 				C7C536672A89FEBD007391FC /* Lottie Animation files */,
 				C79845972A86592300F08457 /* Network */,
 				C75F372A2A79202700925880 /* AppDelegate */,
 				C7EBEE462A7BC7360045B449 /* Helper Files */,
-				C7AB8B412A80CC47003AB4EC /* Common Views */,
 				C7EBEE4E2A7BC8730045B449 /* Screens */,
 				C7EBEE5D2A7BC9780045B449 /* Storyboards */,
 				C75F37242A791BC400925880 /* Info.plist */,
@@ -249,13 +245,6 @@
 				C7A9DF822A83A1410066924E /* UIView+Extension.swift */,
 			);
 			path = "UIVIew+Extension";
-			sourceTree = "<group>";
-		};
-		C7AB8B412A80CC47003AB4EC /* Common Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Common Views";
 			sourceTree = "<group>";
 		};
 		C7C0C1A82A821C260096E958 /* Maven_Pro */ = {
@@ -358,16 +347,6 @@
 			path = "Helper Files";
 			sourceTree = "<group>";
 		};
-		C7EBEE4A2A7BC7E50045B449 /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				C7EBEE522A7BC8ED0045B449 /* Model */,
-				C7EBEE512A7BC8E10045B449 /* ViewModel */,
-				C7EBEE502A7BC8D50045B449 /* View */,
-			);
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
 		C7EBEE4D2A7BC8530045B449 /* InputMobileNumber */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +364,6 @@
 				C7A9DF762A8361690066924E /* BaseViewController */,
 				C7EBEE4F2A7BC87A0045B449 /* EnterOTP */,
 				C7EBEE4D2A7BC8530045B449 /* InputMobileNumber */,
-				C7EBEE4A2A7BC7E50045B449 /* OnBoarding */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -393,32 +371,9 @@
 		C7EBEE4F2A7BC87A0045B449 /* EnterOTP */ = {
 			isa = PBXGroup;
 			children = (
-				C7EBEE552A7BC9310045B449 /* Model */,
 				C7EBEE532A7BC9310045B449 /* View */,
-				C7EBEE562A7BC9310045B449 /* ViewModel */,
 			);
 			path = EnterOTP;
-			sourceTree = "<group>";
-		};
-		C7EBEE502A7BC8D50045B449 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C7EBEE512A7BC8E10045B449 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C7EBEE522A7BC8ED0045B449 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C7EBEE532A7BC9310045B449 /* View */ = {
@@ -427,20 +382,6 @@
 				C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C7EBEE552A7BC9310045B449 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C7EBEE562A7BC9310045B449 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C7EBEE582A7BC93E0045B449 /* Model */ = {
@@ -653,7 +594,6 @@
 				C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */,
 				C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */,
 				C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */,
-				C7C5366C2A8A08D4007391FC /* ViewController.swift in Sources */,
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
 				C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */,
@@ -825,9 +765,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,7 +778,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -854,9 +795,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -866,7 +808,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
