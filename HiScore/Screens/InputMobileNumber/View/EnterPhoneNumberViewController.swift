@@ -26,7 +26,6 @@ class EnterPhoneNumberViewController: BaseViewController {
     private let placeHolderText = "Enter Phone number"
     private let errorMessage = "Invalid Phone Number"
     private var viewModel: OnboardingScreenViewModel!
-    private var slides = [En]()
 }
 extension EnterPhoneNumberViewController{
     override func viewDidLoad() {
@@ -43,13 +42,12 @@ extension EnterPhoneNumberViewController{
 extension EnterPhoneNumberViewController{
     private func getOnBoadingScreens() {
       
-            self.viewModel.getOnBoadingScreens { result in
+            self.viewModel.getOnBoadingScreens { [weak self] result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let data):
-                        self.slides = data.en
-                        self.collectionSlides.reloadData()
-                        self.pageControl.numberOfPages = data.en.count
+                        self?.collectionSlides.reloadData()
+                        self?.pageControl.numberOfPages = self?.viewModel.slides.count ?? 0
                         print(data)
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -60,11 +58,12 @@ extension EnterPhoneNumberViewController{
 }
 extension EnterPhoneNumberViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.slides.count
+        return self.viewModel.slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SlidesCollectionViewCell else { return SlidesCollectionViewCell() }
+        cell.images = self.viewModel.slides[indexPath.row]
         return cell
     }
 }
@@ -118,6 +117,9 @@ extension EnterPhoneNumberViewController {
 
     }
     private func initUI() {
+        viewCollectionPagination.setGradientBackground(colors: [UIColor(red: 0.475, green: 0.416, blue: 0.361, alpha: 1),
+                                                       UIColor(red: 0.078, green: 0.094, blue: 0.169, alpha: 1),
+                                                       UIColor(red: 0.408, green: 0.361, blue: 0.325, alpha: 0)])
         collectionSlides.isPagingEnabled = true
         placeholderLabel.text = ""
         viewContainer.backgroundColor = .black.withAlphaComponent(20)
@@ -132,7 +134,9 @@ extension EnterPhoneNumberViewController {
         buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
         buttonGetStarted.clipsToBounds = true
         buttonGetStarted.layer.cornerRadius = 10
-        buttonGetStarted.setGradientBackground()
+        buttonGetStarted.setGradientBackground(colors: [UIColor(red: 0.96, green: 0.89, blue: 0.72, alpha: 1),
+                                                        UIColor(red: 0.8, green: 0.62, blue: 0.32, alpha: 1)])
+       
     }
 
 }

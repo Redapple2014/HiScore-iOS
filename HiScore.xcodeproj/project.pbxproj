@@ -18,7 +18,6 @@
 		C72618B32A84ED7B00738F7F /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C72618AD2A84ED7B00738F7F /* OFL.txt */; };
 		C72618B42A84ED7B00738F7F /* Rajdhani-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618AE2A84ED7B00738F7F /* Rajdhani-Regular.ttf */; };
 		C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618B52A84EE3300738F7F /* UIFont+Additions.swift */; };
-		C72618B92A84F82000738F7F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618B82A84F82000738F7F /* SplashScreenViewController.swift */; };
 		C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */; };
 		C75F37172A791BC200925880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37162A791BC200925880 /* AppDelegate.swift */; };
 		C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37182A791BC200925880 /* SceneDelegate.swift */; };
@@ -53,6 +52,9 @@
 		C7C5367E2A8A3C11007391FC /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C536762A8A3C11007391FC /* Baloo2-Medium.ttf */; };
 		C7C5367F2A8A3C11007391FC /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C536772A8A3C11007391FC /* Baloo2-ExtraBold.ttf */; };
 		C7C536802A8A3C11007391FC /* Baloo2-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C536782A8A3C11007391FC /* Baloo2-VariableFont_wght.ttf */; };
+		C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368D2A8A4908007391FC /* SplashDataModel.swift */; };
+		C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368E2A8A4908007391FC /* SplashViewModel.swift */; };
+		C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */; };
 		C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBEE612A7BCA590045B449 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +71,6 @@
 		C72618AD2A84ED7B00738F7F /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		C72618AE2A84ED7B00738F7F /* Rajdhani-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Regular.ttf"; sourceTree = "<group>"; };
 		C72618B52A84EE3300738F7F /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
-		C72618B82A84F82000738F7F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		C75F37132A791BC200925880 /* HiScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75F37162A791BC200925880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +107,9 @@
 		C7C536762A8A3C11007391FC /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
 		C7C536772A8A3C11007391FC /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		C7C536782A8A3C11007391FC /* Baloo2-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		C7C5368D2A8A4908007391FC /* SplashDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashDataModel.swift; sourceTree = "<group>"; };
+		C7C5368E2A8A4908007391FC /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		C7EBEE612A7BCA590045B449 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		EE087F7249186B7A92ED1BCC /* Pods-HiScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.debug.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,14 +162,6 @@
 				C72618AE2A84ED7B00738F7F /* Rajdhani-Regular.ttf */,
 			);
 			path = Rajdhani;
-			sourceTree = "<group>";
-		};
-		C72618B72A84F80800738F7F /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				C72618B82A84F82000738F7F /* SplashScreenViewController.swift */,
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		C75F370A2A791BC200925880 = {
@@ -336,6 +332,16 @@
 			path = Baloo_2;
 			sourceTree = "<group>";
 		};
+		C7C5368C2A8A4908007391FC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5368D2A8A4908007391FC /* SplashDataModel.swift */,
+				C7C5368E2A8A4908007391FC /* SplashViewModel.swift */,
+				C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +381,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C72618B72A84F80800738F7F /* Splash */,
+				C7C5368C2A8A4908007391FC /* Splash */,
 				C7A9DF762A8361690066924E /* BaseViewController */,
 				C7EBEE4F2A7BC87A0045B449 /* EnterOTP */,
 				C7EBEE4D2A7BC8530045B449 /* InputMobileNumber */,
@@ -645,8 +651,10 @@
 				C75F37172A791BC200925880 /* AppDelegate.swift in Sources */,
 				C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */,
 				C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */,
+				C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */,
 				C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */,
 				C7C5366C2A8A08D4007391FC /* ViewController.swift in Sources */,
+				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
 				C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */,
 				C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */,
@@ -655,8 +663,8 @@
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C72618A52A84DFE600738F7F /* UITextField+Extension.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
-				C72618B92A84F82000738F7F /* SplashScreenViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
+				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenDataModel.swift in Sources */,

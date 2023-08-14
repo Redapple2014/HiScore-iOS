@@ -48,4 +48,5 @@ pod 'HGCircularSlider'
 # https://github.com
 pod 'DTTextField'
 
+pod 'Kingfisher'
 end

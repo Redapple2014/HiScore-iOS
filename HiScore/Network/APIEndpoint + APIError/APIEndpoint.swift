@@ -16,17 +16,17 @@ enum APIEndpoint {
     var path: String {
         switch self {
         case .fetchSplashImage(let version):
-            return "v\(version)/game/splash"
+            return "\(version)/game/splash"
         case .postItem(let version):
-            return "v\(version)/post-item"
+            return "\(version)/post-item"
         case .sendOTP(let version):
-            return "v\(version)/game/users/sendOTP"
+            return "\(version)/game/users/sendOTP"
         }
     }
     var headers: [String: String]? {
         switch self {
         case .fetchSplashImage, .sendOTP:
-            return ["": ""]
+            return ["Content-Type": "application/json"]
         case .postItem:
             return ["Authorization": "Bearer YOUR_ACCESS_TOKEN",
                     "Content-Type": "application/json"]

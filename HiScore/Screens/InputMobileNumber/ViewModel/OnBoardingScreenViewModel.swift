@@ -9,7 +9,8 @@ import Foundation
 class OnboardingScreenViewModel {
     
     private let networkService: HiScoreNetworkRepository
-    
+    var slides = [Images]()
+
     init(networkService: HiScoreNetworkRepository) {
         self.networkService = networkService
     }
@@ -21,11 +22,15 @@ class OnboardingScreenViewModel {
             switch response {
             case .success(let data):
                 print(data)
-                completion(.success(data))
+                DispatchQueue.main.async {
+                    self.slides = data.en
+                    completion(.success(data))
+                }
             case .failure(let error):
                 print(error.localizedDescription)
-                completion(.failure(error))
-                
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             }
         }
     }

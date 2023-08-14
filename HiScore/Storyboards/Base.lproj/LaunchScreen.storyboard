@@ -17,17 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rummy Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zgt-f7-eXn">
-                                <rect key="frame" x="79" y="372" width="217" height="60"/>
+                                <rect key="frame" x="84.333333333333329" y="375" width="206.33333333333337" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ua4-ld-Qdn"/>
+                                    <constraint firstAttribute="width" secondItem="zgt-f7-eXn" secondAttribute="height" multiplier="100:30" id="TcS-RH-Z2z"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="HiSchoreDark"/>
                         <constraints>
-                            <constraint firstItem="zgt-f7-eXn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="372" id="Pla-qq-Bbk"/>
+                            <constraint firstItem="zgt-f7-eXn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5ZO-Ef-xSh"/>
+                            <constraint firstItem="zgt-f7-eXn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ac0-RZ-hFX"/>
                             <constraint firstItem="zgt-f7-eXn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ixB-2T-9Zd"/>
+                            <constraint firstItem="zgt-f7-eXn" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.55" id="vJ3-2x-CaL"/>
                         </constraints>
                     </view>
                 </viewController>

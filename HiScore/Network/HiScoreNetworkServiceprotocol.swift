@@ -29,6 +29,7 @@ extension HiScoreNetworkServiceprotocol {
             return
         }
         var request = URLRequest(url: url)
+        Log.d("URL: \(url)")
         request.httpMethod = HiScoreHTTPMethods.get.rawValue
         request.allHTTPHeaderFields = endpoint.headers
         fetchData(with: request, model: model, completion: completion)
@@ -42,6 +43,7 @@ extension HiScoreNetworkServiceprotocol {
             completion(.failure(.invalidURL))
             return
         }
+        Log.d("URL: \(url)")
         do {
             let jsonData = try JSONEncoder().encode(body)
             var request = URLRequest(url: url)

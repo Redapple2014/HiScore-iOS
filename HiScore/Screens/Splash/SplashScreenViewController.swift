@@ -6,15 +6,35 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SplashScreenViewController: BaseViewController {
-
+    @IBOutlet weak var splashImageView: UIImageView!
+    private var viewModel: SpalshViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
-            let storyboard = UIStoryboard(name: "main", bundle: nil)
-            
+        let networkService = HiScoreNetworkRepository()
+        viewModel = SpalshViewModel(networkService: networkService)
+        fetchSplashImages()
+    }
+    
+    func fetchSplashImages() {
+        viewModel.getSplashScreenImages { result in
+            switch result {
+            case .success(let data):
+                print(data.message)
+                self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    guard let viewController = storyboard.instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
+                        return
+                    }
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-        
     }
 }
