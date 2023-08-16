@@ -29,7 +29,6 @@ extension HiScoreNetworkServiceprotocol {
             return
         }
         var request = URLRequest(url: url)
-        Log.d("URL: \(url)")
         request.httpMethod = HiScoreHTTPMethods.get.rawValue
         request.allHTTPHeaderFields = endpoint.headers
         fetchData(with: request, model: model, completion: completion)
@@ -43,7 +42,6 @@ extension HiScoreNetworkServiceprotocol {
             completion(.failure(.invalidURL))
             return
         }
-        Log.d("URL: \(url)")
         do {
             let jsonData = try JSONEncoder().encode(body)
             var request = URLRequest(url: url)
@@ -60,6 +58,10 @@ extension HiScoreNetworkServiceprotocol {
  class HiScoreNetworkRepository: HiScoreNetworkServiceprotocol {
     internal func postData<U>(with request: URLRequest, responseModelType: U.Type, completion: @escaping (Result<U, APIError>) -> Void) where U : Decodable {
         let session = URLSession.shared
+        Log.d("API request url: \(String(describing: request.url))")
+        Log.d("API request body: \(String(describing: request.httpBody))")
+        Log.d("API request method: \(String(describing: request.httpMethod))")
+        Log.d("API request header: \(String(describing: request.allHTTPHeaderFields))")
         let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(.requestFailed(error: error.localizedDescription)))
@@ -93,6 +95,10 @@ extension HiScoreNetworkServiceprotocol {
     internal func fetchData<T>(with request: URLRequest, model: T.Type, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
         
         let session = URLSession.shared
+        Log.d("API request url: \(String(describing: request.url))")
+        Log.d("API request body: \(String(describing: request.httpBody))")
+        Log.d("API request method: \(String(describing: request.httpMethod))")
+        Log.d("API request header: \(String(describing: request.allHTTPHeaderFields))")
         let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(.requestFailed(error: error.localizedDescription)))

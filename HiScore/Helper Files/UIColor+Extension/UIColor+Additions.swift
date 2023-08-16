@@ -34,7 +34,7 @@ extension UIColor {
         )
     } 
 
-    static let HSThemeColor: UIColor = {
+    static let HSAppThemeColor: UIColor = {
         return UIColor(hex: "#0D0616")
     }()
     
