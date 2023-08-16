@@ -27,6 +27,7 @@ class EnterPhoneNumberViewController: BaseViewController {
     private let errorMessage = "Invalid Phone Number"
     private var viewModel: OnboardingScreenViewModel!
 }
+// MARK: - View Life Cycle ------------
 extension EnterPhoneNumberViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ extension EnterPhoneNumberViewController{
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
+// MARK: - Keyboard animations ------------
 extension EnterPhoneNumberViewController {
     @objc func keyboardWillShow(_ notification: Notification) {
         animateView(upward: true)
@@ -71,9 +73,20 @@ extension EnterPhoneNumberViewController {
     }
 
 }
+// MARK: - API Calls ------------
 extension EnterPhoneNumberViewController{
+    private func getOTP(phoneNumber: String) {
+        viewModel.getOTP(phoneNumber: phoneNumber) { response in
+            switch response {
+            case .success(let response):
+                Log.d(response)
+            case .failure(let error):
+                Log.d(error)
+            }
+        }
+        
+    }
     private func getOnBoadingScreens() {
-      
             self.viewModel.getOnBoadingScreens { [weak self] result in
                 DispatchQueue.main.async {
                     switch result {
@@ -88,6 +101,7 @@ extension EnterPhoneNumberViewController{
             }
         }
 }
+// MARK: - CollectionView UICollectionViewDataSource ------------
 extension EnterPhoneNumberViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.viewModel.slides.count
@@ -99,11 +113,13 @@ extension EnterPhoneNumberViewController: UICollectionViewDataSource {
         return cell
     }
 }
+// MARK: - CollectionView UICollectionViewDelegateFlowLayout ------------
 extension EnterPhoneNumberViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
 }
+// MARK: - Private methods ------------
 extension EnterPhoneNumberViewController {
     private func showInPutError() {
         errorLabel.isHidden = false
@@ -146,10 +162,9 @@ extension EnterPhoneNumberViewController {
         view.addGestureRecognizer(tap)
         collectionSlides.dataSource = self
         collectionSlides.delegate = self
-
-    }
+     }
     private func initUI() {
-        viewCollectionPagination.setGradientForSliderBG()
+//        viewCollectionPagination.setGradientForSliderBG()
         collectionSlides.isPagingEnabled = true
         placeholderLabel.text = ""
         viewContainer.backgroundColor = .black.withAlphaComponent(20)
@@ -169,8 +184,9 @@ extension EnterPhoneNumberViewController {
     }
 
 }
-extension EnterPhoneNumberViewController {
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+// MARK: - UIScrollViewDelegate ------------
+extension EnterPhoneNumberViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let xPoint = scrollView.contentOffset.x + scrollView.frame.width / 2
         let yPoint = scrollView.frame.height / 2
         let center = CGPoint(x: xPoint, y: yPoint)
@@ -179,6 +195,7 @@ extension EnterPhoneNumberViewController {
         }
     }
 }
+// MARK: - Buttons tap ------------
 extension EnterPhoneNumberViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
@@ -187,10 +204,14 @@ extension EnterPhoneNumberViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         if !self.viewModel.validate(value: inputTextField.text!) {
             showInPutError()
+            return
         }
+        guard let phoneNumber = inputTextField.text else { return }
+        getOTP(phoneNumber: phoneNumber)
     }
 
 }
+// MARK: - UITextFieldDelegate ------------
 extension EnterPhoneNumberViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentCharacterCount = textField.text?.count ?? 0
@@ -214,20 +235,6 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         } else if ((textField.text?.count ?? 0) == 10 ) {
             hideInPutError()
         }
-
-//        if (textField.text?.count ?? 0) == 0 {
-//            hideInPutError()
-//        } else {
-//            if ((textField.text?.count ?? 0) == 10 ) {
-//                hideInPutError()
-//            }
-////            if !self.viewModel.validate(value: inputTextField.text!) {
-////                showInPutError()
-////            } else {
-////                placeholderLabel.text = ""
-////                hideInPutError()
-////            }
-//        }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if (textField.text?.count ?? 0) == 0 {
