@@ -11,6 +11,8 @@
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
 		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
+		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
+		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
 		C72618A52A84DFE600738F7F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A42A84DFE600738F7F /* UITextField+Extension.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
@@ -66,6 +68,8 @@
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
 		AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
+		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
+		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C72618A42A84DFE600738F7F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		AF89AEE72A8CCCC200AE2318 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */,
+				AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
 		C72618A32A84DFC600738F7F /* UITextField+Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,7 @@
 		C75F37152A791BC200925880 /* HiScore */ = {
 			isa = PBXGroup;
 			children = (
+				AF89AEE72A8CCCC200AE2318 /* Custom Components */,
 				C7C536672A89FEBD007391FC /* Lottie Animation files */,
 				C79845972A86592300F08457 /* Network */,
 				C75F372A2A79202700925880 /* AppDelegate */,
@@ -534,6 +548,7 @@
 				C72618B42A84ED7B00738F7F /* Rajdhani-Regular.ttf in Resources */,
 				C72618B32A84ED7B00738F7F /* OFL.txt in Resources */,
 				C7C5367E2A8A3C11007391FC /* Baloo2-Medium.ttf in Resources */,
+				AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */,
 				AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */,
 				C7C536802A8A3C11007391FC /* Baloo2-VariableFont_wght.ttf in Resources */,
 				C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */,
@@ -607,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */,
 				C75F37172A791BC200925880 /* AppDelegate.swift in Sources */,
 				C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */,
 				C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */,
@@ -782,8 +798,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HiScore/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -812,8 +831,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HiScore/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your precise location is used to show your position on the map, get directions, estimate travel times and improve search results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
