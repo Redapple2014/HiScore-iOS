@@ -34,8 +34,8 @@ extension EnterOTPViewController {
         buttonChangeNumber.setUpButtonWithGradientBackground(type: .lightGrey)
         OTPTextField.fieldsCount = 6
         OTPTextField.fieldBorderWidth = 2
-        OTPTextField.defaultBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
-        OTPTextField.filledBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+        OTPTextField.defaultBorderColor = .HSTextFieldBorderColor
+        OTPTextField.filledBorderColor = .HSTextFieldBorderColor
         OTPTextField.cursorColor = UIColor.white
         OTPTextField.displayType = .square
         OTPTextField.fieldSize = 42
@@ -43,7 +43,7 @@ extension EnterOTPViewController {
         OTPTextField.displayType = .roundedCorner
         OTPTextField.fieldFont = UIFont.Rajdhani.Bold.withSize(25)
         OTPTextField.shouldAllowIntermediateEditing = false
-        OTPTextField.errorBorderColor = UIColor(red: 0.961, green: 0.302, blue: 0.247, alpha: 0.5)
+        OTPTextField.errorBorderColor = .HSRedColor
         OTPTextField.delegate = self
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
         OTPTextField.initializeUI()
@@ -52,14 +52,14 @@ extension EnterOTPViewController {
 // MARK: - OTPFieldView Delegate -
 extension EnterOTPViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
-        print("Has entered all OTP? \(hasEntered)")
+        Log.d("Has entered all OTP? \(hasEntered)")
         return true
     }
     func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Int) -> Bool {
         return true
     }
     func enteredOTP(otp otpString: String) {
-        print("OTPString: \(otpString)")
+        Log.d("OTPString: \(otpString)")
     }
 }
 // MARK: - Button Actions -

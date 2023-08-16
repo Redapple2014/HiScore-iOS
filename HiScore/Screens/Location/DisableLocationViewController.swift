@@ -15,7 +15,5 @@ class DisableLocationViewController: BaseViewController {
         buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
         buttonContactUs.addTarget(self, action: #selector(buttonContactUsDidTap), for: .touchUpInside)
     }
-    @objc func buttonContactUsDidTap() {
-        self.showFetchLocationPopUp()
-    }
+    @objc func buttonContactUsDidTap() { }
 }

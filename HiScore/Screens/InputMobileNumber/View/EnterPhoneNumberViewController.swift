@@ -97,11 +97,11 @@ extension EnterPhoneNumberViewController{
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let data):
+                        Log.d(data)
                         self?.collectionSlides.reloadData()
                         self?.pageControl.numberOfPages = self?.viewModel.slides.count ?? 0
-                        print(data)
                     case .failure(let error):
-                        print(error.localizedDescription)
+                        Log.d(error.localizedDescription)
                     }
                 }
             }

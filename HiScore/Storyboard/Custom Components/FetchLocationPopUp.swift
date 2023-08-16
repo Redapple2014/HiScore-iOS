@@ -36,10 +36,6 @@ class FetchLocationPopUp: UIView {
         super.layoutSubviews()
         containerView.layoutIfNeeded()
         containerView.setNeedsLayout()
-        containerView.setGradientBackground(colorTop: UIColor(red: 0.223, green: 0.24, blue: 0.317, alpha: 1),
-                                            colorBottom:  UIColor(red: 0.078, green: 0.094, blue: 0.165, alpha: 1))
-        containerView.setGradientBackground(colorTop:  UIColor(red: 0.271, green: 0.562, blue: 1, alpha: 1),
-                                            colorBottom: UIColor(red: 0.513, green: 0.577, blue: 0.7, alpha: 0))
     }
     func animationPopUp(view: UIWindow) {
         view.addSubview(self)

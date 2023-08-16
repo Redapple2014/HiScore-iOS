@@ -23,7 +23,6 @@ class SplashScreenViewController: BaseViewController {
         viewModel.getSplashScreenImages { result in
             switch result {
             case .success(let data):
-                print(data.message)
                 self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
                     guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
@@ -32,7 +31,7 @@ class SplashScreenViewController: BaseViewController {
                     self.navigationController?.pushViewController(viewController, animated: true)
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                Log.d(error.localizedDescription)
             }
         }
     }

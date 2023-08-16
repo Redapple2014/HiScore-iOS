@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -120,7 +120,7 @@ required to proceed</string>
                                     <fontDescription key="titleFontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Uky-xY-SFR" kind="push" id="Tcb-ge-JiD"/>
+                                    <action selector="shareLocationDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hdv-aV-xHd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,42 +156,42 @@ required to proceed</string>
         <!--Disable Location View Controller-->
         <scene sceneID="H8O-4v-riW">
             <objects>
-                <viewController storyboardIdentifier="DisableLocationViewController" id="Uky-xY-SFR" customClass="DisableLocationViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisableLocationViewController" modalPresentationStyle="overFullScreen" id="Uky-xY-SFR" customClass="DisableLocationViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCj-uL-U7H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patterns" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-lC-tBc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="419"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disable_location" translatesAutoresizingMaskIntoConstraints="NO" id="nlH-92-KyC">
-                                <rect key="frame" x="142" y="144.5" width="130" height="130"/>
+                                <rect key="frame" x="142" y="159" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="831-mn-EZX"/>
                                     <constraint firstAttribute="width" constant="130" id="gKV-8h-gGc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You cannot play Rummy from Tamil Nadu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Rg-SBq">
-                                <rect key="frame" x="30" y="285.5" width="354" height="66"/>
+                                <rect key="frame" x="30" y="300" width="354" height="66"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-bA-Kt8">
-                                <rect key="frame" x="30" y="419" width="354" height="335"/>
+                                <rect key="frame" x="30" y="448" width="354" height="330"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn3-2J-wyM">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="82.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-Yl-snz">
-                                                <rect key="frame" x="0.0" y="21" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="6ot-T6-QWU"/>
                                                     <constraint firstAttribute="height" constant="42" id="dqw-pL-bSj"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy is banned in your location. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-ao-GFd">
-                                                <rect key="frame" x="57" y="33.5" width="267" height="16.5"/>
+                                                <rect key="frame" x="57" y="33" width="267" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-Xl-7x8">
-                                        <rect key="frame" x="0.0" y="84" width="354" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="82.5" width="354" height="82.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-p6-aT5">
                                                 <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
@@ -233,18 +233,18 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nov-Bc-k46">
-                                        <rect key="frame" x="0.0" y="167.5" width="354" height="84"/>
+                                        <rect key="frame" x="0.0" y="165" width="354" height="82.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-vd-9LL">
-                                        <rect key="frame" x="0.0" y="251.5" width="354" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="247.5" width="354" height="82.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-77-WPz" customClass="LoadingButton" customModule="MHLoadingButton">
-                                <rect key="frame" x="18" y="754" width="378" height="48"/>
+                                <rect key="frame" x="18" y="778" width="378" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="2k7-xW-K3g"/>
                                 </constraints>
