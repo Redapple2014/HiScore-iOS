@@ -26,8 +26,7 @@ class SplashScreenViewController: BaseViewController {
                 print(data.message)
                 self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                    let storyboard = UIStoryboard(name: "Location", bundle: nil)
-                    guard let viewController = storyboard.instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
+                    guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)

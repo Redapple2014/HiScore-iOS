@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Baloo2-VariableFont_wght.ttf">
+        <array key="Baloo2-Regular.ttf">
             <string>Baloo2-Regular</string>
         </array>
         <array key="MavenPro-Regular.ttf">
@@ -49,46 +49,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-bF-hJM">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="565"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="564.33333333333337"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="1kg-qh-fiO">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="564.33333333333337"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.13092257862059486" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="564.33000000000004" id="AcJ-2d-3Cc"/>
+                                        </constraints>
+                                    </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-Lb-lBy">
-                                        <rect key="frame" x="138.66666666666666" y="545" width="115.66666666666666" height="20"/>
+                                        <rect key="frame" x="138.66666666666666" y="544.33333333333337" width="115.66666666666666" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Qse-G3-rmo"/>
                                         </constraints>
                                     </pageControl>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2s-FV-njl">
-                                        <rect key="frame" x="0.0" y="144" width="393" height="401"/>
+                                        <rect key="frame" x="0.0" y="143.99999999999997" width="393" height="400.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ToE-yK-u6W">
-                                            <size key="itemSize" width="387" height="305"/>
+                                            <size key="itemSize" width="285" height="229"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OU0-it-3td" customClass="SlidesCollectionViewCell" customModule="HiScore" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="48" width="387" height="305"/>
+                                                <rect key="frame" x="0.0" y="85.666666666666671" width="285" height="229"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZC-rE-K44">
-                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="305"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="229"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-hG-j3m">
-                                                            <rect key="frame" x="0.0" y="0.0" width="387" height="255"/>
-                                                            <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-hG-j3m">
+                                                            <rect key="frame" x="30" y="0.0" width="225" height="169"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-ZS-TVR">
-                                                            <rect key="frame" x="30" y="255" width="327" height="50"/>
+                                                            <rect key="frame" x="30" y="169" width="225" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-85-rTs">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="29"/>
                                                                     <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
                                                                     <color key="textColor" red="0.8901960784313725" green="0.80784313725490198" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-dx-FGr">
-                                                                    <rect key="frame" x="0.0" y="29" width="327" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="37" width="225" height="23"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-Regular" family="Rajdhani" pointSize="18"/>
                                                                     <color key="textColor" red="0.73725490196078436" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -101,14 +108,14 @@
                                                         <constraint firstItem="Q89-ZS-TVR" firstAttribute="top" secondItem="TW8-hG-j3m" secondAttribute="bottom" id="1t6-Zt-Ek2"/>
                                                         <constraint firstAttribute="trailing" secondItem="Q89-ZS-TVR" secondAttribute="trailing" constant="30" id="6Eg-9Y-yo2"/>
                                                         <constraint firstItem="TW8-hG-j3m" firstAttribute="top" secondItem="bZC-rE-K44" secondAttribute="top" id="Pre-wp-Mv9"/>
-                                                        <constraint firstItem="TW8-hG-j3m" firstAttribute="leading" secondItem="bZC-rE-K44" secondAttribute="leading" id="UDD-45-qXl"/>
+                                                        <constraint firstItem="TW8-hG-j3m" firstAttribute="leading" secondItem="bZC-rE-K44" secondAttribute="leading" constant="30" id="UDD-45-qXl"/>
                                                         <constraint firstAttribute="bottom" secondItem="Q89-ZS-TVR" secondAttribute="bottom" id="e87-YU-w8n"/>
                                                         <constraint firstItem="Q89-ZS-TVR" firstAttribute="leading" secondItem="bZC-rE-K44" secondAttribute="leading" constant="30" id="p34-Nk-5R1"/>
-                                                        <constraint firstAttribute="trailing" secondItem="TW8-hG-j3m" secondAttribute="trailing" id="qrB-yY-fU3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TW8-hG-j3m" secondAttribute="trailing" constant="30" id="qrB-yY-fU3"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="customSize" width="387" height="305"/>
+                                                <size key="customSize" width="285" height="229"/>
                                                 <connections>
                                                     <outlet property="imageSlides" destination="TW8-hG-j3m" id="DYK-U8-Kuv"/>
                                                     <outlet property="labelHeader1" destination="K4a-85-rTs" id="4fC-cv-4Qk"/>
@@ -125,34 +132,37 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="qb1-Lb-lBy" secondAttribute="bottom" id="2i1-h3-2lt"/>
+                                    <constraint firstItem="1kg-qh-fiO" firstAttribute="centerY" secondItem="1b5-bF-hJM" secondAttribute="centerY" id="5dt-PX-IQc"/>
                                     <constraint firstItem="j2s-FV-njl" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="7cm-Ww-9mB"/>
                                     <constraint firstItem="j2s-FV-njl" firstAttribute="top" secondItem="1b5-bF-hJM" secondAttribute="top" constant="144" id="Hzq-9B-pbQ"/>
                                     <constraint firstItem="qb1-Lb-lBy" firstAttribute="top" secondItem="j2s-FV-njl" secondAttribute="bottom" id="PYM-Q3-RSd"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kg-qh-fiO" secondAttribute="trailing" id="RKn-NA-ziK"/>
+                                    <constraint firstItem="1kg-qh-fiO" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="alj-0A-Mmq"/>
                                     <constraint firstItem="qb1-Lb-lBy" firstAttribute="centerX" secondItem="1b5-bF-hJM" secondAttribute="centerX" id="xG3-7u-aY4"/>
                                     <constraint firstAttribute="trailing" secondItem="j2s-FV-njl" secondAttribute="trailing" id="yMQ-fV-vIL"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-ya-q1z">
-                                <rect key="frame" x="0.0" y="565" width="393" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-ya-q1z" userLabel="View Login">
+                                <rect key="frame" x="0.0" y="564.33333333333337" width="393" height="200.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login/Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-oF-7n5">
-                                        <rect key="frame" x="17.999999999999993" y="27" width="119.33333333333331" height="23.333333333333329"/>
+                                        <rect key="frame" x="18" y="27" width="125" height="23.666666666666671"/>
                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akB-9y-xjF">
-                                        <rect key="frame" x="17" y="70.333333333333371" width="359" height="65.666666666666686"/>
+                                        <rect key="frame" x="17" y="70.666666666666629" width="359" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-n5-H8N">
-                                                <rect key="frame" x="15.999999999999993" y="5" width="101.33333333333331" height="13"/>
+                                                <rect key="frame" x="16.000000000000007" y="5" width="103.66666666666669" height="13"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LS0-09-qKk">
-                                                <rect key="frame" x="17" y="28" width="325" height="22.666666666666671"/>
+                                                <rect key="frame" x="17" y="28" width="325" height="23"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="HiScoreGray"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="18"/>
@@ -173,7 +183,7 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputError" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-n7-ZSe">
-                                        <rect key="frame" x="17" y="144" width="10" height="10"/>
+                                        <rect key="frame" x="17" y="144.66666666666663" width="10" height="10"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="2h7-Oz-bsm"/>
@@ -181,13 +191,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-O9-FRd">
-                                        <rect key="frame" x="33" y="142" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="33" y="142.66666666666663" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZg-oX-4sP" customClass="LoadingButton" customModule="MHLoadingButton">
-                                        <rect key="frame" x="17" y="152" width="359" height="48"/>
+                                        <rect key="frame" x="17" y="152.66666666666663" width="359" height="48"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="6mh-oa-JEJ"/>
@@ -284,32 +294,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-3U-g8f" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="76" y="372" width="240" height="163"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-ha-XhZ">
+                                <rect key="frame" x="30" y="79" width="16" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="xoh-Gt-AZM"/>
+                                    <constraint firstAttribute="height" constant="14" id="zdx-VG-c9b"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <action selector="buttonbackTapped:" destination="3LF-2T-DMt" eventType="touchUpInside" id="Puh-HG-kWB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP sent to +919725559757" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v52-0e-MK6">
+                                <rect key="frame" x="18" y="146" width="286" height="66"/>
+                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you did not recieve the OTP," textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-Ee-skg">
+                                <rect key="frame" x="18" y="224" width="171.33333333333334" height="14.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESEND OTP" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-yK-SBg">
+                                <rect key="frame" x="209.33333333333334" y="224" width="73.333333333333343" height="14.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
+                                <color key="textColor" red="0.84705882352941175" green="0.69019607843137254" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-MN-Ssj" customClass="OTPFieldView" customModule="OTPFieldView">
+                                <rect key="frame" x="18" y="282.33333333333331" width="357" height="42"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="animation_ll6mjcvw.json"/>
-                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1wu-oF-WAE"/>
+                                </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-q3-BMd">
+                                <rect key="frame" x="18" y="360.33333333333331" width="357" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Zq-uvO" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="48"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Verify"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrw-u1-S6C" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="357" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Change Phone Number"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="X9I-WX-kBX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mqq-By-Nc9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="HiSchoreDark"/>
                         <constraints>
-                            <constraint firstItem="mqq-By-Nc9" firstAttribute="bottom" secondItem="QFe-3U-g8f" secondAttribute="bottom" constant="283" id="106-Hv-KIt"/>
-                            <constraint firstItem="mqq-By-Nc9" firstAttribute="trailing" secondItem="QFe-3U-g8f" secondAttribute="trailing" constant="77" id="b0I-Mx-768"/>
-                            <constraint firstItem="QFe-3U-g8f" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="76" id="dit-pV-sHL"/>
-                            <constraint firstItem="mqq-By-Nc9" firstAttribute="trailing" secondItem="QFe-3U-g8f" secondAttribute="trailing" constant="77" id="p5f-hM-75g"/>
-                            <constraint firstItem="QFe-3U-g8f" firstAttribute="top" secondItem="mqq-By-Nc9" secondAttribute="top" constant="313" id="szU-1C-Bab"/>
+                            <constraint firstItem="mqq-By-Nc9" firstAttribute="trailing" secondItem="Mvf-q3-BMd" secondAttribute="trailing" constant="18" id="1Uv-6w-eHk"/>
+                            <constraint firstItem="AtV-MN-Ssj" firstAttribute="top" secondItem="p2d-Ee-skg" secondAttribute="bottom" constant="44" id="9dW-V1-akr"/>
+                            <constraint firstItem="p2d-Ee-skg" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="D6v-Rw-ZNy"/>
+                            <constraint firstItem="v52-0e-MK6" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="FW3-oR-eb4"/>
+                            <constraint firstItem="p2d-Ee-skg" firstAttribute="top" secondItem="v52-0e-MK6" secondAttribute="bottom" constant="12" id="IvT-FY-lZr"/>
+                            <constraint firstItem="Mvf-q3-BMd" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="LNb-E1-uPK"/>
+                            <constraint firstItem="u1K-yK-SBg" firstAttribute="leading" secondItem="p2d-Ee-skg" secondAttribute="trailing" constant="20" id="PgQ-rX-40u"/>
+                            <constraint firstItem="v52-0e-MK6" firstAttribute="width" secondItem="E80-1k-N00" secondAttribute="width" multiplier="0.727735" id="ZWP-gO-9dd"/>
+                            <constraint firstItem="u1K-yK-SBg" firstAttribute="top" secondItem="p2d-Ee-skg" secondAttribute="top" id="c8U-aG-VHf"/>
+                            <constraint firstItem="v52-0e-MK6" firstAttribute="top" secondItem="lWB-ha-XhZ" secondAttribute="bottom" constant="53" id="fCD-6d-iIh"/>
+                            <constraint firstItem="u1K-yK-SBg" firstAttribute="bottom" secondItem="p2d-Ee-skg" secondAttribute="bottom" id="nQT-Y7-CAV"/>
+                            <constraint firstItem="AtV-MN-Ssj" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="nUL-fU-0Xw"/>
+                            <constraint firstItem="lWB-ha-XhZ" firstAttribute="top" secondItem="mqq-By-Nc9" secondAttribute="top" constant="20" id="nq7-mg-Mdt"/>
+                            <constraint firstItem="lWB-ha-XhZ" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="30" id="xYN-H7-Dst"/>
+                            <constraint firstItem="Mvf-q3-BMd" firstAttribute="top" secondItem="AtV-MN-Ssj" secondAttribute="bottom" constant="36" id="yxc-27-Uyj"/>
+                            <constraint firstItem="mqq-By-Nc9" firstAttribute="trailing" secondItem="AtV-MN-Ssj" secondAttribute="trailing" constant="18" id="ztN-9G-yTM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t78-cv-liY"/>
                     <connections>
-                        <outlet property="animationView" destination="QFe-3U-g8f" id="d5b-4u-n7J"/>
+                        <outlet property="OTPTextField" destination="AtV-MN-Ssj" id="f8P-vN-WNP"/>
+                        <outlet property="buttonChangeNumber" destination="hrw-u1-S6C" id="7xo-1t-dQl"/>
+                        <outlet property="buttonVerify" destination="NZw-Zq-uvO" id="Y3U-nb-JH9"/>
+                        <outlet property="labelResend" destination="u1K-yK-SBg" id="vqy-kI-hUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr4-cJ-qAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="-800"/>
+            <point key="canvasLocation" x="1203.8167938931297" y="-800"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="Jag-S2-cHr">
@@ -343,12 +415,20 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="NZw-Zq-uvO">
+            <size key="intrinsicContentSize" width="40" height="30"/>
+        </designable>
         <designable name="fZg-oX-4sP">
-            <size key="intrinsicContentSize" width="96.666666666666671" height="30.333333333333332"/>
+            <size key="intrinsicContentSize" width="101.66666666666667" height="30.666666666666668"/>
+        </designable>
+        <designable name="hrw-u1-S6C">
+            <size key="intrinsicContentSize" width="201.66666666666666" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>
+        <image name="Home" width="375" height="550"/>
         <image name="Rummy Logo" width="217" height="60"/>
+        <image name="backArrow" width="18" height="16"/>
         <image name="inputError" width="11" height="11"/>
         <namedColor name="HiSchoreDark">
             <color red="0.094117647058823528" green="0.023529411764705882" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -56,7 +56,7 @@ extension HiScoreNetworkServiceprotocol {
 }
 
  class HiScoreNetworkRepository: HiScoreNetworkServiceprotocol {
-    internal func postData<U>(with request: URLRequest, responseModelType: U.Type, completion: @escaping (Result<U, APIError>) -> Void) where U : Decodable {
+     func postData<U>(with request: URLRequest, responseModelType: U.Type, completion: @escaping (Result<U, APIError>) -> Void) where U : Decodable {
         let session = URLSession.shared
         Log.d("API request url: \(String(describing: request.url))")
         Log.d("API request body: \(String(describing: request.httpBody))")

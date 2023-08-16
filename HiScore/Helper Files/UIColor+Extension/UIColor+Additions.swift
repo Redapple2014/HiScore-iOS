@@ -53,4 +53,9 @@ extension UIColor {
     static let HSGradientButtonTextColor: UIColor = {
         return  UIColor(red: 0.07, green: 0, blue: 0.12, alpha: 1)
     }()
+    
+    static let HSDarkButtonTextColor: UIColor = {
+        return  UIColor(red: 0.933, green: 0.839, blue: 0.651, alpha: 1)
+    }()
+
 }

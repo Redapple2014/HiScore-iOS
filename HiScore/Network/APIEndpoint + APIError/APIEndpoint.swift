@@ -9,7 +9,6 @@ import Foundation
 
 enum APIEndpoint {
     case fetchSplashImage(version: Version)
-    case postItem(version: Version)
     case sendOTP(version: Version)
     
     
@@ -17,8 +16,6 @@ enum APIEndpoint {
         switch self {
         case .fetchSplashImage(let version):
             return "\(version)/game/splash"
-        case .postItem(let version):
-            return "\(version)/post-item"
         case .sendOTP(let version):
             return "\(version)/game/users/sendOTP"
         }
@@ -27,9 +24,9 @@ enum APIEndpoint {
         switch self {
         case .fetchSplashImage, .sendOTP:
             return ["Content-Type": "application/json"]
-        case .postItem:
-            return ["Authorization": "Bearer YOUR_ACCESS_TOKEN",
-                    "Content-Type": "application/json"]
+//        case .postItem:
+//            return ["Authorization": "Bearer YOUR_ACCESS_TOKEN",
+//                    "Content-Type": "application/json"]
             
         }
     }
@@ -44,7 +41,9 @@ enum APIEndpoint {
     static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides.json"
 }
 enum Version: Int {
-    case v1 = 1
-    case v2 = 2
-    case v3 = 3
+    case v1
+    case v2
+    case v3
+    case v4
+    case v5
 }
