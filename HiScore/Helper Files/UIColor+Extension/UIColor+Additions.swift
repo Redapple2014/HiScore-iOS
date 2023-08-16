@@ -50,12 +50,16 @@ extension UIColor {
         return  UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
     }()
 
-    static let HSGradientButtonTextColor: UIColor = {
+    static let HSYellowButtonTextColor: UIColor = {
         return  UIColor(red: 0.07, green: 0, blue: 0.12, alpha: 1)
     }()
     
-    static let HSDarkButtonTextColor: UIColor = {
+    static let HSLightGreyButtonTextColor: UIColor = {
         return  UIColor(red: 0.933, green: 0.839, blue: 0.651, alpha: 1)
     }()
 
+/*
+ UIColor(red: 0.271, green: 0.562, blue: 1, alpha: 1).cgColor,
+ UIColor(red: 0.513, green: 0.577, blue: 0.7, alpha: 0).cgColor
+ */
 }

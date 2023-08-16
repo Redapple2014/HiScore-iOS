@@ -15,15 +15,21 @@ import OTPFieldView
 
 enum Storyboards: String {
     case main = "Main"
-    case splash = "Splash"
+    case location = "Location"
     case wallet = "Wallet"
 }
 class BaseViewController: UIViewController {
 
 //    private let snackVw = SnackerView()
-    
+    // MARK: - This one is instance of UIWindow.
+    weak var mainWindow: UIWindow? = {
+        let window =  UIApplication.shared.windows.first { $0.isKeyWindow }
+        return window
+        
+    }()
 
 }
+// MARK: - View life cycles
 extension BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +39,14 @@ extension BaseViewController {
         super.viewWillAppear(animated)
     }
 }
+// MARK: - Initiate storyboard
 extension BaseViewController {
     func storyboard(name: Storyboards) -> UIStoryboard {
         return UIStoryboard(name: name.rawValue, bundle: nil)
     }
-    func updateUI() {
-    }
-    
-
+    func updateUI() { }
 }
+// MARK: - Methods for snakbar
 extension BaseViewController {
     func showSnackbarError(title: String, subtitle: String) {
         showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
@@ -58,6 +63,25 @@ extension BaseViewController {
         banner.show()
     }
 }
+// MARK: - Pop up views
+extension BaseViewController {
+    /// show fetch location popup
+    func showFetchLocationPopUp() {
+        guard let window = self.view.window else { return }
+        let popView = FetchLocationPopUp(frame: UIScreen.main.bounds)
+        popView.animationPopUp(view: window)
+    }
+    /// hide fetch location popup
+    func hideFetchLocationPopUp() {
+        let popView = FetchLocationPopUp(frame: UIScreen.main.bounds)
+        popView.closePopUpView(sender: self)
+    }
+}
+
+
+
+
+
 extension BaseViewController {
 //     func placeHolderTextField(textField: TKFormTextField) {
 //        // UITextField traditional properties
