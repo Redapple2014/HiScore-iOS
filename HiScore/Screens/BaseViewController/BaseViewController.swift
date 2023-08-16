@@ -9,6 +9,15 @@ import UIKit
 import Skeleton
 import NotificationBannerSwift
 import OTPFieldView
+
+
+
+
+enum Storyboards: String {
+    case main = "Main"
+    case splash = "Splash"
+    case wallet = "Wallet"
+}
 class BaseViewController: UIViewController {
 
 //    private let snackVw = SnackerView()
@@ -25,6 +34,9 @@ extension BaseViewController {
     }
 }
 extension BaseViewController {
+    func storyboard(name: Storyboards) -> UIStoryboard {
+        return UIStoryboard(name: name.rawValue, bundle: nil)
+    }
     func updateUI() {
     }
     
@@ -45,14 +57,16 @@ extension BaseViewController {
 }
 extension BaseViewController {
     func showSnackbarError(title: String, subtitle: String) {
-        showAlert(title: title, subtitle: subtitle, style: .danger)
+        showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
     }
     
     func showSnackbarSuccessOnTop(title: String, subtitle: String) {
-        showAlert(title: title, subtitle: subtitle, style: .success)
+        showAlert(title: title, subtitle: subtitle, style: .success, font: UIFont.MavenPro.ExtraBold.withSize(18))
     }
-    private func showAlert(title: String, subtitle: String, style: BannerStyle) {
+    private func showAlert(title: String, subtitle: String, style: BannerStyle, font: UIFont) {
         let banner = NotificationBanner(title: title, subtitle: subtitle, style: style)
+        banner.subtitleLabel?.font = font
+        banner.subtitleLabel?.textAlignment = .center
         banner.autoDismiss = true
         banner.show()
     }

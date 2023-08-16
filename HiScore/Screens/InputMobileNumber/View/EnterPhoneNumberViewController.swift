@@ -76,15 +76,24 @@ extension EnterPhoneNumberViewController {
 // MARK: - API Calls ------------
 extension EnterPhoneNumberViewController{
     private func getOTP(phoneNumber: String) {
-        viewModel.getOTP(phoneNumber: phoneNumber) { response in
-            switch response {
-            case .success(let response):
-                Log.d(response)
-            case .failure(let error):
-                Log.d(error)
+        buttonGetStarted.showButtonLoader(vc: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.viewModel.getOTP(phoneNumber: phoneNumber) { response in
+                self.buttonGetStarted.hideButtonLoader(vc: self)
+                switch response {
+                case .success(let response):
+                    guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterOTPViewController") as? EnterOTPViewController else {
+                        return
+                    }
+                    self.navigationController?.pushViewController(viewController, animated: true)
+
+                    Log.d(response)
+                case .failure(let error):
+                    self.showSnackbarError(title: "", subtitle: error.localizedDescription)
+                    Log.d(error)
+                }
             }
         }
-        
     }
     private func getOnBoadingScreens() {
             self.viewModel.getOnBoadingScreens { [weak self] result in
@@ -164,7 +173,6 @@ extension EnterPhoneNumberViewController {
         collectionSlides.delegate = self
      }
     private func initUI() {
-//        viewCollectionPagination.setGradientForSliderBG()
         collectionSlides.isPagingEnabled = true
         placeholderLabel.text = ""
         viewContainer.backgroundColor = .black.withAlphaComponent(20)
@@ -174,12 +182,12 @@ extension EnterPhoneNumberViewController {
         viewContainer.layer.borderColor = UIColor.HSTextFieldBorderColor.cgColor
         viewContainer.layer.borderWidth = 2.0
         viewContainer.backgroundColor = UIColor.HSTextFieldColor
-       
-        buttonGetStarted.setTitleColor(.HSGradientButtonTextColor, for: .normal)
-        buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
-        buttonGetStarted.clipsToBounds = true
-        buttonGetStarted.layer.cornerRadius = 10
-        buttonGetStarted.setBUttonGradientBackground()
+        buttonGetStarted.initLoadingButton()
+//        buttonGetStarted.setTitleColor(.HSGradientButtonTextColor, for: .normal)
+//        buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
+//        buttonGetStarted.clipsToBounds = true
+//        buttonGetStarted.layer.cornerRadius = 10
+        buttonGetStarted.setUpButtonWithGradientBackground(type: .gradient)
         inputTextField.clearButtonMode = .whileEditing
     }
 

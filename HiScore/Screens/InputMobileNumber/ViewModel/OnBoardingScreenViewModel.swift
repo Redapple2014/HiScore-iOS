@@ -59,20 +59,18 @@ class OnboardingScreenViewModel {
     }
     
     func validate(value: String) -> Bool {
-        
-        //        if (value.count) == 0 {
-        //            return false
-        ////            placeholderLabel.text = ""
-        ////            hideInPutError()
-        //        } else if ((value.count) > 0 ) && ((value.count) < 10 ){
-        ////            showInPutError()
-        //        } else if ((value.count) == 10 ) {
-        ////            hideInPutError()
-        //        }
-        //        let PHONE_REGEX = "^//[6-9]\\d{9}$"
-        //        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        //        let result = phoneTest.evaluate(with: value)
-        return true//result
+        if (value.count) == 0 {
+            return false
+        } else if ((value.count) > 0 ) && ((value.count) < 10 ){
+            return false
+        } else if ((value.count) == 10 ) {
+            return true
+        }
+        return false
+//        let PHONE_REGEX = "^//[6-9]\\d{9}$"
+//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+//        let result = phoneTest.evaluate(with: value)
+//        return result
     }
     
 }
