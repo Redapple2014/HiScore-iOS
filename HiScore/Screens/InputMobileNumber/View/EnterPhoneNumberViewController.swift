@@ -11,6 +11,7 @@ import MHLoadingButton
 import IQKeyboardManager
 
 class EnterPhoneNumberViewController: BaseViewController {
+    //MARK: - IBOutlets
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var bottomConstraintOfLoginView: NSLayoutConstraint!
@@ -21,10 +22,8 @@ class EnterPhoneNumberViewController: BaseViewController {
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewCollectionPagination: UIView!
     @IBOutlet weak var collectionSlides: UICollectionView!
-    
     @IBOutlet weak var pageControl: UIPageControl!
-    private let placeHolderText = "Enter Phone number"
-    private let errorMessage = "Invalid Phone Number"
+    //MARK: - Instance of viewModel
     private var viewModel: OnboardingScreenViewModel!
 }
 // MARK: - View Life Cycle ------------
@@ -52,7 +51,6 @@ extension EnterPhoneNumberViewController {
     @objc func keyboardWillShow(_ notification: Notification) {
         animateView(upward: true)
     }
-
     @objc func keyboardWillHide(_ notification: Notification) {
         animateView(upward: false)
     }
@@ -71,7 +69,6 @@ extension EnterPhoneNumberViewController {
             }
         }
     }
-
 }
 // MARK: - API Calls ------------
 extension EnterPhoneNumberViewController{
@@ -132,7 +129,7 @@ extension EnterPhoneNumberViewController: UICollectionViewDelegateFlowLayout {
 extension EnterPhoneNumberViewController {
     private func showInPutError() {
         errorLabel.isHidden = false
-        errorLabel.text = errorMessage
+        errorLabel.text = Messages.invalidPhoneNumber.description
         errorImage.isHidden = false
     }
     private func hideInPutError() {
@@ -226,7 +223,7 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         return newLength <= 10
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        placeholderLabel.text = placeHolderText
+        placeholderLabel.text = PlaceholderMessages.phoneNumber.desscription
         viewCollectionPagination.layoutIfNeeded()
         self.view.layoutIfNeeded()
     }

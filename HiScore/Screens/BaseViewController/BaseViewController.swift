@@ -10,24 +10,13 @@ import Skeleton
 import NotificationBannerSwift
 import OTPFieldView
 
-
-
-
-enum Storyboards: String {
-    case main = "Main"
-    case location = "Location"
-    case wallet = "Wallet"
-}
 class BaseViewController: UIViewController {
-
-//    private let snackVw = SnackerView()
     // MARK: - This one is instance of UIWindow.
     weak var mainWindow: UIWindow? = {
         let window =  UIApplication.shared.windows.first { $0.isKeyWindow }
         return window
         
     }()
-
 }
 // MARK: - View life cycles
 extension BaseViewController {
@@ -46,7 +35,7 @@ extension BaseViewController {
     }
     func updateUI() { }
 }
-// MARK: - Methods for snakbar
+// MARK: - Methods for snackbar
 extension BaseViewController {
     func showSnackbarError(title: String, subtitle: String) {
         showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
@@ -82,7 +71,7 @@ extension BaseViewController {
 
 
 
-extension BaseViewController {
+//extension BaseViewController {
 //     func placeHolderTextField(textField: TKFormTextField) {
 //        // UITextField traditional properties
 //        textField.placeholder = "Enter phone number"
@@ -111,7 +100,7 @@ extension BaseViewController {
 //     //   textField.addTarget(self, action: #selector(updateError), for: .editingChanged)
 //
 //    }
-}
+//}
 //extension BaseViewController: GradientsOwner {
 //    var gradientLayers: [CAGradientLayer] {
 //        let grad = gradView.map({$0.gradientLayer})

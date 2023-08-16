@@ -57,9 +57,8 @@ extension UIColor {
     static let HSLightGreyButtonTextColor: UIColor = {
         return  UIColor(red: 0.933, green: 0.839, blue: 0.651, alpha: 1)
     }()
-
-/*
- UIColor(red: 0.271, green: 0.562, blue: 1, alpha: 1).cgColor,
- UIColor(red: 0.513, green: 0.577, blue: 0.7, alpha: 0).cgColor
- */
+    
+    static let HSDarkBlue: UIColor = {
+        return  UIColor(hex: "#14182B")
+    }()
 }

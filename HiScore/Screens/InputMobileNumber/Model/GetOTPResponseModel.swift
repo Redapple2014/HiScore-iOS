@@ -8,9 +8,9 @@
 import Foundation
 
 struct GetOTPResponseModel: Codable {
-      let status: String
-      let status_code: Int
-      let message: String
+    let status: String
+    let status_code: Int
+    let message: String
 }
 
 struct GetOtpRequestModel: Encodable {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		317DA8597D312491EF6B595F /* Pods_HiScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3BFB8D1FABBC43FE9D6591 /* Pods_HiScore.framework */; };
+		84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1EE3D2A8D41480015194D /* AppConstants.swift */; };
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
 		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		6547A8D621B47575AE35586C /* Pods-HiScore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.release.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.release.xcconfig"; sourceTree = "<group>"; };
+		84C1EE3D2A8D41480015194D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8E3BFB8D1FABBC43FE9D6591 /* Pods_HiScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		C7C0C1C62A82528A0096E958 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C7C536682A8A08D4007391FC /* OnboardingScreenDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreenDataModel.swift; sourceTree = "<group>"; };
 		C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenViewModel.swift; sourceTree = "<group>"; };
-		C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlidesCollectionViewCell.swift; path = Cell/SlidesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7C536732A8A3C11007391FC /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		C7C536742A8A3C11007391FC /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		C7C536752A8A3C11007391FC /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
@@ -155,6 +157,39 @@
 				8E3BFB8D1FABBC43FE9D6591 /* Pods_HiScore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840DD1562A8D463200B46FDD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AF89AEE72A8CCCC200AE2318 /* Custom Components */,
+				C7EBEE5D2A7BC9780045B449 /* Storyboards */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		840DD1572A8D469200B46FDD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		840DD1582A8D469F00B46FDD /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		84C1EE3C2A8D41330015194D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				84C1EE3D2A8D41480015194D /* AppConstants.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		AF28DCC42A8A70CB003BFDCF /* Location */ = {
@@ -217,13 +252,11 @@
 		C75F37152A791BC200925880 /* HiScore */ = {
 			isa = PBXGroup;
 			children = (
-				AF89AEE72A8CCCC200AE2318 /* Custom Components */,
 				C7C536672A89FEBD007391FC /* Lottie Animation files */,
-				C79845972A86592300F08457 /* Network */,
 				C75F372A2A79202700925880 /* AppDelegate */,
 				C7EBEE462A7BC7360045B449 /* Helper Files */,
 				C7EBEE4E2A7BC8730045B449 /* Screens */,
-				C7EBEE5D2A7BC9780045B449 /* Storyboards */,
+				840DD1562A8D463200B46FDD /* Storyboard */,
 				C75F37242A791BC400925880 /* Info.plist */,
 			);
 			path = HiScore;
@@ -241,8 +274,8 @@
 		C79845972A86592300F08457 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */,
-				C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */,
+				840DD1582A8D469F00B46FDD /* Methods */,
+				840DD1572A8D469200B46FDD /* Protocol */,
 				C798459A2A86592300F08457 /* APIEndpoint + APIError */,
 			);
 			path = Network;
@@ -356,6 +389,7 @@
 		C7C5366E2A8A332D007391FC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -386,6 +420,8 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				C79845972A86592300F08457 /* Network */,
+				84C1EE3C2A8D41330015194D /* Constant */,
 				C72618A32A84DFC600738F7F /* UITextField+Extension */,
 				C7A9DF7F2A83A0F50066924E /* UIVIew+Extension */,
 				C7A9DF7E2A83A0D10066924E /* UIButton+Extension */,
@@ -453,7 +489,6 @@
 			children = (
 				C7C5366E2A8A332D007391FC /* Cell */,
 				C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */,
-				C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +706,7 @@
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
+				84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenDataModel.swift in Sources */,
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,

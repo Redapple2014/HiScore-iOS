@@ -10,27 +10,25 @@ import OTPFieldView
 import MHLoadingButton
 
 class EnterOTPViewController: BaseViewController {
-    
     @IBOutlet weak var viewShowError: UIView!
     @IBOutlet weak var labelResend: UILabel!
     @IBOutlet weak var OTPTextField: OTPFieldView!
-    
     @IBOutlet weak var labelInvalidOTP: UILabel!
     @IBOutlet weak var buttonVerify: LoadingButton!
     @IBOutlet weak var buttonChangeNumber: LoadingButton!
-    var errorMessage = "Invalid OTP. Please try again"
+    
+    var errorMessage = Messages.invalidOtp.description
 }
-// MARK: - View Life Cycle
+// MARK: - View Life Cycle -
 extension EnterOTPViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
     }
 }
-// MARK: - UI Design
+// MARK: - UI Design -
 extension EnterOTPViewController {
     func initUI() {
-        errorMessage = ""
         viewShowError.isHidden = true
         buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
         buttonChangeNumber.setUpButtonWithGradientBackground(type: .lightGrey)
@@ -39,7 +37,6 @@ extension EnterOTPViewController {
         OTPTextField.defaultBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         OTPTextField.filledBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         OTPTextField.cursorColor = UIColor.white
-     //   OTPTextField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
         OTPTextField.displayType = .square
         OTPTextField.fieldSize = 42
         OTPTextField.separatorSpace = 10
@@ -50,27 +47,24 @@ extension EnterOTPViewController {
         OTPTextField.delegate = self
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
         OTPTextField.initializeUI()
-
     }
 }
+// MARK: - OTPFieldView Delegate -
 extension EnterOTPViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
         print("Has entered all OTP? \(hasEntered)")
         return true
     }
-    
     func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Int) -> Bool {
         return true
     }
-    
     func enteredOTP(otp otpString: String) {
         print("OTPString: \(otpString)")
     }
 }
-// MARK: - Button Actions
+// MARK: - Button Actions -
 extension EnterOTPViewController {
     @IBAction func buttonbackTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-
 }
