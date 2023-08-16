@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="KFu-lG-tfQ" kind="relationship" relationship="rootViewController" id="Vur-v9-PYS"/>
+                        <segue destination="3LF-2T-DMt" kind="relationship" relationship="rootViewController" id="xOH-wS-PwN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-yk-fyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -326,13 +326,42 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-MN-Ssj" customClass="OTPFieldView" customModule="OTPFieldView">
                                 <rect key="frame" x="18" y="282.33333333333331" width="357" height="42"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="1wu-oF-WAE"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-fi-1RF">
+                                <rect key="frame" x="18" y="324.33333333333331" width="357" height="25"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputError" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-Gq-U0m">
+                                        <rect key="frame" x="0.0" y="12" width="13" height="13"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="i0f-Gq-U0m" secondAttribute="height" id="P0h-8c-8Hc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid OTP. Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLN-KE-c4b">
+                                        <rect key="frame" x="19" y="12" width="338" height="13"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mLN-KE-c4b" firstAttribute="top" secondItem="qYM-fi-1RF" secondAttribute="top" constant="12" id="49X-OH-urE"/>
+                                    <constraint firstAttribute="bottom" secondItem="mLN-KE-c4b" secondAttribute="bottom" id="6PH-5k-3Ra"/>
+                                    <constraint firstItem="i0f-Gq-U0m" firstAttribute="width" secondItem="i0f-Gq-U0m" secondAttribute="height" id="BFC-53-5yp"/>
+                                    <constraint firstItem="i0f-Gq-U0m" firstAttribute="leading" secondItem="qYM-fi-1RF" secondAttribute="leading" id="KOr-cD-WoY"/>
+                                    <constraint firstItem="i0f-Gq-U0m" firstAttribute="height" secondItem="mLN-KE-c4b" secondAttribute="height" id="Ok4-oH-sGH"/>
+                                    <constraint firstAttribute="trailing" secondItem="mLN-KE-c4b" secondAttribute="trailing" id="S9W-Mt-pdY"/>
+                                    <constraint firstItem="i0f-Gq-U0m" firstAttribute="top" secondItem="qYM-fi-1RF" secondAttribute="top" constant="12" id="YMK-9X-GpY"/>
+                                    <constraint firstItem="mLN-KE-c4b" firstAttribute="leading" secondItem="i0f-Gq-U0m" secondAttribute="trailing" constant="6" id="hA7-o6-VGL"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-q3-BMd">
-                                <rect key="frame" x="18" y="360.33333333333331" width="357" height="112"/>
+                                <rect key="frame" x="18" y="357.33333333333331" width="357" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Zq-uvO" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="357" height="48"/>
@@ -362,12 +391,15 @@
                             <constraint firstItem="u1K-yK-SBg" firstAttribute="leading" secondItem="p2d-Ee-skg" secondAttribute="trailing" constant="6" id="PgQ-rX-40u"/>
                             <constraint firstItem="v52-0e-MK6" firstAttribute="width" secondItem="E80-1k-N00" secondAttribute="width" multiplier="0.727735" id="ZWP-gO-9dd"/>
                             <constraint firstItem="u1K-yK-SBg" firstAttribute="top" secondItem="p2d-Ee-skg" secondAttribute="top" id="c8U-aG-VHf"/>
+                            <constraint firstItem="qYM-fi-1RF" firstAttribute="leading" secondItem="AtV-MN-Ssj" secondAttribute="leading" id="f3V-yn-gv0"/>
                             <constraint firstItem="v52-0e-MK6" firstAttribute="top" secondItem="lWB-ha-XhZ" secondAttribute="bottom" constant="53" id="fCD-6d-iIh"/>
                             <constraint firstItem="u1K-yK-SBg" firstAttribute="bottom" secondItem="p2d-Ee-skg" secondAttribute="bottom" id="nQT-Y7-CAV"/>
                             <constraint firstItem="AtV-MN-Ssj" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="nUL-fU-0Xw"/>
                             <constraint firstItem="lWB-ha-XhZ" firstAttribute="top" secondItem="mqq-By-Nc9" secondAttribute="top" constant="20" id="nq7-mg-Mdt"/>
+                            <constraint firstItem="qYM-fi-1RF" firstAttribute="top" secondItem="AtV-MN-Ssj" secondAttribute="bottom" id="oC1-6y-15z"/>
+                            <constraint firstItem="qYM-fi-1RF" firstAttribute="trailing" secondItem="AtV-MN-Ssj" secondAttribute="trailing" id="q2N-PJ-YuS"/>
                             <constraint firstItem="lWB-ha-XhZ" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="30" id="xYN-H7-Dst"/>
-                            <constraint firstItem="Mvf-q3-BMd" firstAttribute="top" secondItem="AtV-MN-Ssj" secondAttribute="bottom" constant="36" id="yxc-27-Uyj"/>
+                            <constraint firstItem="Mvf-q3-BMd" firstAttribute="top" secondItem="qYM-fi-1RF" secondAttribute="bottom" constant="8" id="xoq-2L-80k"/>
                             <constraint firstItem="mqq-By-Nc9" firstAttribute="trailing" secondItem="AtV-MN-Ssj" secondAttribute="trailing" constant="18" id="ztN-9G-yTM"/>
                         </constraints>
                     </view>
@@ -376,7 +408,9 @@
                         <outlet property="OTPTextField" destination="AtV-MN-Ssj" id="f8P-vN-WNP"/>
                         <outlet property="buttonChangeNumber" destination="hrw-u1-S6C" id="7xo-1t-dQl"/>
                         <outlet property="buttonVerify" destination="NZw-Zq-uvO" id="Y3U-nb-JH9"/>
+                        <outlet property="labelInvalidOTP" destination="mLN-KE-c4b" id="da1-jg-ahh"/>
                         <outlet property="labelResend" destination="u1K-yK-SBg" id="vqy-kI-hUz"/>
+                        <outlet property="viewShowError" destination="qYM-fi-1RF" id="El9-WJ-n8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr4-cJ-qAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,9 +470,6 @@
         <namedColor name="HiScoreGray">
             <color red="1" green="1" blue="1" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

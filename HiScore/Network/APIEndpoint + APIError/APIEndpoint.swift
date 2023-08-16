@@ -10,7 +10,7 @@ import Foundation
 enum APIEndpoint {
     case fetchSplashImage(version: Version)
     case sendOTP(version: Version)
-    
+    case login(version: Version)
     
     var path: String {
         switch self {
@@ -18,11 +18,13 @@ enum APIEndpoint {
             return "\(version)/game/splash"
         case .sendOTP(let version):
             return "\(version)/game/users/sendOTP"
+        case .login(let version):
+            return "\(version)/game/users/login"
         }
     }
     var headers: [String: String]? {
         switch self {
-        case .fetchSplashImage, .sendOTP:
+        case .fetchSplashImage, .sendOTP, .login:
             return ["Content-Type": "application/json"]
 //        case .postItem:
 //            return ["Authorization": "Bearer YOUR_ACCESS_TOKEN",
