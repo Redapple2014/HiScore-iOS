@@ -40,19 +40,6 @@ extension BaseViewController {
     func updateUI() {
     }
     
-    func setupOtpView(otpTextFieldView: OTPFieldView){
-            otpTextFieldView.fieldsCount = 5
-            otpTextFieldView.fieldBorderWidth = 2
-            otpTextFieldView.defaultBorderColor = UIColor.black
-            otpTextFieldView.filledBorderColor = UIColor.green
-            otpTextFieldView.cursorColor = UIColor.red
-            otpTextFieldView.displayType = .square
-            otpTextFieldView.fieldSize = 40
-            otpTextFieldView.separatorSpace = 8
-            otpTextFieldView.shouldAllowIntermediateEditing = false
-           // otpTextFieldView.delegate = self
-            otpTextFieldView.initializeUI()
-        }
 
 }
 extension BaseViewController {

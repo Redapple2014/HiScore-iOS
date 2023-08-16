@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Baloo2-Regular.ttf">
+        <array key="Baloo2-VariableFont_wght.ttf">
             <string>Baloo2-Regular</string>
         </array>
         <array key="MavenPro-Regular.ttf">
@@ -319,7 +319,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESEND OTP" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-yK-SBg">
-                                <rect key="frame" x="209.33333333333334" y="224" width="73.333333333333343" height="14.333333333333343"/>
+                                <rect key="frame" x="195.33333333333334" y="224" width="73.333333333333343" height="14.333333333333343"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
                                 <color key="textColor" red="0.84705882352941175" green="0.69019607843137254" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -341,8 +341,8 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrw-u1-S6C" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="357" height="48"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Change Phone Number"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Change Phone Number"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -359,7 +359,7 @@
                             <constraint firstItem="v52-0e-MK6" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="FW3-oR-eb4"/>
                             <constraint firstItem="p2d-Ee-skg" firstAttribute="top" secondItem="v52-0e-MK6" secondAttribute="bottom" constant="12" id="IvT-FY-lZr"/>
                             <constraint firstItem="Mvf-q3-BMd" firstAttribute="leading" secondItem="mqq-By-Nc9" secondAttribute="leading" constant="18" id="LNb-E1-uPK"/>
-                            <constraint firstItem="u1K-yK-SBg" firstAttribute="leading" secondItem="p2d-Ee-skg" secondAttribute="trailing" constant="20" id="PgQ-rX-40u"/>
+                            <constraint firstItem="u1K-yK-SBg" firstAttribute="leading" secondItem="p2d-Ee-skg" secondAttribute="trailing" constant="6" id="PgQ-rX-40u"/>
                             <constraint firstItem="v52-0e-MK6" firstAttribute="width" secondItem="E80-1k-N00" secondAttribute="width" multiplier="0.727735" id="ZWP-gO-9dd"/>
                             <constraint firstItem="u1K-yK-SBg" firstAttribute="top" secondItem="p2d-Ee-skg" secondAttribute="top" id="c8U-aG-VHf"/>
                             <constraint firstItem="v52-0e-MK6" firstAttribute="top" secondItem="lWB-ha-XhZ" secondAttribute="bottom" constant="53" id="fCD-6d-iIh"/>
@@ -422,7 +422,7 @@
             <size key="intrinsicContentSize" width="101.66666666666667" height="30.666666666666668"/>
         </designable>
         <designable name="hrw-u1-S6C">
-            <size key="intrinsicContentSize" width="201.66666666666666" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="160" height="30"/>
         </designable>
     </designables>
     <resources>

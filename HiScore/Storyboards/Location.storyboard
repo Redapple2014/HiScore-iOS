@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -157,40 +158,40 @@ required to proceed</string>
             <objects>
                 <viewController storyboardIdentifier="DisableLocationViewController" id="Uky-xY-SFR" customClass="DisableLocationViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCj-uL-U7H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patterns" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-lC-tBc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="419"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disable_location" translatesAutoresizingMaskIntoConstraints="NO" id="nlH-92-KyC">
-                                <rect key="frame" x="142" y="145.5" width="130" height="130"/>
+                                <rect key="frame" x="142" y="144.5" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="831-mn-EZX"/>
                                     <constraint firstAttribute="width" constant="130" id="gKV-8h-gGc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You cannot play Rummy from Tamil Nadu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Rg-SBq">
-                                <rect key="frame" x="30" y="286.5" width="354" height="66"/>
+                                <rect key="frame" x="30" y="285.5" width="354" height="66"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-bA-Kt8">
-                                <rect key="frame" x="30" y="421" width="354" height="303"/>
+                                <rect key="frame" x="30" y="419" width="354" height="335"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn3-2J-wyM">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="84"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-Yl-snz">
-                                                <rect key="frame" x="0.0" y="17" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="21" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="6ot-T6-QWU"/>
                                                     <constraint firstAttribute="height" constant="42" id="dqw-pL-bSj"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy is banned in your location. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-ao-GFd">
-                                                <rect key="frame" x="57" y="29.5" width="267" height="16.5"/>
+                                                <rect key="frame" x="57" y="33.5" width="267" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -206,17 +207,17 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-Xl-7x8">
-                                        <rect key="frame" x="0.0" y="76" width="354" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="83.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-p6-aT5">
-                                                <rect key="frame" x="0.0" y="16.5" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="UNg-iO-mBl"/>
                                                     <constraint firstAttribute="width" constant="42" id="ZCW-2e-FRO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you think there is an issue, please retry or helpdesk@hiscore.games" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-hl-O1Y">
-                                                <rect key="frame" x="57" y="21" width="267" height="33"/>
+                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -232,18 +233,18 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nov-Bc-k46">
-                                        <rect key="frame" x="0.0" y="151.5" width="354" height="76"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="354" height="84"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-vd-9LL">
-                                        <rect key="frame" x="0.0" y="227.5" width="354" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="251.5" width="354" height="83.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-77-WPz" customClass="LoadingButton" customModule="MHLoadingButton">
-                                <rect key="frame" x="18" y="724" width="378" height="48"/>
+                                <rect key="frame" x="18" y="754" width="378" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="2k7-xW-K3g"/>
                                 </constraints>
@@ -285,6 +286,14 @@ required to proceed</string>
             <point key="canvasLocation" x="1039" y="65"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="RTM-E4-MdB">
+            <size key="intrinsicContentSize" width="125" height="30.5"/>
+        </designable>
+        <designable name="cUG-77-WPz">
+            <size key="intrinsicContentSize" width="98" height="30.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Patterns" width="363" height="353"/>
         <image name="disable_location" width="65" height="65"/>

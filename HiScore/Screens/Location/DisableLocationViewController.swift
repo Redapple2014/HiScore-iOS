@@ -12,6 +12,6 @@ class DisableLocationViewController: BaseViewController {
     @IBOutlet weak var buttonContactUs: LoadingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonContactUs.setYellowGradientBackground()
+        buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
     }
 }

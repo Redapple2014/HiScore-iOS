@@ -77,7 +77,7 @@ extension EnterPhoneNumberViewController {
 extension EnterPhoneNumberViewController{
     private func getOTP(phoneNumber: String) {
         buttonGetStarted.showButtonLoader(vc: self)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.viewModel.getOTP(phoneNumber: phoneNumber) { response in
                 self.buttonGetStarted.hideButtonLoader(vc: self)
                 switch response {
@@ -183,11 +183,7 @@ extension EnterPhoneNumberViewController {
         viewContainer.layer.borderWidth = 2.0
         viewContainer.backgroundColor = UIColor.HSTextFieldColor
         buttonGetStarted.initLoadingButton()
-//        buttonGetStarted.setTitleColor(.HSGradientButtonTextColor, for: .normal)
-//        buttonGetStarted.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
-//        buttonGetStarted.clipsToBounds = true
-//        buttonGetStarted.layer.cornerRadius = 10
-        buttonGetStarted.setUpButtonWithGradientBackground(type: .gradient)
+        buttonGetStarted.setUpButtonWithGradientBackground(type: .yellow)
         inputTextField.clearButtonMode = .whileEditing
     }
 

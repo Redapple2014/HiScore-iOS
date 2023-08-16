@@ -13,6 +13,6 @@ class GetLocationViewController: BaseViewController {
     @IBOutlet weak var buttonShareLocation: LoadingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonShareLocation.setYellowGradientBackground()
+        buttonShareLocation.setUpButtonWithGradientBackground(type: .yellow)
     }
 }

@@ -9,18 +9,18 @@ import Foundation
 import UIKit
 import MHLoadingButton
 
-enum ButtonTypes {
-    case dark
-    case gradient
+enum ButtonColor {
+    case lightGrey
+    case yellow
 }
 extension LoadingButton {
-    func setUpButtonWithGradientBackground(type: ButtonTypes) {
-        self.titleLabel?.font = UIFont.MavenPro.Bold.withSize(14)
+    func setUpButtonWithGradientBackground(type: ButtonColor, fontSize: CGFloat = 14, cornerRadius: CGFloat = 10) {
+        self.titleLabel?.font = UIFont.MavenPro.Bold.withSize(fontSize)
         self.clipsToBounds = true
-        self.layer.cornerRadius = 10
-        type == .gradient ? designGradientButton() : designDarkButton()
+        self.layer.cornerRadius = cornerRadius
+        type == .yellow ? designYellowGradientButton() : designLightGreyButton()
     }
-    private func designGradientButton() {
+    private func designYellowGradientButton() {
         let colorTop =  UIColor(red: 0.96, green: 0.89, blue: 0.72, alpha: 1).cgColor
         let colorBottom = UIColor(red: 0.8, green: 0.62, blue: 0.32, alpha: 1).cgColor
         let gradientLayer = CAGradientLayer()
@@ -30,17 +30,18 @@ extension LoadingButton {
         self.layer.insertSublayer(gradientLayer, at:0)
         self.setTitleColor(.HSGradientButtonTextColor, for: .normal)
     }
-    private func designDarkButton() {
+    private func designLightGreyButton() {
         self.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1).cgColor
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor(red: 0.953, green: 0.871, blue: 0.694, alpha: 0.25).cgColor
         self.setTitleColor(.HSDarkButtonTextColor, for: .normal)
     }
 
-    func initLoadingButton() {
+    func initLoadingButton(color: UIColor = .black) {
         self.indicator = UIActivityIndicatorView()
-        self.indicator = MaterialLoadingIndicator(color: .black)
+        self.indicator = MaterialLoadingIndicator(color: color)
     }
+    
     func showButtonLoader(vc: UIViewController) {
         self.showLoader(userInteraction: true)
         vc.view.isUserInteractionEnabled = false
@@ -50,6 +51,4 @@ extension LoadingButton {
         self.hideLoader()
         vc.view.isUserInteractionEnabled = true
     }
-
-    
 }
