@@ -28,13 +28,13 @@ extension LoadingButton {
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at:0)
-        self.setTitleColor(.HSGradientButtonTextColor, for: .normal)
+        self.setTitleColor(.HSYellowButtonTextColor, for: .normal)
     }
     private func designLightGreyButton() {
         self.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1).cgColor
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor(red: 0.953, green: 0.871, blue: 0.694, alpha: 0.25).cgColor
-        self.setTitleColor(.HSDarkButtonTextColor, for: .normal)
+        self.setTitleColor(.HSLightGreyButtonTextColor, for: .normal)
     }
 
     func initLoadingButton(color: UIColor = .black) {

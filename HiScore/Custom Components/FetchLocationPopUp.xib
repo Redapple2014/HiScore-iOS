@@ -3,9 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,7 +37,7 @@
                                 <rect key="frame" x="20" y="242" width="335" height="328"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapLayout" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-0R-jqM">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="131.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="152"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="dk6-5p-VeD">
                                         <rect key="frame" x="129" y="40" width="77" height="77"/>
@@ -68,14 +66,14 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" name="HSAppThemeColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="RHg-0R-jqM" firstAttribute="height" secondItem="BTw-oZ-IsB" secondAttribute="height" multiplier="0.463415" id="2cZ-8S-Q2m"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="leading" secondItem="BTw-oZ-IsB" secondAttribute="leading" constant="17" id="2ne-Oq-4uT"/>
                                     <constraint firstItem="exY-XW-4H2" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="2tk-4i-YYU"/>
                                     <constraint firstItem="KjW-MP-L42" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jOn-8C-3Rh" secondAttribute="bottom" constant="24" id="3FQ-Uz-Kv4"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="8d7-Pr-W7A"/>
                                     <constraint firstAttribute="height" constant="328" id="A2c-O0-6Vt"/>
-                                    <constraint firstItem="RHg-0R-jqM" firstAttribute="height" secondItem="BTw-oZ-IsB" secondAttribute="height" multiplier="0.4" id="AcM-jS-BWV"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="top" secondItem="exY-XW-4H2" secondAttribute="bottom" constant="16" id="BMR-6I-AdW"/>
                                     <constraint firstAttribute="trailing" secondItem="RHg-0R-jqM" secondAttribute="trailing" id="EfZ-LD-qVk"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jOn-8C-3Rh" secondAttribute="trailing" constant="17" id="GLD-Uu-Z5V"/>
@@ -100,7 +98,7 @@
                 </visualEffectView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="o4b-VD-rhq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1nY-z0-W9P"/>
                 <constraint firstItem="o4b-VD-rhq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Llp-z8-fwH"/>
@@ -114,11 +112,5 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="mapLayout" width="335" height="101"/>
         <image name="marker" width="77" height="76"/>
-        <namedColor name="HSAppThemeColor">
-            <color red="0.050980392156862744" green="0.023529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
