@@ -14,6 +14,10 @@
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
 		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
 		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
+		AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C162A8E390600125808 /* LocationViewModel.swift */; };
+		AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */; };
+		AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Home.storyboard */; };
+		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
 		C72618A52A84DFE600738F7F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A42A84DFE600738F7F /* UITextField+Extension.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
@@ -75,6 +79,10 @@
 		AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
 		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
+		AF916C162A8E390600125808 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
+		AF916C1E2A8E64C000125808 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C72618A42A84DFE600738F7F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +203,8 @@
 		AF28DCC42A8A70CB003BFDCF /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				AF916C1B2A8E3BB300125808 /* DataModel */,
+				AF916C152A8E38EF00125808 /* ViewModel */,
 				AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */,
 				AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */,
 			);
@@ -208,6 +218,54 @@
 				AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */,
 			);
 			path = "Custom Components";
+			sourceTree = "<group>";
+		};
+		AF916C152A8E38EF00125808 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF916C162A8E390600125808 /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF916C182A8E393100125808 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5368E2A8A4908007391FC /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF916C192A8E393A00125808 /* Datamodel */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5368D2A8A4908007391FC /* SplashDataModel.swift */,
+			);
+			path = Datamodel;
+			sourceTree = "<group>";
+		};
+		AF916C1A2A8E394400125808 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF916C1B2A8E3BB300125808 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		AF916C202A8E66CF00125808 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				AF916C212A8E66E800125808 /* CustomTabBarController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		C72618A32A84DFC600738F7F /* UITextField+Extension */ = {
@@ -410,9 +468,9 @@
 		C7C5368C2A8A4908007391FC /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				C7C5368D2A8A4908007391FC /* SplashDataModel.swift */,
-				C7C5368E2A8A4908007391FC /* SplashViewModel.swift */,
-				C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */,
+				AF916C1A2A8E394400125808 /* View */,
+				AF916C192A8E393A00125808 /* Datamodel */,
+				AF916C182A8E393100125808 /* ViewModel */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -448,6 +506,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AF916C202A8E66CF00125808 /* Tabbar */,
 				AF28DCC42A8A70CB003BFDCF /* Location */,
 				C7C5368C2A8A4908007391FC /* Splash */,
 				C7A9DF762A8361690066924E /* BaseViewController */,
@@ -507,6 +566,7 @@
 				C75F371C2A791BC200925880 /* Main.storyboard */,
 				C75F37212A791BC400925880 /* LaunchScreen.storyboard */,
 				AF28DCC22A8A66A3003BFDCF /* Location.storyboard */,
+				AF916C1E2A8E64C000125808 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -621,6 +681,7 @@
 				C7C5367D2A8A3C11007391FC /* Baloo2-Regular.ttf in Resources */,
 				C72618B22A84ED7B00738F7F /* Rajdhani-Bold.ttf in Resources */,
 				C75F37202A791BC400925880 /* Assets.xcassets in Resources */,
+				AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */,
 				C72618B02A84ED7B00738F7F /* Rajdhani-SemiBold.ttf in Resources */,
 				C75F371E2A791BC200925880 /* Main.storyboard in Resources */,
 				C72618B12A84ED7B00738F7F /* Rajdhani-Light.ttf in Resources */,
@@ -683,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */,
 				AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */,
 				C75F37172A791BC200925880 /* AppDelegate.swift in Sources */,
 				C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */,
@@ -694,6 +756,7 @@
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
 				C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */,
 				C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */,
+				AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */,
 				C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */,
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
 				AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */,
@@ -706,6 +769,7 @@
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
+				AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */,
 				84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenDataModel.swift in Sources */,
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,

@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FetchLocationPopUp" customModule="HiScore" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="BTw-oZ-IsB" id="3vp-R4-cnY"/>
-                <outlet property="loaderImage" destination="KjW-MP-L42" id="njZ-YR-Qak"/>
+                <outlet property="loaderImage" destination="lhf-qS-Ofi" id="icU-9I-rZd"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="GMQ-Sf-6rs"/>
             </connections>
         </placeholder>
@@ -58,31 +58,38 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-MP-L42">
-                                        <rect key="frame" x="151.66666666666666" y="257" width="32" height="30.666666666666686"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-qS-Ofi" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="151.66666666666666" y="256" width="32" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="5ex-lQ-aaF"/>
-                                            <constraint firstAttribute="height" constant="32" id="PTE-i8-hUz"/>
+                                            <constraint firstAttribute="height" constant="32" id="Zi0-ag-fCo"/>
+                                            <constraint firstAttribute="width" constant="32" id="jlD-XP-jrH"/>
                                         </constraints>
-                                    </imageView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="RHg-0R-jqM" firstAttribute="height" secondItem="BTw-oZ-IsB" secondAttribute="height" multiplier="0.463415" id="2cZ-8S-Q2m"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="leading" secondItem="BTw-oZ-IsB" secondAttribute="leading" constant="17" id="2ne-Oq-4uT"/>
                                     <constraint firstItem="exY-XW-4H2" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="2tk-4i-YYU"/>
-                                    <constraint firstItem="KjW-MP-L42" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jOn-8C-3Rh" secondAttribute="bottom" constant="24" id="3FQ-Uz-Kv4"/>
+                                    <constraint firstItem="lhf-qS-Ofi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jOn-8C-3Rh" secondAttribute="bottom" constant="25" id="7yE-vj-maC"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="8d7-Pr-W7A"/>
                                     <constraint firstAttribute="height" constant="328" id="A2c-O0-6Vt"/>
                                     <constraint firstItem="jOn-8C-3Rh" firstAttribute="top" secondItem="exY-XW-4H2" secondAttribute="bottom" constant="16" id="BMR-6I-AdW"/>
                                     <constraint firstAttribute="trailing" secondItem="RHg-0R-jqM" secondAttribute="trailing" id="EfZ-LD-qVk"/>
+                                    <constraint firstAttribute="bottom" secondItem="lhf-qS-Ofi" secondAttribute="bottom" constant="40" id="FAm-YA-GqW"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jOn-8C-3Rh" secondAttribute="trailing" constant="17" id="GLD-Uu-Z5V"/>
-                                    <constraint firstItem="KjW-MP-L42" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="LmZ-WR-gWh"/>
                                     <constraint firstItem="RHg-0R-jqM" firstAttribute="leading" secondItem="BTw-oZ-IsB" secondAttribute="leading" id="Nio-cz-d6V"/>
                                     <constraint firstItem="exY-XW-4H2" firstAttribute="top" secondItem="dk6-5p-VeD" secondAttribute="bottom" constant="32" id="UyG-2g-vdf"/>
                                     <constraint firstItem="RHg-0R-jqM" firstAttribute="top" secondItem="BTw-oZ-IsB" secondAttribute="top" id="ZJJ-7d-c5l"/>
-                                    <constraint firstAttribute="bottom" secondItem="KjW-MP-L42" secondAttribute="bottom" constant="40" id="aAk-av-SKa"/>
                                     <constraint firstItem="dk6-5p-VeD" firstAttribute="top" secondItem="BTw-oZ-IsB" secondAttribute="top" constant="40" id="dq7-KO-vGv"/>
+                                    <constraint firstItem="lhf-qS-Ofi" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="hbV-Tl-ZHx"/>
                                     <constraint firstItem="dk6-5p-VeD" firstAttribute="centerX" secondItem="BTw-oZ-IsB" secondAttribute="centerX" id="sug-f0-7WY"/>
                                 </constraints>
                             </view>
@@ -109,7 +116,6 @@
         </view>
     </objects>
     <resources>
-        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="mapLayout" width="335" height="101"/>
         <image name="marker" width="77" height="76"/>
     </resources>

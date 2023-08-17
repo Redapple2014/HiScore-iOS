@@ -10,6 +10,9 @@ PODS:
   - NotificationBannerSwift (3.0.6):
     - MarqueeLabel (~> 4.0.5)
     - SnapKit (~> 5.0.1)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - OTPFieldView (1.0.1)
   - Skeleton (0.4.0)
   - SnapKit (5.0.1)
@@ -24,6 +27,7 @@ DEPENDENCIES:
   - lottie-ios
   - MHLoadingButton
   - NotificationBannerSwift (~> 3.0.0)
+  - NVActivityIndicatorView
   - OTPFieldView
   - Skeleton
   - SwiftLint
@@ -39,6 +43,7 @@ SPEC REPOS:
     - MarqueeLabel
     - MHLoadingButton
     - NotificationBannerSwift
+    - NVActivityIndicatorView
     - OTPFieldView
     - Skeleton
     - SnapKit
@@ -54,11 +59,12 @@ SPEC CHECKSUMS:
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   MHLoadingButton: 13bab47a3ce9d88df15638b7a5b73a8ac9f21077
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   Skeleton: ef0f1d1b62250ee93e3a805efd268e5fd2979b32
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
 
-PODFILE CHECKSUM: 3b033320dabad14846f5446d089007a130a4a3cd
+PODFILE CHECKSUM: 1dd243c5829dbb5384424558775d0e611acd2b88
 
 COCOAPODS: 1.12.1

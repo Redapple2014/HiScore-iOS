@@ -11,7 +11,7 @@ enum APIEndpoint {
     case fetchSplashImage(version: Version)
     case sendOTP(version: Version)
     case login(version: Version)
-    
+    case validateAccess(version: Version)
     var path: String {
         switch self {
         case .fetchSplashImage(let version):
@@ -20,16 +20,15 @@ enum APIEndpoint {
             return "\(version)/game/users/sendOTP"
         case .login(let version):
             return "\(version)/game/users/login"
+        case .validateAccess(let version):
+            return "\(version)/user/app/capability"
         }
     }
     var headers: [String: String]? {
         switch self {
-        case .fetchSplashImage, .sendOTP, .login:
-            return ["Content-Type": "application/json"]
-//        case .postItem:
-//            return ["Authorization": "Bearer YOUR_ACCESS_TOKEN",
-//                    "Content-Type": "application/json"]
-            
+        case .fetchSplashImage, .sendOTP, .login, .validateAccess:
+            return ["Content-Type": "application/json",
+                    "platform_name": Device.deviceOS]
         }
     }
     var url: URL? {

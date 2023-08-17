@@ -36,7 +36,7 @@ pod 'NotificationBannerSwift', '~> 3.0.0'
 # https://github.com/Root-vb/OTPFieldView
 pod 'OTPFieldView'
 
-# SwiftLint is for code beautification.
+# A tool to enforce Swift style and conventions, loosely based on GitHub's Swift Style Guide.
 # https://github.com/realm/SwiftLint
 pod 'SwiftLint'
 
@@ -48,5 +48,11 @@ pod 'HGCircularSlider'
 # https://github.com
 pod 'DTTextField'
 
+# Kingfisher is a powerful, pure-Swift library for downloading and caching images from the web. It provides you a chance to use a pure-Swift way to work with remote images in your next app.
+# https://github.com/onevcat/Kingfisher
 pod 'Kingfisher'
+
+# NVActivityIndicatorView is a collection of awesome loading animations.
+# https://github.com/ninjaprox/NVActivityIndicatorView
+pod 'NVActivityIndicatorView'
 end

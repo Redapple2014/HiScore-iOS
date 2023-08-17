@@ -77,11 +77,11 @@ extension HiScoreNetworkServiceprotocol {
                 completion(.failure(.httpError(statusCode: httpResponse.statusCode)))
                 return
             }
-            
             guard let data = data else {
                 completion(.failure(.noData))
                 return
             }
+            Log.d(String(data: data, encoding: .utf8))
             do {
                 let decodedObject = try JSONDecoder().decode(responseModelType, from: data)
                 completion(.success(decodedObject))
@@ -114,11 +114,11 @@ extension HiScoreNetworkServiceprotocol {
                 completion(.failure(.httpError(statusCode: httpResponse.statusCode)))
                 return
             }
-            
             guard let data = data else {
                 completion(.failure(.noData))
                 return
             }
+            Log.d(String(data: data, encoding: .utf8))
             do {
                 let decodedObject = try JSONDecoder().decode(model, from: data)
                 completion(.success(decodedObject))

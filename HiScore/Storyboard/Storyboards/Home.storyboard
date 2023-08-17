@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="h.square.on.square.fill" catalog="system" id="e1e-qX-Tq5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="-74"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="5Ct-UT-YID">
+            <objects>
+                <tabBarController storyboardIdentifier="CustomTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="yEp-Ya-h8p" customClass="CustomTabBarController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKX-Pz-ggx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="04H-qA-Sgg"/>
+                        <segue destination="JLT-fA-S3A" kind="relationship" relationship="viewControllers" id="yxs-tP-r3b"/>
+                        <segue destination="1Ac-u0-bip" kind="relationship" relationship="viewControllers" id="aDb-OU-mCr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNt-D8-fxC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="1120"/>
+        </scene>
+        <!--Wallet-->
+        <scene sceneID="KJe-yy-zPU">
+            <objects>
+                <viewController id="JLT-fA-S3A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8g-F5-ArD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Ot-sn-kje"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Wallet" image="wallet.pass" catalog="system" id="QfR-YI-zNZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BrY-wR-7D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="740"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="wNb-wX-amD">
+            <objects>
+                <viewController id="1Ac-u0-bip" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AID-Sq-p7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="O0a-x7-ywd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="table.badge.more" catalog="system" id="ZVI-P7-Gtt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDq-Uo-pGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="1518"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="h.square.on.square.fill" catalog="system" width="128" height="113"/>
+        <image name="table.badge.more" catalog="system" width="128" height="92"/>
+        <image name="wallet.pass" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

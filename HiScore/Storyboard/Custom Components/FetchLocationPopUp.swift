@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
-
+import NVActivityIndicatorView
+//#393D51, #14182A
 class FetchLocationPopUp: UIView {
-    @IBOutlet weak var loaderImage: UIImageView!
+    @IBOutlet weak var loaderImage: NVActivityIndicatorView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainView: UIView!
     
@@ -26,39 +27,20 @@ class FetchLocationPopUp: UIView {
     
     func commonInit() {
         self.backgroundColor = .clear
-        self.mainView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-        self.mainView.alpha = 0
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = 24
-        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
         containerView.layoutIfNeeded()
         containerView.setNeedsLayout()
+        containerView.setGradientBackground(colorTop: .HSMediumDarkBlue, colorBottom: .HSDarkBlue)
+        containerView.setGradientBackground(colorTop: .HSBlue, colorBottom: .HSGreyBlue)
     }
-    func animationPopUp(view: UIWindow) {
-        view.addSubview(self)
-        self.frame = view.bounds
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0,
-            usingSpringWithDamping: 0.55,
-            initialSpringVelocity: 3,
-            options: .transitionCrossDissolve,
-            animations: {
-                self.mainView.transform = .identity
-                self.mainView.alpha = 1
-            }, completion: nil)
+    func startLoading() {
+        loaderImage.startAnimating()
     }
-    @objc func closePopUpView(sender: Any) {
-        UIView.animate(
-            withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 3,
-            options: .curveEaseOut, animations: {
-                self.mainView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.mainView.alpha = 0
-            }, completion: {_ in
-                self.removeFromSuperview()
-            })
+    func stopLoading() {
+        loaderImage.stopAnimating()
     }
 }

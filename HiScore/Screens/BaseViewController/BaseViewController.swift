@@ -11,6 +11,7 @@ import NotificationBannerSwift
 import OTPFieldView
 
 class BaseViewController: UIViewController {
+    private var locationPopUp = FetchLocationPopUp(frame: UIScreen.main.bounds)
     // MARK: - This one is instance of UIWindow.
     weak var mainWindow: UIWindow? = {
         let window =  UIApplication.shared.windows.first { $0.isKeyWindow }
@@ -52,22 +53,36 @@ extension BaseViewController {
         banner.show()
     }
 }
-// MARK: - Pop up views
+
+// MARK: - Activity loader methods
 extension BaseViewController {
-    /// show fetch location popup
+    /// This function is used to show loader and message.
+    /// - Parameter message: The message to be displayed.
     func showFetchLocationPopUp() {
-        guard let window = self.view.window else { return }
-        let popView = FetchLocationPopUp(frame: UIScreen.main.bounds)
-        popView.animationPopUp(view: window)
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = false
+            self.locationPopUp.startLoading()
+            guard let mainWindow = self.mainWindow else { return }
+            mainWindow.addSubview(self.locationPopUp)
+            self.locationPopUp.translatesAutoresizingMaskIntoConstraints = false
+            let constraints = [
+                self.locationPopUp.topAnchor.constraint(equalTo: mainWindow.topAnchor, constant: 0),
+                self.locationPopUp.bottomAnchor.constraint(equalTo: mainWindow.bottomAnchor, constant: 0),
+                self.locationPopUp.leftAnchor.constraint(equalTo: mainWindow.leftAnchor, constant: 0),
+                self.locationPopUp.rightAnchor.constraint(equalTo: mainWindow.rightAnchor, constant: 0)
+            ]
+            NSLayoutConstraint.activate(constraints)
+        }
     }
-    /// hide fetch location popup
+    /// This function is used to show loader and message.
     func hideFetchLocationPopUp() {
-        let popView = FetchLocationPopUp(frame: UIScreen.main.bounds)
-        popView.closePopUpView(sender: self)
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = true
+            self.locationPopUp.removeFromSuperview()
+            self.locationPopUp.stopLoading()
+        }
     }
 }
-
-
 
 
 
