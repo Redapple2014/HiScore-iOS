@@ -7,16 +7,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A42942C7-3C78-4632-9D0D-F04366AF9C4F"
+            uuid = "6CB1E85D-261B-4B01-8635-44FEBF9A03E6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/InputMobileNumber/ViewModel/OnBoardingScreenViewModel.swift"
+            filePath = "HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getOnBoadingScreens(completion:)"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "buttonVerifyTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11E621B-8691-46CE-8702-8D25426BA5E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "buttonVerifyTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F11E621B-8691-46CE-8702-8D25426BA5E6 - 6f7ce0e3351d8934"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HiScore.EnterOTPViewController.buttonVerifyTapped(Any) -&gt; ()"
+                  moduleName = "HiScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pc-072/Documents/Red%20apple%20Live%20Project/HiScore-IOS/HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "3577">
+               </Location>
+               <Location
+                  uuid = "F11E621B-8691-46CE-8702-8D25426BA5E6 - 70a66ea741539557"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HiScore.VerifyOtpAndLoginResponseModel, HiScore.APIError&gt;) -&gt; () in HiScore.EnterOTPViewController.buttonVerifyTapped(Any) -&gt; ()"
+                  moduleName = "HiScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pc-072/Documents/Red%20apple%20Live%20Project/HiScore-IOS/HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C076AB1F-D5CA-4831-ACB4-024F77C59DAB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "buttonVerifyTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55DAA941-7D28-4B2E-8006-AFF84355077D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/InputMobileNumber/OnBoardingScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getOTP(phoneNumber:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "456AF7BE-D09B-42D3-865B-39822EBBF629"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/InputMobileNumber/OnBoardingScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getOTP(phoneNumber:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CC7CA04-A704-405E-8CAE-D79D4BACA8AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/InputMobileNumber/OnBoardingScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getOTP(phoneNumber:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

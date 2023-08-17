@@ -15,12 +15,15 @@ enum Storyboards: String {
 enum Messages {
     case invalidOtp
     case invalidPhoneNumber
+    case otpRecieved
     var description: String {
         switch self {
         case .invalidOtp:
             return "Invalid OTP. Please try again"
         case .invalidPhoneNumber:
             return "Invalid Phone Number"
+        case .otpRecieved:
+            return "OTP resent successfully"
         }
     }
 }

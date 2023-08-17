@@ -90,6 +90,7 @@ extension EnterPhoneNumberViewController{
                     guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterOTPViewController") as? EnterOTPViewController else {
                         return
                     }
+                    viewController.phoneNumber = self.inputTextField.text
                     self.navigationController?.pushViewController(viewController, animated: true)
                 case .failure(let error):
                     self.showSnackbarError(title: "", subtitle: error.localizedDescription)
