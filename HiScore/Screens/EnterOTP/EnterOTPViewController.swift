@@ -64,11 +64,15 @@ extension EnterOTPViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     private func initSettings() {
+        counter = modelOTPResponse.data?.remainingTime ?? 14
         labelResend.isUserInteractionEnabled = (modelOTPResponse.data?.resendAllowed ?? true) //? true : false
+        if let err = modelOTPResponse.data?.errorMsg {
+            self.showSnackbarError(title: "", subtitle: err)
+            self.updateCounter()
+        }
         let networkService = HiScoreNetworkRepository()
         viewModelGetOtp = OnboardingScreenViewModel(networkService: networkService)
         viewModelVerifyOtp = EnterOTPViewModel(networkService: networkService)
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         labelResend.addGestureRecognizer(tap)
     }
@@ -133,6 +137,7 @@ extension EnterOTPViewController {
         self.view.endEditing(true)
         if let err = modelOTPResponse.data?.errorMsg {
             self.showSnackbarError(title: "", subtitle: err)
+            return
         }
         getOTP(phoneNumber: self.phoneNumber ?? "")
     }

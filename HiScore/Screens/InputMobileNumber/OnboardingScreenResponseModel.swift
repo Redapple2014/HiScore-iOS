@@ -23,8 +23,8 @@ struct GetOtpRequestModel: Encodable {
 
 // MARK: - Welcome
 struct GetOTPResponseModel: Codable {
-    let status, message: String
-    let statusCode: Int
+    let status, message: String?
+    let statusCode: Int?
     let data: DataClassGetOtp?
 
     enum CodingKeys: String, CodingKey {
