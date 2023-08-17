@@ -41,12 +41,13 @@ extension EnterOTPViewController {
     private func getOTP(phoneNumber: String) {
        // buttonVerify.showButtonLoader(vc: self)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-        counter = 15
+        counter = modelOTPResponse.data?.remainingTime ?? 15
              self.viewModelGetOtp.getOTP(phoneNumber: phoneNumber) { response in
               //  self.buttonVerify.hideButtonLoader(vc: self)
                 self.showOtpTimerAndText()
                 switch response {
                 case .success(let response):
+                    self.modelOTPResponse = response
                     Log.d(response)
                     self.showSnackbarSuccessOnTop(title: "", subtitle: Messages.otpRecieved)
                 case .failure(let error):
@@ -63,7 +64,7 @@ extension EnterOTPViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     private func initSettings() {
-        labelResend.isUserInteractionEnabled = true
+        labelResend.isUserInteractionEnabled = (modelOTPResponse.data?.resendAllowed ?? true) //? true : false
         let networkService = HiScoreNetworkRepository()
         viewModelGetOtp = OnboardingScreenViewModel(networkService: networkService)
         viewModelVerifyOtp = EnterOTPViewModel(networkService: networkService)
@@ -130,6 +131,9 @@ extension EnterOTPViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
         self.view.endEditing(true)
+        if let err = modelOTPResponse.data?.errorMsg {
+            self.showSnackbarError(title: "", subtitle: err)
+        }
         getOTP(phoneNumber: self.phoneNumber ?? "")
     }
 
