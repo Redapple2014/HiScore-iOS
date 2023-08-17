@@ -40,7 +40,7 @@ enum APIEndpoint {
     }
     
     static let baseURL = "https://nostrapi-ios.nostragamus-stage.in/"
-    static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides.json"
+    static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides_iOS.json"
 }
 enum Version: Int {
     case v1
