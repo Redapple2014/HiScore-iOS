@@ -12,6 +12,7 @@
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
 		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
+		AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */; };
 		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
 		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
 		AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C162A8E390600125808 /* LocationViewModel.swift */; };
@@ -77,6 +78,7 @@
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
 		AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
+		AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
 		AF916C162A8E390600125808 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				C75F37212A791BC400925880 /* LaunchScreen.storyboard */,
 				AF28DCC22A8A66A3003BFDCF /* Location.storyboard */,
 				AF916C1E2A8E64C000125808 /* Home.storyboard */,
+				AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				C7C5367B2A8A3C11007391FC /* Baloo2-Bold.ttf in Resources */,
 				C7C0C1B62A821C260096E958 /* MavenPro-ExtraBold.ttf in Resources */,
 				C7C0C1B72A821C260096E958 /* MavenPro-Regular.ttf in Resources */,
+				AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */,
 				C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */,
 				C7C0C1B82A821C260096E958 /* MavenPro-Medium.ttf in Resources */,
 				C79845A42A86716100F08457 /* REward Gift Box.json in Resources */,

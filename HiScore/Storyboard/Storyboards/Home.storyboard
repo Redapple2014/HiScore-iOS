@@ -3,22 +3,34 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAI-Zm-ZkQ">
+                                <rect key="frame" x="177" y="434.5" width="60" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="tAI-Zm-ZkQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b8z-IK-flK"/>
+                            <constraint firstItem="tAI-Zm-ZkQ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="bwR-xC-p9n"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="h.square.on.square.fill" catalog="system" id="e1e-qX-Tq5"/>
+                    <tabBarItem key="tabBarItem" title="" id="e1e-qX-Tq5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,6 +42,7 @@
                 <tabBarController storyboardIdentifier="CustomTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="yEp-Ya-h8p" customClass="CustomTabBarController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKX-Pz-ggx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -43,33 +56,57 @@
             </objects>
             <point key="canvasLocation" x="-1478" y="1120"/>
         </scene>
-        <!--Wallet-->
+        <!--View Controller-->
         <scene sceneID="KJe-yy-zPU">
             <objects>
                 <viewController id="JLT-fA-S3A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8g-F5-ArD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icy-gO-ebO">
+                                <rect key="frame" x="176.5" y="434.5" width="61.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ot-sn-kje"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="icy-gO-ebO" firstAttribute="centerX" secondItem="a8g-F5-ArD" secondAttribute="centerX" id="5bs-Uf-Now"/>
+                            <constraint firstItem="icy-gO-ebO" firstAttribute="centerY" secondItem="a8g-F5-ArD" secondAttribute="centerY" id="Rcy-ya-0eG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wallet" image="wallet.pass" catalog="system" id="QfR-YI-zNZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="QfR-YI-zNZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrY-wR-7D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1264" y="740"/>
         </scene>
-        <!--More-->
+        <!--View Controller-->
         <scene sceneID="wNb-wX-amD">
             <objects>
                 <viewController id="1Ac-u0-bip" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AID-Sq-p7q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-qP-K8b">
+                                <rect key="frame" x="181.5" y="434.5" width="51.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O0a-x7-ywd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="SU2-qP-K8b" firstAttribute="centerX" secondItem="AID-Sq-p7q" secondAttribute="centerX" id="Zfe-5c-JEi"/>
+                            <constraint firstItem="SU2-qP-K8b" firstAttribute="centerY" secondItem="AID-Sq-p7q" secondAttribute="centerY" id="q2M-w8-3Kb"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="More" image="table.badge.more" catalog="system" id="ZVI-P7-Gtt"/>
+                    <tabBarItem key="tabBarItem" title="" id="ZVI-P7-Gtt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDq-Uo-pGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,17 +114,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="h.square.on.square.fill" catalog="system" width="128" height="113"/>
-        <image name="table.badge.more" catalog="system" width="128" height="92"/>
-        <image name="wallet.pass" catalog="system" width="115" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="HSAppThemeColor">
+            <color red="0.050980392156862744" green="0.023529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

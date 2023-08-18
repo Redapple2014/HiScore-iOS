@@ -15,6 +15,7 @@ class GetLocationViewController: BaseViewController {
     let locationManager = CLLocationManager()
     private var lat = ""
     private var long = ""
+    private var isLocationFetched = false
     private var viewModel: LocationViewModel!
 
     override func viewDidLoad() {
@@ -45,7 +46,10 @@ extension GetLocationViewController: CLLocationManagerDelegate {
         Log.d("locations = \(locValue.latitude) \(locValue.longitude)")
         lat = locValue.latitude.description
         long = locValue.longitude.description
-        shareLocation(lat: lat, long: long)
+        if !isLocationFetched {
+            shareLocation(lat: lat, long: long)
+            isLocationFetched = true
+        }
         locationManager.stopUpdatingLocation()
     }
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

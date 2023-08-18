@@ -25,10 +25,11 @@ class SplashScreenViewController: BaseViewController {
             case .success(let data):
                 self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
+                    guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)
+                    
                 }
             case .failure(let error):
                 Log.d(error.localizedDescription)

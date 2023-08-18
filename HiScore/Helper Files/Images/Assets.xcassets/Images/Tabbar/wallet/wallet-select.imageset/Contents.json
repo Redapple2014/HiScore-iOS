@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "gradientBG.png",
+      "filename" : "wallet.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "gradientBG 1.png",
+      "filename" : "wallet@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "gradientBG 2.png",
+      "filename" : "wallet@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
