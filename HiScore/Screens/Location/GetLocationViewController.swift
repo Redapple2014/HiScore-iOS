@@ -110,7 +110,7 @@ extension GetLocationViewController {
                     switch result {
                     case .success(let response):
                         if response.data.rummy.isAllowed {
-                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+                            guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
                                 return
                             }
                             self.navigationController?.pushViewController(viewController, animated: true)
