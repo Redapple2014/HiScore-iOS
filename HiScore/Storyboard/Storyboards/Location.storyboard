@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -279,6 +278,9 @@ required to proceed</string>
                     <navigationItem key="navigationItem" id="PVN-Mv-uhW"/>
                     <connections>
                         <outlet property="buttonContactUs" destination="cUG-77-WPz" id="tll-Xk-dg1"/>
+                        <outlet property="labelDescriptionText" destination="oM4-hl-O1Y" id="qBS-MZ-KwU"/>
+                        <outlet property="labelDescriptionTitle" destination="ssp-ao-GFd" id="TNa-TD-Qx4"/>
+                        <outlet property="labelHeaderTitle" destination="RAB-Rg-SBq" id="kTb-VI-wqw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knH-tM-Vr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
