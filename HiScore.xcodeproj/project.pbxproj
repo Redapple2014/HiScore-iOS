@@ -35,6 +35,7 @@
 		C75F371E2A791BC200925880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F371C2A791BC200925880 /* Main.storyboard */; };
 		C75F37202A791BC400925880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75F371F2A791BC400925880 /* Assets.xcassets */; };
 		C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F37212A791BC400925880 /* LaunchScreen.storyboard */; };
+		C77E2A532A8FA19300C8C96D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E2A522A8FA19300C8C96D /* User.swift */; };
 		C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */; };
 		C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */; };
 		C798459F2A86592300F08457 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798459B2A86592300F08457 /* APIError.swift */; };
@@ -104,6 +105,7 @@
 		C75F371F2A791BC400925880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C75F37222A791BC400925880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75F37242A791BC400925880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C77E2A522A8FA19300C8C96D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiScoreNetworkServiceprotocol.swift; sourceTree = "<group>"; };
 		C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiScoreHTTPMethods.swift; sourceTree = "<group>"; };
 		C798459B2A86592300F08457 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -333,6 +335,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		C77E2A512A8FA19300C8C96D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C77E2A522A8FA19300C8C96D /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		C79845972A86592300F08457 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +483,7 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				C77E2A512A8FA19300C8C96D /* User */,
 				C7AD48DB2A8E3F960063CEBE /* Device */,
 				C79845972A86592300F08457 /* Network */,
 				84C1EE3C2A8D41330015194D /* Constant */,
@@ -750,6 +761,7 @@
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
+				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,
 				C79845A02A86592300F08457 /* APIEndpoint.swift in Sources */,
