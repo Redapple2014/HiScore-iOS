@@ -27,8 +27,9 @@ enum APIEndpoint {
     var headers: [String: String]? {
         switch self {
         case .fetchSplashImage, .sendOTP, .login, .validateAccess:
-            return ["app_version":"1751",
-                    "platform_name": "ios",
+            return ["app_flavor": DeviceDetails.deviceOS,
+                    "app_version":"1751",
+                    "platform_name": DeviceDetails.deviceOS,
                     "Content-Type": "application/json"]
 
         }

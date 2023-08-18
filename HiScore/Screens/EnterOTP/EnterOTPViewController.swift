@@ -47,6 +47,7 @@ extension EnterOTPViewController {
                 switch response {
                 case .success(let response):
                     self.modelOTPResponse = response
+//                    self.vi
                     Log.d(response)
                     self.showSnackbarSuccessOnTop(title: "", subtitle: Messages.otpRecieved)
                 case .failure(let error):
@@ -103,14 +104,6 @@ extension EnterOTPViewController {
         let seconds = time % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
 
-//        if time < 60 { // less than 1 min
-//            return "00:\(60)"
-//        } else if time > 60 && time < 3600 { // less than 1 hour
-//
-//            return "00:\(0)"
-//        } else {
-//            return "00:\(0)"
-//        }
     }
 }
 // MARK: - OTPFieldView Delegate -
@@ -158,31 +151,12 @@ extension EnterOTPViewController {
             self.showSnackbarError(title: "", subtitle: Messages.invalidOtp.description)
             return
         }
-        viewModelVerifyOtp.accountDetais = AccountDetails(otp: self.otpEntered ?? "",
-                                                          userMobile: self.phoneNumber ?? "",
-                                                          referralCode: "",
-                                                          uid: self.modelOTPResponse.data?.uid ?? "")
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        var version = 1.0
-        if let dble = Double(appVersion ?? "1.0") {
-                version = dble
-        }
-    
-        viewModelVerifyOtp.device = Device(abis: UIDevice.current.getCPUName(),
-                                           gaid: "",
-                                           androidID: UUID().uuidString,
-                                           appVersion: Int(version),
-                                           cpuABI: "",
-                                           deviceType: "iPhone",
-                                           manufecturer: "Apple",
-                                           model: UIDevice.current.name,
-                                           osAPILevel: 0,
-                                           ram: 0,
-                                           screenDPI: 0,
-                                           screenHeight: Int(self.view.frame.size.height),
-                                           screenWidth: Int(self.view.frame.size.width))
+
+        guard let otp = self.otpEntered,
+              let numberEntered = self.phoneNumber,
+              let uniqId =  self.modelOTPResponse.data?.uid else { return }
         
-        viewModelVerifyOtp.verifyOTP { response in
+        viewModelVerifyOtp.verifyOTP(otpEntered: otp, phoneNumber: numberEntered, uid: uniqId) { response in
               switch response {
               case .success(let response):
                   Log.d(response)

@@ -14,7 +14,7 @@ struct  VerifyOtpAndLoginRequestModel: Codable {
     let accountDetails: AccountDetails
     let appType, appsflyerAdset, appsflyerCampaignName, appsflyerChannel: String
     let appsflyerMediaSource, campaignName: String
-    let device: Device
+    let device: DeviceData
     let method: String
     let walletInit: Int
 
@@ -44,7 +44,7 @@ struct AccountDetails: Codable {
 }
 
 // MARK: - Device
-struct Device: Codable {
+struct DeviceData: Codable {
     let abis: [String]
     let gaid, androidID: String
     let appVersion: Int
@@ -72,7 +72,7 @@ struct Device: Codable {
 struct VerifyOtpAndLoginResponseModel: Codable {
     let status, message: String
     let statusCode: Int
-    let data: DataClass
+    let data: DataClass?
 
     enum CodingKeys: String, CodingKey {
         case status, message

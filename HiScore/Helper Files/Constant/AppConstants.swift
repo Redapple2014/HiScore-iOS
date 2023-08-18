@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Storyboards: String {
     case main = "Main"
@@ -49,7 +50,25 @@ enum PlaceholderMessages {
         }
     }
 }
-class Device {
+class DeviceDetails {
     static let deviceOS = "ios"
     static let uniqueIdentifier = UUID().uuidString
+    static let manufacturer = "apple"
+    static var deviceType: String {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return "iPhone"
+        default:
+            return "other Decvice"
+        }
+    }
+}
+class ScreenDetails {
+    static let width = UIScreen.main.bounds.width
+    static let height = UIScreen.main.bounds.height
+}
+
+class AdvertiseDetails {
+    static let campaignName = "organic"
+     
 }

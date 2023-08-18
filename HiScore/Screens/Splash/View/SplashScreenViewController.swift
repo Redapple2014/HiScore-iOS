@@ -25,11 +25,7 @@ class SplashScreenViewController: BaseViewController {
             case .success(let data):
                 self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-<<<<<<< HEAD:HiScore/Screens/Splash/View/SplashScreenViewController.swift
-                    guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
-=======
                     guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
->>>>>>> login_m2:HiScore/Screens/Splash/SplashScreenViewController.swift
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)

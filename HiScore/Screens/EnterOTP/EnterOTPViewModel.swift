@@ -6,25 +6,52 @@
 //
 
 import Foundation
+import UIKit
 
 class EnterOTPViewModel {
     private let networkService: HiScoreNetworkServiceprotocol
-
     
     init(networkService: HiScoreNetworkServiceprotocol) {
         self.networkService = networkService
     }
     var accountDetais: AccountDetails!
-    var device: Device!
-    func verifyOTP(completion: @escaping (Result<VerifyOtpAndLoginResponseModel, APIError>) -> Void) {
-      
+    var device: DeviceData!
+    var uid = ""
+    func verifyOTP(otpEntered: String,
+                   phoneNumber: String,
+                   uid:String,
+                   completion: @escaping (Result<VerifyOtpAndLoginResponseModel, APIError>) -> Void) {
+        
+        accountDetais = AccountDetails(otp: otpEntered,
+                                       userMobile: phoneNumber,
+                                       referralCode: "",
+                                       uid: uid)
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        var version = 1.0
+        if let dble = Double(appVersion ?? "1.0") {
+            version = dble
+        }
+        device = DeviceData(abis: UIDevice.current.getCPUName(),
+                            gaid: "",
+                            androidID: DeviceDetails.uniqueIdentifier,
+                            appVersion: Int(version),
+                            cpuABI: "",
+                            deviceType: DeviceDetails.deviceType,
+                            manufecturer: DeviceDetails.manufacturer,
+                            model: UIDevice.current.name,
+                            osAPILevel: 0,
+                            ram: 0,
+                            screenDPI: 0,
+                            screenHeight: Int(ScreenDetails.height),
+                            screenWidth: Int(ScreenDetails.width))
+        
         let param = VerifyOtpAndLoginRequestModel(accountDetails: accountDetais,
-                                                  appType: "ios",
+                                                  appType: DeviceDetails.deviceOS,
                                                   appsflyerAdset: "",
                                                   appsflyerCampaignName: "",
                                                   appsflyerChannel: "",
                                                   appsflyerMediaSource: "",
-                                                  campaignName: "organic",
+                                                  campaignName: AdvertiseDetails.campaignName,
                                                   device: device,
                                                   method: "1p",
                                                   walletInit: -1)
