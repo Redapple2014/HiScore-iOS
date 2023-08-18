@@ -10,10 +10,19 @@ import UIKit
 import MHLoadingButton
 class DisableLocationViewController: BaseViewController {
     @IBOutlet weak var buttonContactUs: LoadingButton!
+    @IBOutlet weak var labelHeaderTitle: UILabel!
+    @IBOutlet weak var labelDescriptionTitle: UILabel!
+    @IBOutlet weak var labelDescriptionText: UILabel!
+   
+    var viewModel = DisableLocationViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
         buttonContactUs.addTarget(self, action: #selector(buttonContactUsDidTap), for: .touchUpInside)
+        guard let error = viewModel.errorText else { return }
+        labelHeaderTitle.text = error.headerTitle
+        labelDescriptionTitle.text = error.headerTitle
+        labelDescriptionText.text = error.headerTitle
     }
     @objc func buttonContactUsDidTap() { }
 }

@@ -69,7 +69,7 @@ struct DeviceData: Codable {
 
  
 // MARK: - Welcome
-struct VerifyOtpAndLoginResponseModel: Codable {
+class VerifyOtpAndLoginResponseModel: NSObject, NSCoding,  Codable {
     let status, message: String?
     let statusCode: Int?
     let data: DataClass?
@@ -79,10 +79,23 @@ struct VerifyOtpAndLoginResponseModel: Codable {
         case statusCode = "status_code"
         case data
     }
+    func encode(with coder: NSCoder) {
+        coder.encode(self.data, forKey: "data")
+        coder.encode(self.status, forKey: "status")
+        coder.encode(self.message, forKey: "message")
+        coder.encode(self.statusCode, forKey: "status_code")
+    }
+    
+    required init?(coder: NSCoder) {
+        self.data = coder.decodeObject(forKey: "data") as? DataClass
+        self.status = coder.decodeObject(forKey: "status") as? String
+        self.message = coder.decodeObject(forKey: "message") as? String
+        self.statusCode = coder.decodeObject(forKey: "status_code") as? Int
+    }
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
+class DataClass: NSObject, NSCoding, Codable {
     let isNewUser: Bool?
     let userName: String?
     let userID: Int?
@@ -104,6 +117,31 @@ struct DataClass: Codable {
         case dupe
         case userStatus = "user_status"
         case errorMsg = "error_msg"
+    }
+    func encode(with coder: NSCoder) {
+        coder.encode(self.isNewUser, forKey: "isNewUser")
+        coder.encode(self.userName, forKey: "user_name")
+        coder.encode(self.userID, forKey: "user_id")
+        coder.encode(self.userPhoto, forKey: "user_photo")
+        coder.encode(self.profileCreated, forKey: "profile_created")
+        coder.encode(self.showUserBenefits, forKey: "show_user_benefits")
+        coder.encode(self.loginToken, forKey: "login_token")
+        coder.encode(self.dupe, forKey: "dupe")
+        coder.encode(self.userStatus, forKey: "user_status")
+        coder.encode(self.errorMsg, forKey: "error_msg")
+    }
+    
+    required init?(coder: NSCoder) {
+        self.isNewUser = coder.decodeObject(forKey: "isNewUser") as? Bool
+        self.userName = coder.decodeObject(forKey: "user_name") as? String
+        self.userID = coder.decodeObject(forKey: "user_id") as? Int
+        self.userPhoto = coder.decodeObject(forKey: "user_photo") as? String
+        self.profileCreated = coder.decodeObject(forKey: "profile_created") as? Bool
+        self.showUserBenefits = coder.decodeObject(forKey: "show_user_benefits") as? Bool
+        self.loginToken = coder.decodeObject(forKey: "login_token") as? String
+        self.dupe = coder.decodeObject(forKey: "dupe") as? Bool
+        self.userStatus = coder.decodeObject(forKey: "user_status") as? String
+        self.errorMsg = coder.decodeObject(forKey: "error_msg") as? String
     }
 }
  

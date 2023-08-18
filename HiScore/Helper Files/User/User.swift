@@ -10,7 +10,6 @@ import Foundation
 class User {
     static let shared = User()
     private let userDetailsKey = "hiScoreUser@Details"
-//    private let userBallenceKey = "hiScoreUser@Balance"
     var details: VerifyOtpAndLoginResponseModel? {
         do {
             guard let data = UserDefaults.standard.object(forKey: userDetailsKey) else { return nil }
@@ -23,13 +22,12 @@ class User {
     private init() { }
 
     func save(userDetails user: VerifyOtpAndLoginResponseModel) {
-//        do {
-//            let userData = try NSKeyedArchiver.archivedData(withRootObject: user, requiringSecureCoding: false)
-//            UserDefaults.standard.set(userData, forKey: userDetailsKey)
-//            UserDefaults.standard.synchronize()
-//        } catch {
-//            fatalError("Archiving error: " + error.localizedDescription)
-//        }
+        do {
+            let userData = try NSKeyedArchiver.archivedData(withRootObject: user, requiringSecureCoding: false)
+            UserDefaults.standard.set(userData, forKey: userDetailsKey)
+            UserDefaults.standard.synchronize()
+        } catch {
+            fatalError("Archiving error: " + error.localizedDescription)
+        }
     }
-
 }

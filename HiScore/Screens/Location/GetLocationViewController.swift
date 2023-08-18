@@ -109,27 +109,23 @@ extension GetLocationViewController {
                    self.hideFetchLocationPopUp()
                     switch result {
                     case .success(let response):
-                        if response.data.login.isAllowed {
-//                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
-//                                return
-//                            }
-                            guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+                        if response.data.rummy.isAllowed {
+                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
                                 return
                             }
-
                             self.navigationController?.pushViewController(viewController, animated: true)
                             return
                         }
-                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
-                            return
-                        }
-                        self.navigationController?.pushViewController(viewController, animated: true)
-                    case .failure(let error):
-                        self.showSnackbarError(title: "", subtitle: error.localizedDescription)
-                        Log.d(error)
+                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
+                        return
                     }
+                    viewController.viewModel.errorText = response.data.rummy.error
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                case .failure(let error):
+                    Log.d(error)
                 }
             }
         }
     }
+}
 }

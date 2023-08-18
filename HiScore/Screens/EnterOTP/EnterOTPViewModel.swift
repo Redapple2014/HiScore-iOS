@@ -61,8 +61,8 @@ class EnterOTPViewModel {
             switch result {
             case .success(let response):
                 Log.d(response)
+                User.shared.save(userDetails: response)
                 DispatchQueue.main.async {
-                    User.shared.save(userDetails: response)
                     completion(.success(response))
                 }
             case .failure(let error):

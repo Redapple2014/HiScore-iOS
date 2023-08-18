@@ -32,7 +32,6 @@ enum APIEndpoint {
                     "app_version":"1751",
                     "platform_name": DeviceDetails.deviceOS,
                     "Content-Type": "application/json"]
-
         }
     }
     var url: URL? {
