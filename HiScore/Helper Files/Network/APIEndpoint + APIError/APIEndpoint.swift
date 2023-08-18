@@ -21,6 +21,7 @@ enum APIEndpoint {
         case .login(let version):
             return "\(version)/game/users/login"
         case .validateAccess(let version):
+//            return "\(version)/game/validateAccess"
             return "\(version)/user/app/capability"
         }
     }

@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FB2EABAB-7FF2-4E21-96F1-DA5FB8DB8C6A"
-            shouldBeEnabled = "Yes"
+            uuid = "D0C4C4B5-BAE7-49BF-AC26-39A27E299B31"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/EnterOTP/EnterOTPViewModel.swift"
+            filePath = "HiScore/Screens/EnterOTP/EnterOTPViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "verifyOTP(otpEntered:phoneNumber:uid:completion:)"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "buttonVerifyTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

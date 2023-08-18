@@ -88,6 +88,7 @@ extension GetLocationViewController: CLLocationManagerDelegate {
 extension GetLocationViewController {
     @IBAction func shareLocationDidTap(_ sender: Any){
         fetchLocation()
+        isLocationFetched = false
         switch locationManager.authorizationStatus {
         case .notDetermined, .restricted:
             self.locationManager.requestWhenInUseAuthorization()
@@ -101,25 +102,28 @@ extension GetLocationViewController {
     }
     func shareLocation(lat: String, long: String) {
         self.showFetchLocationPopUp()
-        viewModel.getLocationData(lat: lat,
-                                  long: long) { result in
-            DispatchQueue.main.async {
-               self.hideFetchLocationPopUp()
-                switch result {
-                case .success(let response):
-                    if response.data.login.isAllowed {
-                        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.viewModel.getLocationData(lat: lat,
+                                      long: long) { result in
+                DispatchQueue.main.async {
+                   self.hideFetchLocationPopUp()
+                    switch result {
+                    case .success(let response):
+                        if response.data.login.isAllowed {
+                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+                                return
+                            }
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                            return
+                        }
+                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
                             return
                         }
                         self.navigationController?.pushViewController(viewController, animated: true)
-                        return
+                    case .failure(let error):
+                        self.showSnackbarError(title: "", subtitle: error.localizedDescription)
+                        Log.d(error)
                     }
-                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
-                        return
-                    }
-                    self.navigationController?.pushViewController(viewController, animated: true)
-                case .failure(let error):
-                    Log.d(error)
                 }
             }
         }

@@ -160,6 +160,13 @@ extension EnterOTPViewController {
               switch response {
               case .success(let response):
                   Log.d(response)
+                  DispatchQueue.main.async {
+                      guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
+                          return
+                      }
+                      self.navigationController?.pushViewController(viewController, animated: true)
+                      
+                  }
               case .failure(let error):
                   self.showSnackbarError(title: "", subtitle: error.localizedDescription)
                   Log.d(error)

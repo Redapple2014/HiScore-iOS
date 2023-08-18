@@ -47,6 +47,8 @@ extension HiScoreNetworkServiceprotocol {
             var request = URLRequest(url: url)
             request.httpMethod = HiScoreHTTPMethods.post.rawValue
             request.allHTTPHeaderFields = endpoint.headers
+            Log.d("API name: - \(url)" )
+            Log.d("Request Param: \(String(data: jsonData, encoding: .utf8))" )
             request.httpBody = jsonData
             postData(with: request, responseModelType: responseModelType, completion: completion)
         } catch {

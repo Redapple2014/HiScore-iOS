@@ -104,5 +104,5 @@ struct DataClass: Codable {
         case userStatus = "user_status"
     }
 }
-
+ 
  
