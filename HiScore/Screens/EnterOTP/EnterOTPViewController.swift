@@ -23,7 +23,7 @@ class EnterOTPViewController: BaseViewController {
     var phoneNumber: String?
     var viewModelGetOtp: OnboardingScreenViewModel!
     var viewModelVerifyOtp: EnterOTPViewModel!
-    var counter = 15
+    var counter = 0
     var timer: Timer?
     var otpEntered: String?
     var modelOTPResponse: GetOTPResponseModel!
@@ -40,8 +40,7 @@ extension EnterOTPViewController {
 extension EnterOTPViewController {
     private func getOTP(phoneNumber: String) {
        // buttonVerify.showButtonLoader(vc: self)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-        counter = modelOTPResponse.data?.remainingTime ?? 15
+        counter = modelOTPResponse.data?.remainingTime ?? 0
              self.viewModelGetOtp.getOTP(phoneNumber: phoneNumber) { response in
               //  self.buttonVerify.hideButtonLoader(vc: self)
                 self.showOtpTimerAndText()
@@ -55,7 +54,6 @@ extension EnterOTPViewController {
                     Log.d(error)
                 }
             }
-//        }
     }
 }
 // MARK: - Private methods -
@@ -64,10 +62,11 @@ extension EnterOTPViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     private func initSettings() {
-        counter = modelOTPResponse.data?.remainingTime ?? 14
+        counter = modelOTPResponse.data?.remainingTime ?? 0
         labelResend.isUserInteractionEnabled = (modelOTPResponse.data?.resendAllowed ?? true) //? true : false
         if let err = modelOTPResponse.data?.errorMsg {
             self.showSnackbarError(title: "", subtitle: err)
+            self.showOtpTimerAndText()
             self.updateCounter()
         }
         let networkService = HiScoreNetworkRepository()
@@ -77,8 +76,6 @@ extension EnterOTPViewController {
         labelResend.addGestureRecognizer(tap)
     }
     private func initUI() {
-       
-        
        // buttonVerify.initLoadingButton()
         labelDisplayMobileNumber.text = "Enter OTP sent to \(phoneNumber ?? "")"
         viewShowError.isHidden = true
@@ -99,6 +96,21 @@ extension EnterOTPViewController {
         OTPTextField.delegate = self
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
         OTPTextField.initializeUI()
+    }
+    private func getTimeRemainingText(time: Int) -> String {
+        let hours = time / 3600
+        let minutes = (time % 3600) / 60
+        let seconds = time % 60
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+
+//        if time < 60 { // less than 1 min
+//            return "00:\(60)"
+//        } else if time > 60 && time < 3600 { // less than 1 hour
+//
+//            return "00:\(0)"
+//        } else {
+//            return "00:\(0)"
+//        }
     }
 }
 // MARK: - OTPFieldView Delegate -
@@ -121,7 +133,7 @@ extension EnterOTPViewController {
     @objc func updateCounter() {
         //example functionality
         if counter > -1 {
-            self.labelResend.text = "RESEND OTP in 00:\(counter)"
+            self.labelResend.text = "RESEND OTP in \(getTimeRemainingText(time: counter))"
             Log.d("\(counter) seconds to enable button")
             labelResend.isUserInteractionEnabled = false
             counter -= 1
@@ -129,7 +141,6 @@ extension EnterOTPViewController {
             timer?.invalidate()
             labelResend.isUserInteractionEnabled = true
         }
-        
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
@@ -143,18 +154,24 @@ extension EnterOTPViewController {
     }
 
     @IBAction func buttonVerifyTapped(_ sender: Any) {
+        if ((self.otpEntered?.isEmpty) == nil) {
+            self.showSnackbarError(title: "", subtitle: Messages.invalidOtp.description)
+            return
+        }
         viewModelVerifyOtp.accountDetais = AccountDetails(otp: self.otpEntered ?? "",
                                                           userMobile: self.phoneNumber ?? "",
                                                           referralCode: "",
-                                                          uid: UUID().uuidString)
+                                                          uid: self.modelOTPResponse.data?.uid ?? "")
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-
+        var version = 1.0
+        if let dble = Double(appVersion ?? "1.0") {
+                version = dble
+        }
     
-        
         viewModelVerifyOtp.device = Device(abis: UIDevice.current.getCPUName(),
                                            gaid: "",
-                                           androidID: "",
-                                           appVersion: 1,
+                                           androidID: UUID().uuidString,
+                                           appVersion: Int(version),
                                            cpuABI: "",
                                            deviceType: "iPhone",
                                            manufecturer: "Apple",

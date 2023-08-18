@@ -36,7 +36,7 @@ struct GetOTPResponseModel: Codable {
 
 // MARK: - DataClass
 struct DataClassGetOtp: Codable {
-    let userStatus, errorMsg: String?
+    let userStatus, errorMsg, uid: String?
     let multiLang: MultiLang?
     let remainingTime: Int?
     let resendAllowed: Bool?
@@ -47,6 +47,7 @@ struct DataClassGetOtp: Codable {
         case multiLang = "multi_lang"
         case remainingTime = "remaining_time"
         case resendAllowed
+        case uid
     }
 }
 

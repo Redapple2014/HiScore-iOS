@@ -36,10 +36,10 @@ class OnboardingScreenViewModel {
     }
     
     func getOTP(phoneNumber: String, completion: @escaping (Result<GetOTPResponseModel, APIError>) -> Void) {
-        let tempId = "\(UUID().uuidString)"
+    //    let tempId = "\(UUID().uuidString)"
         let param = GetOtpRequestModel(mobile: phoneNumber,
                                        uid: "",//UUID().uuidString,
-                                       dest: "phone")
+                                       dest: "")//"phone")
         networkService.postData(to: .sendOTP(version: .v5),
                                 with: param,
                                 responseModelType: GetOTPResponseModel.self) { result in
