@@ -14,6 +14,10 @@ class EnterPhoneNumberViewController: BaseViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var placeholderLabel: UILabel!
+    
+    @IBOutlet weak var heightConstraintLoginView: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraintErrorView: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraintPlaceholderText: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraintOfLoginView: NSLayoutConstraint!
     @IBOutlet weak var topConstraintOfLoginView: NSLayoutConstraint!
     @IBOutlet weak var errorImage: UIImageView!
@@ -36,6 +40,9 @@ extension EnterPhoneNumberViewController{
         let networkService = HiScoreNetworkRepository()
         viewModel = OnboardingScreenViewModel(networkService: networkService)
         getOnBoadingScreens()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -79,12 +86,13 @@ extension EnterPhoneNumberViewController{
                 self.buttonGetStarted.hideButtonLoader(vc: self)
                 switch response {
                 case .success(let response):
+                    Log.d(response)
                     guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterOTPViewController") as? EnterOTPViewController else {
                         return
                     }
+                    viewController.modelOTPResponse = response
+                    viewController.phoneNumber = self.inputTextField.text
                     self.navigationController?.pushViewController(viewController, animated: true)
-
-                    Log.d(response)
                 case .failure(let error):
                     self.showSnackbarError(title: "", subtitle: error.localizedDescription)
                     Log.d(error)
@@ -128,14 +136,14 @@ extension EnterPhoneNumberViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Private methods ------------
 extension EnterPhoneNumberViewController {
     private func showInPutError() {
-        errorLabel.isHidden = false
-        errorLabel.text = Messages.invalidPhoneNumber.description
-        errorImage.isHidden = false
+        heightConstraintErrorView.constant = 12
+        heightConstraintLoginView.constant = 218
+        view.setNeedsLayout()
     }
     private func hideInPutError() {
-        errorLabel.isHidden = true
-        errorImage.isHidden = true
-        errorLabel.text = ""
+        heightConstraintErrorView.constant = 0
+        heightConstraintLoginView.constant = 206
+        view.setNeedsLayout()
     }
     private func hideViewWithAnimation() {
         UIView.animate(withDuration: 0.3, animations: {
@@ -171,8 +179,7 @@ extension EnterPhoneNumberViewController {
      }
     private func initUI() {
         collectionSlides.isPagingEnabled = true
-        placeholderLabel.text = ""
-        viewContainer.backgroundColor = .black.withAlphaComponent(20)
+        heightConstraintPlaceholderText.constant = 0
         inputTextField.textColor = UIColor.HSPlaceHolderColor
         inputTextField.font = UIFont.Rajdhani.Bold.withSize(18)
         viewContainer.layer.cornerRadius = 5
@@ -223,13 +230,12 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         return newLength <= 10
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        placeholderLabel.text = PlaceholderMessages.phoneNumber.desscription
+        heightConstraintPlaceholderText.constant = 13
         viewCollectionPagination.layoutIfNeeded()
         self.view.layoutIfNeeded()
     }
     @objc func editingText(_ textField: UITextField) {
         if (textField.text?.count ?? 0) == 0 {
-            placeholderLabel.text = ""
             hideInPutError()
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
             showInPutError()
@@ -238,8 +244,8 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
+        heightConstraintPlaceholderText.constant = 0
         if (textField.text?.count ?? 0) == 0 {
-            placeholderLabel.text = ""
             hideInPutError()
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
             showInPutError()

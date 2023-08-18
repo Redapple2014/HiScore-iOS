@@ -77,6 +77,7 @@ extension HiScoreNetworkServiceprotocol {
                 completion(.failure(.httpError(statusCode: httpResponse.statusCode)))
                 return
             }
+           
             guard let data = data else {
                 completion(.failure(.noData))
                 return
@@ -114,6 +115,7 @@ extension HiScoreNetworkServiceprotocol {
                 completion(.failure(.httpError(statusCode: httpResponse.statusCode)))
                 return
             }
+            
             guard let data = data else {
                 completion(.failure(.noData))
                 return

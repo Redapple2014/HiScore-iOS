@@ -15,8 +15,8 @@ class SlidesCollectionViewCell: UICollectionViewCell {
     var images: Images? {
         didSet {
             labelHeader1.text = images?.title
-            labelHeader2.text = " "
-          //  imageSlides.kf.setImage(with: images?.splashScreenUrl)
+            labelHeader2.text = images?.subTitle
+            imageSlides.kf.setImage(with: images?.splashScreenUrl)
         }
     }
 }

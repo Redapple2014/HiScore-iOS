@@ -20,6 +20,7 @@ enum Messages {
     case locationTitle
     case cancel
     case settings
+    case otpRecieved
     var description: String {
         switch self {
         case .invalidOtp:
@@ -34,6 +35,8 @@ enum Messages {
             return "Cancel"
         case .settings:
             return "Settings"
+        case .otpRecieved:
+            return "OTP resent successfully"
         }
     }
 }

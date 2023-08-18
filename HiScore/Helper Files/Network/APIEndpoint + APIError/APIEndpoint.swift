@@ -27,8 +27,10 @@ enum APIEndpoint {
     var headers: [String: String]? {
         switch self {
         case .fetchSplashImage, .sendOTP, .login, .validateAccess:
-            return ["Content-Type": "application/json",
-                    "platform_name": Device.deviceOS]
+            return ["app_version":"1751",
+                    "platform_name": "ios",
+                    "Content-Type": "application/json"]
+
         }
     }
     var url: URL? {
@@ -39,7 +41,7 @@ enum APIEndpoint {
     }
     
     static let baseURL = "https://nostrapi-ios.nostragamus-stage.in/"
-    static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides.json"
+    static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides_iOS.json"
 }
 enum Version: Int {
     case v1

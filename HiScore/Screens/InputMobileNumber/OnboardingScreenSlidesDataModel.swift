@@ -8,16 +8,17 @@
 import Foundation
 
 struct OnboardingScreenResponseModel: Codable {
-    let hi, en: [Images]
+    let en: [Images]
 }
 
 // MARK: - En
 struct Images: Codable {
-    let title: String
+    let title, subTitle : String
   private  let imageURL: String
 
     enum CodingKeys: String, CodingKey {
         case title
+        case subTitle
         case imageURL = "imageUrl"
     }
 }

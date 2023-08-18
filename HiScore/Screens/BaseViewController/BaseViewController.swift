@@ -42,11 +42,11 @@ extension BaseViewController {
         showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
     }
     
-    func showSnackbarSuccessOnTop(title: String, subtitle: String) {
-        showAlert(title: title, subtitle: subtitle, style: .success, font: UIFont.MavenPro.ExtraBold.withSize(18))
+    func showSnackbarSuccessOnTop(title: String, subtitle: Messages) {
+        showAlert(title: title, subtitle: subtitle.description, style: .success, font: UIFont.MavenPro.ExtraBold.withSize(18))
     }
     private func showAlert(title: String, subtitle: String, style: BannerStyle, font: UIFont) {
-        let banner = NotificationBanner(title: title, subtitle: subtitle, style: style)
+        let banner = NotificationBanner(title: title, subtitle: subtitle.description, style: style)
         banner.subtitleLabel?.font = font
         banner.subtitleLabel?.textAlignment = .center
         banner.autoDismiss = true
