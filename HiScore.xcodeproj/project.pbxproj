@@ -13,6 +13,7 @@
 		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
 		AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */; };
+		AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */; };
 		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
 		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
 		AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C162A8E390600125808 /* LocationViewModel.swift */; };
@@ -81,6 +82,7 @@
 		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
 		AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
 		AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
+		AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewModel.swift; sourceTree = "<group>"; };
 		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
 		AF916C162A8E390600125808 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		AF916C152A8E38EF00125808 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */,
 				AF916C162A8E390600125808 /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
@@ -508,7 +511,6 @@
 				C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */,
 				C7C5366E2A8A332D007391FC /* Cell */,
 				C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */,
-				C7EBEE592A7BC93E0045B449 /* View */,
 			);
 			path = InputMobileNumber;
 			sourceTree = "<group>";
@@ -534,13 +536,6 @@
 				C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */,
 			);
 			path = EnterOTP;
-			sourceTree = "<group>";
-		};
-		C7EBEE592A7BC93E0045B449 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C7EBEE5D2A7BC9780045B449 /* Storyboards */ = {
@@ -735,6 +730,7 @@
 				C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */,
 				C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */,
 				C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */,
+				AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */,
 				C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */,
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */,

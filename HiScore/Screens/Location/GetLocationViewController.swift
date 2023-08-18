@@ -116,14 +116,13 @@ extension GetLocationViewController {
                             self.navigationController?.pushViewController(viewController, animated: true)
                             return
                         }
-                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
-                            return
-                        }
-                        self.navigationController?.pushViewController(viewController, animated: true)
-                    case .failure(let error):
-                        self.showSnackbarError(title: "", subtitle: error.localizedDescription)
-                        Log.d(error)
+                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
+                        return
                     }
+                    viewController.viewModel.errorText = response.data.rummy.error
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                case .failure(let error):
+                    Log.d(error)
                 }
             }
         }

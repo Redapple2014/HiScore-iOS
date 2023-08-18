@@ -29,7 +29,6 @@ class SplashScreenViewController: BaseViewController {
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)
-                    
                 }
             case .failure(let error):
                 Log.d(error.localizedDescription)
