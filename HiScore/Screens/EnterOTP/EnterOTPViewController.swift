@@ -152,9 +152,11 @@ extension EnterOTPViewController {
             return
         }
 
-        guard let otp = self.otpEntered,
-              let numberEntered = self.phoneNumber,
-              let uniqId =  self.modelOTPResponse.data?.uid else { return }
+        guard let otp = self.otpEntered, let numberEntered = self.phoneNumber else { return }
+        
+        guard let uniqId =  self.modelOTPResponse.data?.uid else {
+            self.showSnackbarError(title: "", subtitle: self.modelOTPResponse.data?.errorMsg ?? Messages.invalidResponse.description)
+            return }
         
         viewModelVerifyOtp.verifyOTP(otpEntered: otp, phoneNumber: numberEntered, uid: uniqId) { response in
               switch response {

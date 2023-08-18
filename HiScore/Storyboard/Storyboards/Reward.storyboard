@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,6 +18,40 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Reward View Controller-->
+        <scene sceneID="8uI-gR-bhI">
+            <objects>
+                <viewController storyboardIdentifier="RewardViewController" id="kd0-El-uAx" customClass="RewardViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8L-Jh-nCG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-Vb-RGh" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="REward Gift Box"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9hP-H2-zYH"/>
+                        <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="Ed9-Vb-RGh" firstAttribute="leading" secondItem="9hP-H2-zYH" secondAttribute="leading" id="2ig-vb-Twc"/>
+                            <constraint firstAttribute="bottom" secondItem="Ed9-Vb-RGh" secondAttribute="bottom" id="DYu-EE-E5l"/>
+                            <constraint firstItem="Ed9-Vb-RGh" firstAttribute="top" secondItem="R8L-Jh-nCG" secondAttribute="top" id="bEK-SX-cog"/>
+                            <constraint firstItem="9hP-H2-zYH" firstAttribute="trailing" secondItem="Ed9-Vb-RGh" secondAttribute="trailing" id="nUt-5B-3oE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OWd-zy-8T5"/>
+                    <connections>
+                        <outlet property="animationView" destination="Ed9-Vb-RGh" id="hIq-qa-egA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fx8-a2-A5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270" y="-27"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -26,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj0-gr-6Q8">
-                                <rect key="frame" x="0.0" y="78" width="414" height="49.5"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="49.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, user70****164" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IES-Mj-z52">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -69,9 +104,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="63"/>
+            <point key="canvasLocation" x="283" y="23"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Ed9-Vb-RGh"/>
+    </designables>
     <resources>
         <namedColor name="HSAppThemeColor">
             <color red="0.050980392156862744" green="0.023529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

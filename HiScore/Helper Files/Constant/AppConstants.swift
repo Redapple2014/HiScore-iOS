@@ -13,8 +13,10 @@ enum Storyboards: String {
     case location = "Location"
     case wallet = "Wallet"
     case home = "Home"
+    case reward = "Reward"
 }
 enum Messages {
+    case tryAgain
     case invalidOtp
     case invalidPhoneNumber
     case locationmessage
@@ -25,6 +27,8 @@ enum Messages {
     case invalidResponse
     var description: String {
         switch self {
+        case .tryAgain:
+            return ""
         case .invalidOtp:
             return "Invalid OTP. Please try again"
         case .invalidPhoneNumber:
@@ -76,3 +80,6 @@ class AdvertiseDetails {
      
 }
 
+class AnimationFiles {
+    static let reward = "REward Gift Box"
+}

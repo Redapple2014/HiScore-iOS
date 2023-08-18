@@ -110,9 +110,13 @@ extension GetLocationViewController {
                     switch result {
                     case .success(let response):
                         if response.data.login.isAllowed {
-                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+//                            guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+//                                return
+//                            }
+                            guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
                                 return
                             }
+
                             self.navigationController?.pushViewController(viewController, animated: true)
                             return
                         }

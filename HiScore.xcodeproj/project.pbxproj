@@ -36,6 +36,7 @@
 		C75F37202A791BC400925880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75F371F2A791BC400925880 /* Assets.xcassets */; };
 		C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F37212A791BC400925880 /* LaunchScreen.storyboard */; };
 		C77E2A532A8FA19300C8C96D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E2A522A8FA19300C8C96D /* User.swift */; };
+		C77E2A562A8FA6FE00C8C96D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */; };
 		C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */; };
 		C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */; };
 		C798459F2A86592300F08457 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798459B2A86592300F08457 /* APIError.swift */; };
@@ -106,6 +107,7 @@
 		C75F37222A791BC400925880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75F37242A791BC400925880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C77E2A522A8FA19300C8C96D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiScoreNetworkServiceprotocol.swift; sourceTree = "<group>"; };
 		C79845992A86592300F08457 /* HiScoreHTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiScoreHTTPMethods.swift; sourceTree = "<group>"; };
 		C798459B2A86592300F08457 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -343,6 +345,14 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		C77E2A542A8FA6DB00C8C96D /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */,
+			);
+			path = Reward;
+			sourceTree = "<group>";
+		};
 		C79845972A86592300F08457 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +526,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C77E2A542A8FA6DB00C8C96D /* Reward */,
 				AF916C202A8E66CF00125808 /* Tabbar */,
 				AF28DCC42A8A70CB003BFDCF /* Location */,
 				C7A9DF762A8361690066924E /* BaseViewController */,
@@ -756,6 +767,7 @@
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
 				AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */,
+				C77E2A562A8FA6FE00C8C96D /* RewardViewController.swift in Sources */,
 				84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift in Sources */,
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,

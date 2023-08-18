@@ -16,7 +16,12 @@ class SlidesCollectionViewCell: UICollectionViewCell {
         didSet {
             labelHeader1.text = images?.title
             labelHeader2.text = images?.subTitle
-            imageSlides.kf.setImage(with: images?.splashScreenUrl)
+            imageSlides.kf.setImage(with: images?.splashScreenUrl,
+                                    placeholder: UIImage(named: "placeholder"),
+                                    options: nil,
+                                    progressBlock: nil,
+                                    completionHandler: nil)
+
         }
     }
 }

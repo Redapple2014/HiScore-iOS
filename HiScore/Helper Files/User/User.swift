@@ -20,42 +20,16 @@ class User {
             fatalError("Unarchive error: " + error.localizedDescription)
         }
     }
-//    var Balance: BalanceData? {
-//        do {
-//            guard let data = UserDefaults.standard.object(forKey: userBallenceKey) else { return nil }
-//            guard let balance = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as! Data) as? BalanceData else { return nil }
-//            return balance
-//        } catch {
-//            fatalError("Unarchive error: " + error.localizedDescription)
-//        }
-//    }
     private init() { }
 
     func save(userDetails user: VerifyOtpAndLoginResponseModel) {
-        do {
-            let userData = try NSKeyedArchiver.archivedData(withRootObject: user, requiringSecureCoding: false)
-            UserDefaults.standard.set(userData, forKey: userDetailsKey)
-            UserDefaults.standard.synchronize()
-        } catch {
-            fatalError("Archiving error: " + error.localizedDescription)
-        }
-    }
-
-//    func saveBalance(balanceDetails wallet: BalanceData) {
 //        do {
-//            let balanceData = try NSKeyedArchiver.archivedData(withRootObject: wallet, requiringSecureCoding: false)
-//            UserDefaults.standard.set(balanceData, forKey: userBallenceKey)
+//            let userData = try NSKeyedArchiver.archivedData(withRootObject: user, requiringSecureCoding: false)
+//            UserDefaults.standard.set(userData, forKey: userDetailsKey)
 //            UserDefaults.standard.synchronize()
 //        } catch {
 //            fatalError("Archiving error: " + error.localizedDescription)
 //        }
-//    }
-//    func logout() {
-//        UserDefaults.standard.setValue(nil, forKey: UserDefaultConstants.token)
-//        UserDefaults.standard.removeObject(forKey: userDetailsKey)
-//        UserDefaults.standard.set(nil, forKey: userDetailsKey)
-//        UserDefaults.standard.removeObject(forKey: userBallenceKey)
-//        UserDefaults.standard.set(nil, forKey: userBallenceKey)
-//        UserDefaults.standard.synchronize()
-//    }
+    }
+
 }
