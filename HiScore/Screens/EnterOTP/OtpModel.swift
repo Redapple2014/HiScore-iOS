@@ -70,8 +70,8 @@ struct DeviceData: Codable {
  
 // MARK: - Welcome
 struct VerifyOtpAndLoginResponseModel: Codable {
-    let status, message: String
-    let statusCode: Int
+    let status, message: String?
+    let statusCode: Int?
     let data: DataClass?
 
     enum CodingKeys: String, CodingKey {
@@ -83,15 +83,16 @@ struct VerifyOtpAndLoginResponseModel: Codable {
 
 // MARK: - DataClass
 struct DataClass: Codable {
-    let isNewUser: Bool
-    let userName: String
-    let userID: Int
-    let userPhoto: String
-    let profileCreated, showUserBenefits: Bool
-    let loginToken: String
-    let dupe: Bool
-    let userStatus: String
-
+    let isNewUser: Bool?
+    let userName: String?
+    let userID: Int?
+    let userPhoto: String?
+    let profileCreated, showUserBenefits: Bool?
+    let loginToken: String?
+    let dupe: Bool?
+    private let userStatus: String?
+    let errorMsg: String?
+    
     enum CodingKeys: String, CodingKey {
         case isNewUser
         case userName = "user_name"
@@ -102,7 +103,38 @@ struct DataClass: Codable {
         case loginToken = "login_token"
         case dupe
         case userStatus = "user_status"
+        case errorMsg = "error_msg"
     }
 }
  
- 
+enum  UserLoginStatus {
+    case existingUser
+    case invalidOTP
+    case profileCreated
+    var description: String {
+        switch self {
+        case .existingUser : return "EXISTING_USER"
+        case .invalidOTP : return "INVALID_OTP"
+        case .profileCreated: return "PROFILE_CREATED"
+        }
+    }
+}
+
+extension DataClass: UserLoginStatusDelegate {
+    var status: UserLoginStatus? {
+        if userStatus == UserLoginStatus.existingUser.description {
+            return .existingUser
+        } else  if userStatus == UserLoginStatus.profileCreated.description {
+            return .profileCreated
+        } else  if userStatus == UserLoginStatus.invalidOTP.description {
+            return .invalidOTP
+        } else {
+            return nil
+        }
+    }
+}
+
+protocol UserLoginStatusDelegate {
+    var status: UserLoginStatus? { get }
+}
+

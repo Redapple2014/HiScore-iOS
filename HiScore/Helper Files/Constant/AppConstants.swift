@@ -22,6 +22,7 @@ enum Messages {
     case cancel
     case settings
     case otpRecieved
+    case invalidResponse
     var description: String {
         switch self {
         case .invalidOtp:
@@ -38,6 +39,8 @@ enum Messages {
             return "Settings"
         case .otpRecieved:
             return "OTP resent successfully"
+        case .invalidResponse:
+            return "Something went wrong. Please try again later."
         }
     }
 }
@@ -72,3 +75,4 @@ class AdvertiseDetails {
     static let campaignName = "organic"
      
 }
+

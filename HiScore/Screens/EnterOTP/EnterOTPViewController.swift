@@ -161,11 +161,19 @@ extension EnterOTPViewController {
               case .success(let response):
                   Log.d(response)
                   DispatchQueue.main.async {
+                      guard let data = response.data else {
+                          self.showSnackbarError(title: "", subtitle: Messages.invalidResponse.description)
+                          return
+                      }
+                      if data.status == .invalidOTP {
+                          self.showSnackbarError(title: "", subtitle: data.errorMsg ?? Messages.invalidResponse.description)
+//                          self.OTPTextField.de = .HSRedColor
+                          return
+                      }
                       guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
                           return
                       }
                       self.navigationController?.pushViewController(viewController, animated: true)
-                      
                   }
               case .failure(let error):
                   self.showSnackbarError(title: "", subtitle: error.localizedDescription)
@@ -173,7 +181,6 @@ extension EnterOTPViewController {
               }
           }
     }
-
     @IBAction func buttonbackTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

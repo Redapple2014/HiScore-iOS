@@ -16,7 +16,7 @@ class LocationViewModel {
     }
     func getLocationData(lat: String, long: String, completion: @escaping (Result<LocationResponseModel, APIError>) -> Void) {
         let param = LocationRequestModel(lat: lat, long: long)
-        networkService.postData(to: .validateAccess(version: .v3),
+        networkService.postData(to: .validateAccess(version: .v2),
                                 with: param,
                                 responseModelType: LocationResponseModel.self) { result in
             switch result {
