@@ -109,7 +109,7 @@ extension GetLocationViewController {
                    self.hideFetchLocationPopUp()
                     switch result {
                     case .success(let response):
-                        if response.data.login.isAllowed {
+                        if response.data.rummy.isAllowed {
                             guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
                                 return
                             }
@@ -127,4 +127,5 @@ extension GetLocationViewController {
             }
         }
     }
+}
 }
