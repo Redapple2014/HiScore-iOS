@@ -15,6 +15,7 @@ public enum APIError: Error {
     case noData
     case decodingError
     case encodingError
+    case wrongData
     // Add more cases as needed for your specific API errors
     
     var localizedDescription: String {
@@ -33,6 +34,8 @@ public enum APIError: Error {
             return "Error decoding the response data."
         case .encodingError:
             return "Error encoding the request data."
+        case .wrongData:
+            return "Something went wrong. Please try again later."
         // Add localized descriptions for other cases
         }
     }

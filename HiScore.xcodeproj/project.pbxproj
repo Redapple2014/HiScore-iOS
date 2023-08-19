@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		317DA8597D312491EF6B595F /* Pods_HiScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3BFB8D1FABBC43FE9D6591 /* Pods_HiScore.framework */; };
 		84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1EE3D2A8D41480015194D /* AppConstants.swift */; };
+		84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A5C92A9113000098A1F4 /* UITextField+Extension.swift */; };
+		84D2A5CD2A9115060098A1F4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A5CC2A9115060098A1F4 /* String+Extension.swift */; };
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
 		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
 		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
@@ -21,7 +23,6 @@
 		AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Home.storyboard */; };
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
-		C72618A52A84DFE600738F7F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A42A84DFE600738F7F /* UITextField+Extension.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
 		C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */; };
 		C72618B02A84ED7B00738F7F /* Rajdhani-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618AA2A84ED7A00738F7F /* Rajdhani-SemiBold.ttf */; };
@@ -78,6 +79,8 @@
 /* Begin PBXFileReference section */
 		6547A8D621B47575AE35586C /* Pods-HiScore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.release.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.release.xcconfig"; sourceTree = "<group>"; };
 		84C1EE3D2A8D41480015194D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		84D2A5C92A9113000098A1F4 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		84D2A5CC2A9115060098A1F4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8E3BFB8D1FABBC43FE9D6591 /* Pods_HiScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		AF916C1E2A8E64C000125808 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		C72618A42A84DFE600738F7F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
 		C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Medium.ttf"; sourceTree = "<group>"; };
 		C72618AA2A84ED7A00738F7F /* Rajdhani-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -210,6 +212,22 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		84D2A5C82A9112E60098A1F4 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				84D2A5C92A9113000098A1F4 /* UITextField+Extension.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		84D2A5CB2A9114F30098A1F4 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				84D2A5CC2A9115060098A1F4 /* String+Extension.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		AF28DCC42A8A70CB003BFDCF /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,14 +295,6 @@
 				AF916C212A8E66E800125808 /* CustomTabBarController.swift */,
 			);
 			path = Tabbar;
-			sourceTree = "<group>";
-		};
-		C72618A32A84DFC600738F7F /* UITextField+Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C72618A42A84DFE600738F7F /* UITextField+Extension.swift */,
-			);
-			path = "UITextField+Extension";
 			sourceTree = "<group>";
 		};
 		C72618A82A84ED7A00738F7F /* Rajdhani */ = {
@@ -496,11 +506,12 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				84D2A5CB2A9114F30098A1F4 /* String */,
+				84D2A5C82A9112E60098A1F4 /* UITextField */,
 				C77E2A512A8FA19300C8C96D /* User */,
 				C7AD48DB2A8E3F960063CEBE /* Device */,
 				C79845972A86592300F08457 /* Network */,
 				84C1EE3C2A8D41330015194D /* Constant */,
-				C72618A32A84DFC600738F7F /* UITextField+Extension */,
 				C7A9DF7F2A83A0F50066924E /* UIVIew+Extension */,
 				C7A9DF7E2A83A0D10066924E /* UIButton+Extension */,
 				C7C0C1C52A82528A0096E958 /* NetworkReachability */,
@@ -743,6 +754,7 @@
 				C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */,
 				AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */,
 				C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */,
+				84D2A5CD2A9115060098A1F4 /* String+Extension.swift in Sources */,
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */,
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
@@ -755,7 +767,6 @@
 				AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
-				C72618A52A84DFE600738F7F /* UITextField+Extension.swift in Sources */,
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
@@ -771,6 +782,7 @@
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
+				84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,
 				C79845A02A86592300F08457 /* APIEndpoint.swift in Sources */,
 			);

@@ -16,16 +16,28 @@ class EnterOTPViewModel {
     }
     var accountDetais: AccountDetails!
     var device: DeviceData!
-    var uid = ""
-    func verifyOTP(otpEntered: String,
-                   phoneNumber: String,
-                   uid:String,
-                   completion: @escaping (Result<VerifyOtpAndLoginResponseModel, APIError>) -> Void) {
-        
-        accountDetais = AccountDetails(otp: otpEntered,
+    var modelOTPResponse: GetOTPResponseModel?
+    var otp = ""
+    var phoneNumber = ""
+    
+    func isValid() -> Bool {
+        if (!otp.validateOTP) && (phoneNumber != "") {
+            return false
+        }
+        return true
+    }
+    func verifyOTP(completion: @escaping (Result<VerifyOtpAndLoginResponseModel, APIError>) -> Void) {
+        if !isValid() {
+            completion(.failure(.wrongData))
+        }
+        guard let uniqueId = modelOTPResponse?.data?.uid else {
+            completion(.failure(.wrongData))
+            return
+        }
+        accountDetais = AccountDetails(otp: otp,
                                        userMobile: phoneNumber,
                                        referralCode: "",
-                                       uid: uid)
+                                       uid: uniqueId)
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         var version = 1.0
         if let dble = Double(appVersion ?? "1.0") {
