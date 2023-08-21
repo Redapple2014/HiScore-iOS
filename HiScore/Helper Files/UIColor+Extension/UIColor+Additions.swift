@@ -76,5 +76,7 @@ extension UIColor {
     static let HSTabbarColor: UIColor = {
         return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8) //UIColor(hex: "#181D34")
     }()
-    
+    static let HSBlackTextColor: UIColor = {
+        return UIColor(hex: "#463327")
+    }()
 }

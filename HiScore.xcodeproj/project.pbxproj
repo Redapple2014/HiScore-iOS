@@ -22,6 +22,8 @@
 		AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */; };
 		AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Home.storyboard */; };
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
+		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
+		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
 		C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */; };
@@ -93,6 +95,8 @@
 		AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
 		AF916C1E2A8E64C000125808 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
+		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
 		C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Medium.ttf"; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		840DD1562A8D463200B46FDD /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				AFEE60262A9335A500CB1D9A /* SwiftUI */,
 				AF89AEE72A8CCCC200AE2318 /* Custom Components */,
 				C7EBEE5D2A7BC9780045B449 /* Storyboards */,
 			);
@@ -295,6 +300,15 @@
 				AF916C212A8E66E800125808 /* CustomTabBarController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		AFEE60262A9335A500CB1D9A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE60242A9335A100CB1D9A /* OfferView.swift */,
+				AFEE60272A93446100CB1D9A /* CardView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		C72618A82A84ED7A00738F7F /* Rajdhani */ = {
@@ -771,6 +785,7 @@
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
+				AFEE60282A93446100CB1D9A /* CardView.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
 				AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */,
@@ -785,6 +800,7 @@
 				84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,
 				C79845A02A86592300F08457 /* APIEndpoint.swift in Sources */,
+				AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
