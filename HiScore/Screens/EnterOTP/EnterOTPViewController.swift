@@ -37,6 +37,10 @@ extension EnterOTPViewController {
         initUI()
         initSettings()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        invalidTimer()
+    }
 }
 // MARK: - OTPFieldView Delegate -
 extension EnterOTPViewController: OTPFieldViewDelegate {
@@ -85,9 +89,14 @@ extension EnterOTPViewController {
 }
 // MARK: - Private methods -
 private extension EnterOTPViewController {
-    func resendOTP(phoneNumber: String) {
+    func invalidTimer() {
         counter = 0
-        timer?.invalidate()
+        if timer != nil {
+            timer?.invalidate()
+        }
+    }
+    func resendOTP(phoneNumber: String) {
+        invalidTimer()
         self.viewModelGetOtp.getOTP(phoneNumber: phoneNumber) { response in
             switch response {
             case .success(let response):
