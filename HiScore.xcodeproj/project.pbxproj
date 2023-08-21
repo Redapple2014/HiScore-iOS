@@ -77,6 +77,10 @@
 		C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */; };
 		C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */; };
 		C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */; };
+		C7EC883A2A935FA0009CFAFA /* APIHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88392A935FA0009CFAFA /* APIHeader.swift */; };
+		C7EC883D2A937BDF009CFAFA /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC883C2A937BDF009CFAFA /* GradientLabel.swift */; };
+		C7EC883F2A938652009CFAFA /* ChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC883E2A938652009CFAFA /* ChainView.swift */; };
+		C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88412A9388A5009CFAFA /* MyRewardsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +157,10 @@
 		C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewController.swift; sourceTree = "<group>"; };
 		C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewModel.swift; sourceTree = "<group>"; };
 		C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupModels.swift; sourceTree = "<group>"; };
+		C7EC88392A935FA0009CFAFA /* APIHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeader.swift; sourceTree = "<group>"; };
+		C7EC883C2A937BDF009CFAFA /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		C7EC883E2A938652009CFAFA /* ChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainView.swift; sourceTree = "<group>"; };
+		C7EC88412A9388A5009CFAFA /* MyRewardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRewardsTableViewCell.swift; sourceTree = "<group>"; };
 		EE087F7249186B7A92ED1BCC /* Pods-HiScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.debug.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -388,6 +396,7 @@
 			children = (
 				C798459B2A86592300F08457 /* APIError.swift */,
 				C798459C2A86592300F08457 /* APIEndpoint.swift */,
+				C7EC88392A935FA0009CFAFA /* APIHeader.swift */,
 			);
 			path = "APIEndpoint + APIError";
 			sourceTree = "<group>";
@@ -413,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A9DF822A83A1410066924E /* UIView+Extension.swift */,
+				C7EC883E2A938652009CFAFA /* ChainView.swift */,
 			);
 			path = "UIVIew+Extension";
 			sourceTree = "<group>";
@@ -513,6 +523,7 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7EC883B2A937BCD009CFAFA /* UILabel */,
 				84D2A5CB2A9114F30098A1F4 /* String */,
 				84D2A5C82A9112E60098A1F4 /* UITextField */,
 				C77E2A512A8FA19300C8C96D /* User */,
@@ -625,11 +636,28 @@
 		C7EC88322A9339D5009CFAFA /* PopupViewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				C7EC88402A938853009CFAFA /* cell */,
 				C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */,
 				C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */,
 				C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */,
 			);
 			path = PopupViewcontroller;
+			sourceTree = "<group>";
+		};
+		C7EC883B2A937BCD009CFAFA /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC883C2A937BDF009CFAFA /* GradientLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		C7EC88402A938853009CFAFA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC88412A9388A5009CFAFA /* MyRewardsTableViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -796,9 +824,12 @@
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
+				C7EC883F2A938652009CFAFA /* ChainView.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
+				C7EC883D2A937BDF009CFAFA /* GradientLabel.swift in Sources */,
+				C7EC883A2A935FA0009CFAFA /* APIHeader.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
 				AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */,
 				C77E2A562A8FA6FE00C8C96D /* RewardViewController.swift in Sources */,
@@ -808,6 +839,7 @@
 				C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
+				C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
 				84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */,
