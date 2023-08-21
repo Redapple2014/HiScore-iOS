@@ -74,6 +74,7 @@
 		C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368E2A8A4908007391FC /* SplashViewModel.swift */; };
 		C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */; };
 		C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBEE612A7BCA590045B449 /* Reachability.swift */; };
+		C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,7 @@
 		C7C5368E2A8A4908007391FC /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		C7EBEE612A7BCA590045B449 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewController.swift; sourceTree = "<group>"; };
 		EE087F7249186B7A92ED1BCC /* Pods-HiScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.debug.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,7 +363,8 @@
 		C77E2A542A8FA6DB00C8C96D /* Reward */ = {
 			isa = PBXGroup;
 			children = (
-				C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */,
+				C7EC88322A9339D5009CFAFA /* PopupViewcontroller */,
+				C7EC88312A9339C2009CFAFA /* ANimationBox */,
 			);
 			path = Reward;
 			sourceTree = "<group>";
@@ -607,6 +610,22 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		C7EC88312A9339C2009CFAFA /* ANimationBox */ = {
+			isa = PBXGroup;
+			children = (
+				C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */,
+			);
+			path = ANimationBox;
+			sourceTree = "<group>";
+		};
+		C7EC88322A9339D5009CFAFA /* PopupViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */,
+			);
+			path = PopupViewcontroller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -748,6 +767,7 @@
 			files = (
 				AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */,
 				AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */,
+				C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */,
 				C75F37172A791BC200925880 /* AppDelegate.swift in Sources */,
 				C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */,
 				C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */,

@@ -16,4 +16,11 @@ extension UIView {
         gradientLayer.frame = self.bounds
         layer.insertSublayer(gradientLayer, at: 0)
     }
+    func circleUI() {
+        self.backgroundColor = .clear
+        self.layer.borderWidth = 0.9
+        self.layer.cornerRadius = self.frame.size.height/2
+        self.clipsToBounds = true
+        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.06).cgColor
+    }
 }
