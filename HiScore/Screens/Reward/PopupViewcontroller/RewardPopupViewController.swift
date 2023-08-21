@@ -14,10 +14,8 @@ class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var viewTop: UIView!
     @IBOutlet weak var viewBetween: UIView!
     @IBOutlet weak var viewBottom: UIView!
-    
     @IBOutlet weak var circle1: UIView!
     @IBOutlet weak var circle2: UIView!
-    
     @IBOutlet weak var buttonContinue: LoadingButton!
     
 }

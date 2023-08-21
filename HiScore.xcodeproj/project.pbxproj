@@ -75,6 +75,8 @@
 		C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */; };
 		C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBEE612A7BCA590045B449 /* Reachability.swift */; };
 		C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */; };
+		C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */; };
+		C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		C7EBEE612A7BCA590045B449 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewController.swift; sourceTree = "<group>"; };
+		C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewModel.swift; sourceTree = "<group>"; };
+		C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupModels.swift; sourceTree = "<group>"; };
 		EE087F7249186B7A92ED1BCC /* Pods-HiScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.debug.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -622,6 +626,8 @@
 			isa = PBXGroup;
 			children = (
 				C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */,
+				C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */,
+				C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */,
 			);
 			path = PopupViewcontroller;
 			sourceTree = "<group>";
@@ -790,6 +796,7 @@
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
+				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
@@ -798,6 +805,7 @@
 				84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift in Sources */,
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,
+				C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
