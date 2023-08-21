@@ -28,10 +28,11 @@ class EnterOTPViewModel {
     }
     func verifyOTP(completion: @escaping (Result<VerifyOtpAndLoginResponseModel, APIError>) -> Void) {
         if !isValid() {
-            completion(.failure(.wrongData))
+            completion(.failure(.custom(message: Messages.invalidOtp.description)))
+            return
         }
         guard let uniqueId = modelOTPResponse?.data?.uid else {
-            completion(.failure(.wrongData))
+            completion(.failure(.custom(message: Messages.invalidResponse.description)))
             return
         }
         accountDetais = AccountDetails(otp: otp,

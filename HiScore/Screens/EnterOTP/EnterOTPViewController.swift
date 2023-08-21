@@ -86,18 +86,20 @@ extension EnterOTPViewController {
 // MARK: - Private methods -
 private extension EnterOTPViewController {
     func resendOTP(phoneNumber: String) {
+        counter = 0
+        timer?.invalidate()
         self.viewModelGetOtp.getOTP(phoneNumber: phoneNumber) { response in
             switch response {
             case .success(let response):
                 Log.d(response)
                 guard let otpResponse = response.data else { return }
+                self.viewModelVerifyOtp.modelOTPResponse = response
                 if let err = otpResponse.errorMsg {
                     self.counter = otpResponse.remainingTime ?? 0
                     self.labelResend.isUserInteractionEnabled = (otpResponse.resendAllowed ?? true)
                     self.showSnackbarError(title: "", subtitle: err)
                     self.showOtpTimerAndText()
                 } else {
-                    self.viewModelVerifyOtp.modelOTPResponse = response
                     self.showSnackbarSuccessOnTop(title: "", subtitle: Messages.otpRecieved)
                 }
             case .failure(let error):
