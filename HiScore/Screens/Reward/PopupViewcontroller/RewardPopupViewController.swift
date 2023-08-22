@@ -12,6 +12,7 @@ class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
     @IBOutlet weak var labelMObileNUmber: UILabel!
 
+    @IBOutlet weak var viwRewardPopup: RewardPopupView!
     @IBOutlet weak var tableMyReward: UITableView!
     
     @IBOutlet weak var labelRewardSubTitle: UILabel!

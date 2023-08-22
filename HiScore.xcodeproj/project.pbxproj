@@ -73,6 +73,8 @@
 		C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368D2A8A4908007391FC /* SplashDataModel.swift */; };
 		C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368E2A8A4908007391FC /* SplashViewModel.swift */; };
 		C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */; };
+		C7D521832A94BDFB00454B67 /* RewardPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D521822A94BDFB00454B67 /* RewardPopupView.swift */; };
+		C7D521852A94BE0800454B67 /* RewardPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D521842A94BE0800454B67 /* RewardPopupView.xib */; };
 		C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBEE612A7BCA590045B449 /* Reachability.swift */; };
 		C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */; };
 		C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */; };
@@ -153,6 +155,8 @@
 		C7C5368D2A8A4908007391FC /* SplashDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashDataModel.swift; sourceTree = "<group>"; };
 		C7C5368E2A8A4908007391FC /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		C7C5368F2A8A4908007391FC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		C7D521822A94BDFB00454B67 /* RewardPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupView.swift; sourceTree = "<group>"; };
+		C7D521842A94BE0800454B67 /* RewardPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardPopupView.xib; sourceTree = "<group>"; };
 		C7EBEE612A7BCA590045B449 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C7EC88332A9339F5009CFAFA /* RewardPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewController.swift; sourceTree = "<group>"; };
 		C7EC88352A934EE4009CFAFA /* RewardPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupViewModel.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 		C77E2A542A8FA6DB00C8C96D /* Reward */ = {
 			isa = PBXGroup;
 			children = (
+				C7D521812A94BC8700454B67 /* Popup */,
 				C7EC88322A9339D5009CFAFA /* PopupViewcontroller */,
 				C7EC88312A9339C2009CFAFA /* ANimationBox */,
 			);
@@ -518,6 +523,15 @@
 				AF916C182A8E393100125808 /* ViewModel */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		C7D521812A94BC8700454B67 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				C7D521822A94BDFB00454B67 /* RewardPopupView.swift */,
+				C7D521842A94BE0800454B67 /* RewardPopupView.xib */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
@@ -736,6 +750,7 @@
 				C72618B22A84ED7B00738F7F /* Rajdhani-Bold.ttf in Resources */,
 				C75F37202A791BC400925880 /* Assets.xcassets in Resources */,
 				AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */,
+				C7D521852A94BE0800454B67 /* RewardPopupView.xib in Resources */,
 				C72618B02A84ED7B00738F7F /* Rajdhani-SemiBold.ttf in Resources */,
 				C75F371E2A791BC200925880 /* Main.storyboard in Resources */,
 				C72618B12A84ED7B00738F7F /* Rajdhani-Light.ttf in Resources */,
@@ -808,6 +823,7 @@
 				C7C536922A8A4908007391FC /* SplashScreenViewController.swift in Sources */,
 				AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */,
 				C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */,
+				C7D521832A94BDFB00454B67 /* RewardPopupView.swift in Sources */,
 				84D2A5CD2A9115060098A1F4 /* String+Extension.swift in Sources */,
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */,
