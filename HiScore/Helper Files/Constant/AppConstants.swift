@@ -14,6 +14,7 @@ enum Storyboards: String {
     case wallet = "Wallet"
     case home = "Home"
     case reward = "Reward"
+    case offer = "Offer"
 }
 enum Messages {
     case tryAgain

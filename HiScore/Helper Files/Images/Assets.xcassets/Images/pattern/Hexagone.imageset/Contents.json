@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "timer 1.png",
+      "filename" : "Hexagone.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "timer 1-2.png",
+      "filename" : "Hexagone@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "timer 1-3.png",
+      "filename" : "Hexagone@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

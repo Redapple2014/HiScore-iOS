@@ -23,6 +23,46 @@ extension UIView {
         self.clipsToBounds = true
         self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.06).cgColor
     }
-    
+    func setGradiantColor(topColor : UIColor,
+                          bottomColor: UIColor,
+                          cornerRadius : CGFloat = 0.0
+                          ,gradiantDirection : GradiantDirection = .topToBottom )
+    {
+        
+        self.layer.sublayers?.filter{ $0 is CAGradientLayer }.forEach{ $0.removeFromSuperlayer() }
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradient.frame = self.bounds
+        
+        switch gradiantDirection {
+        case .topToBottom:
+            gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+            gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+        case .bottomToTop:
+            gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 0.0, y: 0.5)
+        case .leftToRight:
+            gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        case .rightToLeft:
+            gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 0.0, y: 0.5)
+        }
+        
+        gradient.masksToBounds = true
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.cornerRadius = cornerRadius
+        gradient.rasterizationScale = 100
+        self.layer.insertSublayer(gradient, at: 0)
+    }
     
 }
+enum GradiantDirection {
+    case leftToRight
+    case rightToLeft
+    case topToBottom
+    case bottomToTop
+}
+
+

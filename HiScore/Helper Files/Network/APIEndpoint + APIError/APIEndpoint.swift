@@ -13,6 +13,7 @@ enum APIEndpoint {
     case login(version: Version)
     case validateAccess(version: Version)
     case reward(version: Version)
+    case offer(version: Version)
     var path: String {
         switch self {
         case .fetchSplashImage(let version):
@@ -23,8 +24,10 @@ enum APIEndpoint {
             return "\(version)/game/users/login"
         case .validateAccess(let version):
             return "\(version)/user/app/capability"
-        case .reward(version: let version):
+        case .reward(let version):
             return "\(version)/game/users/rewardsInfoV2"
+        case .offer(let version):
+            return "\(version)/utils/onboardingDepositOffers"
         }
     }
     var baseHeader: [String: String] {
@@ -38,8 +41,8 @@ enum APIEndpoint {
         switch self {
         case .fetchSplashImage, .sendOTP, .login, .validateAccess:
             break
-        case .reward:
-            if let token = User.shared.details?.data?.loginToken as? String {
+        case .reward, .offer:
+            if let token = User.shared.details?.data?.loginToken {
                 allHeaders["authorization"] = token // "Bearer \(token)"
             }
         }

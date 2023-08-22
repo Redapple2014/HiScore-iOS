@@ -43,20 +43,20 @@ required to proceed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cde-6G-cRO">
-                                <rect key="frame" x="30" y="448" width="354" height="330"/>
+                                <rect key="frame" x="30" y="448" width="354" height="346"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1N-Cr-0jp">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="86.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="7UN-iG-7wp">
-                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="QfA-Rc-6Qk"/>
                                                     <constraint firstAttribute="height" constant="42" id="qxV-Dp-gGS"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to check your location to continue playing. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-GB-nE6">
-                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <rect key="frame" x="57" y="27" width="267" height="33"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -72,17 +72,17 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlT-N1-77D">
-                                        <rect key="frame" x="0.0" y="82.5" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="86.5" width="354" height="86.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-Qa-Evz">
-                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="gN8-kA-GBf"/>
                                                     <constraint firstAttribute="height" constant="42" id="sit-Jb-vnt"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you deny 2 times go to your phone settings and enable location services" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaP-BM-Jv4">
-                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <rect key="frame" x="57" y="27" width="267" height="33"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -98,22 +98,22 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBE-6f-woA">
-                                        <rect key="frame" x="0.0" y="165" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="173" width="354" height="86.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwO-VY-6Pd">
-                                        <rect key="frame" x="0.0" y="247.5" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="354" height="86.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-E4-MdB" customClass="LoadingButton" customModule="MHLoadingButton">
-                                <rect key="frame" x="18" y="778" width="378" height="48"/>
+                                <rect key="frame" x="18" y="794" width="378" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="lTg-hf-Cfj"/>
                                 </constraints>
-                                <color key="tintColor" name="ButtonTextBlackColor"/>
+                                <color key="tintColor" name="HSYellowButtonTextColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Share Location">
                                     <fontDescription key="titleFontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
@@ -137,7 +137,7 @@ required to proceed</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nQi-8d-iLM" secondAttribute="trailing" id="jf5-Hk-W5c"/>
                             <constraint firstItem="9HD-xN-CbT" firstAttribute="centerY" secondItem="nQi-8d-iLM" secondAttribute="centerY" id="mpX-s5-AP6"/>
                             <constraint firstItem="nQi-8d-iLM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nzq-Z0-XaF"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RTM-E4-MdB" secondAttribute="bottom" constant="36" id="pvy-Bk-QgS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RTM-E4-MdB" secondAttribute="bottom" constant="20" id="pvy-Bk-QgS"/>
                             <constraint firstItem="nQi-8d-iLM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tIl-3f-3DQ"/>
                             <constraint firstItem="RTM-E4-MdB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="tc1-YY-ieP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GAi-PT-AzL" secondAttribute="trailing" constant="30" id="u1I-fg-H1I"/>
@@ -177,20 +177,20 @@ required to proceed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-bA-Kt8">
-                                <rect key="frame" x="30" y="448" width="354" height="330"/>
+                                <rect key="frame" x="30" y="448" width="354" height="346"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn3-2J-wyM">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="86.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-Yl-snz">
-                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="6ot-T6-QWU"/>
                                                     <constraint firstAttribute="height" constant="42" id="dqw-pL-bSj"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy is banned in your location. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-ao-GFd">
-                                                <rect key="frame" x="57" y="33" width="267" height="16.5"/>
+                                                <rect key="frame" x="57" y="35" width="267" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -206,17 +206,17 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-Xl-7x8">
-                                        <rect key="frame" x="0.0" y="82.5" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="86.5" width="354" height="86.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-p6-aT5">
-                                                <rect key="frame" x="0.0" y="20.5" width="42" height="42"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="UNg-iO-mBl"/>
                                                     <constraint firstAttribute="width" constant="42" id="ZCW-2e-FRO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you think there is an issue, please retry or helpdesk@hiscore.games" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-hl-O1Y">
-                                                <rect key="frame" x="57" y="25" width="267" height="33"/>
+                                                <rect key="frame" x="57" y="27" width="267" height="33"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -232,22 +232,22 @@ required to proceed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nov-Bc-k46">
-                                        <rect key="frame" x="0.0" y="165" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="173" width="354" height="86.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-vd-9LL">
-                                        <rect key="frame" x="0.0" y="247.5" width="354" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="354" height="86.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-77-WPz" customClass="LoadingButton" customModule="MHLoadingButton">
-                                <rect key="frame" x="18" y="778" width="378" height="48"/>
+                                <rect key="frame" x="18" y="794" width="378" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="2k7-xW-K3g"/>
                                 </constraints>
-                                <color key="tintColor" name="ButtonTextBlackColor"/>
+                                <color key="tintColor" name="HSYellowButtonTextColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Contact Us">
                                     <fontDescription key="titleFontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
@@ -267,7 +267,7 @@ required to proceed</string>
                             <constraint firstItem="dXT-bA-Kt8" firstAttribute="top" secondItem="Idi-lC-tBc" secondAttribute="bottom" id="Qfk-Jb-4gY"/>
                             <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="Idi-lC-tBc" secondAttribute="trailing" id="UPV-G5-a3R"/>
                             <constraint firstItem="nlH-92-KyC" firstAttribute="centerY" secondItem="Idi-lC-tBc" secondAttribute="centerY" id="VRt-MN-WnH"/>
-                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="bottom" secondItem="cUG-77-WPz" secondAttribute="bottom" constant="36" id="col-7V-3kR"/>
+                            <constraint firstItem="xgK-Uo-UPe" firstAttribute="bottom" secondItem="cUG-77-WPz" secondAttribute="bottom" constant="20" id="col-7V-3kR"/>
                             <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="dXT-bA-Kt8" secondAttribute="trailing" constant="30" id="dWY-I4-XWa"/>
                             <constraint firstItem="xgK-Uo-UPe" firstAttribute="trailing" secondItem="cUG-77-WPz" secondAttribute="trailing" constant="18" id="fiQ-xC-kx4"/>
                             <constraint firstItem="Idi-lC-tBc" firstAttribute="top" secondItem="LCj-uL-U7H" secondAttribute="top" id="lsj-3i-4nA"/>
@@ -304,7 +304,7 @@ required to proceed</string>
         <namedColor name="AppThemeColor">
             <color red="0.078431372549019607" green="0.094117647058823528" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="ButtonTextBlackColor">
+        <namedColor name="HSYellowButtonTextColor">
             <color red="0.070588235294117646" green="0.0039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
