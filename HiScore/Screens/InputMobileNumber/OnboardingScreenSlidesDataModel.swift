@@ -26,6 +26,4 @@ extension Images: EventUrlPresentable {
     var splashScreenUrl: URL {
         return URL(string: imageURL)!
     }
-    
-    
 }
