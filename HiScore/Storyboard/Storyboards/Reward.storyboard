@@ -35,7 +35,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-Vb-RGh" customClass="LottieAnimationView" customModule="Lottie">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeTest" translatesAutoresizingMaskIntoConstraints="NO" id="k2O-W0-Ibs">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-Vb-RGh" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -47,9 +51,13 @@
                         <color key="backgroundColor" name="HSAppThemeColor"/>
                         <constraints>
                             <constraint firstItem="Ed9-Vb-RGh" firstAttribute="leading" secondItem="9hP-H2-zYH" secondAttribute="leading" id="2ig-vb-Twc"/>
+                            <constraint firstItem="9hP-H2-zYH" firstAttribute="bottom" secondItem="k2O-W0-Ibs" secondAttribute="bottom" id="57t-tl-WJI"/>
+                            <constraint firstItem="9hP-H2-zYH" firstAttribute="trailing" secondItem="k2O-W0-Ibs" secondAttribute="trailing" id="CeH-PD-bdg"/>
                             <constraint firstAttribute="bottom" secondItem="Ed9-Vb-RGh" secondAttribute="bottom" id="DYu-EE-E5l"/>
+                            <constraint firstItem="k2O-W0-Ibs" firstAttribute="leading" secondItem="9hP-H2-zYH" secondAttribute="leading" id="OpK-Sf-8h8"/>
                             <constraint firstItem="Ed9-Vb-RGh" firstAttribute="top" secondItem="R8L-Jh-nCG" secondAttribute="top" id="bEK-SX-cog"/>
                             <constraint firstItem="9hP-H2-zYH" firstAttribute="trailing" secondItem="Ed9-Vb-RGh" secondAttribute="trailing" id="nUt-5B-3oE"/>
+                            <constraint firstItem="k2O-W0-Ibs" firstAttribute="top" secondItem="9hP-H2-zYH" secondAttribute="top" id="owy-iV-bV5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OWd-zy-8T5"/>
@@ -59,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fx8-a2-A5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230" y="-10"/>
+            <point key="canvasLocation" x="175" y="-38"/>
         </scene>
         <!--Reward Popup View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -72,17 +80,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-L3-Ug4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-xS-gYy" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
-                                <rect key="frame" x="18" y="814" width="378" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="lgB-1N-12d"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <action selector="buttonContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j65-sn-DKJ"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj0-gr-6Q8">
                                 <rect key="frame" x="0.0" y="82" width="414" height="49.5"/>
                                 <subviews>
@@ -331,17 +328,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-96-71s">
-                                <rect key="frame" x="97" y="740" width="220" height="50"/>
+                                <rect key="frame" x="95" y="740" width="224" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="OmO-Vy-3yK">
-                                        <rect key="frame" x="39" y="9" width="16" height="16"/>
+                                        <rect key="frame" x="41" y="9" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OmO-Vy-3yK" secondAttribute="height" multiplier="1:1" id="lcW-AT-WFZ"/>
                                             <constraint firstAttribute="width" constant="16" id="uSY-ae-zKE"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:59:57" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdV-5e-0i2" customClass="GradientLabel" customModule="HiScore" customModuleProvider="target">
-                                        <rect key="frame" x="65" y="5" width="90" height="24"/>
+                                        <rect key="frame" x="67" y="5" width="90" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="cik-LF-LmQ"/>
                                         </constraints>
@@ -350,7 +347,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurry! Offer limited for first deposit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTo-16-FGX">
-                                        <rect key="frame" x="6" y="28.5" width="208" height="14.5"/>
+                                        <rect key="frame" x="8" y="28.5" width="208" height="14.5"/>
                                         <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="12"/>
                                         <color key="textColor" name="LightGreyTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -358,15 +355,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="TTo-16-FGX" firstAttribute="leading" secondItem="Uwn-96-71s" secondAttribute="leading" constant="6" id="2hc-EQ-dz6"/>
                                     <constraint firstAttribute="bottom" secondItem="TTo-16-FGX" secondAttribute="bottom" constant="7" id="5Yc-jd-nin"/>
                                     <constraint firstItem="YdV-5e-0i2" firstAttribute="top" secondItem="Uwn-96-71s" secondAttribute="top" constant="5" id="BOh-OS-xlY"/>
                                     <constraint firstItem="YdV-5e-0i2" firstAttribute="centerX" secondItem="Uwn-96-71s" secondAttribute="centerX" id="C4Q-2F-Kda"/>
+                                    <constraint firstAttribute="trailing" secondItem="TTo-16-FGX" secondAttribute="trailing" constant="8" id="KaK-YL-TxH"/>
                                     <constraint firstItem="YdV-5e-0i2" firstAttribute="leading" secondItem="OmO-Vy-3yK" secondAttribute="trailing" constant="10" id="Kws-XO-fsH"/>
                                     <constraint firstItem="TTo-16-FGX" firstAttribute="top" secondItem="YdV-5e-0i2" secondAttribute="bottom" constant="-0.5" id="kDM-K5-n1g"/>
+                                    <constraint firstItem="TTo-16-FGX" firstAttribute="leading" secondItem="Uwn-96-71s" secondAttribute="leading" constant="8" id="nqX-Es-icf"/>
                                     <constraint firstItem="OmO-Vy-3yK" firstAttribute="centerY" secondItem="YdV-5e-0i2" secondAttribute="centerY" id="r9o-wn-eyh"/>
                                     <constraint firstAttribute="height" constant="50" id="sBd-Db-a0x"/>
-                                    <constraint firstAttribute="trailing" secondItem="TTo-16-FGX" secondAttribute="trailing" constant="6" id="ufm-BK-uSn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -374,6 +371,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-xS-gYy" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
+                                <rect key="frame" x="18" y="814" width="378" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lgB-1N-12d"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="buttonContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j65-sn-DKJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="HSAppThemeColor"/>
@@ -423,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="-10.044642857142856"/>
+            <point key="canvasLocation" x="1023" y="-29"/>
         </scene>
     </scenes>
     <designables>
@@ -433,6 +441,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="HomeTest" width="562.5" height="1218"/>
         <image name="RummyCash" width="86.5" height="83.5"/>
         <image name="inputError" width="11" height="11"/>
         <image name="rewardStar" width="112" height="116"/>
@@ -447,7 +456,7 @@
             <color red="0.51372549019607838" green="0.57647058823529407" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightGreyTextColor">
-            <color red="0.90588241815567017" green="0.91372555494308472" blue="0.94117653369903564" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90588235294117647" green="0.9137254901960784" blue="0.94117647058823528" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -33,7 +33,9 @@ class RewardPopupViewController: BaseViewController {
     var viewModel: RewardPopupViewModel!
     var rewardResponse: RewardPopupResponseModel?
     @IBOutlet weak var labelTimerText: GradientLabel!
-    
+    var counter = 0
+    var timer: Timer?
+
 }
 extension RewardPopupViewController {
     override func viewDidLoad() {
@@ -45,15 +47,44 @@ extension RewardPopupViewController {
         drawStroke()
         createCircleUI()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        invalidTimer()
+    }
+
 }
 
 extension RewardPopupViewController {
     @IBAction func buttonContinue(_ sender: Any) {
         
     }
-    
+    @objc func updateCounter() {
+        if counter > -1 {
+                self.labelTimerText.text = getTimeRemainingText(time: counter)
+            counter -= 1
+        } else {
+            timer?.invalidate()
+        }
+    }
 }
 extension RewardPopupViewController {
+    func showTimerWithAnimation() {
+        // Unhide the view before animating
+            viewTimerSection.isHidden = false
+            // Initial position for animation (below the screen)
+        viewTimerSection.transform = CGAffineTransform(translationX: 0, y: viewTimerSection.frame.size.height)
+            UIView.animate(withDuration: 0.5, animations: {
+                // Animate the view to its original position (no translation)
+                self.viewTimerSection.transform = .identity
+            })
+    }
+    func invalidTimer() {
+        counter = 0
+        if timer != nil {
+            timer?.invalidate()
+        }
+    }
+
     private func getRewardData() {
         viewModel.getRewardData { response in
             switch response {
@@ -73,6 +104,13 @@ extension RewardPopupViewController {
 
 
 extension RewardPopupViewController {
+    func getTimeRemainingText(time: Int) -> String {
+        let hours = time / 3600
+        let minutes = (time % 3600) / 60
+        let seconds = time % 60
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+
     private func showText() {
         guard let data = self.rewardResponse?.data else { return }
         labelGreetingText.text = data.greetingSection.subtitle
@@ -81,8 +119,14 @@ extension RewardPopupViewController {
         labelRewardAmount.text = "₹ \(data.rewardSection.totalRewardReceived)"
         labelHurryUP.text = data.hurryUpSection.hurrySubtitle
         tableMyReward.reloadData()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        counter = self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showTimerWithAnimation()
+        }
     }
     private func initUI() {
+        viewTimerSection.isHidden = true
         viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
         labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
         viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
@@ -124,20 +168,11 @@ extension RewardPopupViewController {
         circle2.circleUI()
     }
     private func drawStroke() {
-        
-     //   viewBetween.backgroundColor = .blue
-//        let stroke = UIView()
-//        stroke.bounds = viewBetween.bounds.insetBy(dx: -2, dy: -2)
-//        stroke.center = viewBetween.center
-//        viewBetween.addSubview(stroke)
-//        stroke.bounds = viewBetween.bounds.insetBy(dx: -2, dy: -2)
-//        stroke.layer.borderWidth = 4
-//        stroke.layer.borderColor = UIColor(red: 0.078, green: 0.094, blue: 0.169, alpha: 1).cgColor
     }
 }
 extension RewardPopupViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.rewardResponse?.data.knowMoreSection.rewardsList.count ?? 0
+        return self.rewardResponse?.data.rewardSection.allRewards.horizontalSet.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,9 +181,9 @@ extension RewardPopupViewController:UITableViewDataSource {
         }
         guard let res = self.rewardResponse,
               let data = res.data as? RewardDataClass,
-              let knowMore = data.knowMoreSection as? KnowMoreSection,
-              let list = knowMore.rewardsList as? [RewardsList] else { return MyRewardsTableViewCell()}
-        
+              let reward = data.rewardSection as? RewardSection,
+              let allReward = reward.allRewards as? AllRewards,
+              let list = allReward.horizontalSet as? [HorizontalSet] else { return MyRewardsTableViewCell()}
         cell.configCell(data: list[indexPath.row] )
         return cell
     }

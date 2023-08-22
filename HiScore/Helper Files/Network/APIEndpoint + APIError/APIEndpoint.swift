@@ -26,6 +26,7 @@ enum APIEndpoint {
             return "\(version)/user/app/capability"
         case .reward(version: let version):
             return "\(version)/game/users/rewardsInfoV2"
+
         }
     }
     var baseHeader: [String: String] {

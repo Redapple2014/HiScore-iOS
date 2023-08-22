@@ -40,7 +40,7 @@ class RewardViewController: BaseViewController {
         animationView.stop()
         // 6. Play animation
         animationView!.play ()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             self.animationView.stop()
             self.moveToHome()
         }
@@ -49,7 +49,10 @@ class RewardViewController: BaseViewController {
     }
     
     func moveToHome() {
-        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+//        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+//            return
+//        }
+        guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardPopupViewController") as? RewardPopupViewController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
