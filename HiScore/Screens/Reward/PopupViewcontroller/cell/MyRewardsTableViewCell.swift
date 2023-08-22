@@ -23,7 +23,7 @@ class MyRewardsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         viewGradient.layoutIfNeeded()
         viewGradient.setNeedsLayout()
-        imageContainer()
+//        imageContainer()
     }
     func configCell(data: HorizontalSet) {
         viewBG.backgroundColor = .clear
@@ -38,12 +38,12 @@ class MyRewardsTableViewCell: UITableViewCell {
         labelRewardName.text = data.rewardType
         
     }
-    func imageContainer() {
-        viewGradient.setGradientBackground(colorTop: UIColor(red: 1, green: 1, blue: 1, alpha: 1), colorBottom: UIColor(red: 1, green: 1, blue: 1, alpha: 0))
-        viewGradient.layer.cornerRadius = 10
-        viewGradient.clipsToBounds = true
-        viewGradient.backgroundColor = .clear
-    }
+//    func imageContainer() {
+////        viewGradient.setGradientBackground(colorTop: UIColor(red: 1, green: 1, blue: 1, alpha: 1), colorBottom: UIColor(red: 1, green: 1, blue: 1, alpha: 0))
+////        viewGradient.layer.cornerRadius = 10
+////        viewGradient.clipsToBounds = true
+////        viewGradient.backgroundColor = .clear
+//    }
    
 
     override func setSelected(_ selected: Bool, animated: Bool) {

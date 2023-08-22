@@ -77,7 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-L3-Ug4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RewardDetailsHome" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-L3-Ug4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj0-gr-6Q8">
@@ -110,7 +110,10 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tig-Bf-eHk">
                                 <rect key="frame" x="18" y="155.5" width="378" height="140"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61T-az-1Lb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewardTop" translatesAutoresizingMaskIntoConstraints="NO" id="KIJ-HR-JJi">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="140"/>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61T-az-1Lb">
                                         <rect key="frame" x="240" y="-64" width="128" height="128"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
@@ -118,7 +121,7 @@
                                             <constraint firstAttribute="height" constant="128" id="zbM-L8-IBG"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-8c-PQV">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-8c-PQV">
                                         <rect key="frame" x="274" y="-30" width="128" height="128"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
@@ -158,14 +161,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="HSDarkBlue"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="hVj-J4-GQR" firstAttribute="leading" secondItem="RCq-z4-mdh" secondAttribute="leading" id="772-1E-0mt"/>
                                     <constraint firstItem="b8z-8x-971" firstAttribute="top" secondItem="hVj-J4-GQR" secondAttribute="bottom" constant="12" id="CE2-iS-8hz"/>
+                                    <constraint firstItem="KIJ-HR-JJi" firstAttribute="centerX" secondItem="tig-Bf-eHk" secondAttribute="centerX" id="F3e-aZ-XAb"/>
+                                    <constraint firstItem="KIJ-HR-JJi" firstAttribute="centerY" secondItem="tig-Bf-eHk" secondAttribute="centerY" id="Fdr-jR-uYc"/>
                                     <constraint firstItem="kN1-Vp-nlc" firstAttribute="leading" secondItem="tig-Bf-eHk" secondAttribute="leading" constant="12" id="GBX-cE-mI1"/>
                                     <constraint firstItem="D7k-kQ-SGa" firstAttribute="top" secondItem="tig-Bf-eHk" secondAttribute="top" constant="37" id="Hge-RZ-xyz"/>
                                     <constraint firstAttribute="trailing" secondItem="61T-az-1Lb" secondAttribute="trailing" constant="10" id="IhC-6L-VKs"/>
                                     <constraint firstItem="D7k-kQ-SGa" firstAttribute="leading" secondItem="tig-Bf-eHk" secondAttribute="leading" constant="30" id="Ihd-te-3Aq"/>
+                                    <constraint firstItem="KIJ-HR-JJi" firstAttribute="width" secondItem="tig-Bf-eHk" secondAttribute="width" id="KF2-pd-4KQ"/>
                                     <constraint firstItem="iIh-8c-PQV" firstAttribute="centerY" secondItem="61T-az-1Lb" secondAttribute="bottom" constant="-30" id="MOb-oE-Q5N"/>
                                     <constraint firstItem="61T-az-1Lb" firstAttribute="centerY" secondItem="tig-Bf-eHk" secondAttribute="top" id="QnQ-1K-z3Y"/>
                                     <constraint firstItem="kN1-Vp-nlc" firstAttribute="top" secondItem="tig-Bf-eHk" secondAttribute="top" constant="12" id="Xx7-fO-2kk"/>
@@ -177,6 +183,7 @@
                                     <constraint firstItem="iIh-8c-PQV" firstAttribute="centerX" secondItem="61T-az-1Lb" secondAttribute="trailing" constant="-30" id="gm0-FH-fWa"/>
                                     <constraint firstItem="iIh-8c-PQV" firstAttribute="width" secondItem="iIh-8c-PQV" secondAttribute="height" multiplier="1:1" id="j5J-mS-3Is"/>
                                     <constraint firstAttribute="height" constant="140" id="ulu-mn-eyt"/>
+                                    <constraint firstItem="KIJ-HR-JJi" firstAttribute="height" secondItem="tig-Bf-eHk" secondAttribute="height" id="yHR-5D-erQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -184,15 +191,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axd-da-4Ub" customClass="ChainView" customModule="HiScore" customModuleProvider="target">
-                                <rect key="frame" x="18" y="295.5" width="378" height="10"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axd-da-4Ub" customClass="ChainView" customModule="HiScore" customModuleProvider="target">
+                                <rect key="frame" x="18" y="295.5" width="378" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="9zZ-Qn-V1W"/>
+                                    <constraint firstAttribute="height" id="9zZ-Qn-V1W"/>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-kG-3w0">
-                                <rect key="frame" x="18" y="305.5" width="378" height="410.5"/>
+                                <rect key="frame" x="18" y="295.5" width="378" height="420.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQU-lD-FNR">
                                         <rect key="frame" x="12" y="19" width="84" height="19"/>
@@ -234,7 +241,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-gK-mBP">
-                                        <rect key="frame" x="0.0" y="49.5" width="378" height="361"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="378" height="371"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="61n-Zv-Mmc" customClass="MyRewardsTableViewCell" customModule="HiScore" customModuleProvider="target">
@@ -250,15 +257,22 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAK-aU-xjz">
                                                                     <rect key="frame" x="12" y="10" width="36" height="36"/>
                                                                     <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleBG" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-yQ-B3p">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        </imageView>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EsY-Aa-1N7">
                                                                             <rect key="frame" x="6" y="6" width="24" height="24"/>
                                                                         </imageView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" name="HSGreyBlue"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="35l-Dg-whH"/>
+                                                                        <constraint firstItem="Yfm-yQ-B3p" firstAttribute="centerX" secondItem="pAK-aU-xjz" secondAttribute="centerX" id="4lT-ml-ugl"/>
+                                                                        <constraint firstItem="Yfm-yQ-B3p" firstAttribute="centerY" secondItem="pAK-aU-xjz" secondAttribute="centerY" id="Ilj-mL-2y6"/>
                                                                         <constraint firstItem="EsY-Aa-1N7" firstAttribute="leading" secondItem="pAK-aU-xjz" secondAttribute="leading" constant="6" id="b2k-2z-ecE"/>
                                                                         <constraint firstItem="EsY-Aa-1N7" firstAttribute="top" secondItem="pAK-aU-xjz" secondAttribute="top" constant="6" id="bso-lX-0T0"/>
+                                                                        <constraint firstItem="Yfm-yQ-B3p" firstAttribute="width" secondItem="pAK-aU-xjz" secondAttribute="width" id="eD8-zt-LU8"/>
+                                                                        <constraint firstItem="Yfm-yQ-B3p" firstAttribute="height" secondItem="pAK-aU-xjz" secondAttribute="height" id="iOs-Qz-J5r"/>
                                                                         <constraint firstAttribute="trailing" secondItem="EsY-Aa-1N7" secondAttribute="trailing" constant="6" id="jaI-LV-XG5"/>
                                                                         <constraint firstAttribute="bottom" secondItem="EsY-Aa-1N7" secondAttribute="bottom" constant="6" id="x4d-4I-TxM"/>
                                                                         <constraint firstAttribute="width" secondItem="pAK-aU-xjz" secondAttribute="height" id="zI2-c7-h39"/>
@@ -431,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="-29"/>
+            <point key="canvasLocation" x="970" y="-110"/>
         </scene>
     </scenes>
     <designables>
@@ -442,18 +456,18 @@
     </designables>
     <resources>
         <image name="HomeTest" width="562.5" height="1218"/>
+        <image name="RewardDetailsHome" width="375" height="812"/>
         <image name="RummyCash" width="86.5" height="83.5"/>
         <image name="inputError" width="11" height="11"/>
+        <image name="rectangleBG" width="36" height="36"/>
         <image name="rewardStar" width="112" height="116"/>
+        <image name="rewardTop" width="680" height="280"/>
         <image name="timer" width="11.5" height="14"/>
         <namedColor name="HSAppThemeColor">
             <color red="0.050980392156862744" green="0.023529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HSDarkBlue">
             <color red="0.078431372549019607" green="0.094117647058823528" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="HSGreyBlue">
-            <color red="0.51372549019607838" green="0.57647058823529407" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightGreyTextColor">
             <color red="0.90588235294117647" green="0.9137254901960784" blue="0.94117647058823528" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>

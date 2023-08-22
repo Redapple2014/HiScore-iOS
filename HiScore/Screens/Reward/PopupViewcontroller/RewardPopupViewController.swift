@@ -105,18 +105,19 @@ extension RewardPopupViewController {
 
 extension RewardPopupViewController {
     func getTimeRemainingText(time: Int) -> String {
-        let hours = time / 3600
-        let minutes = (time % 3600) / 60
-        let seconds = time % 60
+        let sec = time/1000
+        let hours = sec / 3600
+        let minutes = (sec % 3600) / 60
+        let seconds = sec % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 
     private func showText() {
         guard let data = self.rewardResponse?.data else { return }
         labelGreetingText.text = data.greetingSection.subtitle
-        labelMObileNUmber.text = "Hi usr\(data.greetingSection.username)"
+        labelMObileNUmber.text = "Hi \(data.greetingSection.username)"
         labelRewardSubTitle.text = data.rewardSection.totalRewardSubtitle
-        labelRewardAmount.text = "₹ \(data.rewardSection.totalRewardReceived)"
+        labelRewardAmount.text = "₹\(data.rewardSection.totalRewardReceived)"
         labelHurryUP.text = data.hurryUpSection.hurrySubtitle
         tableMyReward.reloadData()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
@@ -129,7 +130,7 @@ extension RewardPopupViewController {
         viewTimerSection.isHidden = true
         viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
         labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
-        viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
+//        viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
         viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
         designKnowMoreView()
