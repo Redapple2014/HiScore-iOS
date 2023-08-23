@@ -106,10 +106,10 @@ extension RewardPopupViewController {
 
 extension RewardPopupViewController {
     func getTimeRemainingText(time: Int) -> String {
-        let sec = time/1000
-        let hours = sec / 3600
-        let minutes = (sec % 3600) / 60
-        let seconds = sec % 60
+      //  let sec = time/1000
+        let hours = time / 3600
+        let minutes = (time % 3600) / 60
+        let seconds = time % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 
@@ -122,7 +122,7 @@ extension RewardPopupViewController {
         labelHurryUP.text = data.hurryUpSection.hurrySubtitle
         tableMyReward.reloadData()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        counter = self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0
+        counter = (self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0)/1000
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.showTimerWithAnimation()
         }
