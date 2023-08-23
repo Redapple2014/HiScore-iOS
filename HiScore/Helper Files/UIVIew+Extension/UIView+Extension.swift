@@ -7,24 +7,62 @@
 
 import Foundation
 import UIKit
-extension UIView {
-    func setButtonGradientBackground() {
-        let colorTop =  UIColor(red: 0.96, green: 0.89, blue: 0.72, alpha: 1).cgColor
-        let colorBottom = UIColor(red: 0.8, green: 0.62, blue: 0.32, alpha: 1).cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.bounds
-        self.layer.insertSublayer(gradientLayer, at:0)
-    }
 
-    func setGradientForSliderBG() {
+extension UIView {
+    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [ UIColor(red: 0.475, green: 0.416, blue: 0.361, alpha: 1).cgColor, UIColor(red: 0.078, green: 0.094, blue: 0.169, alpha: 1).cgColor, UIColor(red: 0.408, green: 0.361, blue: 0.325, alpha: 0).cgColor
-            ]
-        gradientLayer.locations = [0, 1, 1]
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.locations = [0, 1]
         gradientLayer.frame = self.bounds
-        self.layer.insertSublayer(gradientLayer, at:0)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
+    func circleUI() {
+        self.backgroundColor = .clear
+        self.layer.borderWidth = 0.9
+        self.layer.cornerRadius = self.frame.size.height/2
+        self.clipsToBounds = true
+        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.06).cgColor
+    }
+    func setGradiantColor(topColor : UIColor,
+                          bottomColor: UIColor,
+                          cornerRadius : CGFloat = 0.0
+                          ,gradiantDirection : GradiantDirection = .topToBottom )
+    {
+        
+        self.layer.sublayers?.filter{ $0 is CAGradientLayer }.forEach{ $0.removeFromSuperlayer() }
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradient.frame = self.bounds
+        
+        switch gradiantDirection {
+        case .topToBottom:
+            gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+            gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+        case .bottomToTop:
+            gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 0.0, y: 0.5)
+        case .leftToRight:
+            gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        case .rightToLeft:
+            gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 0.0, y: 0.5)
+        }
+        
+        gradient.masksToBounds = true
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.cornerRadius = cornerRadius
+        gradient.rasterizationScale = 100
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
 }
+enum GradiantDirection {
+    case leftToRight
+    case rightToLeft
+    case topToBottom
+    case bottomToTop
+}
+
 

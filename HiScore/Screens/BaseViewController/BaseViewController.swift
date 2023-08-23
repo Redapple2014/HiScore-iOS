@@ -9,12 +9,17 @@ import UIKit
 import Skeleton
 import NotificationBannerSwift
 import OTPFieldView
+
 class BaseViewController: UIViewController {
-
-//    private let snackVw = SnackerView()
-    
-
+    private var locationPopUp = FetchLocationPopUp(frame: UIScreen.main.bounds)
+    // MARK: - This one is instance of UIWindow.
+    weak var mainWindow: UIWindow? = {
+        let window =  UIApplication.shared.windows.first { $0.isKeyWindow }
+        return window
+        
+    }()
 }
+// MARK: - View life cycles
 extension BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,40 +29,64 @@ extension BaseViewController {
         super.viewWillAppear(animated)
     }
 }
+// MARK: - Initiate storyboard
 extension BaseViewController {
-    func updateUI() {
+    func storyboard(name: Storyboards) -> UIStoryboard {
+        return UIStoryboard(name: name.rawValue, bundle: nil)
     }
-    
-    func setupOtpView(otpTextFieldView: OTPFieldView){
-            otpTextFieldView.fieldsCount = 5
-            otpTextFieldView.fieldBorderWidth = 2
-            otpTextFieldView.defaultBorderColor = UIColor.black
-            otpTextFieldView.filledBorderColor = UIColor.green
-            otpTextFieldView.cursorColor = UIColor.red
-            otpTextFieldView.displayType = .square
-            otpTextFieldView.fieldSize = 40
-            otpTextFieldView.separatorSpace = 8
-            otpTextFieldView.shouldAllowIntermediateEditing = false
-           // otpTextFieldView.delegate = self
-            otpTextFieldView.initializeUI()
-        }
-
+    func updateUI() { }
 }
+// MARK: - Methods for snackbar
 extension BaseViewController {
     func showSnackbarError(title: String, subtitle: String) {
-        showAlert(title: title, subtitle: subtitle, style: .danger)
+        showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
     }
     
-    func showSnackbarSuccessOnTop(title: String, subtitle: String) {
-        showAlert(title: title, subtitle: subtitle, style: .success)
+    func showSnackbarSuccessOnTop(title: String, subtitle: Messages) {
+        showAlert(title: title, subtitle: subtitle.description, style: .success, font: UIFont.MavenPro.ExtraBold.withSize(18))
     }
-    private func showAlert(title: String, subtitle: String, style: BannerStyle) {
-        let banner = NotificationBanner(title: title, subtitle: subtitle, style: style)
+    private func showAlert(title: String, subtitle: String, style: BannerStyle, font: UIFont) {
+        let banner = NotificationBanner(title: title, subtitle: subtitle.description, style: style)
+        banner.subtitleLabel?.font = font
+        banner.subtitleLabel?.textAlignment = .center
         banner.autoDismiss = true
         banner.show()
     }
 }
+
+// MARK: - Activity loader methods
 extension BaseViewController {
+    /// This function is used to show loader and message.
+    /// - Parameter message: The message to be displayed.
+    func showFetchLocationPopUp() {
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = false
+            self.locationPopUp.startLoading()
+            guard let mainWindow = self.mainWindow else { return }
+            mainWindow.addSubview(self.locationPopUp)
+            self.locationPopUp.translatesAutoresizingMaskIntoConstraints = false
+            let constraints = [
+                self.locationPopUp.topAnchor.constraint(equalTo: mainWindow.topAnchor, constant: 0),
+                self.locationPopUp.bottomAnchor.constraint(equalTo: mainWindow.bottomAnchor, constant: 0),
+                self.locationPopUp.leftAnchor.constraint(equalTo: mainWindow.leftAnchor, constant: 0),
+                self.locationPopUp.rightAnchor.constraint(equalTo: mainWindow.rightAnchor, constant: 0)
+            ]
+            NSLayoutConstraint.activate(constraints)
+        }
+    }
+    /// This function is used to show loader and message.
+    func hideFetchLocationPopUp() {
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = true
+            self.locationPopUp.removeFromSuperview()
+            self.locationPopUp.stopLoading()
+        }
+    }
+}
+
+
+
+//extension BaseViewController {
 //     func placeHolderTextField(textField: TKFormTextField) {
 //        // UITextField traditional properties
 //        textField.placeholder = "Enter phone number"
@@ -86,7 +115,7 @@ extension BaseViewController {
 //     //   textField.addTarget(self, action: #selector(updateError), for: .editingChanged)
 //
 //    }
-}
+//}
 //extension BaseViewController: GradientsOwner {
 //    var gradientLayers: [CAGradientLayer] {
 //        let grad = gradView.map({$0.gradientLayer})

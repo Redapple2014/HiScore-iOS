@@ -34,7 +34,7 @@ extension UIColor {
         )
     } 
 
-    static let HSThemeColor: UIColor = {
+    static let HSAppThemeColor: UIColor = {
         return UIColor(hex: "#0D0616")
     }()
     
@@ -50,7 +50,33 @@ extension UIColor {
         return  UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
     }()
 
-    static let HSGradientButtonTextColor: UIColor = {
+    static let HSYellowButtonTextColor: UIColor = {
         return  UIColor(red: 0.07, green: 0, blue: 0.12, alpha: 1)
+    }()
+    
+    static let HSLightGreyButtonTextColor: UIColor = {
+        return  UIColor(red: 0.933, green: 0.839, blue: 0.651, alpha: 1)
+    }()
+    
+    static let HSDarkBlue: UIColor = {
+        return  UIColor(hex: "#14182B")
+    }()
+    static let HSRedColor: UIColor = {
+       return UIColor(red: 0.961, green: 0.302, blue: 0.247, alpha: 0.5)
+    }()
+    static let HSBlue: UIColor = {
+       return UIColor(hex: "#458FFF")
+    }()
+    static let HSGreyBlue: UIColor = {
+       return UIColor(hex: "#8393B2")
+    }()
+    static let HSMediumDarkBlue: UIColor = {
+       return UIColor(hex: "#393D51")
+    }()
+    static let HSTabbarColor: UIColor = {
+        return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8) //UIColor(hex: "#181D34")
+    }()
+    static let HSBlackTextColor: UIColor = {
+        return UIColor(hex: "#463327")
     }()
 }
