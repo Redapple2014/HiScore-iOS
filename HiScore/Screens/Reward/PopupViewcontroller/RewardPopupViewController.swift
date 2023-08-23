@@ -48,6 +48,12 @@ extension RewardPopupViewController {
         super.viewWillDisappear(animated)
         invalidTimer()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonContinue.setNeedsLayout()
+        buttonContinue.layoutIfNeeded()
+        buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
+    }
 
 }
 extension RewardPopupViewController: RewardPopupDelegate {
@@ -158,9 +164,7 @@ extension RewardPopupViewController {
         viewTimerSection.isHidden = true
         viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
         labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
-//        viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
         viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
-        buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
         designKnowMoreView()
         tableMyReward.dataSource = self
     }

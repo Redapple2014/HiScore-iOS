@@ -17,12 +17,17 @@ class DisableLocationViewController: BaseViewController {
     var viewModel = DisableLocationViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
         buttonContactUs.addTarget(self, action: #selector(buttonContactUsDidTap), for: .touchUpInside)
         guard let error = viewModel.errorText else { return }
         labelHeaderTitle.text = error.headerTitle
         labelDescriptionTitle.text = error.headerTitle
         labelDescriptionText.text = error.headerTitle
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonContactUs.setNeedsLayout()
+        buttonContactUs.layoutIfNeeded()
+        buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
     }
     @objc func buttonContactUsDidTap() { }
 }

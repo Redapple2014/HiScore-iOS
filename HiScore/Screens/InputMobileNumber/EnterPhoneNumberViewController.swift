@@ -46,6 +46,12 @@ extension EnterPhoneNumberViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonGetStarted.setNeedsLayout()
+        buttonGetStarted.layoutIfNeeded()
+        buttonGetStarted.setUpButtonWithGradientBackground(type: .yellow)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Remove keyboard observers
@@ -188,7 +194,6 @@ extension EnterPhoneNumberViewController {
         viewContainer.layer.borderWidth = 2.0
         viewContainer.backgroundColor = UIColor.HSTextFieldColor
         buttonGetStarted.initLoadingButton()
-        buttonGetStarted.setUpButtonWithGradientBackground(type: .yellow)
         inputTextField.clearButtonMode = .whileEditing
     }
 

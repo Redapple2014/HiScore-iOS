@@ -41,6 +41,15 @@ extension EnterOTPViewController {
         super.viewWillDisappear(animated)
         invalidTimer()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonVerify.setNeedsLayout()
+        buttonVerify.layoutIfNeeded()
+        buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
+        buttonChangeNumber.setNeedsLayout()
+        buttonChangeNumber.layoutIfNeeded()
+        buttonChangeNumber.setUpButtonWithGradientBackground(type: .lightGrey)
+    }
 }
 // MARK: - OTPFieldView Delegate -
 extension EnterOTPViewController: OTPFieldViewDelegate {

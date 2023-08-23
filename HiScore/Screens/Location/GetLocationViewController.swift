@@ -22,9 +22,14 @@ class GetLocationViewController: BaseViewController {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
         viewModel = LocationViewModel(networkService: networkService)
-        buttonShareLocation.setUpButtonWithGradientBackground(type: .yellow)
     }
     override func viewWillAppear(_ animated: Bool) { }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonShareLocation.setNeedsLayout()
+        buttonShareLocation.layoutIfNeeded()
+        buttonShareLocation.setUpButtonWithGradientBackground(type: .yellow)
+    }
 }
 // MARK: - Navigation
 extension GetLocationViewController: CLLocationManagerDelegate {
@@ -110,6 +115,7 @@ extension GetLocationViewController {
                     switch result {
                     case .success(let response):
                         if response.data.rummy.isAllowed {
+                            UserDefaults.standard.set(true, forKey: "isLocationAllowed")
                             guard let userData = User.shared.details?.data,
                                   let isNewUser = userData.isNewUser,
                                   let isDuplicateUser = userData.dupe else { return }

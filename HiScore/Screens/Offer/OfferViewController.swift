@@ -33,7 +33,7 @@ extension OfferViewController {
         super.viewDidLoad()
         let hiScoreNetworkService = HiScoreNetworkRepository()
         viewModel = OfferViewModel(networkService: hiScoreNetworkService)
-        buttonStartPlaying.setUpButtonWithGradientBackground(type: .yellow)
+       
         buttonStartPlaying.addTarget(self, action: #selector(startPlayingDidTap), for: .touchUpInside)
         viewTimer.setCornerBorder(color: UIColor(hex: "#452735"),
                                   cornerRadius: 25,
@@ -47,6 +47,12 @@ extension OfferViewController {
         viewTopConstraintWithTimerView.isActive = false
         viewTimer.isHidden = true
         getOfferDetails()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonStartPlaying.setNeedsLayout()
+        buttonStartPlaying.layoutIfNeeded()
+        buttonStartPlaying.setUpButtonWithGradientBackground(type: .yellow)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
