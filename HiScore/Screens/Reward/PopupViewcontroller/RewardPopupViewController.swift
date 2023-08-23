@@ -54,10 +54,26 @@ extension RewardPopupViewController {
     }
 
 }
-
+extension RewardPopupViewController: RewardPopupDelegate {
+    func okayTapped() {
+        self.viwRewardPopup.isHidden = true
+    }
+    
+    
+}
 extension RewardPopupViewController {
+    @IBAction func buttonKnowMore(_ sender: Any) {
+        self.viwRewardPopup.isHidden = false
+        self.viwRewardPopup.delegate = self
+        guard let data = self.rewardResponse?.data.knowMoreSection.rewardsList else { return }
+        self.viwRewardPopup.showDefaultData(data: data[0], type: .depositCash)
+        self.viwRewardPopup.showDefaultData(data: data[1], type: .winningCash)
+        self.viwRewardPopup.showDefaultData(data: data[2], type: .rummyCash)
+        self.viwRewardPopup.showDefaultData(data: data[3], type: .freeEntryTickets)
+        self.viwRewardPopup.showDefaultData(data: data[4], type: .vouchersAndOffers)
+    }
     @IBAction func buttonContinue(_ sender: Any) {
-        
+        self.viwRewardPopup.isHidden = true
     }
     @objc func updateCounter() {
         if counter > -1 {
@@ -186,7 +202,7 @@ extension RewardPopupViewController:UITableViewDataSource {
               let reward = data.rewardSection as? RewardSection,
               let allReward = reward.allRewards as? AllRewards,
               let list = allReward.horizontalSet as? [HorizontalSet] else { return MyRewardsTableViewCell()}
-        cell.configCell(data: list[indexPath.row] )
+        cell.configCell(data: list[indexPath.row], index: indexPath.row )
         return cell
     }
     

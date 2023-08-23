@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fx8-a2-A5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="-38"/>
+            <point key="canvasLocation" x="399" y="-38"/>
         </scene>
         <!--Reward Popup View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -240,6 +240,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZQ-bp-2mS">
+                                        <rect key="frame" x="260" y="17.5" width="96" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="buttonKnowMore:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iBg-tU-p9X"/>
+                                        </connections>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-gK-mBP">
                                         <rect key="frame" x="0.0" y="49.5" width="378" height="371"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,13 +334,17 @@
                                 <color key="backgroundColor" name="HSDarkBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wMD-gK-mBP" secondAttribute="trailing" id="DEE-kq-5Wz"/>
+                                    <constraint firstItem="rZQ-bp-2mS" firstAttribute="width" secondItem="sRw-5l-wc1" secondAttribute="width" id="EPn-XK-gdf"/>
                                     <constraint firstAttribute="trailing" secondItem="sRw-5l-wc1" secondAttribute="trailing" constant="22" id="Gx5-cW-gky"/>
                                     <constraint firstItem="sRw-5l-wc1" firstAttribute="centerY" secondItem="FQU-lD-FNR" secondAttribute="centerY" id="Lem-rF-NOT"/>
                                     <constraint firstItem="FQU-lD-FNR" firstAttribute="leading" secondItem="J4h-kG-3w0" secondAttribute="leading" constant="12" id="QbG-w1-Xk5"/>
                                     <constraint firstItem="wMD-gK-mBP" firstAttribute="leading" secondItem="J4h-kG-3w0" secondAttribute="leading" id="YJK-Hm-J41"/>
+                                    <constraint firstItem="rZQ-bp-2mS" firstAttribute="height" secondItem="sRw-5l-wc1" secondAttribute="height" id="YPd-Yw-m1y"/>
                                     <constraint firstAttribute="bottom" secondItem="wMD-gK-mBP" secondAttribute="bottom" id="Znu-O6-Ah0"/>
+                                    <constraint firstItem="rZQ-bp-2mS" firstAttribute="centerX" secondItem="sRw-5l-wc1" secondAttribute="centerX" id="g3O-Ws-oxI"/>
                                     <constraint firstItem="FQU-lD-FNR" firstAttribute="top" secondItem="J4h-kG-3w0" secondAttribute="top" constant="19" id="pFz-qz-pGF"/>
                                     <constraint firstItem="wMD-gK-mBP" firstAttribute="top" secondItem="sRw-5l-wc1" secondAttribute="bottom" constant="10" id="vBu-SD-uVW"/>
+                                    <constraint firstItem="rZQ-bp-2mS" firstAttribute="centerY" secondItem="sRw-5l-wc1" secondAttribute="centerY" id="zlf-e8-F6d"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -454,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="-132"/>
+            <point key="canvasLocation" x="1241" y="-38"/>
         </scene>
     </scenes>
     <designables>

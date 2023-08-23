@@ -77,4 +77,8 @@ extension UIColor {
         return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8) //UIColor(hex: "#181D34")
     }()
     
+    static let HSLightBlackColor: UIColor = {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+    }()
+
 }
