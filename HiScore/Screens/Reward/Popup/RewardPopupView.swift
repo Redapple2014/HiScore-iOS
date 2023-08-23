@@ -32,6 +32,15 @@ class RewardPopupView: UIView {
     @IBOutlet weak var imageArrowVouchersAndOffers: UIImageView!
 
     
+    @IBOutlet var viewContainer:[ UIView]!
+    @IBOutlet weak var viewDepositCash: UIView!
+    @IBOutlet weak var viewWinningCash: UIView!
+    @IBOutlet weak var viewRummyCashCash: UIView!
+    @IBOutlet weak var viewFreeEntryTickets: UIView!
+    @IBOutlet weak var viewVouchersAndOffers: UIView!
+
+    
+    
     
     @IBOutlet weak var labelDepositCash: UILabel!
     @IBOutlet weak var labelWinningCash: UILabel!
@@ -71,11 +80,18 @@ class RewardPopupView: UIView {
     }
     
     @IBAction func closePopup(_ sender: Any) {
+        self.isHidden = true
     }
+    //
+    
+   // arrowUp
     func clearAllText() {
        _ = labelDescCollection.map({$0.text = ""})
+        _ = imageArrow.map({$0.image = UIImage(named: "arrowDownHS")})
     }
-    
+    func selectedUI() {
+        
+    }
     @IBAction func buttonDepositCash(_ sender: Any) {
         clearAllText()
     }
@@ -91,4 +107,12 @@ class RewardPopupView: UIView {
     @IBAction func buttonVouchers(_ sender: Any) {
         clearAllText()
     }
+}
+
+enum RewardType {
+    case depositCash
+    case winningCash
+    case rummyCash
+    case freeEntryTickets
+    case vouchersAndOffers
 }
