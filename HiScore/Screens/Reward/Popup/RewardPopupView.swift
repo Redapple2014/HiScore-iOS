@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import MHLoadingButton
 
 
 protocol RewardPopupDelegate {
     func okayTapped()
 }
 class RewardPopupView: UIView {
+    @IBOutlet weak var viewCintainer: UIView!
+    @IBOutlet weak var buttonCross: UIButton!
     
     var delegate: RewardPopupDelegate?
     @IBOutlet var labelDescCollection: [UILabel]!
@@ -48,6 +51,7 @@ class RewardPopupView: UIView {
     @IBOutlet weak var labelFreeEntryTickets: UILabel!
     @IBOutlet weak var labelVouchersAndOffers: UILabel!
     
+    @IBOutlet weak var buttonVerify: LoadingButton!
     private let nibName = "RewardPopupView"
     
     private var dataDepositCash: RewardsList?
@@ -70,10 +74,13 @@ class RewardPopupView: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
-       _ = viewContainer.map({$0.layer.cornerRadius = 10})
-       _ = viewContainer.map({$0.clipsToBounds = true})
     }
-    
+    private func loadUI() {
+        _ = viewContainer.map({$0.layer.cornerRadius = 10})
+        _ = viewContainer.map({$0.clipsToBounds = true})
+        buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
+        viewCintainer.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor(hex: "14182A"))
+    }
     private func loadViewFromNib() -> UIView? {
         let nib = UINib(nibName: nibName, bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
@@ -88,10 +95,8 @@ class RewardPopupView: UIView {
         clearAllText()
     }
     //
-    
-    // arrowUp
-    
     func showDefaultData(data: RewardsList, type: RewardType) {
+        loadUI()
         switch type {
         case .depositCash:
             dataDepositCash = data
@@ -114,9 +119,9 @@ class RewardPopupView: UIView {
             showIcon(data: data, icon: imageIconVouchersAndOffers, label: labelTitleVouchersAndOffers)
             break
         }
-
-        
-        
+    }
+    private func getArrowImage() -> UIImage {
+        return UIImage(named: "arrowUp_2")!
     }
     private func showIcon(data: RewardsList, icon: UIImageView, label: UILabel ) {
         label.text = data.rewardTitle
@@ -131,7 +136,9 @@ class RewardPopupView: UIView {
         _ = labelDescCollection.map({$0.text = ""})
         _ = imageArrow.map({$0.image = UIImage(named: "arrowDownHS")})
         _ = viewContainer.map({$0.backgroundColor = .clear})
+       
     }
+   
     private func selectedUI(type: RewardType) {
         clearAllText()
         switch type {
@@ -153,41 +160,74 @@ class RewardPopupView: UIView {
         }
         
     }
+//    private func checkLabelText(label: UILabel, text: String) {
+//        if label.text!.isEmpty {
+//            label.text = text
+//        } else {
+//            self.clearAllText()
+//        }
+//    }
     private func depositCash() {
         labelDepositCash.text = self.dataDepositCash?.rewardDesc
-        viewDepositCash.backgroundColor = .HSLightBlackColor
+        viewDepositCash.backgroundColor = .HSRewardBlackColor
+        imageArrowDepositCash.image = getArrowImage()
     }
     private  func winningCash() {
         labelWinningCash.text = self.dataWinningCash?.rewardDesc
-        viewWinningCash.backgroundColor = .HSLightBlackColor
+        viewWinningCash.backgroundColor = .HSRewardBlackColor
+        imageArrowWinningCash.image = getArrowImage()
     }
     private func rummyCash() {
-        labelRummyCashCash.text = self.dataRummyCash?.rewardDesc
-        viewRummyCashCash.backgroundColor = .HSLightBlackColor
+        let text = self.dataRummyCash?.rewardDesc.replacingOccurrences(of: "\n", with: "\n• ") ?? ""
+        labelRummyCashCash.text = "• " + text
+        viewRummyCashCash.backgroundColor = .HSRewardBlackColor
+        imageArrowRummyCashCash.image = getArrowImage()
     }
     private func freeEntryTickets() {
         labelFreeEntryTickets.text = self.dataFreeTicket?.rewardDesc
-        viewFreeEntryTickets.backgroundColor = .HSLightBlackColor
+        viewFreeEntryTickets.backgroundColor = .HSRewardBlackColor
+        imageArrowFreeEntryTickets.image = getArrowImage()
     }
     private func vouchersAndOffers() {
         labelVouchersAndOffers.text = self.dataVouchers?.rewardDesc
-        viewVouchersAndOffers.backgroundColor = .HSLightBlackColor
+        viewVouchersAndOffers.backgroundColor = .HSRewardBlackColor
+        imageArrowVouchersAndOffers.image = getArrowImage()
 
     }
     @IBAction func buttonDepositCash(_ sender: Any) {
-        selectedUI(type: .depositCash)
+        if labelDepositCash.text == "" {
+            selectedUI(type: .depositCash)
+        } else {
+            clearAllText()
+        }
     }
     @IBAction func buttonWinningCash(_ sender: Any) {
-        selectedUI(type: .winningCash)
+        if labelWinningCash.text == "" {
+            selectedUI(type: .winningCash)
+        } else {
+            clearAllText()
+        }
     }
     @IBAction func buttonRummyCash(_ sender: Any) {
-        selectedUI(type: .rummyCash)
+        if labelRummyCashCash.text == "" {
+            selectedUI(type: .rummyCash)
+        } else {
+            clearAllText()
+        }
     }
     @IBAction func buttonFreeEntryTickets(_ sender: Any) {
-        selectedUI(type: .freeEntryTickets)
+        if labelFreeEntryTickets.text == "" {
+            selectedUI(type: .freeEntryTickets)
+        } else {
+            clearAllText()
+        }
     }
     @IBAction func buttonVouchers(_ sender: Any) {
-        selectedUI(type: .vouchersAndOffers)
+        if labelVouchersAndOffers.text == "" {
+            selectedUI(type: .vouchersAndOffers)
+        } else {
+            clearAllText()
+        }
     }
 }
 

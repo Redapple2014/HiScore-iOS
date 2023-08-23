@@ -58,12 +58,25 @@ extension RewardPopupViewController: RewardPopupDelegate {
     func okayTapped() {
         self.viwRewardPopup.isHidden = true
     }
-    
-    
 }
 extension RewardPopupViewController {
     @IBAction func buttonKnowMore(_ sender: Any) {
-        self.viwRewardPopup.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.viwRewardPopup.buttonCross.transform = CGAffineTransform(translationX: 0, y: self.viwRewardPopup.buttonCross.frame.size.height)
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viwRewardPopup.isHidden = true
+                    self.viwRewardPopup.buttonCross.transform = .identity
+                })
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.viwRewardPopup.viewCintainer.transform = CGAffineTransform(translationX: 0, y: self.viwRewardPopup.viewCintainer.frame.size.height)
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.viwRewardPopup.isHidden = false
+                    self.viwRewardPopup.viewCintainer.transform = .identity
+                })
+        }
+
         self.viwRewardPopup.delegate = self
         guard let data = self.rewardResponse?.data.knowMoreSection.rewardsList else { return }
         self.viwRewardPopup.showDefaultData(data: data[0], type: .depositCash)
@@ -86,9 +99,7 @@ extension RewardPopupViewController {
 }
 extension RewardPopupViewController {
     func showTimerWithAnimation() {
-        // Unhide the view before animating
             viewTimerSection.isHidden = false
-            // Initial position for animation (below the screen)
         viewTimerSection.transform = CGAffineTransform(translationX: 0, y: viewTimerSection.frame.size.height)
             UIView.animate(withDuration: 0.5, animations: {
                 // Animate the view to its original position (no translation)
