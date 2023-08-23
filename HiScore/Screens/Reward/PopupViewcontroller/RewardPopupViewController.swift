@@ -11,15 +11,11 @@ import MHLoadingButton
 class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
     @IBOutlet weak var labelMObileNUmber: UILabel!
-
     @IBOutlet weak var viwRewardPopup: RewardPopupView!
     @IBOutlet weak var tableMyReward: UITableView!
-    
     @IBOutlet weak var labelRewardSubTitle: UILabel!
     @IBOutlet weak var labelRewardAmount: UILabel!
-    
     @IBOutlet weak var labelHurryUP: UILabel!
-    
     @IBOutlet weak var viewBetween: ChainView!
     
     @IBOutlet weak var viewTimerSection: UIView!
@@ -86,7 +82,11 @@ extension RewardPopupViewController {
         self.viwRewardPopup.showDefaultData(data: data[4], type: .vouchersAndOffers)
     }
     @IBAction func buttonContinue(_ sender: Any) {
-        self.viwRewardPopup.isHidden = true
+        guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+
     }
     @objc func updateCounter() {
         if counter > -1 {
@@ -146,7 +146,7 @@ extension RewardPopupViewController {
         labelMObileNUmber.text = "Hi \(data.greetingSection.username)"
         labelRewardSubTitle.text = data.rewardSection.totalRewardSubtitle
         labelRewardAmount.text = "₹\(data.rewardSection.totalRewardReceived)"
-        labelHurryUP.text = data.hurryUpSection.hurrySubtitle
+        labelHurryUP.text = data.hurryUpSection.hurryTitle
         tableMyReward.reloadData()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         counter = (self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0)/1000

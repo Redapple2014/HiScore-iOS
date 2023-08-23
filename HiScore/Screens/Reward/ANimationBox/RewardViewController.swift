@@ -18,7 +18,7 @@ class RewardViewController: BaseViewController {
     }
     
     private func animateView() {
-        animationView = .init(name: AnimationFiles.rewardConfetti)
+        animationView = .init(name: AnimationFiles.reward)
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop//.repeat(2)
@@ -36,7 +36,6 @@ class RewardViewController: BaseViewController {
         guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardPopupViewController") as? RewardPopupViewController else {
             return
         }
-      //  self.navigationController?.pushViewController(viewController, animated: true)
-        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
