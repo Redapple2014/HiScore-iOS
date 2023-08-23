@@ -11,17 +11,12 @@ import MHLoadingButton
 class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
     @IBOutlet weak var labelMObileNUmber: UILabel!
-
     @IBOutlet weak var viwRewardPopup: RewardPopupView!
     @IBOutlet weak var tableMyReward: UITableView!
-    
     @IBOutlet weak var labelRewardSubTitle: UILabel!
     @IBOutlet weak var labelRewardAmount: UILabel!
-    
     @IBOutlet weak var labelHurryUP: UILabel!
-    
     @IBOutlet weak var viewBetween: ChainView!
-    
     @IBOutlet weak var viewTimerSection: UIView!
     @IBOutlet weak var heightOfTimer: NSLayoutConstraint!
     @IBOutlet weak var viewKnowMore: UIView!
@@ -57,7 +52,9 @@ extension RewardPopupViewController {
 
 extension RewardPopupViewController {
     @IBAction func buttonContinue(_ sender: Any) {
-        
+        guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController
+        else { return }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     @objc func updateCounter() {
         if counter > -1 {

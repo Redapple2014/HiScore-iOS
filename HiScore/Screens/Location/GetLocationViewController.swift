@@ -104,28 +104,50 @@ extension GetLocationViewController {
         self.showFetchLocationPopUp()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.viewModel.getLocationData(lat: lat,
-                                      long: long) { result in
+                                           long: long) { result in
                 DispatchQueue.main.async {
-                   self.hideFetchLocationPopUp()
+                    self.hideFetchLocationPopUp()
                     switch result {
                     case .success(let response):
                         if response.data.rummy.isAllowed {
-                            guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+                            guard let userData = User.shared.details?.data,
+                                  let isNewUser = userData.isNewUser,
+                                  let isDuplicateUser = userData.dupe else { return }
+                            if isNewUser {
+                                if isDuplicateUser {
+                                    // Navigate to offer
+                                    guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
+                                        return
+                                    }
+                                    self.navigationController?.pushViewController(viewController, animated: true)
+                                    return
+                                } else {
+                                    // Navigate to reward
+                                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+                                        return
+                                    }
+                                    self.navigationController?.pushViewController(viewController, animated: true)
+                                    return
+                                }
+                            } else {
+                                guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+                                    return
+                                }
+                                self.navigationController?.pushViewController(viewController, animated: true)
                                 return
+                                
                             }
-                            self.navigationController?.pushViewController(viewController, animated: true)
+                        }
+                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
                             return
                         }
-                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
-                        return
+                        viewController.viewModel.errorText = response.data.rummy.error
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                    case .failure(let error):
+                        Log.d(error)
                     }
-                    viewController.viewModel.errorText = response.data.rummy.error
-                    self.navigationController?.pushViewController(viewController, animated: true)
-                case .failure(let error):
-                    Log.d(error)
                 }
             }
         }
     }
-}
 }

@@ -34,6 +34,7 @@ extension OfferViewController {
         let hiScoreNetworkService = HiScoreNetworkRepository()
         viewModel = OfferViewModel(networkService: hiScoreNetworkService)
         buttonStartPlaying.setUpButtonWithGradientBackground(type: .yellow)
+        buttonStartPlaying.addTarget(self, action: #selector(startPlayingDidTap), for: .touchUpInside)
         viewTimer.setCornerBorder(color: UIColor(hex: "#452735"),
                                   cornerRadius: 25,
                                   borderWidth: 0.8)
@@ -60,7 +61,7 @@ extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let data = offer?.offers else { return 0}
         return data.count
-      //  return 4
+        //  return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,9 +71,9 @@ extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSou
         if  let data = offer?.offers {
             cell.offer = data[indexPath.item]
         }
-//        let url = URL(string: "https://cdn-images.nst-app.com/img/Game/Login_screen/new_login/offer1@3x.png")
-//        cell.imageViewOffer.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
-//        cell.labelButtonText.text = "$1-$99"
+        //        let url = URL(string: "https://cdn-images.nst-app.com/img/Game/Login_screen/new_login/offer1@3x.png")
+        //        cell.imageViewOffer.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
+        //        cell.labelButtonText.text = "$1-$99"
         return cell
     }
 }
@@ -89,6 +90,12 @@ extension OfferViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: - Private Methods
 private extension OfferViewController {
+    @objc func startPlayingDidTap(){
+        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     func getOfferDetails() {
         viewModel.getOfferDetails { result in
             DispatchQueue.main.async {
