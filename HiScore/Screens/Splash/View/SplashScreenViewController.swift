@@ -25,12 +25,10 @@ class SplashScreenViewController: BaseViewController {
             case .success(let data):
                 self.splashImageView.kf.setImage(with: data.data.event.splashScreenUrl)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                    //                    guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
-                    //                        return
-                    //                    }
-                    guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
+                    guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
                         return
                     }
+                    
                     self.navigationController?.pushViewController(viewController, animated: true)
                 }
             case .failure(let error):

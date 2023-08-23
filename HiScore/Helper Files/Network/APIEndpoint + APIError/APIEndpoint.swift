@@ -43,7 +43,7 @@ enum APIEndpoint {
             break
         case .reward, .offer:
             if let token = User.shared.details?.data?.loginToken {
-                allHeaders["authorization"] = token // "Bearer \(token)"
+                allHeaders["authorization"] = token
             }
         }
         return allHeaders

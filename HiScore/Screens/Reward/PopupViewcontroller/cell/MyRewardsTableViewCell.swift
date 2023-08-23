@@ -15,19 +15,7 @@ class MyRewardsTableViewCell: UITableViewCell {
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var labelAmuont: UILabel!
     @IBOutlet weak var labelRewardName: UILabel!
-//
-//    var data: RewardsList {
-//        didSet {
-//            imgIcon.kf.setImage(with: data.rewardIcon,
-//                                    placeholder: UIImage(named: "placeholder"),
-//                                    options: nil,
-//                                    progressBlock: nil,
-//                                    completionHandler: nil)
-//            labelAmuont.text = "₹ 600"
-//            labelRewardName.text = data.rewardTitle
-//        }
-//    }
-   
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -35,24 +23,27 @@ class MyRewardsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         viewGradient.layoutIfNeeded()
         viewGradient.setNeedsLayout()
-        imageContainer()
+//        imageContainer()
     }
-    func configCell(data: RewardsList) {
+    func configCell(data: HorizontalSet) {
         viewBG.backgroundColor = .clear
-        imgIcon.kf.setImage(with: data.splashScreenUrl,
-                                placeholder: UIImage(named: "placeholder"),
-                                options: nil,
-                                progressBlock: nil,
-                                completionHandler: nil)
-        labelAmuont.text = "₹ 600"
-        labelRewardName.text = data.rewardTitle
+        if data.rewardType.contains("Rummy") {
+            imgIcon.image = UIImage(named: "RummyCash")
+        } else if data.rewardType.contains("Game") {
+            imgIcon.image = UIImage(named: "cashTicket")
+        } else {//if data.rewardType.contains("") {
+            imgIcon.image = UIImage(named: "cash")
+        }
+        labelAmuont.text = "₹\(data.rewardValue)"
+        labelRewardName.text = data.rewardType
+        
     }
-    func imageContainer() {
-        viewGradient.setGradientBackground(colorTop: UIColor(red: 1, green: 1, blue: 1, alpha: 1), colorBottom: UIColor(red: 1, green: 1, blue: 1, alpha: 0))
-        viewGradient.layer.cornerRadius = 10
-        viewGradient.clipsToBounds = true
-        viewGradient.backgroundColor = .clear
-    }
+//    func imageContainer() {
+////        viewGradient.setGradientBackground(colorTop: UIColor(red: 1, green: 1, blue: 1, alpha: 1), colorBottom: UIColor(red: 1, green: 1, blue: 1, alpha: 0))
+////        viewGradient.layer.cornerRadius = 10
+////        viewGradient.clipsToBounds = true
+////        viewGradient.backgroundColor = .clear
+//    }
    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
