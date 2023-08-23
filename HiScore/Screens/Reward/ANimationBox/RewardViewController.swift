@@ -21,7 +21,7 @@ class RewardViewController: BaseViewController {
         animationView = .init(name: AnimationFiles.rewardConfetti)
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .repeat(2)
+        animationView.loopMode = .loop//.repeat(2)
         animationView.animationSpeed = 1
         view.addSubview(animationView)
         animationView.stop()
