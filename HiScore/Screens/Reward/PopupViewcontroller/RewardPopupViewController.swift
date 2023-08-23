@@ -11,12 +11,17 @@ import MHLoadingButton
 class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
     @IBOutlet weak var labelMObileNUmber: UILabel!
+
     @IBOutlet weak var viwRewardPopup: RewardPopupView!
     @IBOutlet weak var tableMyReward: UITableView!
+    
     @IBOutlet weak var labelRewardSubTitle: UILabel!
     @IBOutlet weak var labelRewardAmount: UILabel!
+    
     @IBOutlet weak var labelHurryUP: UILabel!
+    
     @IBOutlet weak var viewBetween: ChainView!
+    
     @IBOutlet weak var viewTimerSection: UIView!
     @IBOutlet weak var heightOfTimer: NSLayoutConstraint!
     @IBOutlet weak var viewKnowMore: UIView!
@@ -49,12 +54,39 @@ extension RewardPopupViewController {
     }
 
 }
-
+extension RewardPopupViewController: RewardPopupDelegate {
+    func okayTapped() {
+        self.viwRewardPopup.isHidden = true
+    }
+}
 extension RewardPopupViewController {
+    @IBAction func buttonKnowMore(_ sender: Any) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.viwRewardPopup.buttonCross.transform = CGAffineTransform(translationX: 0, y: self.viwRewardPopup.buttonCross.frame.size.height)
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viwRewardPopup.isHidden = true
+                    self.viwRewardPopup.buttonCross.transform = .identity
+                })
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.viwRewardPopup.viewCintainer.transform = CGAffineTransform(translationX: 0, y: self.viwRewardPopup.viewCintainer.frame.size.height)
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.viwRewardPopup.isHidden = false
+                    self.viwRewardPopup.viewCintainer.transform = .identity
+                })
+        }
+
+        self.viwRewardPopup.delegate = self
+        guard let data = self.rewardResponse?.data.knowMoreSection.rewardsList else { return }
+        self.viwRewardPopup.showDefaultData(data: data[0], type: .depositCash)
+        self.viwRewardPopup.showDefaultData(data: data[1], type: .winningCash)
+        self.viwRewardPopup.showDefaultData(data: data[2], type: .rummyCash)
+        self.viwRewardPopup.showDefaultData(data: data[3], type: .freeEntryTickets)
+        self.viwRewardPopup.showDefaultData(data: data[4], type: .vouchersAndOffers)
+    }
     @IBAction func buttonContinue(_ sender: Any) {
-        guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController
-        else { return }
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.viwRewardPopup.isHidden = true
     }
     @objc func updateCounter() {
         if counter > -1 {
@@ -67,9 +99,7 @@ extension RewardPopupViewController {
 }
 extension RewardPopupViewController {
     func showTimerWithAnimation() {
-        // Unhide the view before animating
             viewTimerSection.isHidden = false
-            // Initial position for animation (below the screen)
         viewTimerSection.transform = CGAffineTransform(translationX: 0, y: viewTimerSection.frame.size.height)
             UIView.animate(withDuration: 0.5, animations: {
                 // Animate the view to its original position (no translation)
@@ -183,7 +213,7 @@ extension RewardPopupViewController:UITableViewDataSource {
               let reward = data.rewardSection as? RewardSection,
               let allReward = reward.allRewards as? AllRewards,
               let list = allReward.horizontalSet as? [HorizontalSet] else { return MyRewardsTableViewCell()}
-        cell.configCell(data: list[indexPath.row] )
+        cell.configCell(data: list[indexPath.row], index: indexPath.row )
         return cell
     }
     

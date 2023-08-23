@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "arrowUp_2 1.png",
+      "filename" : "arrowUp_2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "arrowUp_2 2.png",
+      "filename" : "arrowUp_2 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "arrowUp_2.png",
+      "filename" : "arrowUp_2 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

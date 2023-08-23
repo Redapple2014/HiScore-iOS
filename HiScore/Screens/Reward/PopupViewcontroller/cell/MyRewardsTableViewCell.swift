@@ -25,8 +25,13 @@ class MyRewardsTableViewCell: UITableViewCell {
         viewGradient.setNeedsLayout()
 //        imageContainer()
     }
-    func configCell(data: HorizontalSet) {
-        viewBG.backgroundColor = .clear
+    func configCell(data: HorizontalSet, index: Int) {
+        if index % 2 == 0 {
+            viewBG.backgroundColor = .HSLightBlackColor
+        } else {
+            viewBG.backgroundColor = .clear
+        }
+        
         if data.rewardType.contains("Rummy") {
             imgIcon.image = UIImage(named: "RummyCash")
         } else if data.rewardType.contains("Game") {

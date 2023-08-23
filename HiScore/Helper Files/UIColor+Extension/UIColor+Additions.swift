@@ -79,4 +79,12 @@ extension UIColor {
     static let HSBlackTextColor: UIColor = {
         return UIColor(hex: "#463327")
     }()
+    
+    static let HSLightBlackColor: UIColor = {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+    }()
+
+    static let HSRewardBlackColor: UIColor = {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+    }()
 }

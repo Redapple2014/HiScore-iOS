@@ -7,37 +7,36 @@
 
 import UIKit
 import Lottie
-
 class RewardViewController: BaseViewController {
-    @IBOutlet weak var animationView: LottieAnimationView!
     
+    var animationView = LottieAnimationView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         animateView()
     }
+    
     private func animateView() {
-        //Start LottieAnimationView with animation name (without extension)
-        animationView = .init(name: AnimationFiles.reward)
-        animationView!.frame = view.bounds
-        //Set animation content mode
-        animationView!.contentMode = .scaleAspectFit
-        //Set animation loop mode
-        animationView!.loopMode = .loop
-        //Adjust animation speed
-        animationView!.animationSpeed = 1
-        view.addSubview(animationView!)
+        animationView = .init(name: AnimationFiles.rewardConfetti)
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop//.repeat(2)
+        animationView.animationSpeed = 1
+        view.addSubview(animationView)
         animationView.stop()
-        //Play animation
-        animationView!.play ()
+        animationView.play ()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             self.animationView.stop()
             self.moveToHome()
         }
     }
+    
     func moveToHome() {
         guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardPopupViewController") as? RewardPopupViewController else {
             return
         }
-        self.navigationController?.pushViewController(viewController, animated: true)
+      //  self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
