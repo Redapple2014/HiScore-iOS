@@ -39,35 +39,21 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-Vb-RGh" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="REward Gift Box"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9hP-H2-zYH"/>
                         <color key="backgroundColor" name="HSAppThemeColor"/>
                         <constraints>
-                            <constraint firstItem="Ed9-Vb-RGh" firstAttribute="leading" secondItem="9hP-H2-zYH" secondAttribute="leading" id="2ig-vb-Twc"/>
                             <constraint firstItem="9hP-H2-zYH" firstAttribute="bottom" secondItem="k2O-W0-Ibs" secondAttribute="bottom" id="57t-tl-WJI"/>
                             <constraint firstItem="9hP-H2-zYH" firstAttribute="trailing" secondItem="k2O-W0-Ibs" secondAttribute="trailing" id="CeH-PD-bdg"/>
-                            <constraint firstAttribute="bottom" secondItem="Ed9-Vb-RGh" secondAttribute="bottom" id="DYu-EE-E5l"/>
                             <constraint firstItem="k2O-W0-Ibs" firstAttribute="leading" secondItem="9hP-H2-zYH" secondAttribute="leading" id="OpK-Sf-8h8"/>
-                            <constraint firstItem="Ed9-Vb-RGh" firstAttribute="top" secondItem="R8L-Jh-nCG" secondAttribute="top" id="bEK-SX-cog"/>
-                            <constraint firstItem="9hP-H2-zYH" firstAttribute="trailing" secondItem="Ed9-Vb-RGh" secondAttribute="trailing" id="nUt-5B-3oE"/>
                             <constraint firstItem="k2O-W0-Ibs" firstAttribute="top" secondItem="9hP-H2-zYH" secondAttribute="top" id="owy-iV-bV5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OWd-zy-8T5"/>
-                    <connections>
-                        <outlet property="animationView" destination="Ed9-Vb-RGh" id="hIq-qa-egA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fx8-a2-A5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="-38"/>
+            <point key="canvasLocation" x="398.55072463768118" y="-38.169642857142854"/>
         </scene>
         <!--Reward Popup View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -469,7 +455,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="Ed9-Vb-RGh"/>
         <designable name="yWA-xS-gYy">
             <size key="intrinsicContentSize" width="62" height="30"/>
         </designable>

@@ -82,4 +82,6 @@ class AdvertiseDetails {
 
 class AnimationFiles {
     static let reward = "REward Gift Box"
+    static let rewardConfetti = "Confetti Animated Icon"
+    static let loading = "animation_ll6mjcvw"
 }

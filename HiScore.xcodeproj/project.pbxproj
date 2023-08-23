@@ -49,6 +49,7 @@
 		C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9DF802A83A12E0066924E /* UIButton+Extension.swift */; };
 		C7A9DF832A83A1410066924E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9DF822A83A1410066924E /* UIView+Extension.swift */; };
 		C7AD48DD2A8E3FAB0063CEBE /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD48DC2A8E3FAB0063CEBE /* UIDevice+Extension.swift */; };
+		C7B3291A2A962C5D00D461B4 /* Confetti Animated Icon .json in Resources */ = {isa = PBXBuildFile; fileRef = C7B329192A962C5D00D461B4 /* Confetti Animated Icon .json */; };
 		C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4E5D82A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift */; };
 		C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4E5DC2A8D04BD00FB4ABF /* EnterOTPViewModel.swift */; };
 		C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4E5DE2A8D05C600FB4ABF /* OtpModel.swift */; };
@@ -131,6 +132,8 @@
 		C7A9DF802A83A12E0066924E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C7A9DF822A83A1410066924E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C7AD48DC2A8E3FAB0063CEBE /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		C7B329192A962C5D00D461B4 /* Confetti Animated Icon .json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Confetti Animated Icon .json"; sourceTree = "<group>"; };
+		C7B3291B2A96312900D461B4 /* ribbon.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ribbon.lottie; sourceTree = "<group>"; };
 		C7B4E5D82A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenResponseModel.swift; sourceTree = "<group>"; };
 		C7B4E5DC2A8D04BD00FB4ABF /* EnterOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewModel.swift; sourceTree = "<group>"; };
 		C7B4E5DE2A8D05C600FB4ABF /* OtpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpModel.swift; sourceTree = "<group>"; };
@@ -488,7 +491,9 @@
 		C7C536672A89FEBD007391FC /* Lottie Animation files */ = {
 			isa = PBXGroup;
 			children = (
+				C7B329192A962C5D00D461B4 /* Confetti Animated Icon .json */,
 				C79845A32A86716100F08457 /* REward Gift Box.json */,
+				C7B3291B2A96312900D461B4 /* ribbon.lottie */,
 				C79845A12A86703D00F08457 /* animation_ll6mjcvw.json */,
 			);
 			path = "Lottie Animation files";
@@ -744,6 +749,7 @@
 				C79845A22A86703D00F08457 /* animation_ll6mjcvw.json in Resources */,
 				C7C0C1B42A821C260096E958 /* MavenPro-Black.ttf in Resources */,
 				C7C5367C2A8A3C11007391FC /* Baloo2-SemiBold.ttf in Resources */,
+				C7B3291A2A962C5D00D461B4 /* Confetti Animated Icon .json in Resources */,
 				C7C0C1B92A821C260096E958 /* MavenPro-Bold.ttf in Resources */,
 				C7C0C1B52A821C260096E958 /* MavenPro-SemiBold.ttf in Resources */,
 				C7C5367D2A8A3C11007391FC /* Baloo2-Regular.ttf in Resources */,
