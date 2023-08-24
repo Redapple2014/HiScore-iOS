@@ -170,32 +170,7 @@ extension RewardPopupViewController {
     }
     private func designKnowMoreView() {
         viewKnowMore.layer.cornerRadius = 11
-        viewKnowMore.
-//        let shadows = UIView()
-//        shadows.frame = viewKnowMore.frame
-//        shadows.clipsToBounds = false
-//        viewKnowMore.addSubview(shadows)
-//        let shadowPath0 = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 11)
-//        let layer0 = CALayer()
-//        layer0.shadowPath = shadowPath0.cgPath
-//        layer0.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-//        layer0.shadowOpacity = 1
-//        layer0.shadowRadius = 4
-//        layer0.shadowOffset = CGSize(width: 0, height: 4)
-//        layer0.bounds = shadows.bounds
-//        layer0.position = shadows.center
-//        shadows.layer.addSublayer(layer0)
-//        let shapes = UIView()
-//        shapes.frame = viewKnowMore.frame
-//        shapes.clipsToBounds = true
-//        viewKnowMore.addSubview(shapes)
-//        let layer1 = CALayer()
-//        layer1.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1).cgColor
-//        layer1.bounds = shapes.bounds
-//        layer1.position = shapes.center
-//        shapes.layer.addSublayer(layer1)
-//        shapes.layer.cornerRadius = 11
-        
+        viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)        
     }
     private func createCircleUI() {
         circle1.circleUI()
