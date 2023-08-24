@@ -24,8 +24,8 @@ extension UIColor {
             self.init(red: 0, green: 0, blue: 0, alpha: 1)
             return
         }
-        var rgbValue: UInt32 = 0
-        Scanner(string: cString).scanHexInt32(&rgbValue)
+        var rgbValue: UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
         self.init(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -38,18 +38,80 @@ extension UIColor {
         return UIColor(hex: "#14182B")
     }()
     
-    static let HSPlaceHolderColor: UIColor = {
-        return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-    }()
-    
-    static let HSTextFieldColor: UIColor = {
-        return  UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
-    }()
-    
-    static let HSTextFieldBorderColor: UIColor = {
-        return  UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+    static let HSWhiteColor: UIColor = {
+        return UIColor(hex: "#FFFFFF")
     }()
 
+    static let HSLightYellowColor: UIColor = {
+        return UIColor(hex: "#E3CEB6")
+    }()
+    
+    static let HSGrayColor: UIColor = {
+        return UIColor(hex: "#BCBDC1")
+    }()
+    
+    static let HSDarkGrayColor: UIColor = {
+        return UIColor(hex: "#777777")
+    }()
+    
+    static let HSRedColor: UIColor = {
+        return UIColor(hex: "#F54D3F")
+    }()
+    
+    static let HSBlackTextColor: UIColor = {
+        return UIColor(hex: "#12011F")
+    }()
+    
+    static let HSYellowTextColor: UIColor = {
+        return UIColor(hex: "#F3DEB1")
+    }()
+        
+    static let HSGoldenYellowTextColor: UIColor = {
+        return UIColor(hex: "#D8B06E")
+    }()
+    
+    static let HSYellowButtonColor: UIColor = {
+        return UIColor(hex: "#F5E2B7")
+    }()
+    
+    static let HSDarkYellowButtonColor: UIColor = {
+        return UIColor(hex: "#CD9D52")
+    }()
+        
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     static let HSYellowButtonTextColor: UIColor = {
         return  UIColor(red: 0.07, green: 0, blue: 0.12, alpha: 1)
     }()
@@ -61,29 +123,31 @@ extension UIColor {
     static let HSDarkBlue: UIColor = {
         return  UIColor(hex: "#14182B")
     }()
-    static let HSRedColor: UIColor = {
-       return UIColor(red: 0.961, green: 0.302, blue: 0.247, alpha: 0.5)
-    }()
+    
     static let HSBlue: UIColor = {
        return UIColor(hex: "#458FFF")
     }()
+    
     static let HSGreyBlue: UIColor = {
        return UIColor(hex: "#8393B2")
     }()
+    
     static let HSMediumDarkBlue: UIColor = {
        return UIColor(hex: "#393D51")
     }()
+    
     static let HSTabbarColor: UIColor = {
-        return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8) //UIColor(hex: "#181D34")
+        return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8)
     }()
-    static let HSBlackTextColor: UIColor = {
-        return UIColor(hex: "#463327")
-    }()
+    
+//    static let HSBlackTextColor: UIColor = {
+//        return UIColor(hex: "#463327")
+//    }()
     
     static let HSLightBlackColor: UIColor = {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
     }()
-
+    
     static let HSRewardBlackColor: UIColor = {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
     }()

@@ -21,12 +21,12 @@ class RewardViewController: BaseViewController {
         animationView = .init(name: AnimationFiles.reward)
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop//.repeat(2)
+        animationView.loopMode = .repeat(1)
         animationView.animationSpeed = 1
         view.addSubview(animationView)
         animationView.stop()
         animationView.play ()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             self.animationView.stop()
             self.moveToHome()
         }

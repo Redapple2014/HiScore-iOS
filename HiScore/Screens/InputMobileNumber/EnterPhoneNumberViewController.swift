@@ -11,15 +11,22 @@ import MHLoadingButton
 import IQKeyboardManager
 
 class EnterPhoneNumberViewController: BaseViewController {
-    //MARK: - IBOutlets
-    @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var placeholderLabel: UILabel!
+    //MARK: - IBOutlets -
+    @IBOutlet weak var inputTextField: UITextField!{
+        didSet {
+            let redPlaceholderText = NSAttributedString(string: PlaceholderMessages.phoneNumber.desscription,
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.HSWhiteColor.withAlphaComponent(0.3),
+                                                                     NSAttributedString.Key.font: UIFont.MavenPro.ExtraBold.withSize(16)])
+            inputTextField.attributedPlaceholder = redPlaceholderText
+        }
+    }
     
+    @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var heightConstraintLoginView: NSLayoutConstraint!
     @IBOutlet weak var heightConstraintErrorView: NSLayoutConstraint!
     @IBOutlet weak var heightConstraintPlaceholderText: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraintOfLoginView: NSLayoutConstraint!
-    @IBOutlet weak var topConstraintOfLoginView: NSLayoutConstraint!
+    @IBOutlet weak var topConstraintOfButton: NSLayoutConstraint!
     @IBOutlet weak var errorImage: UIImageView!
     @IBOutlet weak var buttonGetStarted: LoadingButton!
     @IBOutlet weak var errorLabel: UILabel!
@@ -27,16 +34,17 @@ class EnterPhoneNumberViewController: BaseViewController {
     @IBOutlet weak var viewCollectionPagination: UIView!
     @IBOutlet weak var collectionSlides: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    //MARK: - Instance of viewModel
+    @IBOutlet weak var clearButton: UIButton!
+    
+    //MARK: - Instance of viewModel -
     private var viewModel: OnboardingScreenViewModel!
 }
-// MARK: - View Life Cycle ------------
+// MARK: - View Life Cycle -
 extension EnterPhoneNumberViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
         initSettings()
-        hideInPutError()
         let networkService = HiScoreNetworkRepository()
         viewModel = OnboardingScreenViewModel(networkService: networkService)
         getOnBoadingScreens()
@@ -59,7 +67,86 @@ extension EnterPhoneNumberViewController{
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
-// MARK: - Keyboard animations ------------
+
+// MARK: - Private methods -
+private extension EnterPhoneNumberViewController {
+    func initSettings() {
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        IQKeyboardManager.shared().isEnabled = false
+        UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
+        inputTextField.addTarget(self, action: #selector(editingText(_:)), for: .editingChanged)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        view.addGestureRecognizer(tap)
+        collectionSlides.dataSource = self
+        collectionSlides.delegate = self
+    }
+    func initUI() {
+        collectionSlides.isPagingEnabled = true
+        buttonGetStarted.initLoadingButton()
+        
+        heightConstraintPlaceholderText.constant = 0
+        placeholderLabel.font = UIFont.MavenPro.SemiBold.withSize(10)
+        placeholderLabel.text = PlaceholderMessages.phoneNumber.desscription
+        placeholderLabel.textColor = UIColor.HSWhiteColor.withAlphaComponent(0.3)
+        
+        viewContainer.layer.cornerRadius = 8
+        viewContainer.layer.borderWidth = 1.0
+        viewContainer.backgroundColor = UIColor.HSWhiteColor.withAlphaComponent(0.1)
+        
+        inputTextField.clearButtonMode = .never
+        inputTextField.textColor = UIColor.HSWhiteColor
+        inputTextField.font = UIFont.Rajdhani.Bold.withSize(18)
+        inputTextField.tintColor = .HSWhiteColor
+        
+        hideInPutError()
+        
+        clearButton.isHidden = true
+        view.setNeedsLayout()
+    }
+    func showInPutError() {
+        heightConstraintErrorView.constant = 12
+        heightConstraintLoginView.constant = 218
+        textfieldStateChange(to: .error)
+        view.setNeedsLayout()
+    }
+    func hideInPutError() {
+        heightConstraintErrorView.constant = 0
+        heightConstraintLoginView.constant = 206
+        textfieldStateChange(to: .inactive)
+        view.setNeedsLayout()
+    }
+    func hideViewWithAnimation() {
+        UIView.animate(withDuration: 0.3, animations: {
+            // Move the view upward and fade it out
+            self.viewCollectionPagination.transform = CGAffineTransform(translationX: 0, y: -350)
+            self.viewCollectionPagination.alpha = 0.0
+        }) { (_) in
+            // Once animation is completed, hide the view
+            self.viewCollectionPagination.isHidden = true
+        }
+    }
+    func unhideViewWithAnimation() {
+        // Reset the view's properties
+        self.viewCollectionPagination.transform = .identity
+        self.viewCollectionPagination.alpha = 0.0
+        self.viewCollectionPagination.isHidden = false
+        UIView.animate(withDuration: 0.3, animations: {
+            // Move the view back to its original position and fade it in
+            self.viewCollectionPagination.alpha = 1.0
+        })
+    }
+    func textfieldStateChange(to state: StateOfTextfield){
+        switch state {
+        case .inactive:
+            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.2).cgColor
+        case .active:
+            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
+        case .error:
+            viewContainer.layer.borderColor = UIColor.HSRedColor.withAlphaComponent(0.5).cgColor
+        }
+    }
+}
+// MARK: - Keyboard animations -
 extension EnterPhoneNumberViewController {
     @objc func keyboardWillShow(_ notification: Notification) {
         animateView(upward: true)
@@ -73,7 +160,7 @@ extension EnterPhoneNumberViewController {
                 // Move the view upward and fade it out
                 self.viewCollectionPagination.transform = CGAffineTransform(translationX: 0, y: -self.viewCollectionPagination.frame.height)
                 self.viewCollectionPagination.alpha = 0.0
-                self.bottomConstraintOfLoginView.constant = 350
+                self.bottomConstraintOfLoginView.constant = 400
             } else {
                 // Reset the view's position and fade it in
                 self.viewCollectionPagination.transform = .identity
@@ -83,9 +170,9 @@ extension EnterPhoneNumberViewController {
         }
     }
 }
-// MARK: - API Calls ------------
-extension EnterPhoneNumberViewController{
-    private func getOTP(phoneNumber: String) {
+// MARK: - API Calls -
+private extension EnterPhoneNumberViewController{
+    func getOTP(phoneNumber: String) {
         buttonGetStarted.showButtonLoader(vc: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.viewModel.getOTP(phoneNumber: phoneNumber) { response in
@@ -107,22 +194,22 @@ extension EnterPhoneNumberViewController{
             }
         }
     }
-    private func getOnBoadingScreens() {
-            self.viewModel.getOnBoadingScreens { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let data):
-                        Log.d(data)
-                        self?.collectionSlides.reloadData()
-                        self?.pageControl.numberOfPages = self?.viewModel.slides.count ?? 0
-                    case .failure(let error):
-                        Log.d(error.localizedDescription)
-                    }
+    func getOnBoadingScreens() {
+        self.viewModel.getOnBoadingScreens { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    Log.d(data)
+                    self?.collectionSlides.reloadData()
+                    self?.pageControl.numberOfPages = self?.viewModel.slides.count ?? 0
+                case .failure(let error):
+                    Log.d(error.localizedDescription)
                 }
             }
         }
+    }
 }
-// MARK: - CollectionView UICollectionViewDataSource ------------
+// MARK: - CollectionView UICollectionViewDataSource -
 extension EnterPhoneNumberViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.viewModel.slides.count
@@ -134,71 +221,13 @@ extension EnterPhoneNumberViewController: UICollectionViewDataSource {
         return cell
     }
 }
-// MARK: - CollectionView UICollectionViewDelegateFlowLayout ------------
+// MARK: - CollectionView UICollectionViewDelegateFlowLayout -
 extension EnterPhoneNumberViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
 }
-// MARK: - Private methods ------------
-extension EnterPhoneNumberViewController {
-    private func showInPutError() {
-        heightConstraintErrorView.constant = 12
-        heightConstraintLoginView.constant = 218
-        view.setNeedsLayout()
-    }
-    private func hideInPutError() {
-        heightConstraintErrorView.constant = 0
-        heightConstraintLoginView.constant = 206
-        view.setNeedsLayout()
-    }
-    private func hideViewWithAnimation() {
-        UIView.animate(withDuration: 0.3, animations: {
-            // Move the view upward and fade it out
-            self.viewCollectionPagination.transform = CGAffineTransform(translationX: 0, y: -350)
-            self.viewCollectionPagination.alpha = 0.0
-        }) { (_) in
-            // Once animation is completed, hide the view
-            self.viewCollectionPagination.isHidden = true
-        }
-    }
-    private func unhideViewWithAnimation() {
-        // Reset the view's properties
-        self.viewCollectionPagination.transform = .identity
-        self.viewCollectionPagination.alpha = 0.0
-        self.viewCollectionPagination.isHidden = false
-        
-        UIView.animate(withDuration: 0.3, animations: {
-            // Move the view back to its original position and fade it in
-            self.viewCollectionPagination.alpha = 1.0
-        })
-    }
-
-    private func initSettings() {
-        IQKeyboardManager.shared().isEnableAutoToolbar = false
-        IQKeyboardManager.shared().isEnabled = false
-        UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
-        inputTextField.addTarget(self, action: #selector(editingText(_:)), for: .editingChanged)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        view.addGestureRecognizer(tap)
-        collectionSlides.dataSource = self
-        collectionSlides.delegate = self
-     }
-    private func initUI() {
-        collectionSlides.isPagingEnabled = true
-        heightConstraintPlaceholderText.constant = 0
-        inputTextField.textColor = UIColor.HSPlaceHolderColor
-        inputTextField.font = UIFont.Rajdhani.Bold.withSize(18)
-        viewContainer.layer.cornerRadius = 5
-        viewContainer.layer.borderColor = UIColor.HSTextFieldBorderColor.cgColor
-        viewContainer.layer.borderWidth = 2.0
-        viewContainer.backgroundColor = UIColor.HSTextFieldColor
-        buttonGetStarted.initLoadingButton()
-        inputTextField.clearButtonMode = .whileEditing
-    }
-
-}
-// MARK: - UIScrollViewDelegate ------------
+// MARK: - UIScrollViewDelegate -
 extension EnterPhoneNumberViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let xPoint = scrollView.contentOffset.x + scrollView.frame.width / 2
@@ -209,7 +238,7 @@ extension EnterPhoneNumberViewController: UIScrollViewDelegate {
         }
     }
 }
-// MARK: - Buttons tap ------------
+// MARK: - Buttons tap -
 extension EnterPhoneNumberViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
@@ -223,9 +252,12 @@ extension EnterPhoneNumberViewController {
         guard let phoneNumber = inputTextField.text else { return }
         getOTP(phoneNumber: phoneNumber)
     }
-
+    @IBAction func clearText(_ sender: Any) {
+        inputTextField.text = ""
+        clearButton.isHidden = true
+    }
 }
-// MARK: - UITextFieldDelegate ------------
+// MARK: - UITextFieldDelegate -
 extension EnterPhoneNumberViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentCharacterCount = textField.text?.count ?? 0
@@ -242,18 +274,22 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
     }
     @objc func editingText(_ textField: UITextField) {
         if (textField.text?.count ?? 0) == 0 {
+            clearButton.isHidden = true
             hideInPutError()
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
             showInPutError()
+            clearButton.isHidden = false
         } else if ((textField.text?.count ?? 0) == 10 ) {
             hideInPutError()
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
+        clearButton.isHidden = true
         heightConstraintPlaceholderText.constant = 0
         if (textField.text?.count ?? 0) == 0 {
             hideInPutError()
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
+            clearButton.isHidden = false
             showInPutError()
         } else if ((textField.text?.count ?? 0) == 10 ) {
             hideInPutError()

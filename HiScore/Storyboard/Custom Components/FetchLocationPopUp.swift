@@ -13,7 +13,7 @@ class FetchLocationPopUp: UIView {
     @IBOutlet weak var loaderImage: NVActivityIndicatorView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainView: UIView!
-    
+    @IBOutlet weak var backGroundView: UIView!
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -27,6 +27,7 @@ class FetchLocationPopUp: UIView {
     
     func commonInit() {
         self.backgroundColor = .clear
+        backGroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = 24
     }

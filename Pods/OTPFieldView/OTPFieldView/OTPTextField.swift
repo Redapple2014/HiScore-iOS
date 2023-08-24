@@ -58,7 +58,7 @@ import UIKit
             layer.cornerRadius = bounds.size.width / 2
             break
         case .roundedCorner:
-            layer.cornerRadius = 4
+            layer.cornerRadius = 6.8
             textColor = .white
             break
         case .square:

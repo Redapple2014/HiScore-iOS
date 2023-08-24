@@ -17,6 +17,7 @@ class CustomTabBarController: UITabBarController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setTabBarItems()
+        self.view.backgroundColor = .HSAppThemeColor
         self.tabBar.backgroundColor = UIColor.HSTabbarColor.withAlphaComponent(0.8)
         self.tabBar.tintColor = .HSLightGreyButtonTextColor
         self.tabBar.unselectedItemTintColor = .white
@@ -24,6 +25,8 @@ class CustomTabBarController: UITabBarController {
         self.tabBar.layer.masksToBounds = true
         self.tabBar.layer.cornerRadius = 16
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        self.tabBar.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.3).cgColor
+        self.tabBar.layer.borderWidth = 0.3
     }
     func setTabBarItems(){
           let myTabBarItem1 = (self.tabBar.items?[0])! as UITabBarItem

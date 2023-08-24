@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6s-FH-rvW">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6s-FH-rvW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Baloo2-Bold.ttf">
+        <array key="Baloo2-VariableFont_wght.ttf">
             <string>Baloo2-Bold</string>
         </array>
         <array key="MavenPro-Regular.ttf">
@@ -38,25 +37,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-yk-fyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1408" y="-677"/>
+            <point key="canvasLocation" x="-1499" y="-1238"/>
         </scene>
         <!--Enter Phone Number View Controller-->
         <scene sceneID="Kih-01-or7">
             <objects>
                 <viewController storyboardIdentifier="EnterPhoneNumberViewController" id="unS-fg-BKx" customClass="EnterPhoneNumberViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhT-Fa-8p7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1b5-bF-hJM">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="1kg-qh-fiO">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.13092257862059486" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2s-FV-njl">
-                                        <rect key="frame" x="0.0" y="133" width="393" height="357"/>
+                                        <rect key="frame" x="0.0" y="118" width="414" height="372"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ToE-yK-u6W">
                                             <size key="itemSize" width="390" height="314.33333333333326"/>
@@ -66,25 +65,25 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OU0-it-3td" customClass="SlidesCollectionViewCell" customModule="HiScore" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="21.333333333333332" width="390" height="314.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="29" width="390" height="314.33333333333326"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZC-rE-K44">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="314.33333333333326"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-ZS-TVR">
-                                                            <rect key="frame" x="30" y="262.33333333333331" width="330" height="42"/>
+                                                            <rect key="frame" x="30" y="262.5" width="330" height="42"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-85-rTs">
                                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="21"/>
                                                                     <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="18"/>
-                                                                    <color key="textColor" name="HSLightGreyButtonTextColor"/>
+                                                                    <color key="textColor" name="HSLightYellowColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-dx-FGr">
                                                                     <rect key="frame" x="0.0" y="21" width="330" height="21"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="18"/>
-                                                                    <color key="textColor" red="0.73725490196078436" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" name="HSGrayColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -94,7 +93,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-hG-j3m">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="252.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="252.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -124,19 +123,29 @@
                                         </connections>
                                     </collectionView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-Lb-lBy">
-                                        <rect key="frame" x="138.66666666666666" y="500" width="115.66666666666666" height="20"/>
+                                        <rect key="frame" x="129.5" y="500" width="155.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Qse-G3-rmo"/>
                                         </constraints>
                                     </pageControl>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzJ-bw-Rq6">
+                                        <rect key="frame" x="0.0" y="549.5" width="414" height="0.5"/>
+                                        <color key="backgroundColor" name="HSWhiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="rIO-Ac-zLo"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="LzJ-bw-Rq6" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="1ai-Xc-MVe"/>
                                     <constraint firstItem="qb1-Lb-lBy" firstAttribute="top" secondItem="j2s-FV-njl" secondAttribute="bottom" constant="10" id="6BN-1L-Lmm"/>
                                     <constraint firstItem="j2s-FV-njl" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="7cm-Ww-9mB"/>
                                     <constraint firstAttribute="trailing" secondItem="1kg-qh-fiO" secondAttribute="trailing" id="RKn-NA-ziK"/>
                                     <constraint firstItem="1kg-qh-fiO" firstAttribute="top" secondItem="1b5-bF-hJM" secondAttribute="top" id="ZdG-sS-kD0"/>
                                     <constraint firstItem="1kg-qh-fiO" firstAttribute="leading" secondItem="1b5-bF-hJM" secondAttribute="leading" id="alj-0A-Mmq"/>
+                                    <constraint firstAttribute="trailing" secondItem="LzJ-bw-Rq6" secondAttribute="trailing" id="b68-W3-e2u"/>
+                                    <constraint firstAttribute="bottom" secondItem="LzJ-bw-Rq6" secondAttribute="bottom" id="cuK-e4-eaO"/>
                                     <constraint firstAttribute="bottom" secondItem="1kg-qh-fiO" secondAttribute="bottom" id="d4L-71-TFR"/>
                                     <constraint firstAttribute="bottom" secondItem="qb1-Lb-lBy" secondAttribute="bottom" constant="30" id="oxb-dY-3nl"/>
                                     <constraint firstItem="qb1-Lb-lBy" firstAttribute="centerX" secondItem="1b5-bF-hJM" secondAttribute="centerX" id="xG3-7u-aY4"/>
@@ -144,7 +153,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-ya-q1z" userLabel="View Login">
-                                <rect key="frame" x="0.0" y="550" width="393" height="218"/>
+                                <rect key="frame" x="0.0" y="550" width="414" height="218"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login/Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-oF-7n5">
                                         <rect key="frame" x="17" y="27" width="125" height="25"/>
@@ -152,49 +161,63 @@
                                             <constraint firstAttribute="height" constant="25" id="3LH-55-VKh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akB-9y-xjF">
-                                        <rect key="frame" x="17" y="72" width="359" height="60"/>
+                                        <rect key="frame" x="17" y="72" width="380" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-n5-H8N">
-                                                <rect key="frame" x="15.999999999999993" y="5" width="105.33333333333331" height="13"/>
+                                                <rect key="frame" x="16" y="5" width="109" height="13"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="PCf-5k-RDn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" name="HSWhiteColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LS0-09-qKk">
-                                                <rect key="frame" x="17" y="28" width="325" height="22"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LS0-09-qKk">
+                                                <rect key="frame" x="17" y="28" width="346" height="22"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="textColor" name="HiScoreGray"/>
+                                                <color key="textColor" name="HSWhiteColor"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="unS-fg-BKx" id="9M1-WJ-yOD"/>
                                                 </connections>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzE-UD-QSj">
+                                                <rect key="frame" x="344" y="20" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="8el-Sq-lQQ"/>
+                                                    <constraint firstAttribute="height" constant="20" id="uqx-1d-ouE"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="circle.fill"/>
+                                                <connections>
+                                                    <action selector="clearText:" destination="unS-fg-BKx" eventType="touchUpInside" id="LvU-u1-e8l"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="LS0-09-qKk" secondAttribute="trailing" constant="17" id="1FZ-Fv-imv"/>
+                                            <constraint firstItem="AzE-UD-QSj" firstAttribute="centerY" secondItem="akB-9y-xjF" secondAttribute="centerY" id="9Zo-9O-ulh"/>
                                             <constraint firstItem="LS0-09-qKk" firstAttribute="top" secondItem="CF3-n5-H8N" secondAttribute="bottom" constant="10" id="FGr-Gb-4YG"/>
                                             <constraint firstItem="CF3-n5-H8N" firstAttribute="leading" secondItem="akB-9y-xjF" secondAttribute="leading" constant="16" id="Jfk-LR-er2"/>
                                             <constraint firstItem="CF3-n5-H8N" firstAttribute="top" secondItem="akB-9y-xjF" secondAttribute="top" constant="5" id="MNs-si-4hX"/>
                                             <constraint firstAttribute="bottom" secondItem="LS0-09-qKk" secondAttribute="bottom" constant="10" id="PLN-H0-E3R"/>
+                                            <constraint firstAttribute="trailing" secondItem="AzE-UD-QSj" secondAttribute="trailing" constant="16" id="bbK-XC-skN"/>
                                             <constraint firstAttribute="height" constant="60" id="fyT-mg-qDz"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CF3-n5-H8N" secondAttribute="trailing" constant="16" id="urS-Bt-j7j"/>
                                             <constraint firstItem="LS0-09-qKk" firstAttribute="leading" secondItem="akB-9y-xjF" secondAttribute="leading" constant="17" id="vzP-Yv-H5r"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9D-i1-Op7" userLabel="errorView">
-                                        <rect key="frame" x="17" y="138" width="359" height="12"/>
+                                        <rect key="frame" x="17" y="138" width="380" height="12"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputError" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-n7-ZSe">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error-info" translatesAutoresizingMaskIntoConstraints="NO" id="BKm-n7-ZSe">
                                                 <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
                                                 <color key="tintColor" name="HSRedColor"/>
                                                 <constraints>
@@ -202,9 +225,9 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Phone Number " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-O9-FRd">
-                                                <rect key="frame" x="18" y="0.0" width="341" height="12"/>
+                                                <rect key="frame" x="18" y="0.0" width="362" height="12"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
-                                                <color key="textColor" red="0.96100002527236938" green="0.30199998617172241" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="HSRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -221,7 +244,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZg-oX-4sP" customClass="LoadingButton" customModule="MHLoadingButton">
-                                        <rect key="frame" x="17" y="170" width="359" height="48"/>
+                                        <rect key="frame" x="17" y="170" width="380" height="48"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="6mh-oa-JEJ"/>
@@ -260,16 +283,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proceed to agree to Terms of Services &amp; Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-CS-BtX">
-                                <rect key="frame" x="0.0" y="788" width="393" height="13"/>
+                                <rect key="frame" x="0.0" y="788" width="414" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13" id="Gux-a8-2gf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="11"/>
-                                <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" name="HSDarkGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rummy Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oB2-6q-2bo">
-                                <rect key="frame" x="88" y="83" width="217" height="40"/>
+                                <rect key="frame" x="98.5" y="68" width="217" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9SI-JU-6ze"/>
@@ -300,6 +323,7 @@
                     <connections>
                         <outlet property="bottomConstraintOfLoginView" destination="CXx-Fj-qRh" id="1ZR-e4-d7d"/>
                         <outlet property="buttonGetStarted" destination="fZg-oX-4sP" id="tz8-Xh-Kb1"/>
+                        <outlet property="clearButton" destination="AzE-UD-QSj" id="xWq-8L-dpc"/>
                         <outlet property="collectionSlides" destination="j2s-FV-njl" id="aDt-u3-izY"/>
                         <outlet property="errorImage" destination="BKm-n7-ZSe" id="xwS-c1-clu"/>
                         <outlet property="errorLabel" destination="hFw-O9-FRd" id="5yx-b3-WPT"/>
@@ -309,7 +333,7 @@
                         <outlet property="inputTextField" destination="LS0-09-qKk" id="sJ6-ug-yH0"/>
                         <outlet property="pageControl" destination="qb1-Lb-lBy" id="NOx-z3-YMc"/>
                         <outlet property="placeholderLabel" destination="CF3-n5-H8N" id="ggW-Kv-Eck"/>
-                        <outlet property="topConstraintOfLoginView" destination="rUL-vh-3ti" id="NXp-SV-4pk"/>
+                        <outlet property="topConstraintOfButton" destination="TrH-Ez-R4e" id="nyt-SX-LCs"/>
                         <outlet property="viewCollectionPagination" destination="1b5-bF-hJM" id="e8W-sF-fqd"/>
                         <outlet property="viewContainer" destination="akB-9y-xjF" id="Wq0-pD-qfN"/>
                     </connections>
@@ -323,11 +347,11 @@
             <objects>
                 <viewController storyboardIdentifier="EnterOTPViewController" id="3LF-2T-DMt" customClass="EnterOTPViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E80-1k-N00">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-ha-XhZ">
-                                <rect key="frame" x="30" y="79" width="16" height="14"/>
+                                <rect key="frame" x="30" y="64" width="16" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="xoh-Gt-AZM"/>
                                     <constraint firstAttribute="height" constant="14" id="zdx-VG-c9b"/>
@@ -339,34 +363,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP sent to +919725559757" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v52-0e-MK6">
-                                <rect key="frame" x="18" y="146" width="286" height="66"/>
+                                <rect key="frame" x="18" y="131" width="301.5" height="66"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="28"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" name="HSWhiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you did not recieve the OTP," textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-Ee-skg">
-                                <rect key="frame" x="18" y="224" width="171.33333333333334" height="14.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you did not recieve the OTP," textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-Ee-skg">
+                                <rect key="frame" x="18" y="209" width="171.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" name="HSWhiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESEND OTP" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-yK-SBg">
-                                <rect key="frame" x="195.33333333333334" y="224" width="73.333333333333343" height="14.333333333333343"/>
+                                <rect key="frame" x="195.5" y="209" width="73.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
-                                <color key="textColor" red="0.84705882352941175" green="0.69019607843137254" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" name="HSGoldenYellowTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-MN-Ssj" customClass="OTPFieldView" customModule="OTPFieldView">
-                                <rect key="frame" x="18" y="282.33333333333331" width="357" height="42"/>
+                                <rect key="frame" x="18" y="267.5" width="378" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="1wu-oF-WAE"/>
+                                    <constraint firstAttribute="height" constant="50" id="1wu-oF-WAE"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-fi-1RF">
-                                <rect key="frame" x="18" y="324.33333333333331" width="357" height="25"/>
+                                <rect key="frame" x="18" y="317.5" width="378" height="25"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputError" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-Gq-U0m">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error-info" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-Gq-U0m">
                                         <rect key="frame" x="0.0" y="12" width="13" height="13"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
@@ -374,9 +398,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid OTP. Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLN-KE-c4b">
-                                        <rect key="frame" x="19" y="12" width="338" height="13"/>
+                                        <rect key="frame" x="19" y="12" width="359" height="13"/>
                                         <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
-                                        <color key="textColor" red="0.96100002527236938" green="0.30199998617172241" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="HSRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -393,10 +417,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-q3-BMd">
-                                <rect key="frame" x="18" y="357.33333333333331" width="357" height="112"/>
+                                <rect key="frame" x="18" y="350.5" width="378" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Zq-uvO" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Verify"/>
                                         <connections>
@@ -404,7 +428,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrw-u1-S6C" customClass="LoadingButton" customModule="HiScore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="357" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="378" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Change Phone Number"/>
                                         <connections>
@@ -454,18 +478,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr4-cJ-qAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-405" y="-507"/>
+            <point key="canvasLocation" x="954" y="-1238"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="Jag-S2-cHr">
             <objects>
                 <viewController storyboardIdentifier="SplashScreenViewController" id="KFu-lG-tfQ" customClass="SplashScreenViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sir-6L-qXA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-O5-1rz">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PO8-R9-GFT"/>
@@ -492,7 +516,7 @@
             <size key="intrinsicContentSize" width="40" height="30"/>
         </designable>
         <designable name="fZg-oX-4sP">
-            <size key="intrinsicContentSize" width="101.66666666666667" height="30.666666666666668"/>
+            <size key="intrinsicContentSize" width="101.5" height="30.5"/>
         </designable>
         <designable name="hrw-u1-S6C">
             <size key="intrinsicContentSize" width="160" height="30"/>
@@ -502,19 +526,29 @@
         <image name="Home" width="375" height="550"/>
         <image name="Rummy Logo" width="217" height="60"/>
         <image name="backArrow" width="18" height="16"/>
-        <image name="inputError" width="11" height="11"/>
-        <image name="placeholder" width="63" height="67.333335876464844"/>
-        <namedColor name="HSLightGreyButtonTextColor">
-            <color red="0.93300002813339233" green="0.83899998664855957" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="circle.fill" width="24" height="24"/>
+        <image name="error-info" width="11.5" height="11.5"/>
+        <image name="placeholder" width="141.5" height="151.5"/>
+        <namedColor name="HSDarkGrayColor">
+            <color red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSGoldenYellowTextColor">
+            <color red="0.84705882352941175" green="0.69019607843137254" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSGrayColor">
+            <color red="0.73725490196078436" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSLightYellowColor">
+            <color red="0.8901960784313725" green="0.80784313725490198" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HSRedColor">
-            <color red="0.96100002527236938" green="0.30199998617172241" blue="0.24699999392032623" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96078431372549022" green="0.30196078431372547" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HiSchoreDark">
             <color red="0.094117647058823528" green="0.023529411764705882" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="HiScoreGray">
-            <color red="1" green="1" blue="1" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

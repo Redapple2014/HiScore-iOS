@@ -54,7 +54,7 @@ enum PlaceholderMessages {
     var desscription: String {
         switch self {
         case .phoneNumber:
-            return "Enter Phone number"
+            return "Enter phone number"
         }
     }
 }
@@ -85,4 +85,10 @@ class AnimationFiles {
     static let reward = "REward Gift Box"
     static let rewardConfetti = "Confetti Animated Icon"
     static let loading = "animation_ll6mjcvw"
+}
+
+enum StateOfTextfield {
+    case inactive
+    case active
+    case error
 }
