@@ -35,7 +35,7 @@ extension UIColor {
     } 
 
     static let HSAppThemeColor: UIColor = {
-        return UIColor(hex: "#0D0616")
+        return UIColor(hex: "#14182B")
     }()
     
     static let HSPlaceHolderColor: UIColor = {
