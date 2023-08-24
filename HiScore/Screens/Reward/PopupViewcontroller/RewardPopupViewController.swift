@@ -157,22 +157,58 @@ extension RewardPopupViewController {
     private func initUI() {
         viewTimerSection.isHidden = true
         viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
-        labelTimerText.addShadow(location: .top)
         labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
-//        viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
-       // viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
-//        #, #  #393D51, #14182A
         viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
-//        viewBottom.setGradientBackground(colorTop: UIColor(hex: "272B40"), colorBottom: UIColor.init(hex: "181C31"))
-//        viewBottom.backgroundColor = UIColor(hex: "000000").withAlphaComponent(0.5)//.HSLightBlackColor
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
         
-        designKnowMoreView()
+        designShadowViews()
         tableMyReward.dataSource = self
     }
-    private func designKnowMoreView() {
+    private func designShadowViews() {
         viewKnowMore.layer.cornerRadius = 11
         viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
+        viewTimerSection.layer.cornerRadius = 22
+//        let imgVw = UIImageView()
+//        imgVw.frame = viewKnowMore.bounds
+//        imgVw.image = UIImage(named: "timerRect")
+//        viewTimerSection.addSubview(imgVw)
+//        var shadowLayer: CAShapeLayer!
+//        shadowLayer = CAShapeLayer()
+//        shadowLayer.path = UIBezierPath(roundedRect: viewTimerSection.bounds, cornerRadius: 22).cgPath
+//        shadowLayer.fillColor = UIColor.white.cgColor
+//
+//        shadowLayer.shadowColor = UIColor.yellow.cgColor
+//        shadowLayer.shadowPath = shadowLayer.path
+//        shadowLayer.shadowOffset = CGSize(width: 20.0, height: 20.0)
+//        shadowLayer.shadowOpacity = 0.8
+//        shadowLayer.shadowRadius = 2
+//        viewTimerSection.layer.insertSublayer(shadowLayer, at: 0)
+
+        
+        
+        
+        
+//        viewTimerSection.clipsToBounds = true
+////        viewTimerSection.addShadow(location: .top, color: .lightGray, opacity: 0.5)
+//        viewTimerSection.layer.cornerRadius = 22
+//        viewTimerSection.clipsToBounds = true
+//       // viewTimerSection.layer.borderWidth = 2
+////        viewTimerSection.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+//        viewTimerSection.addLeftBorderWithColor(color: UIColor.init(hex: "452735"), width: 1)
+//        viewTimerSection.addShadow(location: .top, radius: 22)
+
+//        let gradient = CAGradientLayer()
+//        gradient.frame =  CGRect(origin: CGPointZero, size: self.viewTimerSection.frame.size)
+//        gradient.colors = [UIColor.init(hex: "452735").cgColor, UIColor.init(hex: "221E2F").cgColor]
+//
+//        let shape = CAShapeLayer()
+//        shape.lineWidth = 10
+//        shape.path = UIBezierPath(rect: self.viewTimerSection.bounds).cgPath
+//        shape.strokeColor = UIColor.yellow.cgColor
+//        shape.fillColor = UIColor.clear.cgColor
+//        gradient.mask = shape
+//
+//        viewTimerSection.layer.addSublayer(gradient)
     }
     private func createCircleUI() {
         circle1.circleUI()
