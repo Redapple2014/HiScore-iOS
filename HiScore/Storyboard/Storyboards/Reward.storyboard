@@ -177,15 +177,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axd-da-4Ub" customClass="ChainView" customModule="HiScore" customModuleProvider="target">
-                                <rect key="frame" x="18" y="295.5" width="378" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axd-da-4Ub" customClass="ChainView" customModule="HiScore" customModuleProvider="target">
+                                <rect key="frame" x="18" y="295.5" width="378" height="10"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="9zZ-Qn-V1W"/>
+                                    <constraint firstAttribute="height" constant="10" id="9zZ-Qn-V1W"/>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-kG-3w0">
-                                <rect key="frame" x="18" y="295.5" width="378" height="420.5"/>
+                                <rect key="frame" x="18" y="305.5" width="378" height="410.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQU-lD-FNR">
                                         <rect key="frame" x="12" y="19" width="84" height="19"/>
@@ -234,7 +234,7 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-gK-mBP">
-                                        <rect key="frame" x="0.0" y="49.5" width="378" height="371"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="378" height="361"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="61n-Zv-Mmc" customClass="MyRewardsTableViewCell" customModule="HiScore" customModuleProvider="target">
@@ -441,7 +441,7 @@
                         <outlet property="labelRewardSubTitle" destination="b8z-8x-971" id="BJ4-Pa-QaX"/>
                         <outlet property="labelTimerText" destination="YdV-5e-0i2" id="j1N-zK-iRa"/>
                         <outlet property="tableMyReward" destination="wMD-gK-mBP" id="DEX-Oo-bdm"/>
-                        <outlet property="viewBetween" destination="axd-da-4Ub" id="W7h-Hf-huL"/>
+                        <outlet property="viewBetween" destination="axd-da-4Ub" id="xIt-CL-oQU"/>
                         <outlet property="viewBottom" destination="J4h-kG-3w0" id="mPv-vG-rot"/>
                         <outlet property="viewKnowMore" destination="sRw-5l-wc1" id="7tm-Pq-8IF"/>
                         <outlet property="viewTimerSection" destination="Uwn-96-71s" id="Kj6-A2-4w9"/>

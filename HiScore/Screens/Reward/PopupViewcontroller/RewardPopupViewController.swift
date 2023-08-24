@@ -20,7 +20,7 @@ class RewardPopupViewController: BaseViewController {
     
     @IBOutlet weak var labelHurryUP: UILabel!
     
-    @IBOutlet weak var viewBetween: ChainView!
+    @IBOutlet weak var viewBetween: UIView!
     
     @IBOutlet weak var viewTimerSection: UIView!
     @IBOutlet weak var heightOfTimer: NSLayoutConstraint!
@@ -163,52 +163,46 @@ extension RewardPopupViewController {
         
         designShadowViews()
         tableMyReward.dataSource = self
+        createMiddleView()
+    }
+    private func createMiddleView() {
+        viewBetween.isHidden = false
+
+        
+        
+        
+      //  viewBetween.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
+
+//        let availableWidth = viewBetween.frame.width
+//        // Set the circle width and spacing
+//        let circleWidth: CGFloat = 20
+//        let spacing: CGFloat = 5
+//
+//        // Calculate the number of circles that fit in the width
+//        let maxCircles = Int(availableWidth / (circleWidth + spacing))
+//        let actualWidth = CGFloat(maxCircles) * circleWidth + CGFloat(maxCircles - 1) * spacing
+//
+//
+//        for i in 0..<maxCircles {
+//            let circleView = UIView()
+//            if i == 0 {
+//                circleView.frame = CGRect(x: 0, y: 0, width: circleWidth, height: 10)
+//            } else {
+//                circleView.frame = CGRect(x: CGFloat(i*Int(circleWidth)) + spacing, y: 0, width: circleWidth, height: 10)
+//            }
+//
+//            circleView.backgroundColor = UIColor.clear
+//            circleView.layer.cornerRadius = 5
+//            circleView.clipsToBounds = true
+//            viewBetween.addSubview(circleView)
+//        }
+
+        
     }
     private func designShadowViews() {
         viewKnowMore.layer.cornerRadius = 11
         viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
         viewTimerSection.layer.cornerRadius = 22
-//        let imgVw = UIImageView()
-//        imgVw.frame = viewKnowMore.bounds
-//        imgVw.image = UIImage(named: "timerRect")
-//        viewTimerSection.addSubview(imgVw)
-//        var shadowLayer: CAShapeLayer!
-//        shadowLayer = CAShapeLayer()
-//        shadowLayer.path = UIBezierPath(roundedRect: viewTimerSection.bounds, cornerRadius: 22).cgPath
-//        shadowLayer.fillColor = UIColor.white.cgColor
-//
-//        shadowLayer.shadowColor = UIColor.yellow.cgColor
-//        shadowLayer.shadowPath = shadowLayer.path
-//        shadowLayer.shadowOffset = CGSize(width: 20.0, height: 20.0)
-//        shadowLayer.shadowOpacity = 0.8
-//        shadowLayer.shadowRadius = 2
-//        viewTimerSection.layer.insertSublayer(shadowLayer, at: 0)
-
-        
-        
-        
-        
-//        viewTimerSection.clipsToBounds = true
-////        viewTimerSection.addShadow(location: .top, color: .lightGray, opacity: 0.5)
-//        viewTimerSection.layer.cornerRadius = 22
-//        viewTimerSection.clipsToBounds = true
-//       // viewTimerSection.layer.borderWidth = 2
-////        viewTimerSection.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
-//        viewTimerSection.addLeftBorderWithColor(color: UIColor.init(hex: "452735"), width: 1)
-//        viewTimerSection.addShadow(location: .top, radius: 22)
-
-//        let gradient = CAGradientLayer()
-//        gradient.frame =  CGRect(origin: CGPointZero, size: self.viewTimerSection.frame.size)
-//        gradient.colors = [UIColor.init(hex: "452735").cgColor, UIColor.init(hex: "221E2F").cgColor]
-//
-//        let shape = CAShapeLayer()
-//        shape.lineWidth = 10
-//        shape.path = UIBezierPath(rect: self.viewTimerSection.bounds).cgPath
-//        shape.strokeColor = UIColor.yellow.cgColor
-//        shape.fillColor = UIColor.clear.cgColor
-//        gradient.mask = shape
-//
-//        viewTimerSection.layer.addSublayer(gradient)
     }
     private func createCircleUI() {
         circle1.circleUI()
