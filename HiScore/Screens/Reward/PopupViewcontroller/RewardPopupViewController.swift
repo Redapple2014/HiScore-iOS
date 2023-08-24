@@ -157,6 +157,7 @@ extension RewardPopupViewController {
     private func initUI() {
         viewTimerSection.isHidden = true
         viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
+        labelTimerText.addShadow(location: .top)
         labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
 //        viewTop.setGradientBackground(colorTop: UIColor.init(hex: "272B40"),colorBottom: UIColor.init(hex: "181C31"))
        // viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
@@ -165,12 +166,13 @@ extension RewardPopupViewController {
 //        viewBottom.setGradientBackground(colorTop: UIColor(hex: "272B40"), colorBottom: UIColor.init(hex: "181C31"))
 //        viewBottom.backgroundColor = UIColor(hex: "000000").withAlphaComponent(0.5)//.HSLightBlackColor
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
+        
         designKnowMoreView()
         tableMyReward.dataSource = self
     }
     private func designKnowMoreView() {
         viewKnowMore.layer.cornerRadius = 11
-        viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)        
+        viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
     }
     private func createCircleUI() {
         circle1.circleUI()
