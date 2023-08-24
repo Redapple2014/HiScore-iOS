@@ -393,8 +393,8 @@
                                     <action selector="buttonContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j65-sn-DKJ"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nc5-84-GEb" customClass="RewardPopupView" customModule="HiScore" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="7" width="414" height="896"/>
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nc5-84-GEb" customClass="RewardPopupView" customModule="HiScore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="7000" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
