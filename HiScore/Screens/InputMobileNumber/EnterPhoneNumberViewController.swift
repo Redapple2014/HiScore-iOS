@@ -58,6 +58,9 @@ extension EnterPhoneNumberViewController{
         super.viewDidLayoutSubviews()
         buttonGetStarted.setNeedsLayout()
         buttonGetStarted.layoutIfNeeded()
+        buttonGetStarted.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonGetStarted.setUpButtonWithGradientBackground(type: .yellow)
     }
     override func viewWillDisappear(_ animated: Bool) {

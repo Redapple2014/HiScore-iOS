@@ -18,8 +18,8 @@ class CustomTabBarController: UITabBarController {
         super.viewWillLayoutSubviews()
         setTabBarItems()
         self.view.backgroundColor = .HSAppThemeColor
-        self.tabBar.backgroundColor = UIColor.HSTabbarColor.withAlphaComponent(0.8)
-        self.tabBar.tintColor = .HSLightGreyButtonTextColor
+        self.tabBar.backgroundColor = UIColor.HSTabbarColor
+        self.tabBar.tintColor = .HSYellowTextColor
         self.tabBar.unselectedItemTintColor = .white
         self.tabBar.isTranslucent = false
         self.tabBar.layer.masksToBounds = true

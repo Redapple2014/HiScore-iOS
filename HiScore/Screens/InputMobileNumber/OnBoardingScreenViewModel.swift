@@ -36,7 +36,6 @@ class OnboardingScreenViewModel {
     }
     
     func getOTP(phoneNumber: String, completion: @escaping (Result<GetOTPResponseModel, APIError>) -> Void) {
-    //    let tempId = "\(UUID().uuidString)"
         let param = GetOtpRequestModel(mobile: phoneNumber,
                                        uid: "",//UUID().uuidString,
                                        dest: "")//"phone")
@@ -67,10 +66,6 @@ class OnboardingScreenViewModel {
             return true
         }
         return false
-//        let PHONE_REGEX = "^//[6-9]\\d{9}$"
-//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-//        let result = phoneTest.evaluate(with: value)
-//        return result
     }
     
 }

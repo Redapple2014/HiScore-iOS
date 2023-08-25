@@ -28,6 +28,9 @@ class GetLocationViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         buttonShareLocation.setNeedsLayout()
         buttonShareLocation.layoutIfNeeded()
+        buttonShareLocation.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonShareLocation.setUpButtonWithGradientBackground(type: .yellow)
     }
 }
@@ -107,48 +110,49 @@ extension GetLocationViewController {
     }
     func shareLocation(lat: String, long: String) {
         self.showFetchLocationPopUp()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
             self.viewModel.getLocationData(lat: lat,
                                            long: long) { result in
                 DispatchQueue.main.async {
-                    self.hideFetchLocationPopUp()
+                //    self.hideFetchLocationPopUp()
                     switch result {
                     case .success(let response):
-                        if response.data.rummy.isAllowed {
-                            UserDefaults.standard.set(true, forKey: "isLocationAllowed")
-                            guard let userData = User.shared.details?.data,
-                                  let isNewUser = userData.isNewUser,
-                                  let isDuplicateUser = userData.dupe else { return }
-                            if isNewUser {
-                                if isDuplicateUser {
-                                    // Navigate to offer
-                                    guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
-                                        return
-                                    }
-                                    self.navigationController?.pushViewController(viewController, animated: true)
-                                    return
-                                } else {
-                                    // Navigate to reward
-                                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
-                                        return
-                                    }
-                                    self.navigationController?.pushViewController(viewController, animated: true)
-                                    return
-                                }
-                            } else {
-                                guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
-                                    return
-                                }
-                                self.navigationController?.pushViewController(viewController, animated: true)
-                                return
-                                
-                            }
-                        }
-                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
-                            return
-                        }
-                        viewController.viewModel.errorText = response.data.rummy.error
-                        self.navigationController?.pushViewController(viewController, animated: true)
+                        Log.d(response)
+//                        if response.data.rummy.isAllowed {
+//                            UserDefaults.standard.set(true, forKey: "isLocationAllowed")
+//                            guard let userData = User.shared.details?.data,
+//                                  let isNewUser = userData.isNewUser,
+//                                  let isDuplicateUser = userData.dupe else { return }
+//                            if isNewUser {
+//                                if isDuplicateUser {
+//                                    // Navigate to offer
+//                                    guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
+//                                        return
+//                                    }
+//                                    self.navigationController?.pushViewController(viewController, animated: true)
+//                                    return
+//                                } else {
+//                                    // Navigate to reward
+//                                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+//                                        return
+//                                    }
+//                                    self.navigationController?.pushViewController(viewController, animated: true)
+//                                    return
+//                                }
+//                            } else {
+//                                guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+//                                    return
+//                                }
+//                                self.navigationController?.pushViewController(viewController, animated: true)
+//                                return
+//
+//                            }
+//                        }
+//                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
+//                            return
+//                        }
+//                        viewController.viewModel.errorText = response.data.rummy.error
+//                        self.navigationController?.pushViewController(viewController, animated: true)
                     case .failure(let error):
                         Log.d(error)
                     }

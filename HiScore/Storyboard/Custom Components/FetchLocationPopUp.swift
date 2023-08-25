@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
-//#393D51, #14182A
+
 class FetchLocationPopUp: UIView {
     @IBOutlet weak var loaderImage: NVActivityIndicatorView!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView: HSShadowView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var backGroundView: UIView!
     required init(coder aDecoder: NSCoder) {
@@ -28,15 +28,18 @@ class FetchLocationPopUp: UIView {
     func commonInit() {
         self.backgroundColor = .clear
         backGroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        containerView.clipsToBounds = true
-        containerView.layer.cornerRadius = 24
+//        containerView.clipsToBounds = true
+//        containerView.layer.cornerRadius = 24
     }
     override func layoutSubviews() {
-        super.layoutSubviews()
-        containerView.layoutIfNeeded()
-        containerView.setNeedsLayout()
-        containerView.setGradientBackground(colorTop: .HSMediumDarkBlue, colorBottom: .HSDarkBlue)
-        containerView.setGradientBackground(colorTop: .HSBlue, colorBottom: .HSGreyBlue)
+//        super.layoutSubviews()
+//        containerView.layoutIfNeeded()
+//        containerView.setNeedsLayout()
+//        containerView.setGradiantColor(topColor: .HSMediumDarkBlue,
+//                                       bottomColor: .HSAppThemeColor,
+//                                       cornerRadius: 24,
+//                                       gradiantDirection: .topToBottom)
+       
     }
     func startLoading() {
         loaderImage.startAnimating()

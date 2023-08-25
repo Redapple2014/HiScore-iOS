@@ -14,7 +14,9 @@ enum ButtonColor {
     case yellow
 }
 extension LoadingButton {
-    func setUpButtonWithGradientBackground(type: ButtonColor, fontSize: CGFloat = 14, cornerRadius: CGFloat = 10) {
+    func setUpButtonWithGradientBackground(type: ButtonColor,
+                                           fontSize: CGFloat = 14,
+                                           cornerRadius: CGFloat = 10) {
         self.titleLabel?.font = UIFont.MavenPro.Bold.withSize(fontSize)
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius
@@ -25,6 +27,8 @@ extension LoadingButton {
         let colorBottom = UIColor.HSDarkYellowButtonColor.cgColor
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.startPoint = GradientOrientation.vertical.startPoint
+        gradientLayer.endPoint = GradientOrientation.vertical.endPoint
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
