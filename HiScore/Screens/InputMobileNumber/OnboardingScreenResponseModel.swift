@@ -14,13 +14,6 @@ struct GetOtpRequestModel: Encodable {
     let dest: String
 }
 
-
-//struct GetOTPResponseModel: Codable {
-//    let status: String
-//    let status_code: Int
-//    let message: String
-//}
-
 // MARK: - Welcome
 struct GetOTPResponseModel: Codable {
     let status, message: String?

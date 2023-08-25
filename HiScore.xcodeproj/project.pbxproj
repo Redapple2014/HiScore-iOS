@@ -27,6 +27,10 @@
 		AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */; };
 		AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Home.storyboard */; };
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
+		AFE8EB122A98AC0B00D29399 /* HSShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EB112A98AC0B00D29399 /* HSShadowView.swift */; };
+		AFE8EB152A98ADB700D29399 /* HSGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EB142A98ADB700D29399 /* HSGradientView.swift */; };
+		AFE8EB182A98AE1600D29399 /* HSGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EB172A98AE1600D29399 /* HSGradientButton.swift */; };
+		AFE8EB1B2A98AF3000D29399 /* HSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EB1A2A98AF3000D29399 /* HSButton.swift */; };
 		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
@@ -115,6 +119,10 @@
 		AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
 		AF916C1E2A8E64C000125808 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		AFE8EB112A98AC0B00D29399 /* HSShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSShadowView.swift; sourceTree = "<group>"; };
+		AFE8EB142A98ADB700D29399 /* HSGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSGradientView.swift; sourceTree = "<group>"; };
+		AFE8EB172A98AE1600D29399 /* HSGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSGradientButton.swift; sourceTree = "<group>"; };
+		AFE8EB1A2A98AF3000D29399 /* HSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSButton.swift; sourceTree = "<group>"; };
 		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -294,10 +302,9 @@
 		AF28DCC42A8A70CB003BFDCF /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				AFE8EB0F2A988A7400D29399 /* View */,
 				AF916C1B2A8E3BB300125808 /* DataModel */,
 				AF916C152A8E38EF00125808 /* ViewModel */,
-				AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */,
-				AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -358,6 +365,47 @@
 				AF916C212A8E66E800125808 /* CustomTabBarController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		AFE8EB0F2A988A7400D29399 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */,
+				AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE8EB102A98ABF400D29399 /* HSShadowView */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EB112A98AC0B00D29399 /* HSShadowView.swift */,
+			);
+			path = HSShadowView;
+			sourceTree = "<group>";
+		};
+		AFE8EB132A98AD8100D29399 /* HSGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EB142A98ADB700D29399 /* HSGradientView.swift */,
+			);
+			path = HSGradientView;
+			sourceTree = "<group>";
+		};
+		AFE8EB162A98AE0200D29399 /* HSGradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EB172A98AE1600D29399 /* HSGradientButton.swift */,
+			);
+			path = HSGradientButton;
+			sourceTree = "<group>";
+		};
+		AFE8EB192A98AF1E00D29399 /* HSButton */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EB1A2A98AF3000D29399 /* HSButton.swift */,
+			);
+			path = HSButton;
 			sourceTree = "<group>";
 		};
 		AFEE60262A9335A500CB1D9A /* SwiftUI */ = {
@@ -593,6 +641,10 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFE8EB192A98AF1E00D29399 /* HSButton */,
+				AFE8EB162A98AE0200D29399 /* HSGradientButton */,
+				AFE8EB132A98AD8100D29399 /* HSGradientView */,
+				AFE8EB102A98ABF400D29399 /* HSShadowView */,
 				C7EC883B2A937BCD009CFAFA /* UILabel */,
 				84D2A5CB2A9114F30098A1F4 /* String */,
 				84D2A5C82A9112E60098A1F4 /* UITextField */,
@@ -903,6 +955,8 @@
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
 				C7EC883F2A938652009CFAFA /* ChainView.swift in Sources */,
+				AFE8EB122A98AC0B00D29399 /* HSShadowView.swift in Sources */,
+				AFE8EB182A98AE1600D29399 /* HSGradientButton.swift in Sources */,
 				AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
@@ -917,8 +971,10 @@
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift in Sources */,
 				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,
 				C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */,
+				AFE8EB152A98ADB700D29399 /* HSGradientView.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
+				AFE8EB1B2A98AF3000D29399 /* HSButton.swift in Sources */,
 				C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
