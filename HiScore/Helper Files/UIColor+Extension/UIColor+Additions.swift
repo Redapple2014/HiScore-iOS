@@ -78,8 +78,6 @@ extension UIColor {
         return UIColor(hex: "#CD9D52")
     }()
         
-    
-    
    
     
     
