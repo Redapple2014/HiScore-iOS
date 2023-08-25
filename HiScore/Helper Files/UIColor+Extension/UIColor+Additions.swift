@@ -85,7 +85,7 @@ extension UIColor {
     static let HSGreyBlue: UIColor = {
        return UIColor(hex: "#8393B2")
     }()
-    
+
     static let HSMediumDarkBlue: UIColor = {
        return UIColor(hex: "#393D51")
     }()

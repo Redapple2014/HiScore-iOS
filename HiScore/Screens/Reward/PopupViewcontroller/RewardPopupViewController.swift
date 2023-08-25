@@ -17,6 +17,7 @@ class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelRewardAmount: UILabel!
     @IBOutlet weak var labelHurryUP: UILabel!
 
+    @IBOutlet weak var heightOfTable: NSLayoutConstraint!
     @IBOutlet weak var viewBetween: UIView!
     
     @IBOutlet weak var viewTimerSection: UIView!
@@ -154,7 +155,10 @@ extension RewardPopupViewController {
         labelRewardSubTitle.text = data.rewardSection.totalRewardSubtitle
         labelRewardAmount.text = "₹\(data.rewardSection.totalRewardReceived)"
         labelHurryUP.text = data.hurryUpSection.hurryTitle
+        heightOfTable.constant = CGFloat(((self.rewardResponse?.data.rewardSection.allRewards.horizontalSet.count ?? 0) * 56))
+        tableMyReward.bounces = false
         tableMyReward.reloadData()
+        tableMyReward.delegate = self
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         counter = (self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0)/1000
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -188,6 +192,11 @@ extension RewardPopupViewController {
         circle2.circleUI()
     }
     private func drawStroke() {
+    }
+}
+extension RewardPopupViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
     }
 }
 extension RewardPopupViewController:UITableViewDataSource {
