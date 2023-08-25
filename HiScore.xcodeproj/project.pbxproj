@@ -435,7 +435,7 @@
 			children = (
 				C7D521812A94BC8700454B67 /* Popup */,
 				C7EC88322A9339D5009CFAFA /* PopupViewcontroller */,
-				C7EC88312A9339C2009CFAFA /* ANimationBox */,
+				C7EC88312A9339C2009CFAFA /* Show Reward Animation */,
 			);
 			path = Reward;
 			sourceTree = "<group>";
@@ -697,12 +697,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		C7EC88312A9339C2009CFAFA /* ANimationBox */ = {
+		C7EC88312A9339C2009CFAFA /* Show Reward Animation */ = {
 			isa = PBXGroup;
 			children = (
 				C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */,
 			);
-			path = ANimationBox;
+			path = "Show Reward Animation";
 			sourceTree = "<group>";
 		};
 		C7EC88322A9339D5009CFAFA /* PopupViewcontroller */ = {

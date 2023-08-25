@@ -36,6 +36,7 @@ class RewardViewController: BaseViewController {
         guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardPopupViewController") as? RewardPopupViewController else {
             return
         }
-        self.navigationController?.pushViewController(viewController, animated: true)
+       self.navigationController?.pushViewController(viewController, animated: true)
+
     }
 }

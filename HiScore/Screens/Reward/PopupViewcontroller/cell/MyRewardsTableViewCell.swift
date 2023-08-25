@@ -27,7 +27,8 @@ class MyRewardsTableViewCell: UITableViewCell {
     }
     func configCell(data: HorizontalSet, index: Int) {
         if index % 2 == 0 {
-            viewBG.backgroundColor = .HSLightBlackColor
+//            viewBG.backgroundColor = .HSLightBlackColor
+            viewBG.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "3c425c"))
         } else {
             viewBG.backgroundColor = .clear
         }
