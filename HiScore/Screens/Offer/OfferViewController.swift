@@ -79,9 +79,6 @@ extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSou
         if  let data = offer?.offers {
             cell.offer = data[indexPath.item]
         }
-        //        let url = URL(string: "https://cdn-images.nst-app.com/img/Game/Login_screen/new_login/offer1@3x.png")
-        //        cell.imageViewOffer.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
-        //        cell.labelButtonText.text = "$1-$99"
         return cell
     }
 }

@@ -9,13 +9,12 @@ import UIKit
 //import Kingfisher
 
 class MyRewardsTableViewCell: UITableViewCell {
-
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var viewGradient: UIView!
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var labelAmuont: UILabel!
     @IBOutlet weak var labelRewardName: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -23,16 +22,13 @@ class MyRewardsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         viewGradient.layoutIfNeeded()
         viewGradient.setNeedsLayout()
-//        imageContainer()
     }
     func configCell(data: HorizontalSet, index: Int) {
-        if index % 2 == 0 {
-//            viewBG.backgroundColor = .HSLightBlackColor
+        if (index % 2 == 0) {
             viewBG.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "3c425c"))
         } else {
             viewBG.backgroundColor = .clear
         }
-        
         if data.rewardType.contains("Rummy") {
             imgIcon.image = UIImage(named: "RummyCash")
         } else if data.rewardType.contains("Game") {
@@ -44,18 +40,8 @@ class MyRewardsTableViewCell: UITableViewCell {
         labelRewardName.text = data.rewardType
         
     }
-//    func imageContainer() {
-////        viewGradient.setGradientBackground(colorTop: UIColor(red: 1, green: 1, blue: 1, alpha: 1), colorBottom: UIColor(red: 1, green: 1, blue: 1, alpha: 0))
-////        viewGradient.layer.cornerRadius = 10
-////        viewGradient.clipsToBounds = true
-////        viewGradient.backgroundColor = .clear
-//    }
-   
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }
