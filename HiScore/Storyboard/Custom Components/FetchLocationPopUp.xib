@@ -93,19 +93,19 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                    <color key="value" name="HSDarkYellowButtonColor"/>
+                                    <color key="value" name="HSMediumDarkBlue"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="color2">
-                                    <color key="value" name="HSAppThemeColor"/>
+                                    <color key="value" name="HSDarkBlue"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="color3">
-                                    <color key="value" name="HSGrayColor"/>
+                                    <color key="value" name="HSDarkBlue"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="color4">
-                                    <color key="value" name="HSGreyBlue"/>
+                                    <color key="value" name="HSDarkBlue"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                    <color key="value" name="HSWhiteColor"/>
+                                    <color key="value" name="HSShadowColor"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                     <real key="value" value="24"/>
@@ -135,20 +135,14 @@
     <resources>
         <image name="mapLayout" width="335" height="101"/>
         <image name="marker" width="77" height="76"/>
-        <namedColor name="HSAppThemeColor">
-            <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="HSDarkBlue">
+            <color red="0.078431372549019607" green="0.094117647058823528" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="HSDarkYellowButtonColor">
-            <color red="0.80392156862745101" green="0.61568627450980395" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="HSMediumDarkBlue">
+            <color red="0.22352941176470589" green="0.23921568627450981" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="HSGrayColor">
-            <color red="0.7369999885559082" green="0.74099999666213989" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="HSGreyBlue">
-            <color red="0.51372549019607838" green="0.57647058823529407" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="HSWhiteColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="HSShadowColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -45,9 +45,15 @@ extension EnterOTPViewController {
         super.viewDidLayoutSubviews()
         buttonVerify.setNeedsLayout()
         buttonVerify.layoutIfNeeded()
+        buttonVerify.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
         buttonChangeNumber.setNeedsLayout()
         buttonChangeNumber.layoutIfNeeded()
+        buttonChangeNumber.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonChangeNumber.setUpButtonWithGradientBackground(type: .lightGrey)
     }
 }
@@ -141,8 +147,6 @@ private extension EnterOTPViewController {
     func initUI() {
         labelDisplayMobileNumber.text = "Enter OTP sent to \(viewModelVerifyOtp.phoneNumber)"
         viewShowError.isHidden = true
-        buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
-        buttonChangeNumber.setUpButtonWithGradientBackground(type: .lightGrey)
         OTPTextField.setupOTPView()
         OTPTextField.delegate = self
     }

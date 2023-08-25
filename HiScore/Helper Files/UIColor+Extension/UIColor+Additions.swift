@@ -90,58 +90,35 @@ extension UIColor {
        return UIColor(hex: "#393D51")
     }()
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    static let HSYellowButtonTextColor: UIColor = {
-        return  UIColor(red: 0.07, green: 0, blue: 0.12, alpha: 1)
+    static let HSDarkBlue: UIColor = {
+       return UIColor(hex: "#14182A")
     }()
     
-    static let HSLightGreyButtonTextColor: UIColor = {
-        return  UIColor(red: 0.933, green: 0.839, blue: 0.651, alpha: 1)
+    static let HSShadowColor: UIColor = {
+        return UIColor(hex: "#000000").withAlphaComponent(0.5)
     }()
     
-   
+    static let HSDarkRed: UIColor = {
+        return UIColor(hex: "#452735")
+    }()
     
+    static let HSPinkColor: UIColor = {
+        return UIColor(hex: "#FFC2C2")
+    }()
+    
+    static let HSLightRed: UIColor = {
+        return UIColor(hex: "#FF8585")
+    }()
+    
+    static let HSBlackColor: UIColor = {
+        return UIColor(hex: "#221E2F")
+    }()
     static let HSTabbarColor: UIColor = {
-        return UIColor(red: 0.094, green: 0.113, blue: 0.204, alpha: 0.8)
-    }()
-    
-//    static let HSBlackTextColor: UIColor = {
-//        return UIColor(hex: "#463327")
-//    }()
-    
-    static let HSLightBlackColor: UIColor = {
-        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        return UIColor(hex: "181D34").withAlphaComponent(0.8)
     }()
     
     static let HSRewardBlackColor: UIColor = {
-        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        return UIColor(hex: "#000000").withAlphaComponent(0.4)
     }()
+
 }

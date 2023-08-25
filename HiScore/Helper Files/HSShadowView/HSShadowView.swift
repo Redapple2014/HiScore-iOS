@@ -107,8 +107,8 @@ class HSShadowView: UIView {
           gradient.frame = bounds
           gradient.colors = [colorShade1.cgColor, colorShade2.cgColor, colorShade3.cgColor, colorShade4.cgColor]
           gradient.cornerRadius = cornerRadius
-          gradient.startPoint = GradientOrientation.horizontal.startPoint
-          gradient.endPoint = GradientOrientation.horizontal.endPoint
+          gradient.startPoint = GradientOrientation.topLeftBottomRight.startPoint
+          gradient.endPoint = GradientOrientation.topLeftBottomRight.endPoint
           return gradient
       }
 }

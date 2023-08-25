@@ -27,6 +27,9 @@ class DisableLocationViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         buttonContactUs.setNeedsLayout()
         buttonContactUs.layoutIfNeeded()
+        buttonContactUs.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonContactUs.setUpButtonWithGradientBackground(type: .yellow)
     }
     @objc func buttonContactUsDidTap() { }

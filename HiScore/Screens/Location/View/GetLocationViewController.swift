@@ -28,6 +28,9 @@ class GetLocationViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         buttonShareLocation.setNeedsLayout()
         buttonShareLocation.layoutIfNeeded()
+        buttonShareLocation.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonShareLocation.setUpButtonWithGradientBackground(type: .yellow)
     }
 }
@@ -111,7 +114,7 @@ extension GetLocationViewController {
             self.viewModel.getLocationData(lat: lat,
                                            long: long) { result in
                 DispatchQueue.main.async {
-                   // self.hideFetchLocationPopUp()
+                //    self.hideFetchLocationPopUp()
                     switch result {
                     case .success(let response):
                         Log.d(response)
