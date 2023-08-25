@@ -80,7 +80,7 @@
                     <rect key="frame" x="0.0" y="264.33333333333331" width="393" height="607.66666666666674"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW9-7f-iOa">
-                            <rect key="frame" x="114.66666666666667" y="30" width="163.66666666666663" height="28.333333333333329"/>
+                            <rect key="frame" x="121.00000000000001" y="30" width="151.33333333333337" height="28.333333333333329"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="28.329999999999998" id="5pr-zu-tUm"/>
                             </constraints>
@@ -92,7 +92,7 @@
                             <rect key="frame" x="0.0" y="88.333333333333371" width="393" height="519.33333333333337"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-fK-Lni">
-                                    <rect key="frame" x="20" y="10" width="67" height="14.333333333333336"/>
+                                    <rect key="frame" x="20" y="10" width="64" height="14.333333333333336"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14.33" id="Dc5-Di-Pjc"/>
                                     </constraints>
@@ -214,7 +214,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-BC-X51">
-                                    <rect key="frame" x="20" y="160.99999999999994" width="67" height="14.333333333333343"/>
+                                    <rect key="frame" x="20" y="160.99999999999994" width="64" height="14.333333333333343"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14.33" id="wbX-1q-OCR"/>
                                     </constraints>
@@ -281,7 +281,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-BK-hBI">
-                                    <rect key="frame" x="20" y="253.66666666666671" width="67" height="14.333333333333343"/>
+                                    <rect key="frame" x="20" y="253.66666666666671" width="64" height="14.333333333333343"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14.33" id="BdB-mH-8nU"/>
                                     </constraints>

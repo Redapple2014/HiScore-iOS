@@ -7,6 +7,7 @@
 
 import UIKit
 import MHLoadingButton
+import QuartzCore
 
 class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
@@ -44,7 +45,7 @@ extension RewardPopupViewController {
         getRewardData()
         initUI()
         drawStroke()
-        createCircleUI()
+//        createCircleUI()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -181,16 +182,29 @@ extension RewardPopupViewController {
     }
     private func createMiddleView() {
         viewBetween.isHidden = false
+        let drawDashAtBottom = DashedLineView(frame: CGRect(x: 0,
+                                                    y: viewTop.frame.size.height-2,
+                                                    width: viewTop.frame.size.width,
+                                                    height: 1))
+        
+        viewTop.addSubview(drawDashAtBottom)
+        
+        let drawAtTop = DashedLineView(frame: CGRect(x: 0,
+                                                        y: 0,
+                                                        width: viewBottom.frame.size.width,
+                                                        height: 1))
+        viewBottom.addSubview(drawAtTop)
+
  }
     private func designShadowViews() {
         viewKnowMore.layer.cornerRadius = 11
         viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
         viewTimerSection.layer.cornerRadius = 22
     }
-    private func createCircleUI() {
-        circle1.circleUI()
-        circle2.circleUI()
-    }
+//    private func createCircleUI() {
+//        circle1.circleUI()
+//        circle2.circleUI()
+//    }
     private func drawStroke() {
     }
 }

@@ -89,7 +89,7 @@
 		C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */; };
 		C7EC883A2A935FA0009CFAFA /* APIHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88392A935FA0009CFAFA /* APIHeader.swift */; };
 		C7EC883D2A937BDF009CFAFA /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC883C2A937BDF009CFAFA /* GradientLabel.swift */; };
-		C7EC883F2A938652009CFAFA /* ChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC883E2A938652009CFAFA /* ChainView.swift */; };
+		C7EC883F2A938652009CFAFA /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC883E2A938652009CFAFA /* DashedLineView.swift */; };
 		C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC88412A9388A5009CFAFA /* MyRewardsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -180,7 +180,7 @@
 		C7EC88372A934EF7009CFAFA /* RewardPopupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopupModels.swift; sourceTree = "<group>"; };
 		C7EC88392A935FA0009CFAFA /* APIHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeader.swift; sourceTree = "<group>"; };
 		C7EC883C2A937BDF009CFAFA /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
-		C7EC883E2A938652009CFAFA /* ChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainView.swift; sourceTree = "<group>"; };
+		C7EC883E2A938652009CFAFA /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
 		C7EC88412A9388A5009CFAFA /* MyRewardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRewardsTableViewCell.swift; sourceTree = "<group>"; };
 		EE087F7249186B7A92ED1BCC /* Pods-HiScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiScore.debug.xcconfig"; path = "Target Support Files/Pods-HiScore/Pods-HiScore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -481,7 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A9DF822A83A1410066924E /* UIView+Extension.swift */,
-				C7EC883E2A938652009CFAFA /* ChainView.swift */,
+				C7EC883E2A938652009CFAFA /* DashedLineView.swift */,
 			);
 			path = "UIVIew+Extension";
 			sourceTree = "<group>";
@@ -902,7 +902,7 @@
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
-				C7EC883F2A938652009CFAFA /* ChainView.swift in Sources */,
+				C7EC883F2A938652009CFAFA /* DashedLineView.swift in Sources */,
 				AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
