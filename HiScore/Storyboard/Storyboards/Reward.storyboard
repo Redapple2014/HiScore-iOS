@@ -236,6 +236,9 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-gK-mBP">
                                         <rect key="frame" x="0.0" y="49.5" width="378" height="361"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="361" id="LlD-XQ-tWb"/>
+                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="61n-Zv-Mmc" customClass="MyRewardsTableViewCell" customModule="HiScore" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="378" height="56"/>
@@ -284,7 +287,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="Ax9-5k-iMf" secondAttribute="trailing" constant="12" id="06B-P8-zGT"/>
                                                                 <constraint firstAttribute="height" constant="50" id="5hT-pH-kIS"/>
@@ -421,7 +424,7 @@
                             <constraint firstItem="tig-Bf-eHk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="d2G-F5-HcE"/>
                             <constraint firstItem="Zj0-gr-6Q8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gTT-7W-MGA"/>
                             <constraint firstItem="J4h-kG-3w0" firstAttribute="leading" secondItem="axd-da-4Ub" secondAttribute="leading" id="iME-00-8kB"/>
-                            <constraint firstItem="Uwn-96-71s" firstAttribute="top" secondItem="J4h-kG-3w0" secondAttribute="bottom" constant="24" id="qW1-vm-aY0"/>
+                            <constraint firstItem="Uwn-96-71s" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J4h-kG-3w0" secondAttribute="bottom" constant="24" id="qW1-vm-aY0"/>
                             <constraint firstAttribute="trailing" secondItem="Ryu-L3-Ug4" secondAttribute="trailing" id="sRj-W8-J7N"/>
                             <constraint firstItem="Ryu-L3-Ug4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="xZ9-JC-v4J"/>
                             <constraint firstItem="Nc5-84-GEb" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" id="xkG-6n-znM"/>
@@ -433,6 +436,7 @@
                         <outlet property="buttonContinue" destination="yWA-xS-gYy" id="X2B-DY-ALX"/>
                         <outlet property="circle1" destination="61T-az-1Lb" id="phY-2F-QoC"/>
                         <outlet property="circle2" destination="iIh-8c-PQV" id="pIn-ne-fGT"/>
+                        <outlet property="heightOfTable" destination="LlD-XQ-tWb" id="7py-yw-Ely"/>
                         <outlet property="heightOfTimer" destination="sBd-Db-a0x" id="PXJ-yw-fwo"/>
                         <outlet property="labelGreetingText" destination="IjZ-k7-8Jm" id="G9Q-W0-1oA"/>
                         <outlet property="labelHurryUP" destination="TTo-16-FGX" id="j5L-1J-p0a"/>
@@ -467,9 +471,9 @@
         <image name="rectangleBG" width="36" height="36"/>
         <image name="rewardStar" width="112" height="116"/>
         <image name="rewardTop" width="680" height="280"/>
-        <image name="timer" width="11.5" height="14"/>
+        <image name="timer" width="16" height="16"/>
         <namedColor name="HSAppThemeColor">
-            <color red="0.050980392156862744" green="0.023529411764705882" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HSDarkBlue">
             <color red="0.078431372549019607" green="0.094117647058823528" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -482,6 +486,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

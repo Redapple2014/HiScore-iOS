@@ -43,7 +43,7 @@ class SplashScreenViewController: BaseViewController {
                     //                        }
                     //                        self.navigationController?.pushViewController(viewController, animated: true)
                     //                    }
-                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardPopupViewController") as? RewardPopupViewController else {
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)
