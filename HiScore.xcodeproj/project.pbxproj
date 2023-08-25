@@ -17,12 +17,16 @@
 		AF25812B2A94B9A4006113F2 /* OfferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25812A2A94B9A4006113F2 /* OfferViewModel.swift */; };
 		AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25812C2A94B9AE006113F2 /* Offer.swift */; };
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
-		AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */; };
-		AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */; };
 		AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */; };
 		AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */; };
 		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
 		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
+		AF8D25032A98F10A00001CF0 /* HSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25002A98F10A00001CF0 /* HSButton.swift */; };
+		AF8D25042A98F10A00001CF0 /* HSGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25022A98F10A00001CF0 /* HSGradientButton.swift */; };
+		AF8D25092A98F13500001CF0 /* HSGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25062A98F13500001CF0 /* HSGradientView.swift */; };
+		AF8D250A2A98F13500001CF0 /* HSShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25082A98F13500001CF0 /* HSShadowView.swift */; };
+		AF8D250E2A98F14600001CF0 /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D250C2A98F14600001CF0 /* GetLocationViewController.swift */; };
+		AF8D250F2A98F14600001CF0 /* DisableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D250D2A98F14600001CF0 /* DisableLocationViewController.swift */; };
 		AF916C172A8E390600125808 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C162A8E390600125808 /* LocationViewModel.swift */; };
 		AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */; };
 		AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Home.storyboard */; };
@@ -105,12 +109,16 @@
 		AF25812A2A94B9A4006113F2 /* OfferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewModel.swift; sourceTree = "<group>"; };
 		AF25812C2A94B9AE006113F2 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
-		AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
-		AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
 		AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewModel.swift; sourceTree = "<group>"; };
 		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
+		AF8D25002A98F10A00001CF0 /* HSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSButton.swift; sourceTree = "<group>"; };
+		AF8D25022A98F10A00001CF0 /* HSGradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSGradientButton.swift; sourceTree = "<group>"; };
+		AF8D25062A98F13500001CF0 /* HSGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSGradientView.swift; sourceTree = "<group>"; };
+		AF8D25082A98F13500001CF0 /* HSShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSShadowView.swift; sourceTree = "<group>"; };
+		AF8D250C2A98F14600001CF0 /* GetLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
+		AF8D250D2A98F14600001CF0 /* DisableLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableLocationViewController.swift; sourceTree = "<group>"; };
 		AF916C162A8E390600125808 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
 		AF916C1E2A8E64C000125808 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -294,10 +302,9 @@
 		AF28DCC42A8A70CB003BFDCF /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				AF8D250B2A98F14600001CF0 /* View */,
 				AF916C1B2A8E3BB300125808 /* DataModel */,
 				AF916C152A8E38EF00125808 /* ViewModel */,
-				AF28DCC52A8A70E2003BFDCF /* GetLocationViewController.swift */,
-				AF28DCC72A8A70FB003BFDCF /* DisableLocationViewController.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -309,6 +316,47 @@
 				AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */,
 			);
 			path = "Custom Components";
+			sourceTree = "<group>";
+		};
+		AF8D24FF2A98F10A00001CF0 /* HSButton */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D25002A98F10A00001CF0 /* HSButton.swift */,
+			);
+			path = HSButton;
+			sourceTree = "<group>";
+		};
+		AF8D25012A98F10A00001CF0 /* HSGradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D25022A98F10A00001CF0 /* HSGradientButton.swift */,
+			);
+			path = HSGradientButton;
+			sourceTree = "<group>";
+		};
+		AF8D25052A98F13500001CF0 /* HSGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D25062A98F13500001CF0 /* HSGradientView.swift */,
+			);
+			path = HSGradientView;
+			sourceTree = "<group>";
+		};
+		AF8D25072A98F13500001CF0 /* HSShadowView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D25082A98F13500001CF0 /* HSShadowView.swift */,
+			);
+			path = HSShadowView;
+			sourceTree = "<group>";
+		};
+		AF8D250B2A98F14600001CF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D250C2A98F14600001CF0 /* GetLocationViewController.swift */,
+				AF8D250D2A98F14600001CF0 /* DisableLocationViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AF916C152A8E38EF00125808 /* ViewModel */ = {
@@ -593,6 +641,10 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF8D25052A98F13500001CF0 /* HSGradientView */,
+				AF8D25072A98F13500001CF0 /* HSShadowView */,
+				AF8D24FF2A98F10A00001CF0 /* HSButton */,
+				AF8D25012A98F10A00001CF0 /* HSGradientButton */,
 				C7EC883B2A937BCD009CFAFA /* UILabel */,
 				84D2A5CB2A9114F30098A1F4 /* String */,
 				84D2A5C82A9112E60098A1F4 /* UITextField */,
@@ -896,11 +948,12 @@
 				AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */,
 				C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */,
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
-				AF28DCC62A8A70E2003BFDCF /* GetLocationViewController.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
+				AF8D250A2A98F13500001CF0 /* HSShadowView.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
+				AF8D25092A98F13500001CF0 /* HSGradientView.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
 				C7EC883F2A938652009CFAFA /* DashedLineView.swift in Sources */,
 				AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */,
@@ -908,6 +961,7 @@
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
 				AFEE60282A93446100CB1D9A /* CardView.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
+				AF8D250F2A98F14600001CF0 /* DisableLocationViewController.swift in Sources */,
 				C7EC883D2A937BDF009CFAFA /* GradientLabel.swift in Sources */,
 				C7EC883A2A935FA0009CFAFA /* APIHeader.swift in Sources */,
 				C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */,
@@ -915,13 +969,15 @@
 				C77E2A562A8FA6FE00C8C96D /* RewardViewController.swift in Sources */,
 				84C1EE3E2A8D41480015194D /* AppConstants.swift in Sources */,
 				C7C5366B2A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift in Sources */,
-				AF28DCC82A8A70FB003BFDCF /* DisableLocationViewController.swift in Sources */,
 				C7EC88362A934EE4009CFAFA /* RewardPopupViewModel.swift in Sources */,
 				C798459E2A86592300F08457 /* HiScoreHTTPMethods.swift in Sources */,
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
 				C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
+				AF8D250E2A98F14600001CF0 /* GetLocationViewController.swift in Sources */,
+				AF8D25042A98F10A00001CF0 /* HSGradientButton.swift in Sources */,
+				AF8D25032A98F10A00001CF0 /* HSButton.swift in Sources */,
 				84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */,
 				AF25812B2A94B9A4006113F2 /* OfferViewModel.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,

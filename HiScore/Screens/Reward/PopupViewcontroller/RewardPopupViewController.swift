@@ -44,8 +44,6 @@ extension RewardPopupViewController {
         viewModel = RewardPopupViewModel(networkService: networkService)
         getRewardData()
         initUI()
-        drawStroke()
-//        createCircleUI()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -56,6 +54,16 @@ extension RewardPopupViewController {
         buttonContinue.setNeedsLayout()
         buttonContinue.layoutIfNeeded()
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
+        labelTimerText.gradientColors = [UIColor.HSPinkColor.cgColor,
+                                     UIColor.HSLightRed.cgColor]
+        viewTimerSection.setCornerBorder(color: .HSDarkRed,
+                                  cornerRadius: 25,
+                                  borderWidth: 0.8)
+        viewTimerSection.setGradiantColor(topColor: UIColor.HSDarkRed,
+                                   bottomColor: UIColor.HSBlackColor,
+                                   gradiantDirection: .rightToLeft)
+        viewBottom.setGradientBackground(colorTop: .HSMediumDarkBlue,
+                                         colorBottom: .HSDarkBlue)
     }
 
 }
@@ -168,9 +176,6 @@ extension RewardPopupViewController {
     }
     private func initUI() {
         viewTimerSection.isHidden = true
-        viewTimerSection.setGradientBackground(colorTop: UIColor.init(hex: "452735"), colorBottom: UIColor.init(hex: "221E2F"))
-        labelTimerText.gradientColors = [UIColor(hex: "FFC2C2").cgColor, UIColor(hex: "FF8585").cgColor]
-        viewBottom.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "14182A"))
         designKnowMoreView()
         tableMyReward.dataSource = self
     }
@@ -178,9 +183,9 @@ extension RewardPopupViewController {
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
         designShadowViews()
         tableMyReward.dataSource = self
-        createMiddleView()
+        createDashedLineView()
     }
-    private func createMiddleView() {
+    private func createDashedLineView() {
         viewBetween.isHidden = false
         let drawDashAtBottom = DashedLineView(frame: CGRect(x: 0,
                                                     y: viewTop.frame.size.height-2,
@@ -200,12 +205,6 @@ extension RewardPopupViewController {
         viewKnowMore.layer.cornerRadius = 11
         viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
         viewTimerSection.layer.cornerRadius = 22
-    }
-//    private func createCircleUI() {
-//        circle1.circleUI()
-//        circle2.circleUI()
-//    }
-    private func drawStroke() {
     }
 }
 extension RewardPopupViewController: UITableViewDelegate {

@@ -33,16 +33,7 @@ extension OfferViewController {
         super.viewDidLoad()
         let hiScoreNetworkService = HiScoreNetworkRepository()
         viewModel = OfferViewModel(networkService: hiScoreNetworkService)
-       
         buttonStartPlaying.addTarget(self, action: #selector(startPlayingDidTap), for: .touchUpInside)
-        viewTimer.setCornerBorder(color: .HSDarkRed,
-                                  cornerRadius: 25,
-                                  borderWidth: 0.8)
-        labelTimer.gradientColors = [UIColor.HSPinkColor.cgColor,
-                                     UIColor.HSLightRed.cgColor]
-        viewTimer.setGradiantColor(topColor: UIColor.HSDarkRed,
-                                   bottomColor: UIColor.HSBlackColor,
-                                   gradiantDirection: .rightToLeft)
         viewTopConstraintWithSafeArea.isActive = true
         viewTopConstraintWithTimerView.isActive = false
         viewTimer.isHidden = true
@@ -56,6 +47,14 @@ extension OfferViewController {
                                          cornerRadius: 10,
                                          borderWidth: 0.8)
         buttonStartPlaying.setUpButtonWithGradientBackground(type: .yellow)
+        viewTimer.setCornerBorder(color: .HSDarkRed,
+                                  cornerRadius: 25,
+                                  borderWidth: 0.8)
+        labelTimer.gradientColors = [UIColor.HSPinkColor.cgColor,
+                                     UIColor.HSLightRed.cgColor]
+        viewTimer.setGradiantColor(topColor: UIColor.HSDarkRed,
+                                   bottomColor: UIColor.HSBlackColor,
+                                   gradiantDirection: .rightToLeft)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
