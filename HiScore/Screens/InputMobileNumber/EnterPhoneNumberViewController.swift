@@ -100,9 +100,7 @@ private extension EnterPhoneNumberViewController {
         inputTextField.textColor = UIColor.HSWhiteColor
         inputTextField.font = UIFont.Rajdhani.Bold.withSize(18)
         inputTextField.tintColor = .HSWhiteColor
-        
         hideInPutError()
-        
         clearButton.isHidden = true
         view.setNeedsLayout()
     }
@@ -115,7 +113,8 @@ private extension EnterPhoneNumberViewController {
     func hideInPutError() {
         heightConstraintErrorView.constant = 0
         heightConstraintLoginView.constant = 206
-        textfieldStateChange(to: .inactive)
+        inputTextField.text?.count ?? 0 > 0 ? textfieldStateChange(to: .active) : textfieldStateChange(to: .inactive)
+        
         view.setNeedsLayout()
     }
     func hideViewWithAnimation() {
@@ -143,7 +142,7 @@ private extension EnterPhoneNumberViewController {
         case .inactive:
             viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.2).cgColor
         case .active:
-            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
+            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(1).cgColor//(0.75).cgColor
         case .error:
             viewContainer.layer.borderColor = UIColor.HSRedColor.withAlphaComponent(0.5).cgColor
         }
@@ -258,6 +257,8 @@ extension EnterPhoneNumberViewController {
     @IBAction func clearText(_ sender: Any) {
         inputTextField.text = ""
         clearButton.isHidden = true
+        hideInPutError()
+        textfieldStateChange(to: .active)
     }
 }
 // MARK: - UITextFieldDelegate -
@@ -273,7 +274,14 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         heightConstraintPlaceholderText.constant = 13
         viewCollectionPagination.layoutIfNeeded()
+        if heightConstraintErrorView.constant > 0 {
+            textfieldStateChange(to: .error)
+        } else {
+            textfieldStateChange(to: .active)
+        }
+ 
         self.view.layoutIfNeeded()
+        
     }
     @objc func editingText(_ textField: UITextField) {
         if (textField.text?.count ?? 0) == 0 {
