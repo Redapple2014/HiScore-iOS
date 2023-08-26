@@ -35,7 +35,7 @@ class EnterPhoneNumberViewController: BaseViewController {
     @IBOutlet weak var collectionSlides: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var clearButton: UIButton!
-    
+    private var hasApiCalled = false
     //MARK: - Instance of viewModel -
     private var viewModel: OnboardingScreenViewModel!
 }
@@ -51,6 +51,10 @@ extension EnterPhoneNumberViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        hasApiCalled = false
+        if inputTextField.text?.count ?? 0 > 0 {
+            inputTextField.becomeFirstResponder()
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -154,7 +158,9 @@ extension EnterPhoneNumberViewController {
         animateView(upward: true)
     }
     @objc func keyboardWillHide(_ notification: Notification) {
-        animateView(upward: false)
+        if !hasApiCalled  {
+            animateView(upward: false)
+        }
     }
     private func animateView(upward: Bool) {
         UIView.animate(withDuration: 0.3) {
@@ -175,10 +181,12 @@ extension EnterPhoneNumberViewController {
 // MARK: - API Calls -
 private extension EnterPhoneNumberViewController{
     func getOTP(phoneNumber: String) {
+        hasApiCalled = true
         buttonGetStarted.showButtonLoader(vc: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.viewModel.getOTP(phoneNumber: phoneNumber) { response in
                 self.buttonGetStarted.hideButtonLoader(vc: self)
+                self.hasApiCalled = false
                 switch response {
                 case .success(let response):
                     Log.d(response)
@@ -243,8 +251,7 @@ extension EnterPhoneNumberViewController: UIScrollViewDelegate {
 // MARK: - Buttons tap -
 extension EnterPhoneNumberViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        // handling code
-        self.view.endEditing(true)
+      // self.view.endEditing(true)
     }
     @IBAction func loginButtonTapped(_ sender: Any) {
         if !self.viewModel.validate(value: inputTextField.text!) {
