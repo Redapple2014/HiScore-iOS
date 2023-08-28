@@ -54,6 +54,7 @@ extension EnterPhoneNumberViewController{
         hasApiCalled = false
         if inputTextField.text?.count ?? 0 > 0 {
             inputTextField.becomeFirstResponder()
+            clearButton.isHidden = false
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -146,7 +147,7 @@ private extension EnterPhoneNumberViewController {
         case .inactive:
             viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.2).cgColor
         case .active:
-            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(1).cgColor//(0.75).cgColor
+            viewContainer.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
         case .error:
             viewContainer.layer.borderColor = UIColor.HSRedColor.withAlphaComponent(0.5).cgColor
         }
@@ -294,6 +295,7 @@ extension EnterPhoneNumberViewController: UITextFieldDelegate {
         if (textField.text?.count ?? 0) == 0 {
             clearButton.isHidden = true
             hideInPutError()
+            textfieldStateChange(to: .active) // conditon overriden  bcz keyboard will not go down ever for now condition
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
             showInPutError()
             clearButton.isHidden = false

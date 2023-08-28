@@ -33,6 +33,8 @@
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
 		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
+		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
+		C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
 		C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */; };
@@ -125,6 +127,8 @@
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
 		C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Medium.ttf"; sourceTree = "<group>"; };
@@ -417,6 +421,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		C7196CC32A9CA96900BBC902 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 		C72618A82A84ED7A00738F7F /* Rajdhani */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +691,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C7196CC32A9CA96900BBC902 /* Wallet */,
 				AF2581232A94B401006113F2 /* Offer */,
 				C77E2A542A8FA6DB00C8C96D /* Reward */,
 				AF916C202A8E66CF00125808 /* Tabbar */,
@@ -710,6 +723,7 @@
 				AF916C1E2A8E64C000125808 /* Home.storyboard */,
 				AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */,
 				AF2581212A947EED006113F2 /* Offer.storyboard */,
+				C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -860,6 +874,7 @@
 				C7C0C1B52A821C260096E958 /* MavenPro-SemiBold.ttf in Resources */,
 				C7C5367D2A8A3C11007391FC /* Baloo2-Regular.ttf in Resources */,
 				C72618B22A84ED7B00738F7F /* Rajdhani-Bold.ttf in Resources */,
+				C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */,
 				C75F37202A791BC400925880 /* Assets.xcassets in Resources */,
 				AF916C1F2A8E64C000125808 /* Home.storyboard in Resources */,
 				C7D521852A94BE0800454B67 /* RewardPopupView.xib in Resources */,
@@ -949,6 +964,7 @@
 				C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */,
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
+				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				AF8D250A2A98F13500001CF0 /* HSShadowView.swift in Sources */,
