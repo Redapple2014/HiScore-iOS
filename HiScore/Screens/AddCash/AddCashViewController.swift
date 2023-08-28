@@ -9,6 +9,7 @@ import UIKit
 
 class AddCashViewController: BaseViewController {
 
+    @IBOutlet weak var viewTextField: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
