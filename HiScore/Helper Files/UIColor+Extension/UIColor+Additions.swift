@@ -116,9 +116,10 @@ extension UIColor {
     static let HSTabbarColor: UIColor = {
         return UIColor(hex: "181D34").withAlphaComponent(0.8)
     }()
-    
     static let HSRewardBlackColor: UIColor = {
         return UIColor(hex: "#000000").withAlphaComponent(0.4)
     }()
-
+    static let HSGradientBlue: UIColor = {
+        return UIColor(hex: "#3C425C")
+    }()
 }
