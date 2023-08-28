@@ -12,7 +12,7 @@ enum Storyboards: String {
     case main = "Main"
     case location = "Location"
     case wallet = "Wallet"
-    case home = "Home"
+    case tabBar = "Tabbar"
     case reward = "Reward"
     case offer = "Offer"
 }

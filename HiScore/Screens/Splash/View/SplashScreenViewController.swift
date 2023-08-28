@@ -59,7 +59,7 @@ class SplashScreenViewController: BaseViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     func navigateToHome() {
-        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+        guard let viewController = self.storyboard(name: .tabBar).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)

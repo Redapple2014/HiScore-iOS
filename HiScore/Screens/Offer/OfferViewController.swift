@@ -96,7 +96,7 @@ extension OfferViewController: UICollectionViewDelegateFlowLayout {
 //MARK: - Private Methods
 private extension OfferViewController {
     @objc func startPlayingDidTap(){
-        guard let viewController = self.storyboard(name: .home).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+        guard let viewController = self.storyboard(name: .tabBar).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
