@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,24 +20,40 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-i9-uYu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rupee" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-Ew-A7u">
-                                <rect key="frame" x="154" y="156" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rupee" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-Ew-A7u">
+                                <rect key="frame" x="154" y="207.5" width="240" height="76.5"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLW-Ot-Akb">
+                                <rect key="frame" x="75" y="399" width="265" height="259"/>
+                                <color key="backgroundColor" red="0.96100002529999995" green="0.30199998620000001" blue="0.24699999389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="259" id="2Rk-WY-GDR"/>
+                                    <constraint firstAttribute="width" constant="265" id="MpS-0h-cd2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="addCash:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Er-ct-0WM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="HSAppThemeColor"/>
                         <constraints>
+                            <constraint firstItem="nLW-Ot-Akb" firstAttribute="top" secondItem="MyC-Ew-A7u" secondAttribute="bottom" constant="115" id="4es-bJ-O6l"/>
                             <constraint firstItem="cTU-i9-uYu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="7v5-Dx-6ZP"/>
+                            <constraint firstItem="nLW-Ot-Akb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="Iyf-SL-Rx2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cTU-i9-uYu" secondAttribute="trailing" id="SGQ-jA-GHh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nLW-Ot-Akb" secondAttribute="bottom" constant="204" id="bT4-Bp-wMq"/>
                             <constraint firstItem="cTU-i9-uYu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iiJ-ZS-9fd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nLW-Ot-Akb" secondAttribute="trailing" constant="74" id="qXN-lM-6UT"/>
                             <constraint firstAttribute="bottom" secondItem="cTU-i9-uYu" secondAttribute="bottom" id="wfE-2n-8fB"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="-115"/>
+            <point key="canvasLocation" x="733.33333333333337" y="-115.17857142857142"/>
         </scene>
     </scenes>
     <resources>

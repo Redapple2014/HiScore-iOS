@@ -15,6 +15,7 @@ enum Storyboards: String {
     case tabBar = "Tabbar"
     case reward = "Reward"
     case offer = "Offer"
+    case addCash = "AddCash"
 }
 enum Messages {
     case tryAgain

@@ -1,5 +1,5 @@
 //
-//  WalletViewController.swift
+//  AddCashViewController.swift
 //  HiScore
 //
 //  Created by PC-072 on 28/08/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletViewController: BaseViewController {
+class AddCashViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,5 @@ class WalletViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func addCash(_ sender: Any) {
-        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(viewController, animated: true)
 
-    }
-    
 }

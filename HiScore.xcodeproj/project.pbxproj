@@ -23,7 +23,6 @@
 		AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7969D32A9CB222004BCF81 /* MoreViewController.swift */; };
 		AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7969D52A9CB238004BCF81 /* HomeViewController.swift */; };
 		AF7969D82A9CB2A7004BCF81 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7969D72A9CB2A7004BCF81 /* More.storyboard */; };
-		AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */; };
 		AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */; };
 		AF8D25032A98F10A00001CF0 /* HSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25002A98F10A00001CF0 /* HSButton.swift */; };
 		AF8D25042A98F10A00001CF0 /* HSGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D25022A98F10A00001CF0 /* HSGradientButton.swift */; };
@@ -39,6 +38,13 @@
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
 		C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */; };
+		C7196CC72A9CBBA300BBC902 /* AddCash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */; };
+		C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CC92A9CBBD800BBC902 /* AddCashViewController.swift */; };
+		C7196CCC2A9CBC2200BBC902 /* AddCashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CCB2A9CBC2200BBC902 /* AddCashViewModel.swift */; };
+		C7196CCE2A9CBC3200BBC902 /* AddCashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CCD2A9CBC3200BBC902 /* AddCashModel.swift */; };
+		C7196CD12A9CBC7400BBC902 /* AddCashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CD02A9CBC7400BBC902 /* AddCashCollectionViewCell.swift */; };
+		C7196CD42A9CBFC000BBC902 /* WalletFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7196CD32A9CBFC000BBC902 /* WalletFooter.xib */; };
+		C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CD52A9CC7D500BBC902 /* WalletFooter.swift */; };
 		C72618A22A84D00A00738F7F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A12A84D00A00738F7F /* BaseViewModel.swift */; };
 		C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */; };
 		C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */; };
@@ -49,6 +55,7 @@
 		C72618B42A84ED7B00738F7F /* Rajdhani-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C72618AE2A84ED7B00738F7F /* Rajdhani-Regular.ttf */; };
 		C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618B52A84EE3300738F7F /* UIFont+Additions.swift */; };
 		C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */; };
+		C751DB152A9CC847001FECA8 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = C751DB142A9CC847001FECA8 /* FetchLocationPopUp.xib */; };
 		C75F37172A791BC200925880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37162A791BC200925880 /* AppDelegate.swift */; };
 		C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37182A791BC200925880 /* SceneDelegate.swift */; };
 		C75F371E2A791BC200925880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F371C2A791BC200925880 /* Main.storyboard */; };
@@ -121,7 +128,6 @@
 		AF7969D32A9CB222004BCF81 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AF7969D52A9CB238004BCF81 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF7969D72A9CB2A7004BCF81 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
-		AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationPopUp.swift; sourceTree = "<group>"; };
 		AF8D25002A98F10A00001CF0 /* HSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSButton.swift; sourceTree = "<group>"; };
 		AF8D25022A98F10A00001CF0 /* HSGradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSGradientButton.swift; sourceTree = "<group>"; };
@@ -137,6 +143,13 @@
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
 		C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCash.storyboard; sourceTree = "<group>"; };
+		C7196CC92A9CBBD800BBC902 /* AddCashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashViewController.swift; sourceTree = "<group>"; };
+		C7196CCB2A9CBC2200BBC902 /* AddCashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashViewModel.swift; sourceTree = "<group>"; };
+		C7196CCD2A9CBC3200BBC902 /* AddCashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashModel.swift; sourceTree = "<group>"; };
+		C7196CD02A9CBC7400BBC902 /* AddCashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7196CD32A9CBFC000BBC902 /* WalletFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletFooter.xib; sourceTree = "<group>"; };
+		C7196CD52A9CC7D500BBC902 /* WalletFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletFooter.swift; sourceTree = "<group>"; };
 		C72618A12A84D00A00738F7F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C72618A62A84E1EC00738F7F /* EnterOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterOTPViewController.swift; sourceTree = "<group>"; };
 		C72618A92A84ED7A00738F7F /* Rajdhani-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Medium.ttf"; sourceTree = "<group>"; };
@@ -147,6 +160,7 @@
 		C72618AE2A84ED7B00738F7F /* Rajdhani-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Regular.ttf"; sourceTree = "<group>"; };
 		C72618B52A84EE3300738F7F /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		C751DB142A9CC847001FECA8 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
 		C75F37132A791BC200925880 /* HiScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75F37162A791BC200925880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75F37182A791BC200925880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,8 +354,9 @@
 		AF89AEE72A8CCCC200AE2318 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
-				AF89AEE82A8CCD5C00AE2318 /* FetchLocationPopUp.xib */,
-				AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */,
+				C7196CD22A9CBF2200BBC902 /* FooterWallet */,
+				C7196CD72A9CC80D00BBC902 /* FetchLocation */,
+				C7D521812A94BC8700454B67 /* Popup */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -453,6 +468,43 @@
 			path = Wallet;
 			sourceTree = "<group>";
 		};
+		C7196CC82A9CBBBF00BBC902 /* AddCash */ = {
+			isa = PBXGroup;
+			children = (
+				C7196CCF2A9CBC4600BBC902 /* Cell */,
+				C7196CC92A9CBBD800BBC902 /* AddCashViewController.swift */,
+				C7196CCB2A9CBC2200BBC902 /* AddCashViewModel.swift */,
+				C7196CCD2A9CBC3200BBC902 /* AddCashModel.swift */,
+			);
+			path = AddCash;
+			sourceTree = "<group>";
+		};
+		C7196CCF2A9CBC4600BBC902 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C7196CD02A9CBC7400BBC902 /* AddCashCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C7196CD22A9CBF2200BBC902 /* FooterWallet */ = {
+			isa = PBXGroup;
+			children = (
+				C7196CD52A9CC7D500BBC902 /* WalletFooter.swift */,
+				C7196CD32A9CBFC000BBC902 /* WalletFooter.xib */,
+			);
+			path = FooterWallet;
+			sourceTree = "<group>";
+		};
+		C7196CD72A9CC80D00BBC902 /* FetchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				C751DB142A9CC847001FECA8 /* FetchLocationPopUp.xib */,
+				AF89AEEA2A8CCD8D00AE2318 /* FetchLocationPopUp.swift */,
+			);
+			path = FetchLocation;
+			sourceTree = "<group>";
+		};
 		C72618A82A84ED7A00738F7F /* Rajdhani */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,7 +569,6 @@
 		C77E2A542A8FA6DB00C8C96D /* Reward */ = {
 			isa = PBXGroup;
 			children = (
-				C7D521812A94BC8700454B67 /* Popup */,
 				C7EC88322A9339D5009CFAFA /* PopupViewcontroller */,
 				C7EC88312A9339C2009CFAFA /* Show Reward Animation */,
 			);
@@ -715,6 +766,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C7196CC82A9CBBBF00BBC902 /* AddCash */,
 				AF7969D22A9CB202004BCF81 /* More */,
 				AF7969D12A9CB1FB004BCF81 /* Home */,
 				C7196CC32A9CA96900BBC902 /* Wallet */,
@@ -752,6 +804,7 @@
 				C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */,
 				AF7969CF2A9CB170004BCF81 /* Home.storyboard */,
 				AF7969D72A9CB2A7004BCF81 /* More.storyboard */,
+				C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -889,12 +942,13 @@
 				C72618B42A84ED7B00738F7F /* Rajdhani-Regular.ttf in Resources */,
 				C72618B32A84ED7B00738F7F /* OFL.txt in Resources */,
 				C7C5367E2A8A3C11007391FC /* Baloo2-Medium.ttf in Resources */,
-				AF89AEE92A8CCD5C00AE2318 /* FetchLocationPopUp.xib in Resources */,
 				AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */,
 				AF2581222A947EED006113F2 /* Offer.storyboard in Resources */,
+				C751DB152A9CC847001FECA8 /* FetchLocationPopUp.xib in Resources */,
 				C7C536802A8A3C11007391FC /* Baloo2-VariableFont_wght.ttf in Resources */,
 				C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */,
 				C79845A22A86703D00F08457 /* animation_ll6mjcvw.json in Resources */,
+				C7196CD42A9CBFC000BBC902 /* WalletFooter.xib in Resources */,
 				C7C0C1B42A821C260096E958 /* MavenPro-Black.ttf in Resources */,
 				AF7969D82A9CB2A7004BCF81 /* More.storyboard in Resources */,
 				C7C5367C2A8A3C11007391FC /* Baloo2-SemiBold.ttf in Resources */,
@@ -903,6 +957,7 @@
 				C7C0C1B52A821C260096E958 /* MavenPro-SemiBold.ttf in Resources */,
 				C7C5367D2A8A3C11007391FC /* Baloo2-Regular.ttf in Resources */,
 				AF7969D02A9CB170004BCF81 /* Home.storyboard in Resources */,
+				C7196CC72A9CBBA300BBC902 /* AddCash.storyboard in Resources */,
 				C72618B22A84ED7B00738F7F /* Rajdhani-Bold.ttf in Resources */,
 				C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */,
 				C75F37202A791BC400925880 /* Assets.xcassets in Resources */,
@@ -990,12 +1045,14 @@
 				C7AD48DD2A8E3FAB0063CEBE /* UIDevice+Extension.swift in Sources */,
 				C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */,
 				C7EBEE622A7BCA590045B449 /* Reachability.swift in Sources */,
+				C7196CCC2A9CBC2200BBC902 /* AddCashViewModel.swift in Sources */,
 				AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */,
 				C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */,
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
+				C7196CCE2A9CBC3200BBC902 /* AddCashModel.swift in Sources */,
 				C7B4E5DF2A8D05C600FB4ABF /* OtpModel.swift in Sources */,
 				AF8D250A2A98F13500001CF0 /* HSShadowView.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
@@ -1003,12 +1060,15 @@
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
 				C7EC883F2A938652009CFAFA /* DashedLineView.swift in Sources */,
 				AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */,
+				C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
+				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,
 				AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */,
 				AFEE60282A93446100CB1D9A /* CardView.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
+				C7196CD12A9CBC7400BBC902 /* AddCashCollectionViewCell.swift in Sources */,
 				AF8D250F2A98F14600001CF0 /* DisableLocationViewController.swift in Sources */,
 				C7EC883D2A937BDF009CFAFA /* GradientLabel.swift in Sources */,
 				C7EC883A2A935FA0009CFAFA /* APIHeader.swift in Sources */,
