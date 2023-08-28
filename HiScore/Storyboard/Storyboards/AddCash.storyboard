@@ -6,8 +6,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-ExtraBold.ttf">
+            <string>MavenPro-ExtraBold</string>
+        </array>
+        <array key="MavenPro-SemiBold.ttf">
+            <string>MavenPro-SemiBold</string>
+        </array>
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+        <array key="Rajdhani-SemiBold.ttf">
+            <string>Rajdhani-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Add Cash View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,18 +31,187 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="866-wL-JAw" customClass="WalletFooter" customModule="HiScore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="776" width="393" height="42"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="x0v-O4-Qzz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-hi-P1h">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="117"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZy-p9-yOe">
+                                        <rect key="frame" x="30" y="73" width="16" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="beC-as-tsv"/>
+                                            <constraint firstAttribute="width" constant="16" id="nDK-l6-qco"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="backArrow"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: ₹38,296" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qd-5o-UWS">
+                                        <rect key="frame" x="67" y="84" width="97" height="18"/>
+                                        <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="14"/>
+                                        <color key="textColor" name="HSGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKH-5f-lLH">
+                                        <rect key="frame" x="67" y="65" width="73" height="19"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safeNSecure" translatesAutoresizingMaskIntoConstraints="NO" id="eW1-fb-Rqx">
+                                        <rect key="frame" x="282" y="67" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="0cd-4A-chO"/>
+                                            <constraint firstAttribute="height" constant="36" id="WXU-gS-Af8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instantWithdrawl" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-I7-mbk">
+                                        <rect key="frame" x="333" y="67" width="26" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="gxV-CL-zha"/>
+                                            <constraint firstAttribute="width" constant="26" id="w7B-EA-UkF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSTANT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXK-ek-hSf">
+                                        <rect key="frame" x="334" y="85" width="24" height="9"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="9" id="BYj-yC-85W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="7"/>
+                                        <color key="textColor" name="HSGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITHDRAWL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf4-PN-HVA">
+                                        <rect key="frame" x="331" y="93" width="30.333333333333314" height="9"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="9" id="47v-ws-0uq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="6"/>
+                                        <color key="textColor" name="HSGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eW1-fb-Rqx" secondAttribute="bottom" constant="14" id="6dd-h3-9ky"/>
+                                    <constraint firstItem="JXK-ek-hSf" firstAttribute="centerX" secondItem="cLA-I7-mbk" secondAttribute="centerX" id="9HZ-qA-9Ap"/>
+                                    <constraint firstItem="Xf4-PN-HVA" firstAttribute="top" secondItem="JXK-ek-hSf" secondAttribute="bottom" constant="-1" id="9dA-Jk-bD2"/>
+                                    <constraint firstItem="Xf4-PN-HVA" firstAttribute="centerX" secondItem="JXK-ek-hSf" secondAttribute="centerX" id="CWB-9N-123"/>
+                                    <constraint firstItem="zZy-p9-yOe" firstAttribute="leading" secondItem="PZ1-hi-P1h" secondAttribute="leading" constant="30" id="HEi-A7-A4C"/>
+                                    <constraint firstItem="6Qd-5o-UWS" firstAttribute="top" secondItem="GKH-5f-lLH" secondAttribute="bottom" id="I1J-m0-9Ue"/>
+                                    <constraint firstItem="cLA-I7-mbk" firstAttribute="top" secondItem="eW1-fb-Rqx" secondAttribute="top" id="U9a-xk-3p6"/>
+                                    <constraint firstItem="GKH-5f-lLH" firstAttribute="leading" secondItem="6Qd-5o-UWS" secondAttribute="leading" id="Ycd-dY-YGu"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Qd-5o-UWS" secondAttribute="bottom" constant="15" id="ac8-T9-LWB"/>
+                                    <constraint firstAttribute="height" constant="117" id="gla-Cq-XRZ"/>
+                                    <constraint firstItem="cLA-I7-mbk" firstAttribute="leading" secondItem="eW1-fb-Rqx" secondAttribute="trailing" constant="15" id="iDh-iu-kQG"/>
+                                    <constraint firstItem="6Qd-5o-UWS" firstAttribute="leading" secondItem="zZy-p9-yOe" secondAttribute="trailing" constant="21" id="u9P-qK-r2b"/>
+                                    <constraint firstAttribute="trailing" secondItem="cLA-I7-mbk" secondAttribute="trailing" constant="34" id="ukl-S5-4la"/>
+                                    <constraint firstAttribute="bottom" secondItem="zZy-p9-yOe" secondAttribute="bottom" constant="30" id="xEz-bT-seu"/>
+                                    <constraint firstItem="JXK-ek-hSf" firstAttribute="top" secondItem="cLA-I7-mbk" secondAttribute="bottom" id="zSg-VX-lCS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-y8-auA">
+                                <rect key="frame" x="18" y="147" width="357" height="54"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4c-t2-Ns4">
+                                        <rect key="frame" x="17" y="16" width="323" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsm-t0-JMx">
+                                        <rect key="frame" x="321" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="8d2-LV-Gnc"/>
+                                            <constraint firstAttribute="height" constant="20" id="pXP-j0-mr1"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="circle.fill"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="HSDarkGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zsm-t0-JMx" secondAttribute="trailing" constant="16" id="4E8-F3-Wfo"/>
+                                    <constraint firstAttribute="height" constant="54" id="5qf-uc-MCg"/>
+                                    <constraint firstItem="Zsm-t0-JMx" firstAttribute="centerY" secondItem="Ge4-y8-auA" secondAttribute="centerY" id="AfS-AD-Zdt"/>
+                                    <constraint firstItem="w4c-t2-Ns4" firstAttribute="leading" secondItem="Ge4-y8-auA" secondAttribute="leading" constant="17" id="M42-cH-lIc"/>
+                                    <constraint firstAttribute="trailing" secondItem="w4c-t2-Ns4" secondAttribute="trailing" constant="17" id="Yck-d5-SFV"/>
+                                    <constraint firstItem="w4c-t2-Ns4" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="top" constant="16" id="fqr-qs-AeH"/>
+                                    <constraint firstAttribute="bottom" secondItem="w4c-t2-Ns4" secondAttribute="bottom" constant="15" id="yWQ-ct-aBk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-JR-mmH" customClass="LoadingButton" customModule="MHLoadingButton">
+                                <rect key="frame" x="18" y="712" width="357" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7ls-eS-5bd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                    <fontDescription key="titleFontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="14"/>
+                                    <color key="baseForegroundColor" name="HSBlackTextColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="866-wL-JAw" secondAttribute="bottom" id="0fA-G7-cz1"/>
+                            <constraint firstItem="866-wL-JAw" firstAttribute="top" secondItem="5YR-JR-mmH" secondAttribute="bottom" constant="16" id="2bL-Ob-BOs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="866-wL-JAw" secondAttribute="trailing" id="Cuv-It-gtT"/>
+                            <constraint firstItem="PZ1-hi-P1h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LeX-d1-fRF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ge4-y8-auA" secondAttribute="trailing" constant="18" id="Mp1-xh-nv3"/>
+                            <constraint firstItem="PZ1-hi-P1h" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="OCx-kA-Tsb"/>
+                            <constraint firstItem="Ge4-y8-auA" firstAttribute="top" secondItem="PZ1-hi-P1h" secondAttribute="bottom" constant="30" id="adj-HP-WD5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5YR-JR-mmH" secondAttribute="trailing" constant="18" id="eEA-cM-kSq"/>
+                            <constraint firstItem="Ge4-y8-auA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="gVE-p1-r35"/>
+                            <constraint firstItem="866-wL-JAw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nkY-Cd-z0N"/>
+                            <constraint firstItem="5YR-JR-mmH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="qwn-Xg-cdg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PZ1-hi-P1h" secondAttribute="trailing" id="rWm-an-wnQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewTextField" destination="Ge4-y8-auA" id="nze-O4-bTG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="-49"/>
+            <point key="canvasLocation" x="706" y="-54"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="5YR-JR-mmH">
+            <size key="intrinsicContentSize" width="84.333333333333329" height="30.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="backArrow" width="18" height="16"/>
+        <image name="circle.fill" width="5.3333334922790527" height="5.3333334922790527"/>
+        <image name="instantWithdrawl" width="27.333333969116211" height="19.666666030883789"/>
+        <image name="safeNSecure" width="36.333332061767578" height="36"/>
         <namedColor name="HSAppThemeColor">
             <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="HSBlackTextColor">
+            <color red="0.071000002324581146" green="0.0040000001899898052" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSDarkGrayColor">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSGrayColor">
+            <color red="0.73299998044967651" green="0.7369999885559082" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
