@@ -37,3 +37,11 @@ class OfferCollectionCell: UICollectionViewCell {
         }
     }
 }
+class PlaceholderCell: UICollectionViewCell {
+    @IBOutlet weak var imageViewPlaceholder: UIImageView!
+    @IBOutlet weak var viewBackground: UIView!
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        viewBackground.layer.cornerRadius = 10
+    }
+}

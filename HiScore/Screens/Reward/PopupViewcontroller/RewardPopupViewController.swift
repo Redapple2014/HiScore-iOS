@@ -12,20 +12,19 @@ import QuartzCore
 class RewardPopupViewController: BaseViewController {
     @IBOutlet weak var labelGreetingText: UILabel!
     @IBOutlet weak var labelMObileNUmber: UILabel!
-    @IBOutlet weak var viwRewardPopup: RewardPopupView!
-    @IBOutlet weak var tableMyReward: UITableView!
     @IBOutlet weak var labelRewardSubTitle: UILabel!
     @IBOutlet weak var labelRewardAmount: UILabel!
     @IBOutlet weak var labelHurryUP: UILabel!
     @IBOutlet weak var heightOfTable: NSLayoutConstraint!
-    @IBOutlet weak var viewBetween: UIView!
-    @IBOutlet weak var viewTimerSection: UIView!
     @IBOutlet weak var heightOfTimer: NSLayoutConstraint!
-    @IBOutlet weak var viewKnowMore: UIView!
     @IBOutlet weak var viewTop: UIView!
+    @IBOutlet weak var viewBetween: UIView!
     @IBOutlet weak var viewBottom: UIView!
-    @IBOutlet weak var circle1: UIView!
-    @IBOutlet weak var circle2: UIView!
+    @IBOutlet weak var viewReward: UIView!
+    @IBOutlet weak var viewKnowMore: UIView!
+    @IBOutlet weak var viewTimerSection: UIView!
+    @IBOutlet weak var viwRewardPopup: RewardPopupView!
+    @IBOutlet weak var tableMyReward: UITableView!
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var labelTimerText: GradientLabel!
     
@@ -51,6 +50,9 @@ extension RewardPopupViewController {
         super.viewDidLayoutSubviews()
         buttonContinue.setNeedsLayout()
         buttonContinue.layoutIfNeeded()
+        buttonContinue.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
         labelTimerText.gradientColors = [UIColor.HSPinkColor.cgColor,
                                          UIColor.HSLightRed.cgColor]
@@ -62,11 +64,42 @@ extension RewardPopupViewController {
                                           gradiantDirection: .rightToLeft)
         viewBottom.setGradientBackground(colorTop: .HSMediumDarkBlue,
                                          colorBottom: .HSDarkBlue)
+        viewReward.backgroundColor = .black.withAlphaComponent(0.2)
     }
 }
 private extension RewardPopupViewController {
+    func initUI() {
+        viewTimerSection.isHidden = true
+        designKnowMoreView()
+        createDashedLineView()
+        tableMyReward.dataSource = self
+        tableMyReward.delegate = self
+        tableMyReward.bounces = false
+    }
+    func designKnowMoreView() {
+        viewKnowMore.setCornerBorder(color: .black.withAlphaComponent(0.3),
+                                     cornerRadius: 16,
+                                     borderWidth: 0.8)
+       //viewKnowMore.addShadow(location: .top, color: .darkGray, opacity: 1)
+        viewKnowMore.backgroundColor = .HSWhiteColor.withAlphaComponent(0.1)
+    }
+     func createDashedLineView() {
+        viewBetween.isHidden = false
+        let drawDashAtBottom = DashedLineView(frame: CGRect(x: 0,
+                                                            y: viewTop.frame.size.height - 2,
+                                                            width: viewTop.frame.size.width,
+                                                            height: 1))
+        
+        viewTop.addSubview(drawDashAtBottom)
+        
+        let drawAtTop = DashedLineView(frame: CGRect(x: 0,
+                                                     y: 0,
+                                                     width: viewBottom.frame.size.width,
+                                                     height: 1))
+        viewBottom.addSubview(drawAtTop)
+        
+    }
     func getTimeRemainingText(time: Int) -> String {
-        //  let sec = time/1000
         let hours = time / 3600
         let minutes = (time % 3600) / 60
         let seconds = time % 60
@@ -81,46 +114,12 @@ private extension RewardPopupViewController {
         labelRewardAmount.text = "₹\(data.rewardSection.totalRewardReceived)"
         labelHurryUP.text = data.hurryUpSection.hurryTitle
         heightOfTable.constant = CGFloat(((self.rewardResponse?.data.rewardSection.allRewards.horizontalSet.count ?? 0) * 56))
-        tableMyReward.bounces = false
         tableMyReward.reloadData()
-        tableMyReward.delegate = self
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         counter = (self.rewardResponse?.data.hurryUpSection.timeLeft ?? 0)/1000
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.showTimerWithAnimation()
         }
-    }
-    func initUI() {
-        viewTimerSection.isHidden = true
-        designKnowMoreView()
-        tableMyReward.dataSource = self
-    }
-    func designKnowMoreView() {
-        buttonContinue.setUpButtonWithGradientBackground(type: .yellow)
-        designShadowViews()
-        tableMyReward.dataSource = self
-        createDashedLineView()
-    }
-    private func createDashedLineView() {
-        viewBetween.isHidden = false
-        let drawDashAtBottom = DashedLineView(frame: CGRect(x: 0,
-                                                            y: viewTop.frame.size.height-2,
-                                                            width: viewTop.frame.size.width,
-                                                            height: 1))
-        
-        viewTop.addSubview(drawDashAtBottom)
-        
-        let drawAtTop = DashedLineView(frame: CGRect(x: 0,
-                                                     y: 0,
-                                                     width: viewBottom.frame.size.width,
-                                                     height: 1))
-        viewBottom.addSubview(drawAtTop)
-        
-    }
-    func designShadowViews() {
-        viewKnowMore.layer.cornerRadius = 11
-        viewKnowMore.addShadow(location: .top, color: .lightGray, opacity: 0.5)
-        viewTimerSection.layer.cornerRadius = 22
     }
 }
 extension RewardPopupViewController: RewardPopupDelegate {
@@ -166,12 +165,14 @@ extension RewardPopupViewController {
             self.labelTimerText.text = getTimeRemainingText(time: counter)
             counter -= 1
         } else {
+            viewTimerSection.isHidden = true
             timer?.invalidate()
         }
     }
 }
 extension RewardPopupViewController {
     func showTimerWithAnimation() {
+        guard let _ = self.rewardResponse?.data.hurryUpSection.timeLeft else { return }
         viewTimerSection.isHidden = false
         viewTimerSection.transform = CGAffineTransform(translationX: 0, y: viewTimerSection.frame.size.height)
         UIView.animate(withDuration: 0.5, animations: {
