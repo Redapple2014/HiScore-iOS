@@ -25,9 +25,10 @@ class MyRewardsTableViewCell: UITableViewCell {
     }
     func configCell(data: HorizontalSet, index: Int) {
         if (index % 2 == 0) {
-            viewBG.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor.init(hex: "3c425c"))
-        } else {
+          //  viewBG.setGradientBackground(colorTop: .HSMediumDarkBlue, colorBottom: UIColor.init(hex: "3c425c"))
             viewBG.backgroundColor = .clear
+        } else {
+            viewBG.backgroundColor = .black.withAlphaComponent(0.08)
         }
         if data.rewardType.contains("Rummy") {
             imgIcon.image = UIImage(named: "RummyCash")

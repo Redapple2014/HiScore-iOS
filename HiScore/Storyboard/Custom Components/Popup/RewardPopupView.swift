@@ -78,6 +78,9 @@ class RewardPopupView: UIView {
     private func loadUI() {
         _ = viewContainer.map({$0.layer.cornerRadius = 10})
         _ = viewContainer.map({$0.clipsToBounds = true})
+        buttonVerify.setCornerBorder(color: .HSYellowButtonColor,
+                                         cornerRadius: 10,
+                                         borderWidth: 0.8)
         buttonVerify.setUpButtonWithGradientBackground(type: .yellow)
         viewCintainer.setGradientBackground(colorTop: UIColor(hex: "393D51"), colorBottom: UIColor(hex: "14182A"))
     }

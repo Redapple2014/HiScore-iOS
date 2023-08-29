@@ -48,8 +48,8 @@ extension OfferViewController {
         buttonStartPlaying.setNeedsLayout()
         buttonStartPlaying.layoutIfNeeded()
         buttonStartPlaying.setCornerBorder(color: .HSYellowButtonColor,
-                                         cornerRadius: 10,
-                                         borderWidth: 0.8)
+                                           cornerRadius: 10,
+                                           borderWidth: 0.8)
         buttonStartPlaying.setUpButtonWithGradientBackground(type: .yellow)
         viewTimer.setCornerBorder(color: .HSDarkRed,
                                   cornerRadius: 25,
@@ -71,18 +71,21 @@ extension OfferViewController {
 //MARK: - Collection delegates and datasource
 extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let data = offer?.offers else { return 0}
+        guard let data = offer?.offers else { return 4 }
         return data.count
-        //  return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let data = offer?.offers else {
+            guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "PlaceholderCell", for: indexPath) as? PlaceholderCell else {
+                return PlaceholderCell(frame: .zero)
+            }
+            return cell
+        }
         guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "OfferCollectionCell", for: indexPath) as? OfferCollectionCell else {
             return OfferCollectionCell(frame: .zero)
         }
-        if  let data = offer?.offers {
-            cell.offer = data[indexPath.item]
-        }
+        cell.offer = data[indexPath.item]
         return cell
     }
 }
