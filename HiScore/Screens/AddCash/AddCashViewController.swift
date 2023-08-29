@@ -53,6 +53,8 @@ extension AddCashViewController {
         enterAmountTextField.textColor = UIColor.HSWhiteColor
         enterAmountTextField.font = UIFont.Rajdhani.Bold.withSize(18)
         enterAmountTextField.tintColor = .HSWhiteColor
+        collectionOfCashOffers.delegate = self
+        collectionOfCashOffers.dataSource = self
         clearButton.isHidden = true
         view.setNeedsLayout()
     }
@@ -96,5 +98,23 @@ extension AddCashViewController: UITextFieldDelegate {
         } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
             clearButton.isHidden = false
         } else if ((textField.text?.count ?? 0) == 10 ) { }
+    }
+}
+// MARK: - CollectionView UICollectionViewDataSource -
+extension AddCashViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? AddCashCollectionViewCell else { return AddCashCollectionViewCell() }
+       // cell.images = self.viewModel.slides[indexPath.row]
+        return cell
+    }
+}
+// MARK: - CollectionView UICollectionViewDelegateFlowLayout -
+extension AddCashViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 85, height: 137)
     }
 }

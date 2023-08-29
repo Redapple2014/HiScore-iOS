@@ -122,8 +122,16 @@ extension UIColor {
     }()
     
     static let HSOrange: UIColor = {
-        return UIColor(hex: "#E76000").withAlphaComponent(0.4)
+        return UIColor(hex: "#E76000").withAlphaComponent(1)
     }()
 
+
+    static let HSGreen: UIColor = {
+        return UIColor(hex: "#017A00FF").withAlphaComponent(1)
+    }()
+
+    static let HSViolet: UIColor = {
+        return UIColor(hex: "#AB81FFFF").withAlphaComponent(1)
+    }()
 
 }
