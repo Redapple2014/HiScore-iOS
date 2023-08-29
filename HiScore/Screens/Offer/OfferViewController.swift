@@ -26,6 +26,10 @@ class OfferViewController: BaseViewController {
     private var offer: OffersSection?
     private var time = 0
     private var timer: Timer?
+    
+    override func updateUI() {
+        super.updateUI()
+    }
 }
 //MARK: - View life cycles
 extension OfferViewController {

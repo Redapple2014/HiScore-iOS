@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Google_Pay_Logo.png",
+      "filename" : "Google_Pay_Logo 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Google_Pay_Logo@2x.png",
+      "filename" : "Google_Pay_Logo 1-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Google_Pay_Logo@3x.png",
+      "filename" : "Google_Pay_Logo 1-3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

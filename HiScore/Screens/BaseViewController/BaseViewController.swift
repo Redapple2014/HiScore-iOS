@@ -18,6 +18,9 @@ class BaseViewController: UIViewController {
         return window
         
     }()
+    func updateUI() {
+        self.view.backgroundColor = .HSAppThemeColor
+    }
 }
 // MARK: - View life cycles
 extension BaseViewController {
@@ -34,7 +37,6 @@ extension BaseViewController {
     func storyboard(name: Storyboards) -> UIStoryboard {
         return UIStoryboard(name: name.rawValue, bundle: nil)
     }
-    func updateUI() { }
 }
 // MARK: - Methods for snackbar
 extension BaseViewController {
