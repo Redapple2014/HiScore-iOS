@@ -6,31 +6,58 @@
 //
 
 import UIKit
+import MHLoadingButton
 
 class WalletViewController: BaseViewController {
-
+    @IBOutlet weak var buttonAddCash: LoadingButton!
+    @IBOutlet weak var buttonWithdraw: LoadingButton!
+    override func updateUI() {
+        super.updateUI()
+    }
+}
+//MARK: - View Life Cycle -
+extension WalletViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
+    override func viewDidLayoutSubviews() {
+        buttonAddCash.layoutIfNeeded()
+        buttonAddCash.setNeedsLayout()
+        buttonWithdraw.layoutIfNeeded()
+        buttonWithdraw.setNeedsLayout()
+        buttonAddCash.setUpButtonWithGradientBackground(type: .yellow)
+        buttonWithdraw.setUpButtonWithGradientBackground(type: .yellow)
+       
+        self.buttonAddCash.clipsToBounds = true
+        let gradient = CAGradientLayer()
+        gradient.frame =  CGRect(origin: CGPoint.zero, size: self.buttonAddCash.frame.size)
+        gradient.colors =  [UIColor.HSYellowButtonColor.cgColor,
+                            UIColor.HSGoldenYellowTextColor.cgColor]
 
-    /*
-    // MARK: - Navigation
+        let shape = CAShapeLayer()
+        shape.lineWidth = 4
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        shape.path = UIBezierPath(roundedRect: self.buttonAddCash.bounds, cornerRadius: 10).cgPath
+
+        shape.strokeColor = UIColor.black.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        gradient.mask = shape
+
+        self.buttonAddCash.layer.addSublayer(gradient)
+        
+        buttonWithdraw.setCornerBorder(color: .HSYellowButtonColor,
+                                           cornerRadius: 10,
+                                           borderWidth: 1)
     }
-    */
-    @IBAction func addCash(_ sender: Any) {
-        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(viewController, animated: true)
-
-    }
-    
 }
+//MARK: - Button actions -
+extension WalletViewController {
+    @IBAction func addCash(_ sender: Any) {
+//        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
+//            return
+//        }
+//        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+

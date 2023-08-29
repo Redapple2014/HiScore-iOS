@@ -25,12 +25,23 @@ extension LoadingButton {
     private func designYellowGradientButton() {
         let colorTop =  UIColor.HSYellowButtonColor.cgColor
         let colorBottom = UIColor.HSDarkYellowButtonColor.cgColor
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.startPoint = GradientOrientation.vertical.startPoint
         gradientLayer.endPoint = GradientOrientation.vertical.endPoint
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.bounds
+        
+//        let shadowLayer = CALayer.init()
+//        shadowLayer.frame = gradientLayer.bounds
+//        shadowLayer.shadowColor = UIColor.red.cgColor
+//        shadowLayer.shadowOpacity = 0.08
+//        shadowLayer.shadowRadius = 20
+//        shadowLayer.shadowPath = CGPath.init(rect: shadowLayer.bounds, transform: nil)
+//
+//        gradientLayer.mask = shadowLayer
+//      
         self.layer.insertSublayer(gradientLayer, at: 0)
         self.setTitleColor(.HSBlackTextColor, for: .normal)
       }

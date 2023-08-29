@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "VRectangle.png",
+      "filename" : "Variant10.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "VRectangle 1.png",
+      "filename" : "Variant10 copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "VRectangle 2.png",
+      "filename" : "Variant10 copy 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

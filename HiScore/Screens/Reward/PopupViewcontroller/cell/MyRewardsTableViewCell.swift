@@ -25,7 +25,6 @@ class MyRewardsTableViewCell: UITableViewCell {
     }
     func configCell(data: HorizontalSet, index: Int) {
         if (index % 2 == 0) {
-          //  viewBG.setGradientBackground(colorTop: .HSMediumDarkBlue, colorBottom: UIColor.init(hex: "3c425c"))
             viewBG.backgroundColor = .clear
         } else {
             viewBG.backgroundColor = .black.withAlphaComponent(0.08)
@@ -34,7 +33,7 @@ class MyRewardsTableViewCell: UITableViewCell {
             imgIcon.image = UIImage(named: "RummyCash")
         } else if data.rewardType.contains("Game") {
             imgIcon.image = UIImage(named: "cashTicket")
-        } else {//if data.rewardType.contains("") {
+        } else {
             imgIcon.image = UIImage(named: "cash")
         }
         labelAmuont.text = "₹\(data.rewardValue)"

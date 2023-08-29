@@ -26,10 +26,6 @@ class OfferViewController: BaseViewController {
     private var offer: OffersSection?
     private var time = 0
     private var timer: Timer?
-    
-    override func updateUI() {
-        super.updateUI()
-    }
 }
 //MARK: - View life cycles
 extension OfferViewController {
@@ -47,6 +43,8 @@ extension OfferViewController {
         super.viewDidLayoutSubviews()
         buttonStartPlaying.setNeedsLayout()
         buttonStartPlaying.layoutIfNeeded()
+        viewTimer.setNeedsLayout()
+        viewTimer.layoutIfNeeded()
         buttonStartPlaying.setCornerBorder(color: .HSYellowButtonColor,
                                            cornerRadius: 10,
                                            borderWidth: 0.8)
