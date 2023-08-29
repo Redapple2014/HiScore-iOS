@@ -416,7 +416,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-JR-mmH" customClass="LoadingButton" customModule="MHLoadingButton">
                                 <rect key="frame" x="18" y="712" width="357" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="7ls-eS-5bd"/>
                                 </constraints>
@@ -426,6 +426,14 @@
                                     <color key="baseForegroundColor" name="HSBlackTextColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-CP-Nwg">
+                                <rect key="frame" x="14" y="535" width="365" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U2h-Wa-hsM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="utE-eH-KUg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="HSAppThemeColor"/>
@@ -435,8 +443,10 @@
                             <constraint firstItem="SVr-Ky-s7n" firstAttribute="width" secondItem="OKB-TZ-GB5" secondAttribute="width" id="An9-eh-9lk"/>
                             <constraint firstItem="SVr-Ky-s7n" firstAttribute="centerY" secondItem="OKB-TZ-GB5" secondAttribute="centerY" id="Csz-hV-dEi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="866-wL-JAw" secondAttribute="trailing" id="Cuv-It-gtT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1kf-CP-Nwg" secondAttribute="trailing" constant="14" id="DPD-OA-LSb"/>
                             <constraint firstItem="SVr-Ky-s7n" firstAttribute="height" secondItem="OKB-TZ-GB5" secondAttribute="height" id="EuN-68-5uL"/>
                             <constraint firstItem="OKB-TZ-GB5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EyR-6m-5Ji"/>
+                            <constraint firstItem="1kf-CP-Nwg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="14" id="J9A-Dn-14k"/>
                             <constraint firstItem="PZ1-hi-P1h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LeX-d1-fRF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ge4-y8-auA" secondAttribute="trailing" constant="18" id="Mp1-xh-nv3"/>
                             <constraint firstItem="PZ1-hi-P1h" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="OCx-kA-Tsb"/>
