@@ -120,5 +120,10 @@ extension UIColor {
     static let HSRewardBlackColor: UIColor = {
         return UIColor(hex: "#000000").withAlphaComponent(0.4)
     }()
+    
+    static let HSOrange: UIColor = {
+        return UIColor(hex: "#E76000").withAlphaComponent(0.4)
+    }()
+
 
 }
