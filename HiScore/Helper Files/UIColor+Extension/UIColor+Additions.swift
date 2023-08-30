@@ -134,4 +134,7 @@ extension UIColor {
         return UIColor(hex: "#AB81FFFF").withAlphaComponent(1)
     }()
 
+    static let HSNewdarkBlue: UIColor = {
+        return UIColor(hex: "#282B38")
+    }()
 }

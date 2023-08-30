@@ -11,6 +11,13 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
 
+    @IBOutlet weak var imageVwAmount: UIImageView!
+    @IBOutlet weak var labelbalance: UILabel!
+    @IBOutlet weak var viewNoOffers: UIView!
+    @IBOutlet weak var stackAmountDetails: UIStackView!
+    @IBOutlet weak var viewYouGot: UIView!
+    @IBOutlet weak var imageBGContinue: UIImageView!
+    @IBOutlet weak var constantOfbuttonContainerViewBottom: NSLayoutConstraint!
     @IBOutlet weak var labelUptoCash: UILabel!
     @IBOutlet weak var labelOfferTotal: UILabel!
     @IBOutlet weak var collectionOfCashOffers: UICollectionView!
@@ -18,8 +25,13 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var enterAmountTextField: UITextField!
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
+    var viewModel: AddCashViewModel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let networkService = HiScoreNetworkRepository()
+        viewModel = AddCashViewModel(networkService: networkService)
+        getScreenDataData()
         initUI()
         initSettings()
     }
@@ -35,15 +47,36 @@ class AddCashViewController: BaseViewController {
 }
 
 extension AddCashViewController {
+    private func getScreenDataData() {
+        viewModel.getAddMoneyScreenData { response in
+            switch response {
+            case .success(let response):
+                Log.d(response)
+                break
+            case .failure(let error):
+                self.showSnackbarError(title: "", subtitle: error.localizedDescription)
+                Log.d(error)
+                
+                break
+            }
+        }
+    }
+
     func initSettings() {
         IQKeyboardManager.shared().isEnableAutoToolbar = false
         IQKeyboardManager.shared().isEnabled = false
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
         enterAmountTextField.addTarget(self, action: #selector(editingText(_:)), for: .editingChanged)
+        enterAmountTextField.delegate  = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
     func initUI() {
+        imageBGContinue.isHidden = true
+        collectionOfCashOffers.isHidden = false//true
+        viewNoOffers.isHidden = true//false
+        stackAmountDetails.isHidden = true
+        viewYouGot.isHidden = true
         buttonContinue.initLoadingButton()
         viewTextField.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
         viewTextField.layer.cornerRadius = 8
@@ -58,7 +91,6 @@ extension AddCashViewController {
         clearButton.isHidden = true
         view.setNeedsLayout()
     }
-
 }
 extension AddCashViewController {
     @IBAction func clearButtonTapped(_ sender: Any) {
@@ -81,23 +113,18 @@ extension AddCashViewController: UITextFieldDelegate {
         return newLength <= 10
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        imageBGContinue.isHidden = false
+        constantOfbuttonContainerViewBottom.constant = 216
+        imageVwAmount.isHidden = true
         self.view.layoutIfNeeded()
         
     }
-    @objc func editingText(_ textField: UITextField) {
-        if (textField.text?.count ?? 0) == 0 {
-            clearButton.isHidden = true
-        } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
-            clearButton.isHidden = false
-        } else if ((textField.text?.count ?? 0) == 10 ) { }
-    }
+    @objc func editingText(_ textField: UITextField) {  }
     func textFieldDidEndEditing(_ textField: UITextField) {
         clearButton.isHidden = true
-        if (textField.text?.count ?? 0) == 0 {
-
-        } else if ((textField.text?.count ?? 0) > 0 ) && ((textField.text?.count ?? 0) < 10 ){
-            clearButton.isHidden = false
-        } else if ((textField.text?.count ?? 0) == 10 ) { }
+        imageBGContinue.isHidden = true
+        constantOfbuttonContainerViewBottom.constant = 0
+        imageVwAmount.isHidden = false
     }
 }
 // MARK: - CollectionView UICollectionViewDataSource -
