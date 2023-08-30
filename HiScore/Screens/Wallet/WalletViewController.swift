@@ -11,6 +11,10 @@ import MHLoadingButton
 class WalletViewController: BaseViewController {
     @IBOutlet weak var buttonAddCash: LoadingButton!
     @IBOutlet weak var buttonWithdraw: LoadingButton!
+    @IBOutlet weak var tableViewWalletBreakdown: UITableView!
+    @IBOutlet weak var tableHeightViewWalletBreakdown: NSLayoutConstraint!
+    @IBOutlet weak var heightwalletBreakdownView: NSLayoutConstraint!
+    @IBOutlet weak var walletView: HSShadowView!
     override func updateUI() {
         super.updateUI()
     }
@@ -19,45 +23,49 @@ class WalletViewController: BaseViewController {
 extension WalletViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
     }
+    
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        heightwalletBreakdownView.constant =  tableViewWalletBreakdown.contentSize.height
         buttonAddCash.layoutIfNeeded()
         buttonAddCash.setNeedsLayout()
         buttonWithdraw.layoutIfNeeded()
         buttonWithdraw.setNeedsLayout()
         buttonAddCash.setUpButtonWithGradientBackground(type: .yellow)
         buttonWithdraw.setUpButtonWithGradientBackground(type: .yellow)
-       
-        self.buttonAddCash.clipsToBounds = true
-        let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: CGPoint.zero, size: self.buttonAddCash.frame.size)
-        gradient.colors =  [UIColor.HSYellowButtonColor.cgColor,
-                            UIColor.HSGoldenYellowTextColor.cgColor]
-
-        let shape = CAShapeLayer()
-        shape.lineWidth = 4
-
-        shape.path = UIBezierPath(roundedRect: self.buttonAddCash.bounds, cornerRadius: 10).cgPath
-
-        shape.strokeColor = UIColor.black.cgColor
-        shape.fillColor = UIColor.clear.cgColor
-        gradient.mask = shape
-
-        self.buttonAddCash.layer.addSublayer(gradient)
+        tableViewWalletBreakdown.layoutIfNeeded()
+        tableViewWalletBreakdown.setNeedsLayout()
+        tableViewWalletBreakdown.reloadData()
         
-        buttonWithdraw.setCornerBorder(color: .HSYellowButtonColor,
-                                           cornerRadius: 10,
-                                           borderWidth: 1)
     }
 }
 //MARK: - Button actions -
 extension WalletViewController {
     @IBAction func addCash(_ sender: Any) {
-//        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
-//            return
-//        }
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        //        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
+        //            return
+        //        }
+        //        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+//MARK: - Tableview delegate and datasource
+
+extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? WalletBreakDownCell else {
+            return WalletBreakDownCell()
+        }
+        return cell
     }
 }
 
+
+class WalletBreakDownCell: UITableViewCell {
+    
+}

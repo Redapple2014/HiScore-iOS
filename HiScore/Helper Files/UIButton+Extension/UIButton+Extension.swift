@@ -20,31 +20,21 @@ extension LoadingButton {
         self.titleLabel?.font = UIFont.MavenPro.Bold.withSize(fontSize)
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius
-        type == .yellow ? designYellowGradientButton() : designLightGreyButton()
+        type == .yellow ? designYellowGradientButton(radius: cornerRadius) : designLightGreyButton()
     }
-    private func designYellowGradientButton() {
+    private func designYellowGradientButton(radius: CGFloat) {
         let colorTop =  UIColor.HSYellowButtonColor.cgColor
         let colorBottom = UIColor.HSDarkYellowButtonColor.cgColor
-        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.startPoint = GradientOrientation.vertical.startPoint
         gradientLayer.endPoint = GradientOrientation.vertical.endPoint
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.bounds
-        
-//        let shadowLayer = CALayer.init()
-//        shadowLayer.frame = gradientLayer.bounds
-//        shadowLayer.shadowColor = UIColor.red.cgColor
-//        shadowLayer.shadowOpacity = 0.08
-//        shadowLayer.shadowRadius = 20
-//        shadowLayer.shadowPath = CGPath.init(rect: shadowLayer.bounds, transform: nil)
-//
-//        gradientLayer.mask = shadowLayer
-//      
         self.layer.insertSublayer(gradientLayer, at: 0)
+        self.setButtonGradientBorder(radius: 10)
         self.setTitleColor(.HSBlackTextColor, for: .normal)
-      }
+    }
     private func designLightGreyButton() {
         self.layer.backgroundColor = UIColor.HSWhiteColor.withAlphaComponent(0.1).cgColor
         self.layer.borderWidth = 1
@@ -66,4 +56,18 @@ extension LoadingButton {
         self.hideLoader()
         vc.view.isUserInteractionEnabled = true
     }
+    private func setButtonGradientBorder(radius: CGFloat) {
+       self.clipsToBounds = true
+       let gradient = CAGradientLayer()
+       gradient.frame =  CGRect(origin: CGPoint.zero, size: self.frame.size)
+       gradient.colors =  [UIColor.HSYellowButtonColor.cgColor,
+                           UIColor.HSGoldenYellowTextColor.cgColor]
+       let shape = CAShapeLayer()
+       shape.lineWidth = 4
+       shape.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: radius).cgPath
+       shape.strokeColor = UIColor.black.cgColor
+       shape.fillColor = UIColor.clear.cgColor
+       gradient.mask = shape
+       self.layer.addSublayer(gradient)
+   }
 }

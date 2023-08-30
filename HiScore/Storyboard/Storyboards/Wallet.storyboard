@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qr0-Pf-fz6">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="463.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-P5-lGi" userLabel="walletView">
                                                 <rect key="frame" x="0.0" y="40" width="375" height="103"/>
@@ -51,13 +50,13 @@
                                                         <rect key="frame" x="31" y="37.666666666666671" width="27" height="25.666666666666671"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HiScore Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waf-pK-njl">
-                                                        <rect key="frame" x="121" y="18" width="78.666666666666686" height="14"/>
+                                                        <rect key="frame" x="121" y="18" width="82.666666666666686" height="14.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="12"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹750.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ0-Lw-RkA">
-                                                        <rect key="frame" x="121" y="40" width="114.66666666666669" height="37.333333333333343"/>
+                                                        <rect key="frame" x="121" y="40.333333333333329" width="119.66666666666669" height="37.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="32"/>
                                                         <color key="textColor" name="HSGoldenYellowTextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -198,13 +197,154 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color4">
                                                         <color key="value" name="HSDarkBlue"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor2">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hm-Za-tcC">
-                                                <rect key="frame" x="17" y="300" width="341" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <rect key="frame" x="17" y="300" width="341" height="163.66666666666663"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUp-Xr-40S">
+                                                        <rect key="frame" x="0.0" y="0.0" width="341" height="16.666666666666668"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16.666666666666668" id="7Ce-mF-LqF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
+                                                        <color key="textColor" name="HSWhiteColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-q9-GcE" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="341" height="131"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElipseYellow" translatesAutoresizingMaskIntoConstraints="NO" id="WCh-wV-UCf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="341" height="131"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="14"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TrK-Tg-mMV">
+                                                                <rect key="frame" x="11" y="0.0" width="319" height="131"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <prototypes>
+                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Pam-6i-3AG" customClass="WalletBreakDownCell" customModule="HiScore" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="44.666666030883789" width="319" height="60"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pam-6i-3AG" id="tL8-l2-wxo">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bankNotes" translatesAutoresizingMaskIntoConstraints="NO" id="K8x-88-QgL">
+                                                                                    <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="40" id="9tR-PD-JoP"/>
+                                                                                        <constraint firstAttribute="width" constant="40" id="dEl-2U-kIM"/>
+                                                                                    </constraints>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-ir-CW8">
+                                                                                    <rect key="frame" x="40" y="21.666666666666664" width="50.333333333333343" height="16.666666666666664"/>
+                                                                                    <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="14"/>
+                                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-mr-DsD">
+                                                                                    <rect key="frame" x="95.333333333333329" y="25" width="10" height="10"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="10" id="fCL-Os-jUX"/>
+                                                                                        <constraint firstAttribute="width" constant="10" id="sEb-lc-7Ly"/>
+                                                                                    </constraints>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="plain" image="info-gray"/>
+                                                                                </button>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹750.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-EF-o8z">
+                                                                                    <rect key="frame" x="235.66666666666666" y="19.333333333333336" width="67.333333333333343" height="21.333333333333336"/>
+                                                                                    <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="18"/>
+                                                                                    <color key="textColor" name="HSGoldenYellowTextColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="rG0-EF-o8z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="22Q-mr-DsD" secondAttribute="trailing" constant="10" id="0zG-I6-g8M"/>
+                                                                                <constraint firstItem="vO9-ir-CW8" firstAttribute="leading" secondItem="K8x-88-QgL" secondAttribute="trailing" id="JUk-Ed-Qmd"/>
+                                                                                <constraint firstItem="K8x-88-QgL" firstAttribute="leading" secondItem="tL8-l2-wxo" secondAttribute="leading" id="T30-I6-VRE"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="K8x-88-QgL" secondAttribute="bottom" constant="10" id="TbD-Yu-d2p"/>
+                                                                                <constraint firstItem="rG0-EF-o8z" firstAttribute="centerY" secondItem="tL8-l2-wxo" secondAttribute="centerY" id="Tgh-Y6-9xX"/>
+                                                                                <constraint firstItem="22Q-mr-DsD" firstAttribute="centerY" secondItem="K8x-88-QgL" secondAttribute="centerY" id="bSm-BO-vkS"/>
+                                                                                <constraint firstItem="K8x-88-QgL" firstAttribute="centerY" secondItem="tL8-l2-wxo" secondAttribute="centerY" id="dhh-a5-wfc"/>
+                                                                                <constraint firstItem="22Q-mr-DsD" firstAttribute="leading" secondItem="vO9-ir-CW8" secondAttribute="trailing" constant="5" id="oVt-2U-xDl"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="rG0-EF-o8z" secondAttribute="trailing" constant="16" id="op5-2m-Eu1"/>
+                                                                                <constraint firstItem="vO9-ir-CW8" firstAttribute="centerY" secondItem="K8x-88-QgL" secondAttribute="centerY" id="yFR-nr-Go5"/>
+                                                                                <constraint firstItem="K8x-88-QgL" firstAttribute="top" secondItem="tL8-l2-wxo" secondAttribute="top" constant="10" id="z0w-BY-6OQ"/>
+                                                                            </constraints>
+                                                                        </tableViewCellContentView>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </tableViewCell>
+                                                                </prototypes>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2nP-Bx-ThO"/>
+                                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="wsQ-9I-CYb"/>
+                                                                </connections>
+                                                            </tableView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="TrK-Tg-mMV" secondAttribute="bottom" id="3Kh-2H-CX5"/>
+                                                            <constraint firstItem="TrK-Tg-mMV" firstAttribute="leading" secondItem="6A2-q9-GcE" secondAttribute="leading" constant="11" id="5WP-IQ-Pwa"/>
+                                                            <constraint firstItem="WCh-wV-UCf" firstAttribute="top" secondItem="6A2-q9-GcE" secondAttribute="top" id="IZO-RZ-sJZ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="WCh-wV-UCf" secondAttribute="bottom" id="aLN-pH-Q0l"/>
+                                                            <constraint firstItem="WCh-wV-UCf" firstAttribute="leading" secondItem="6A2-q9-GcE" secondAttribute="leading" id="avL-zf-b7I"/>
+                                                            <constraint firstItem="TrK-Tg-mMV" firstAttribute="top" secondItem="6A2-q9-GcE" secondAttribute="top" id="bO4-UV-BCF"/>
+                                                            <constraint firstAttribute="trailing" secondItem="WCh-wV-UCf" secondAttribute="trailing" id="cB2-0T-lnX"/>
+                                                            <constraint firstAttribute="height" constant="131" id="lob-Bl-mBC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TrK-Tg-mMV" secondAttribute="trailing" constant="11" id="qf3-da-i0r"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                                <color key="value" name="HSMediumDarkBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                                                <color key="value" name="HSDarkBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color3">
+                                                                <color key="value" name="HSDarkBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color4">
+                                                                <color key="value" name="HSDarkBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="14"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor2">
+                                                                <color key="value" name="HSDarkBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.20000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="HLf-ua-q5d"/>
+                                                    <constraint firstItem="6A2-q9-GcE" firstAttribute="leading" secondItem="2Hm-Za-tcC" secondAttribute="leading" id="6Ea-6e-3Z7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6A2-q9-GcE" secondAttribute="trailing" id="Bne-sQ-QoG"/>
+                                                    <constraint firstItem="6A2-q9-GcE" firstAttribute="top" secondItem="qUp-Xr-40S" secondAttribute="bottom" constant="16" id="auA-Q2-BEu"/>
+                                                    <constraint firstItem="qUp-Xr-40S" firstAttribute="leading" secondItem="2Hm-Za-tcC" secondAttribute="leading" id="jUt-pR-D9k"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6A2-q9-GcE" secondAttribute="bottom" id="nEB-Vw-4LH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qUp-Xr-40S" secondAttribute="trailing" id="uD3-pC-RaC"/>
+                                                    <constraint firstItem="qUp-Xr-40S" firstAttribute="top" secondItem="2Hm-Za-tcC" secondAttribute="top" id="xdX-9z-ttq"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -213,12 +353,12 @@
                                             <constraint firstItem="Qmy-P5-lGi" firstAttribute="top" secondItem="qr0-Pf-fz6" secondAttribute="top" constant="40" id="0Yt-5o-IEY"/>
                                             <constraint firstItem="2Hm-Za-tcC" firstAttribute="leading" secondItem="qr0-Pf-fz6" secondAttribute="leading" constant="17" id="AO3-fg-nw0"/>
                                             <constraint firstAttribute="trailing" secondItem="2Hm-Za-tcC" secondAttribute="trailing" constant="17" id="BIl-Gg-Hi3"/>
-                                            <constraint firstAttribute="height" constant="1000" id="Q2q-m5-a0b"/>
                                             <constraint firstItem="Q5i-EP-faM" firstAttribute="leading" secondItem="qr0-Pf-fz6" secondAttribute="leading" constant="17" id="UDL-8N-XMW"/>
                                             <constraint firstItem="Qmy-P5-lGi" firstAttribute="leading" secondItem="qr0-Pf-fz6" secondAttribute="leading" id="WHs-uE-hs0"/>
                                             <constraint firstAttribute="trailing" secondItem="Q5i-EP-faM" secondAttribute="trailing" constant="17" id="WoS-ui-1qC"/>
                                             <constraint firstItem="2Hm-Za-tcC" firstAttribute="top" secondItem="Q5i-EP-faM" secondAttribute="bottom" constant="25" id="YJX-H3-tZb"/>
                                             <constraint firstAttribute="trailing" secondItem="Qmy-P5-lGi" secondAttribute="trailing" id="rBX-61-IVf"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Hm-Za-tcC" secondAttribute="bottom" id="uO9-Jz-gsX"/>
                                             <constraint firstItem="Q5i-EP-faM" firstAttribute="top" secondItem="Qmy-P5-lGi" secondAttribute="bottom" constant="10" id="xX3-sh-Lwe"/>
                                         </constraints>
                                     </view>
@@ -250,6 +390,9 @@
                     <connections>
                         <outlet property="buttonAddCash" destination="thq-AS-Y77" id="TgY-Yh-K51"/>
                         <outlet property="buttonWithdraw" destination="LRh-la-GHL" id="3ck-Ng-kW3"/>
+                        <outlet property="heightwalletBreakdownView" destination="lob-Bl-mBC" id="Ho9-il-Rk0"/>
+                        <outlet property="tableViewWalletBreakdown" destination="TrK-Tg-mMV" id="khf-7r-7kf"/>
+                        <outlet property="walletView" destination="6A2-q9-GcE" id="z0M-Yb-eiU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -259,17 +402,20 @@
     </scenes>
     <designables>
         <designable name="LRh-la-GHL">
-            <size key="intrinsicContentSize" width="83.666666666666671" height="30.333333333333332"/>
+            <size key="intrinsicContentSize" width="91.666666666666671" height="30.666666666666668"/>
         </designable>
         <designable name="thq-AS-Y77">
-            <size key="intrinsicContentSize" width="86" height="30.333333333333332"/>
+            <size key="intrinsicContentSize" width="87.333333333333329" height="30.666666666666668"/>
         </designable>
     </designables>
     <resources>
         <image name="ElipseGreen" width="157" height="146"/>
+        <image name="ElipseYellow" width="132" height="131"/>
         <image name="HS_main-logo" width="27" height="25.5"/>
         <image name="add_money" width="105" height="105"/>
+        <image name="bankNotes" width="40" height="24"/>
         <image name="diamond-square" width="513.66668701171875" height="513.66668701171875"/>
+        <image name="info-gray" width="11.333333015441895" height="11.333333015441895"/>
         <image name="rupee" width="52" height="76.666664123535156"/>
         <image name="wallet" width="103" height="103"/>
         <image name="withdraw_money" width="86" height="86"/>
@@ -288,8 +434,8 @@
         <namedColor name="HSMediumDarkBlue">
             <color red="0.22400000691413879" green="0.23899999260902405" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="HSWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
