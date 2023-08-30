@@ -15,7 +15,8 @@ class AddCashViewModel {
     }
     
     func getAddMoneyScreenData(completion: @escaping (Result<RewardPopupResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
+        networkService.fetchData(from: .getUserWallet(version: .v1),
+//        networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
                                  model: RewardPopupResponseModel.self) { response in
             switch response {
             case .success(let data):

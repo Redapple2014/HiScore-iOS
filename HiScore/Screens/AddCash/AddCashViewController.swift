@@ -11,6 +11,8 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
 
+    @IBOutlet weak var vwCircleNoOffers: HSGradientView!
+    @IBOutlet weak var imageCircleNoOffers: UIImageView!
     @IBOutlet weak var imageVwAmount: UIImageView!
     @IBOutlet weak var labelbalance: UILabel!
     @IBOutlet weak var viewNoOffers: UIView!
@@ -73,8 +75,8 @@ extension AddCashViewController {
     }
     func initUI() {
         imageBGContinue.isHidden = true
-        collectionOfCashOffers.isHidden = false//true
-        viewNoOffers.isHidden = true//false
+        collectionOfCashOffers.isHidden = true
+        viewNoOffers.isHidden = false
         stackAmountDetails.isHidden = true
         viewYouGot.isHidden = true
         buttonContinue.initLoadingButton()
@@ -90,6 +92,23 @@ extension AddCashViewController {
         collectionOfCashOffers.dataSource = self
         clearButton.isHidden = true
         view.setNeedsLayout()
+        showNoOffers()
+    }
+    func showNoOffers() {
+        let view = UIView()
+        view.center = viewNoOffers.center
+        view.frame = CGRect(x: 40, y: 25, width: 57.5, height: 50.75)
+        view.alpha = 0.8
+        view.layer.compositingFilter = "luminosityBlendMode"
+        let image0 = UIImage(named: "noOffers")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1.01, b: 0, c: 0, d: 1, tx: 0, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+        self.vwCircleNoOffers.addSubview(view)
+
     }
 }
 extension AddCashViewController {
