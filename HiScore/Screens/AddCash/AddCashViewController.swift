@@ -11,8 +11,10 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
 
-    @IBOutlet weak var vwCircleNoOffers: HSGradientView!
-    @IBOutlet weak var imageCircleNoOffers: UIImageView!
+    @IBOutlet weak var labelMinimumErrorValue: UILabel!
+    @IBOutlet weak var errorMinimumAmount: UIView!
+    @IBOutlet weak var vwGradientCircleNoOffers: HSGradientView!
+    @IBOutlet weak var vwContainerCircleNoOffers: UIView!
     @IBOutlet weak var imageVwAmount: UIImageView!
     @IBOutlet weak var labelbalance: UILabel!
     @IBOutlet weak var viewNoOffers: UIView!
@@ -73,10 +75,22 @@ extension AddCashViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
-    func initUI() {
-        imageBGContinue.isHidden = true
+    func showOffersData() {
+        collectionOfCashOffers.isHidden = false
+        viewNoOffers.isHidden = true
+        vwContainerCircleNoOffers.isHidden = true
+        vwGradientCircleNoOffers.isHidden = true
+    }
+    func hideOffersData() {
         collectionOfCashOffers.isHidden = true
         viewNoOffers.isHidden = false
+        vwContainerCircleNoOffers.isHidden = false
+        vwGradientCircleNoOffers.isHidden = false
+        showNoOffersImage()
+    }
+    func initUI() {
+        hideOffersData()
+        imageBGContinue.isHidden = true
         stackAmountDetails.isHidden = true
         viewYouGot.isHidden = true
         buttonContinue.initLoadingButton()
@@ -92,12 +106,11 @@ extension AddCashViewController {
         collectionOfCashOffers.dataSource = self
         clearButton.isHidden = true
         view.setNeedsLayout()
-        showNoOffers()
     }
-    func showNoOffers() {
+    func showNoOffersImage() {
         let view = UIView()
-        view.center = viewNoOffers.center
-        view.frame = CGRect(x: 40, y: 25, width: 57.5, height: 50.75)
+        view.backgroundColor = .clear
+        view.frame = CGRect(x: 22, y: 20, width: 50, height: 50)
         view.alpha = 0.8
         view.layer.compositingFilter = "luminosityBlendMode"
         let image0 = UIImage(named: "noOffers")?.cgImage
@@ -107,8 +120,7 @@ extension AddCashViewController {
         layer0.bounds = view.bounds
         layer0.position = view.center
         view.layer.addSublayer(layer0)
-        self.vwCircleNoOffers.addSubview(view)
-
+        self.vwContainerCircleNoOffers.addSubview(view)
     }
 }
 extension AddCashViewController {

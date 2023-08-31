@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,9 @@
         </array>
         <array key="MavenPro-ExtraBold.ttf">
             <string>MavenPro-ExtraBold</string>
+        </array>
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
         </array>
         <array key="MavenPro-SemiBold.ttf">
             <string>MavenPro-SemiBold</string>
@@ -48,13 +52,13 @@
                                         <state key="normal" backgroundImage="backArrow"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: ₹38,296" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qd-5o-UWS">
-                                        <rect key="frame" x="67" y="85.666666666666671" width="108.66666666666669" height="16.333333333333329"/>
+                                        <rect key="frame" x="67" y="84" width="96.666666666666686" height="18"/>
                                         <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="14"/>
                                         <color key="textColor" name="HSGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKH-5f-lLH">
-                                        <rect key="frame" x="67" y="67" width="71" height="18.666666666666671"/>
+                                        <rect key="frame" x="67" y="65" width="72.333333333333314" height="19"/>
                                         <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="16"/>
                                         <color key="textColor" name="HSWhiteColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,7 +78,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSTANT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXK-ek-hSf">
-                                        <rect key="frame" x="313.66666666666669" y="89" width="28.666666666666686" height="9"/>
+                                        <rect key="frame" x="316" y="89" width="24" height="9"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="9" id="BYj-yC-85W"/>
                                         </constraints>
@@ -83,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITHDRAWL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf4-PN-HVA">
-                                        <rect key="frame" x="310" y="97" width="36" height="9"/>
+                                        <rect key="frame" x="313" y="97" width="30.333333333333314" height="9"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="9" id="47v-ws-0uq"/>
                                         </constraints>
@@ -143,6 +147,35 @@
                                     <constraint firstAttribute="trailing" secondItem="w4c-t2-Ns4" secondAttribute="trailing" constant="17" id="Yck-d5-SFV"/>
                                     <constraint firstItem="w4c-t2-Ns4" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="top" constant="16" id="fqr-qs-AeH"/>
                                     <constraint firstAttribute="bottom" secondItem="w4c-t2-Ns4" secondAttribute="bottom" constant="15" id="yWQ-ct-aBk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDf-JG-IQg" userLabel="error field">
+                                <rect key="frame" x="18" y="201" width="339" height="23"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error-info" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-RM-Ma9">
+                                        <rect key="frame" x="0.0" y="10" width="13" height="13"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gbh-RM-Ma9" secondAttribute="height" id="et7-wQ-LCT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter at least ₹20.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYO-h0-QDy">
+                                        <rect key="frame" x="19" y="10" width="320" height="13"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
+                                        <color key="textColor" name="HSRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gbh-RM-Ma9" firstAttribute="height" secondItem="oYO-h0-QDy" secondAttribute="height" id="4Oh-P1-qQX"/>
+                                    <constraint firstItem="oYO-h0-QDy" firstAttribute="leading" secondItem="gbh-RM-Ma9" secondAttribute="trailing" constant="6" id="Gze-4h-Pbb"/>
+                                    <constraint firstItem="gbh-RM-Ma9" firstAttribute="leading" secondItem="gDf-JG-IQg" secondAttribute="leading" id="NG7-ph-fvM"/>
+                                    <constraint firstItem="oYO-h0-QDy" firstAttribute="top" secondItem="gbh-RM-Ma9" secondAttribute="top" id="Ugk-Mk-maX"/>
+                                    <constraint firstAttribute="bottom" secondItem="oYO-h0-QDy" secondAttribute="bottom" id="YND-uT-ocM"/>
+                                    <constraint firstItem="gbh-RM-Ma9" firstAttribute="top" secondItem="gDf-JG-IQg" secondAttribute="top" constant="10" id="a22-pS-bxk"/>
+                                    <constraint firstAttribute="trailing" secondItem="oYO-h0-QDy" secondAttribute="trailing" id="ifg-32-wQ8"/>
+                                    <constraint firstItem="gbh-RM-Ma9" firstAttribute="width" secondItem="gbh-RM-Ma9" secondAttribute="height" id="t8s-tG-9TH"/>
                                 </constraints>
                             </view>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVr-Ky-s7n" customClass="HSGradientView" customModule="HiScore" customModuleProvider="target">
@@ -218,13 +251,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy Offers (12)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kx-hJ-kiH">
-                                        <rect key="frame" x="66" y="18" width="108.66666666666669" height="15.333333333333336"/>
+                                        <rect key="frame" x="66" y="18" width="118.66666666666669" height="15.333333333333336"/>
                                         <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="13"/>
                                         <color key="textColor" name="HSWhiteColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get upto ₹12 Bonus Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUF-Eb-SEu">
-                                        <rect key="frame" x="66" y="33.333333333333314" width="139" height="14"/>
+                                        <rect key="frame" x="66" y="33.333333333333314" width="120.66666666666669" height="15.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="12"/>
                                         <color key="textColor" name="HSGoldenYellowTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -258,25 +291,25 @@
                                                             <rect key="frame" x="6" y="20" width="73" height="117"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrH-MA-Sz7">
-                                                                    <rect key="frame" x="26.333333333333336" y="17" width="20.333333333333336" height="13"/>
+                                                                    <rect key="frame" x="26.333333333333336" y="15" width="20.666666666666664" height="13"/>
                                                                     <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="11"/>
                                                                     <color key="textColor" name="HSBlackTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKS-Rt-rd1">
-                                                                    <rect key="frame" x="23.666666666666664" y="32.333333333333336" width="25.666666666666664" height="18.333333333333336"/>
+                                                                    <rect key="frame" x="24.333333333333329" y="30.333333333333336" width="24.666666666666671" height="20.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="15.700000762939453"/>
                                                                     <color key="textColor" name="HSBlackTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get 25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxf-KZ-ksv">
-                                                                    <rect key="frame" x="14.333333333333332" y="72.333333333333329" width="44.333333333333343" height="13"/>
+                                                                    <rect key="frame" x="15.000000000000004" y="70.666666666666671" width="43.333333333333343" height="13"/>
                                                                     <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="11"/>
                                                                     <color key="textColor" name="HSBlackTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-SC-Nub">
-                                                                    <rect key="frame" x="23" y="86.333333333333329" width="27.333333333333329" height="19.666666666666671"/>
+                                                                    <rect key="frame" x="23.333333333333336" y="84.666666666666671" width="26.333333333333336" height="21.333333333333329"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="16.700000762939453"/>
                                                                     <color key="textColor" name="HSColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -347,10 +380,10 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTF-yf-ukd" userLabel="View Head" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
-                                                            <rect key="frame" x="23.333333333333332" y="12" width="38.333333333333343" height="16"/>
+                                                            <rect key="frame" x="25" y="12" width="35" height="16"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pm-j6-E2x">
-                                                                    <rect key="frame" x="9.0000000000000053" y="2" width="20.333333333333329" height="12"/>
+                                                                    <rect key="frame" x="9" y="2" width="17" height="12"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="9"/>
                                                                     <color key="textColor" name="HSWhiteColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -407,11 +440,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-Cv-AEH">
                                         <rect key="frame" x="0.0" y="79" width="375" height="164"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ib-Y1-S2e">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                                <color key="backgroundColor" name="HSAppThemeColor"/>
+                                            </imageView>
                                             <view clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ1-ub-Xbo" customClass="HSGradientView" customModule="HiScore" customModuleProvider="target">
-                                                <rect key="frame" x="137.66666666666666" y="15" width="100" height="100"/>
+                                                <rect key="frame" x="112.66666666666669" y="15" width="150" height="150"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="OyZ-jW-y6R"/>
+                                                    <constraint firstAttribute="height" constant="150" id="OyZ-jW-y6R"/>
                                                     <constraint firstAttribute="width" secondItem="tZ1-ub-Xbo" secondAttribute="height" id="oLo-h8-7hb"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -419,24 +456,28 @@
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color2">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="value" name="HSBlackColor"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="color3">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="50"/>
+                                                        <integer key="value" value="75"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWM-V9-uGi">
+                                                <rect key="frame" x="120" y="22.666666666666686" width="135" height="135"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No offer available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-NU-0j5">
-                                                <rect key="frame" x="137" y="124.99999999999999" width="101.33333333333331" height="15.333333333333329"/>
+                                                <rect key="frame" x="131.66666666666666" y="175" width="112" height="15.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="13"/>
                                                 <color key="textColor" name="HSWhiteColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One or two line text about Offer not available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXo-mg-4Ng">
-                                                <rect key="frame" x="67.666666666666686" y="148" width="240" height="14"/>
+                                                <rect key="frame" x="55" y="198" width="265" height="14.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="12"/>
                                                 <color key="textColor" name="HSWhiteColor"/>
                                                 <nil key="highlightedColor"/>
@@ -446,10 +487,18 @@
                                         <constraints>
                                             <constraint firstItem="tZ1-ub-Xbo" firstAttribute="centerX" secondItem="Lh0-Cv-AEH" secondAttribute="centerX" id="4aK-hB-dcX"/>
                                             <constraint firstItem="UXo-mg-4Ng" firstAttribute="top" secondItem="SgN-NU-0j5" secondAttribute="bottom" constant="7.6699999999999999" id="MGf-Lr-gFN"/>
+                                            <constraint firstItem="7Ib-Y1-S2e" firstAttribute="centerX" secondItem="Lh0-Cv-AEH" secondAttribute="centerX" id="QBn-s3-rzf"/>
                                             <constraint firstItem="UXo-mg-4Ng" firstAttribute="centerX" secondItem="Lh0-Cv-AEH" secondAttribute="centerX" id="TCf-CJ-h5J"/>
+                                            <constraint firstItem="7Ib-Y1-S2e" firstAttribute="centerY" secondItem="Lh0-Cv-AEH" secondAttribute="centerY" id="TvY-rj-SKc"/>
                                             <constraint firstItem="SgN-NU-0j5" firstAttribute="top" secondItem="tZ1-ub-Xbo" secondAttribute="bottom" constant="10" id="ViH-oM-1HU"/>
                                             <constraint firstItem="SgN-NU-0j5" firstAttribute="centerX" secondItem="Lh0-Cv-AEH" secondAttribute="centerX" id="W06-G9-0lc"/>
+                                            <constraint firstItem="7Ib-Y1-S2e" firstAttribute="width" secondItem="Lh0-Cv-AEH" secondAttribute="width" id="j9F-Oq-SkU"/>
+                                            <constraint firstItem="hWM-V9-uGi" firstAttribute="height" secondItem="tZ1-ub-Xbo" secondAttribute="height" multiplier="0.9" id="jWC-bW-Vb6"/>
+                                            <constraint firstItem="hWM-V9-uGi" firstAttribute="width" secondItem="tZ1-ub-Xbo" secondAttribute="width" multiplier="0.9" id="owq-UW-EP2"/>
                                             <constraint firstItem="tZ1-ub-Xbo" firstAttribute="top" secondItem="Lh0-Cv-AEH" secondAttribute="top" constant="15" id="qBN-Yn-cN6"/>
+                                            <constraint firstItem="hWM-V9-uGi" firstAttribute="centerY" secondItem="tZ1-ub-Xbo" secondAttribute="centerY" id="sA2-mL-ZUM"/>
+                                            <constraint firstItem="7Ib-Y1-S2e" firstAttribute="height" secondItem="Lh0-Cv-AEH" secondAttribute="height" id="vo5-Vd-cJr"/>
+                                            <constraint firstItem="hWM-V9-uGi" firstAttribute="centerX" secondItem="tZ1-ub-Xbo" secondAttribute="centerX" id="zvw-MQ-IPe"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -508,13 +557,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPG-2y-uwR">
-                                                <rect key="frame" x="11.000000000000004" y="5" width="56.333333333333343" height="19.666666666666668"/>
+                                                <rect key="frame" x="10.999999999999996" y="3.3333333333333712" width="52.666666666666657" height="21.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="16.700000762939453"/>
                                                 <color key="textColor" name="HSGoldenYellowTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-ZK-nMD">
-                                                <rect key="frame" x="310.33333333333331" y="5" width="18.666666666666686" height="19.666666666666668"/>
+                                                <rect key="frame" x="311" y="3.3333333333333712" width="18" height="21.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="16.700000762939453"/>
                                                 <color key="textColor" name="HSGoldenYellowTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -539,13 +588,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-FW-Atu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-f4-s6c">
-                                                        <rect key="frame" x="301.33333333333331" y="0.0" width="16.666666666666686" height="20"/>
+                                                        <rect key="frame" x="299" y="0.0" width="19" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -565,13 +614,13 @@
                                                 <rect key="frame" x="0.0" y="31" width="318" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdN-zT-lDU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED6-k3-5Ne">
-                                                        <rect key="frame" x="301.33333333333331" y="0.0" width="16.666666666666686" height="20"/>
+                                                        <rect key="frame" x="298.66666666666669" y="0.0" width="19.333333333333314" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -591,13 +640,13 @@
                                                 <rect key="frame" x="0.0" y="62" width="318" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAI-XR-Xbi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bv-bj-6fh">
-                                                        <rect key="frame" x="301.33333333333331" y="0.0" width="16.666666666666686" height="20"/>
+                                                        <rect key="frame" x="299" y="0.0" width="19" height="20"/>
                                                         <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="14.700000762939453"/>
                                                         <color key="textColor" name="HSWhiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -688,13 +737,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ge4-y8-auA" secondAttribute="trailing" constant="18" id="Mp1-xh-nv3"/>
                             <constraint firstItem="PZ1-hi-P1h" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="OCx-kA-Tsb"/>
                             <constraint firstItem="866-wL-JAw" firstAttribute="top" secondItem="1kf-CP-Nwg" secondAttribute="bottom" id="Qbx-ir-Ovn"/>
+                            <constraint firstItem="gDf-JG-IQg" firstAttribute="leading" secondItem="Ge4-y8-auA" secondAttribute="leading" id="VUO-aZ-rqw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OKB-TZ-GB5" secondAttribute="trailing" id="WGq-Ca-E6B"/>
                             <constraint firstItem="Ge4-y8-auA" firstAttribute="top" secondItem="PZ1-hi-P1h" secondAttribute="bottom" constant="30" id="adj-HP-WD5"/>
                             <constraint firstItem="Ge4-y8-auA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="gVE-p1-r35"/>
                             <constraint firstItem="OKB-TZ-GB5" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="bottom" constant="30" id="gdk-M5-tTI"/>
                             <constraint firstItem="866-wL-JAw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nkY-Cd-z0N"/>
+                            <constraint firstItem="gDf-JG-IQg" firstAttribute="trailing" secondItem="Ge4-y8-auA" secondAttribute="trailing" id="po4-mK-8pt"/>
                             <constraint firstItem="SVr-Ky-s7n" firstAttribute="centerX" secondItem="OKB-TZ-GB5" secondAttribute="centerX" id="rHG-EF-KAx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PZ1-hi-P1h" secondAttribute="trailing" id="rWm-an-wnQ"/>
+                            <constraint firstItem="gDf-JG-IQg" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="bottom" id="yTY-4i-AEZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -703,8 +755,10 @@
                         <outlet property="collectionOfCashOffers" destination="2yQ-lT-BPJ" id="hBJ-e3-Sz9"/>
                         <outlet property="constantOfbuttonContainerViewBottom" destination="Qbx-ir-Ovn" id="qmh-dO-Cdm"/>
                         <outlet property="enterAmountTextField" destination="w4c-t2-Ns4" id="EPK-W5-afx"/>
+                        <outlet property="errorMinimumAmount" destination="gDf-JG-IQg" id="1PQ-uS-Qif"/>
                         <outlet property="imageBGContinue" destination="cgI-EG-ngp" id="3Ua-TB-rMc"/>
                         <outlet property="imageVwAmount" destination="RPy-NW-ywZ" id="xwY-GU-XEV"/>
+                        <outlet property="labelMinimumErrorValue" destination="oYO-h0-QDy" id="rdL-Wc-yjQ"/>
                         <outlet property="labelOfferTotal" destination="1Kx-hJ-kiH" id="ZfV-2K-CFK"/>
                         <outlet property="labelUptoCash" destination="wUF-Eb-SEu" id="CPs-Vm-kZy"/>
                         <outlet property="labelbalance" destination="6Qd-5o-UWS" id="o2c-SK-Paz"/>
@@ -712,7 +766,8 @@
                         <outlet property="viewNoOffers" destination="Lh0-Cv-AEH" id="U4P-Zw-3Bv"/>
                         <outlet property="viewTextField" destination="Ge4-y8-auA" id="nze-O4-bTG"/>
                         <outlet property="viewYouGot" destination="p39-ju-CzN" id="xIr-lo-PUu"/>
-                        <outlet property="vwCircleNoOffers" destination="tZ1-ub-Xbo" id="gzt-VB-xHV"/>
+                        <outlet property="vwContainerCircleNoOffers" destination="hWM-V9-uGi" id="NMY-TM-TbO"/>
+                        <outlet property="vwGradientCircleNoOffers" destination="tZ1-ub-Xbo" id="zLN-iN-snI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -722,7 +777,7 @@
     </scenes>
     <designables>
         <designable name="5YR-JR-mmH">
-            <size key="intrinsicContentSize" width="80.666666666666671" height="30.333333333333332"/>
+            <size key="intrinsicContentSize" width="84.333333333333329" height="30.666666666666668"/>
         </designable>
     </designables>
     <resources>
@@ -730,6 +785,7 @@
         <image name="backArrow" width="18" height="16"/>
         <image name="circle.fill" width="5.3333334922790527" height="5.3333334922790527"/>
         <image name="dashLine" width="70.666664123535156" height="1.3333333730697632"/>
+        <image name="error-info" width="11.333333015441895" height="11.333333015441895"/>
         <image name="greenTick" width="24" height="24.333333969116211"/>
         <image name="instantWithdrawl" width="27.333333969116211" height="19.666666030883789"/>
         <image name="percent" width="27" height="27"/>
@@ -738,6 +794,9 @@
         <image name="wave" width="208.66667175292969" height="159.33332824707031"/>
         <namedColor name="HSAppThemeColor">
             <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSBlackColor">
+            <color red="0.13300000131130219" green="0.11800000071525574" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HSBlackTextColor">
             <color red="0.071000002324581146" green="0.0040000001899898052" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -763,8 +822,14 @@
         <namedColor name="HSOrange">
             <color red="0.90588235294117647" green="0.37647058823529411" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="HSRedColor">
+            <color red="0.96100002527236938" green="0.30199998617172241" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="HSWhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
