@@ -35,7 +35,7 @@ extension HiScoreNetworkServiceprotocol {
     }
     
     func postData<T:Encodable, U: Decodable>(to endpoint: APIEndpoint,
-                                             with body: T,
+                                             with body: T? = nil,
                                              responseModelType: U.Type,
                                              completion: @escaping (Result<U, APIError>) -> Void) {
         guard let url = endpoint.url else {
@@ -47,13 +47,27 @@ extension HiScoreNetworkServiceprotocol {
             var request = URLRequest(url: url)
             request.httpMethod = HiScoreHTTPMethods.post.rawValue
             request.allHTTPHeaderFields = endpoint.headers
-            Log.d("API name: - \(url)" )
+            Log.d("API name: - \(url)")
             Log.d("Request Param: \(String(data: jsonData, encoding: .utf8))" )
             request.httpBody = jsonData
             postData(with: request, responseModelType: responseModelType, completion: completion)
         } catch {
             completion(.failure(.encodingError))
         }
+    }
+    func postData<U: Decodable>(to endpoint: APIEndpoint,
+                                responseModelType: U.Type,
+                                completion: @escaping (Result<U, APIError>) -> Void) {
+        guard let url = endpoint.url else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = HiScoreHTTPMethods.post.rawValue
+        request.allHTTPHeaderFields = endpoint.headers
+        Log.d("API name: - \(url)")
+        request.httpBody = nil
+        postData(with: request, responseModelType: responseModelType, completion: completion)
     }
 }
 

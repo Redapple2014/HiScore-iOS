@@ -12,9 +12,15 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var buttonAddCash: LoadingButton!
     @IBOutlet weak var buttonWithdraw: LoadingButton!
     @IBOutlet weak var tableViewWalletBreakdown: UITableView!
-    @IBOutlet weak var tableHeightViewWalletBreakdown: NSLayoutConstraint!
     @IBOutlet weak var heightwalletBreakdownView: NSLayoutConstraint!
     @IBOutlet weak var walletView: HSShadowView!
+    @IBOutlet weak var detailsView: HSShadowView!
+    @IBOutlet weak var hiscoreWallet: UILabel!
+    @IBOutlet weak var transactionProgress: UILabel!
+    @IBOutlet weak var accountAdded: UILabel!
+    @IBOutlet weak var kycStatus: UILabel!
+    @IBOutlet weak var kycStatusIcon: UIImageView!
+    private var viewModel: WalletViewModel!
     override func updateUI() {
         super.updateUI()
     }
@@ -23,12 +29,24 @@ class WalletViewController: BaseViewController {
 extension WalletViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let hiScoreNetworkService = HiScoreNetworkRepository()
+        viewModel = WalletViewModel(networkService: hiScoreNetworkService)
+        viewModel.getWalletDetails { response in
+            DispatchQueue.main.async {
+                switch response {
+                case .success(let response):
+                    Log.d(response)
+                    //self.hiscoreWallet.text = self.viewModel.walletData.
+                case .failure(let error):
+                    Log.d(error.localizedDescription)
+                }
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        heightwalletBreakdownView.constant =  tableViewWalletBreakdown.contentSize.height
+        heightwalletBreakdownView.constant =  3 * 60 // arrayCount * tablerowHeight
         buttonAddCash.layoutIfNeeded()
         buttonAddCash.setNeedsLayout()
         buttonWithdraw.layoutIfNeeded()
@@ -38,7 +56,6 @@ extension WalletViewController {
         tableViewWalletBreakdown.layoutIfNeeded()
         tableViewWalletBreakdown.setNeedsLayout()
         tableViewWalletBreakdown.reloadData()
-        
     }
 }
 //MARK: - Button actions -
@@ -61,11 +78,20 @@ extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? WalletBreakDownCell else {
             return WalletBreakDownCell()
         }
+        switch indexPath.row {
+        case 0:
+            cell.type.text = "Deposit"
+        case 1:
+            cell.type.text = "Winnings"
+        default:
+            cell.type.text = "Rummycash"
+        }
         return cell
     }
 }
 
 
 class WalletBreakDownCell: UITableViewCell {
-    
+    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var amount: UILabel!
 }
