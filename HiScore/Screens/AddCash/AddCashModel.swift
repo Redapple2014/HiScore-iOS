@@ -113,4 +113,14 @@ struct OfferData: Codable {
     }
 }
 
-
+class OfferListData {
+    var amount: Int
+    var percentage: Int
+    var bonusAmount: Int
+    
+    init(amount: Int,percentage: Int,bonusAmount: Int) {
+        self.amount = amount
+        self.percentage = percentage
+        self.bonusAmount = bonusAmount
+    }
+}

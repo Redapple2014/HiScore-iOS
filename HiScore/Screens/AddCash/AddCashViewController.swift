@@ -30,7 +30,7 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
     var viewModel: AddCashViewModel!
-
+    var offerDataList: [OfferListData]?
     override func viewDidLoad() {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
@@ -67,11 +67,14 @@ extension AddCashViewController {
     }
 
     func initSettings() {
+        viewModel.delegate = self
         IQKeyboardManager.shared().isEnableAutoToolbar = false
         IQKeyboardManager.shared().isEnabled = false
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.light
         enterAmountTextField.addTarget(self, action: #selector(editingText(_:)), for: .editingChanged)
         enterAmountTextField.delegate  = self
+        collectionOfCashOffers.dataSource = self
+        collectionOfCashOffers.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
@@ -89,7 +92,7 @@ extension AddCashViewController {
         showNoOffersImage()
     }
     func initUI() {
-        hideOffersData()
+        showOffersData()
         imageBGContinue.isHidden = true
         stackAmountDetails.isHidden = true
         viewYouGot.isHidden = true
@@ -103,8 +106,7 @@ extension AddCashViewController {
         enterAmountTextField.font = UIFont.Rajdhani.Bold.withSize(18)
         enterAmountTextField.tintColor = .HSWhiteColor
         collectionOfCashOffers.delegate = self
-        collectionOfCashOffers.dataSource = self
-        clearButton.isHidden = true
+         clearButton.isHidden = true
         view.setNeedsLayout()
     }
     func showNoOffersImage() {
@@ -150,7 +152,12 @@ extension AddCashViewController: UITextFieldDelegate {
         self.view.layoutIfNeeded()
         
     }
-    @objc func editingText(_ textField: UITextField) {  }
+    @objc func editingText(_ textField: UITextField) {
+        let amount = textField.text
+        viewModel.amount = Int(amount ?? "0") ?? 0
+        viewModel.showOffers()
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         clearButton.isHidden = true
         imageBGContinue.isHidden = true
@@ -161,12 +168,14 @@ extension AddCashViewController: UITextFieldDelegate {
 // MARK: - CollectionView UICollectionViewDataSource -
 extension AddCashViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return self.offerDataList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? AddCashCollectionViewCell else { return AddCashCollectionViewCell() }
-       // cell.images = self.viewModel.slides[indexPath.row]
+        if let array = self.offerDataList {
+            cell.loadCell(data: array[indexPath.row])
+        }
         return cell
     }
 }
@@ -174,5 +183,12 @@ extension AddCashViewController: UICollectionViewDataSource {
 extension AddCashViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 85, height: 137)
+    }
+}
+ 
+extension AddCashViewController: AddCashDelegate {
+    func updateOffers(offerList: [OfferListData]) {
+        self.offerDataList = offerList
+        self.collectionOfCashOffers.reloadData()
     }
 }

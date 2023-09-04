@@ -14,12 +14,14 @@ class AddCashCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageISelected: UIImageView!
     @IBOutlet weak var labelHeaderText: UILabel!
 
-    @IBOutlet weak var labelOfferAmount: UILabel!
+    @IBOutlet weak var labelBonusPercentageAmount: UILabel!
     @IBOutlet weak var labeOfferPercentage: UILabel!
     @IBOutlet weak var labeITotalAmount: UILabel!
     
-    func loadCell() {
-        
+    func loadCell(data: OfferListData) {
+        labelBonusPercentageAmount.text = "₹ \(data.bonusAmount)"  
+        labeOfferPercentage.text = "Get \(data.percentage) %"
+        labeITotalAmount.text = "₹ \(data.amount)"
     }
 
 }

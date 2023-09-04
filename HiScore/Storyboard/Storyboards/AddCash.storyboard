@@ -291,13 +291,13 @@
                                                             <rect key="frame" x="6" y="20" width="73" height="117"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrH-MA-Sz7">
-                                                                    <rect key="frame" x="26.333333333333336" y="15" width="20.666666666666664" height="13"/>
+                                                                    <rect key="frame" x="26.333333333333336" y="14.333333333333336" width="20.666666666666664" height="13"/>
                                                                     <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="11"/>
                                                                     <color key="textColor" name="HSBlackTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKS-Rt-rd1">
-                                                                    <rect key="frame" x="24.333333333333329" y="30.333333333333336" width="24.666666666666671" height="20.333333333333336"/>
+                                                                    <rect key="frame" x="24.333333333333329" y="29.666666666666664" width="24.666666666666671" height="20.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="15.700000762939453"/>
                                                                     <color key="textColor" name="HSBlackTextColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -322,16 +322,16 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npE-eR-QUk">
-                                                                    <rect key="frame" x="7" y="57.666666666666671" width="59" height="2"/>
+                                                                    <rect key="frame" x="7" y="57" width="59" height="3"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashLine" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-Ho-01C">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="2"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="3"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="m1L-Ho-01C" firstAttribute="top" secondItem="npE-eR-QUk" secondAttribute="top" id="4TP-ht-Re3"/>
-                                                                        <constraint firstAttribute="height" constant="2" id="Un2-T9-6mN"/>
+                                                                        <constraint firstAttribute="height" constant="3" id="Un2-T9-6mN"/>
                                                                         <constraint firstAttribute="trailing" secondItem="m1L-Ho-01C" secondAttribute="trailing" id="aIu-cA-OtY"/>
                                                                         <constraint firstAttribute="bottom" secondItem="m1L-Ho-01C" secondAttribute="bottom" id="aev-j6-llO"/>
                                                                         <constraint firstItem="m1L-Ho-01C" firstAttribute="leading" secondItem="npE-eR-QUk" secondAttribute="leading" id="wSi-py-M3K"/>
@@ -379,7 +379,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTF-yf-ukd" userLabel="View Head" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
+                                                        <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTF-yf-ukd" userLabel="View Head" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
                                                             <rect key="frame" x="25" y="12" width="35" height="16"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pm-j6-E2x">
@@ -403,7 +403,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenTick" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-bl-ose">
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenTick" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-bl-ose">
                                                             <rect key="frame" x="59" y="20" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="N1n-4O-RqY"/>
@@ -427,10 +427,10 @@
                                                 <size key="customSize" width="85" height="137"/>
                                                 <connections>
                                                     <outlet property="imageISelected" destination="3JE-bl-ose" id="IuF-rv-pCt"/>
-                                                    <outlet property="labeITotalAmount" destination="bQu-SC-Nub" id="Ilw-I5-ioU"/>
+                                                    <outlet property="labeITotalAmount" destination="tKS-Rt-rd1" id="5fV-r3-1v2"/>
                                                     <outlet property="labeOfferPercentage" destination="jxf-KZ-ksv" id="DCh-TA-gc9"/>
+                                                    <outlet property="labelBonusPercentageAmount" destination="bQu-SC-Nub" id="cxq-jb-lEp"/>
                                                     <outlet property="labelHeaderText" destination="2Pm-j6-E2x" id="023-56-Zrx"/>
-                                                    <outlet property="labelOfferAmount" destination="tKS-Rt-rd1" id="WcJ-cf-dgb"/>
                                                     <outlet property="viewBG" destination="IhJ-dA-Wm2" id="lnt-Nq-dws"/>
                                                     <outlet property="viewTopHeader" destination="iTF-yf-ukd" id="xDG-J7-aO8"/>
                                                 </connections>
