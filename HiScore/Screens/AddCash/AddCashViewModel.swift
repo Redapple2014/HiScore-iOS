@@ -79,7 +79,8 @@ class AddCashViewModel {
                                  percentage: self.offerData[index].percentage ?? 0,
                                  bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
                                                               number: self.amount,
-                                                              capValue: self.offerData[index].capValue ?? 0))
+                                                              capValue: self.offerData[index].capValue ?? 0),
+                                  isSelected: true)
         array.append(item0)
             // 2nd item
         amountValue = ((self.offerData[index].minLimit ?? 0)+(self.offerData[index].maxLimit ?? 0))/2
@@ -118,7 +119,8 @@ class AddCashViewModel {
                                  percentage: self.offerData[index].percentage ?? 0,
                                  bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
                                                               number: self.amount,
-                                                              capValue: self.offerData[index].capValue ?? 0))
+                                                              capValue: self.offerData[index].capValue ?? 0),
+                                  isSelected: true)
         array.append(item0)
 
         
@@ -158,7 +160,8 @@ class AddCashViewModel {
                                  percentage: self.offerData[index].percentage ?? 0,
                                  bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
                                                               number: self.amount,
-                                                              capValue: self.offerData[index].capValue ?? 0))
+                                                              capValue: self.offerData[index].capValue ?? 0),
+                                  isSelected: true)
         array.append(item0)
 
         if (index+1) < self.offerData.count {
@@ -187,7 +190,8 @@ class AddCashViewModel {
         let item0 = OfferListData(amount: amountValue,
                                  percentage: self.offerData[index].percentage ?? 0,
                                  bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
-                                                              number: self.amount, capValue: self.offerData[index].capValue ?? 0))
+                                                              number: self.amount, capValue: self.offerData[index].capValue ?? 0),
+                                  isSelected: true)
         array.append(item0)
         if (index+1) < self.offerData.count {
             amountValue = ((self.offerData[index+1].minLimit ?? 0)+(self.offerData[index+1].maxLimit ?? 0))/2

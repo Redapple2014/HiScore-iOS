@@ -22,6 +22,12 @@ class AddCashCollectionViewCell: UICollectionViewCell {
         labelBonusPercentageAmount.text = "₹ \(data.bonusAmount)"  
         labeOfferPercentage.text = "Get \(data.percentage) %"
         labeITotalAmount.text = "₹ \(data.amount)"
+        if data.isSelected {
+            
+        }
     }
 
+    func showSelectedUI() {
+        
+    }
 }

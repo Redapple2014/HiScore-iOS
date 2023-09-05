@@ -117,10 +117,12 @@ class OfferListData {
     var amount: Int
     var percentage: Int
     var bonusAmount: Int
+    var isSelected: Bool
     
-    init(amount: Int,percentage: Int,bonusAmount: Int) {
+    init(amount: Int,percentage: Int,bonusAmount: Int, isSelected: Bool = false) {
         self.amount = amount
         self.percentage = percentage
         self.bonusAmount = bonusAmount
+        self.isSelected = isSelected
     }
 }
