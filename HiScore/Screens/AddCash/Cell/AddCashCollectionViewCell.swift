@@ -22,12 +22,38 @@ class AddCashCollectionViewCell: UICollectionViewCell {
         labelBonusPercentageAmount.text = "₹ \(data.bonusAmount)"  
         labeOfferPercentage.text = "Get \(data.percentage) %"
         labeITotalAmount.text = "₹ \(data.amount)"
+//        viewBG.layoutSubviews()
+//        viewBG.setNeedsLayout()
+//
         if data.isSelected {
-            
+            showSelectedUI()
+        } else {
+            showNotSelectedUI()
         }
     }
-
     func showSelectedUI() {
-        
+//        viewBG.backgroundColor = UIColor.clear
+//        viewBG.color1 = .HSYellowButtonColor
+//        viewBG.color2 = .HSDarkYellowButtonColor
+//        viewBG.color3 = .HSDarkYellowButtonColor
+//        viewBG.color4 = .HSDarkYellowButtonColor
+//        viewBG.borderWidth = 2
+//        viewBG.borderColor1 = .HSWhiteColor.withAlphaComponent(0.5)
+//        viewBG.borderColor2 = .HSWhiteColor.withAlphaComponent(0)
+//        viewBG.shadowColor = .lightGray
+        imageISelected.isHidden = false
+    }
+    func showNotSelectedUI() {
+//        viewBG.backgroundColor = .HSDarkBlue
+//        viewBG.setGradientBackground(colorTop: .HSMediumDarkBlue, colorBottom: .HSdar)
+//      //  viewBG.backgroundColor = UIColor.clear
+//        viewBG.color1 = .HSMediumDarkBlue
+//        viewBG.color2 = .HSMediumDarkBlue
+//        viewBG.color3 = .HSMediumDarkBlue
+//        viewBG.color4 = .HSDarkBlue
+//        viewBG.borderColor1 = .clear
+//        viewBG.borderColor2 = .clear
+//        viewBG.shadowColor = .clear
+        imageISelected.isHidden = true
     }
 }
