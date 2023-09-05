@@ -94,6 +94,7 @@ extension AddCashViewController {
         showNoOffersImage()
     }
     func initUI() {
+        errorMinimumAmount.isHidden = true
         showOffersData()
         imageBGContinue.isHidden = true
         stackAmountDetails.isHidden = true
@@ -157,6 +158,8 @@ extension AddCashViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         imageBGContinue.isHidden = false
         constantOfbuttonContainerViewBottom.constant = 216
+        viewYouGot.isHidden = true
+        stackAmountDetails.isHidden = true
         imageVwAmount.isHidden = true
         self.view.layoutIfNeeded()
         
@@ -201,8 +204,13 @@ extension AddCashViewController: AddCashDelegate {
         self.collectionOfCashOffers.reloadData()
         let filtered = offerList.filter { $0.isSelected }
         if filtered.count > 0 {
-            stackAmountDetails.isHidden = false
-            viewYouGot.isHidden = false
+            if constantOfbuttonContainerViewBottom.constant > 0 {
+                stackAmountDetails.isHidden = true
+                viewYouGot.isHidden = true
+            } else {
+                stackAmountDetails.isHidden = false
+                viewYouGot.isHidden = false
+            }
         } else {
             stackAmountDetails.isHidden = true
             viewYouGot.isHidden = true
