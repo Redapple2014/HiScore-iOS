@@ -20,15 +20,7 @@ class AddCashViewModel {
     var totalOfferCount = 4
     var amount = 0
     var offerData: [OfferData]!
-    let min0 = 10
-    let max0 = 99
-    let min1 = 100
-    let max1 = 249
-    let min2 = 250
-    let max2 = 999
-    let min3 = 1000
-    let max3 = 100000
-
+    
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
         networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
                                  model: AddCashResponseModel.self) { response in
@@ -58,43 +50,192 @@ class AddCashViewModel {
     private func checkAmountType() {
         for i in 0..<(offerData.count) {
             if ((offerData[i].minLimit ?? 0)...(offerData[i].maxLimit ?? 0)).contains(amount) {
-                findRange(min: (offerData[i].minLimit ?? 0), max: (offerData[i].maxLimit ?? 0))
+                findRange(min: (offerData[i].minLimit ?? 0), max: (offerData[i].maxLimit ?? 0), index: i)
+                break
             }
         }
     }
-    private func findRange(min: Int, max: Int) {
+    private func findRange(min: Int, max: Int, index: Int) {
         let mid = (min+max)/2
-        let distanceFromMin = amount-min
-        let distanceFromMax = max-amount
-        let distanceFromMid = abs(mid-amount)
+//        let distanceFromMin = amount-min
+//        let distanceFromMax = max-amount
+//        let distanceFromMid = abs(mid-amount)
         
         if amount == min {
-            
-        } //else if amount
+            minimumValueOffer(index:index)
+        }  else if amount > min && amount < mid {
+            minimumToMidumValueOffer(index:index)
+        } else if amount >= mid && amount < max {
+            midiumToMaximumValueOffer(index: index)
+        } else if amount == max {
+            maximumValueOffer(index: index)
+        }
     }
+    private func minimumValueOffer(index: Int) {
+        var array = [OfferListData]()
+        var amountValue = self.amount
+
+        let item0 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                 bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                              number: self.amount,
+                                                              capValue: self.offerData[index].capValue ?? 0))
+        array.append(item0)
+            // 2nd item
+        amountValue = ((self.offerData[index].minLimit ?? 0)+(self.offerData[index].maxLimit ?? 0))/2
+        let item1 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                  bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                               number: amountValue,
+                                                               capValue: self.offerData[index].capValue ?? 0))
+        array.append(item1)
+            // 3rd item
+        if (index+1) < self.offerData.count {
+            amountValue = self.offerData[index+1].minLimit ?? 0
+            let item2 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item2)
+            // 4th item
+            amountValue = ((self.offerData[index+1].minLimit ?? 0)+(self.offerData[index+1].maxLimit ?? 0))/2
+            let item3 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item3)
+
+        }
+        self.delegate?.updateOffers(offerList: array)
+    }
+    
+    private func minimumToMidumValueOffer(index: Int) {
+        var array = [OfferListData]()
+        var amountValue = self.amount
+        let item0 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                 bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                              number: self.amount,
+                                                              capValue: self.offerData[index].capValue ?? 0))
+        array.append(item0)
+
+        
+        amountValue = (self.offerData[index].maxLimit ?? 0)
+        let item1 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                 bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                              number: amountValue,
+                                                              capValue: self.offerData[index].capValue ?? 0))
+        array.append(item1)
+
+        if (index+1) < self.offerData.count {
+            amountValue = ((self.offerData[index+1].minLimit ?? 0) + (self.offerData[index+1].maxLimit ?? 0))/2
+            let item2 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item2)
+
+            amountValue = self.offerData[index+1].maxLimit ?? 0
+            let item3 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item3)
+
+        }
+        self.delegate?.updateOffers(offerList: array)
+    }
+    
+    private func midiumToMaximumValueOffer(index: Int) {
+        var array = [OfferListData]()
+        var amountValue = self.amount
+        let item0 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                 bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                              number: self.amount,
+                                                              capValue: self.offerData[index].capValue ?? 0))
+        array.append(item0)
+
+        if (index+1) < self.offerData.count {
+            amountValue = (self.offerData[index+1].minLimit ?? 0)
+            let item2 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item2)
+
+            amountValue = ((self.offerData[index+1].minLimit ?? 0)+(self.offerData[index+1].maxLimit ?? 0))/2
+            let item3 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue,
+                                                                  capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item3)
+
+        }
+        self.delegate?.updateOffers(offerList: array)
+    }
+    private func maximumValueOffer(index: Int) {
+        var array = [OfferListData]()
+        var amountValue = self.amount
+        let item0 = OfferListData(amount: amountValue,
+                                 percentage: self.offerData[index].percentage ?? 0,
+                                 bonusAmount: percentageValue(percent: self.offerData[index].percentage ?? 0,
+                                                              number: self.amount, capValue: self.offerData[index].capValue ?? 0))
+        array.append(item0)
+        if (index+1) < self.offerData.count {
+            amountValue = ((self.offerData[index+1].minLimit ?? 0)+(self.offerData[index+1].maxLimit ?? 0))/2
+            
+            let item1 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue, capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item1)
+
+            amountValue = (self.offerData[index+1].maxLimit ?? 0)
+            let item2 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+1].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+1].percentage ?? 0,
+                                                                  number: amountValue, capValue: self.offerData[index+1].capValue ?? 0))
+            array.append(item2)
+        }
+        if (index+2) < self.offerData.count {
+            amountValue = ((self.offerData[index+2].minLimit ?? 0)+(self.offerData[index+2].maxLimit ?? 0))/2
+            let item3 = OfferListData(amount: amountValue,
+                                     percentage: self.offerData[index+2].percentage ?? 0,
+                                     bonusAmount: percentageValue(percent: self.offerData[index+2].percentage ?? 0,
+                                                                  number: amountValue, capValue: self.offerData[index+2].capValue ?? 0))
+            array.append(item3)
+        }
+        self.delegate?.updateOffers(offerList: array)
+    }
+    
     private func showOffersForEmpty() -> [OfferListData] {
         var array = [OfferListData]()
         for offer in self.offerData {
             let item = OfferListData(amount: offer.minLimit ?? 0,
                                      percentage: offer.percentage ?? 0,
                                      bonusAmount: percentageValue(percent: offer.percentage ?? 0,
-                                                                  number: offer.minLimit ?? 0))
+                                                                  number: offer.minLimit ?? 0, capValue: offer.capValue ?? 0))
             array.append(item)
         }
         return array
     }
     
-    private func percentageValue(percent: Int, number: Int) -> Int {
-        return ((percent*number)/100)
-    }
-    private  func createArray()  {
-        
+    private func percentageValue(percent: Int, number: Int, capValue: Int) -> Int {
+        return ((percent*number)/100) > capValue ? capValue : ((percent*number)/100)
     }
 }
 
-enum OfferAMountType {
-    case min
-    case minToLessMid
-    case fromMidToMax
-    case max
-}
+//enum OfferAMountType {
+//    case min
+//    case minToLessMid
+//    case fromMidToMax
+//    case max
+//}
