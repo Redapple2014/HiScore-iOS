@@ -193,7 +193,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKB-TZ-GB5" userLabel="Offer collections">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKB-TZ-GB5" userLabel="Offer collections" customClass="HSGradientView" customModule="HiScore" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="231" width="375" height="243"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-XF-2RN">
@@ -211,17 +211,20 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color3">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="value" name="HSBlackColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color2">
-                                                <color key="value" white="1" alpha="0.099490639389999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" name="HSBlackColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                                <color key="value" name="HSWhiteColor"/>
+                                                <color key="value" name="HSMediumDarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-NR-Bqk">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-NR-Bqk" customClass="HSGradientView" customModule="HiScore" customModuleProvider="target">
                                         <rect key="frame" x="15" y="16" width="41" height="41"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="percent" translatesAutoresizingMaskIntoConstraints="NO" id="J76-mK-PD8">
@@ -239,15 +242,29 @@
                                             <constraint firstItem="J76-mK-PD8" firstAttribute="centerY" secondItem="zjr-NR-Bqk" secondAttribute="centerY" id="aJr-9g-XI0"/>
                                             <constraint firstAttribute="width" constant="41" id="eHH-x0-88x"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                <color key="value" name="HSMediumDarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                                <color key="value" name="HSBlackColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color3">
+                                                <color key="value" name="HSBlackColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElipsebrownShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Vuw-l6-W6h">
                                         <rect key="frame" x="15" y="16" width="41" height="41"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElipsebrownShadow" translatesAutoresizingMaskIntoConstraints="NO" id="spD-13-had">
-                                        <rect key="frame" x="-146" y="-60" width="374" height="261"/>
+                                        <rect key="frame" x="-146" y="-60" width="200" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="261" id="Tb4-Gp-ucc"/>
-                                            <constraint firstAttribute="width" constant="374" id="oqb-Yr-g8i"/>
+                                            <constraint firstAttribute="height" constant="120" id="Tb4-Gp-ucc"/>
+                                            <constraint firstAttribute="width" constant="200" id="oqb-Yr-g8i"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy Offers (12)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kx-hJ-kiH">
@@ -315,7 +332,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.089999999999999997" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="percent" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-Bh-NY1">
-                                                                    <rect key="frame" x="42" y="86" width="36" height="36"/>
+                                                                    <rect key="frame" x="37" y="81" width="36" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="UlP-Bh-NY1" secondAttribute="height" id="2ld-C0-4L8"/>
                                                                         <constraint firstAttribute="width" constant="36" id="LTR-WX-TzG"/>
@@ -343,10 +360,10 @@
                                                                 <constraint firstItem="jxf-KZ-ksv" firstAttribute="centerX" secondItem="IhJ-dA-Wm2" secondAttribute="centerX" id="2py-GB-ufO"/>
                                                                 <constraint firstAttribute="bottom" secondItem="bQu-SC-Nub" secondAttribute="bottom" constant="11" id="DTF-Hv-FtC"/>
                                                                 <constraint firstItem="npE-eR-QUk" firstAttribute="top" secondItem="tKS-Rt-rd1" secondAttribute="bottom" constant="7" id="LsR-Xj-GIO"/>
-                                                                <constraint firstAttribute="bottom" secondItem="UlP-Bh-NY1" secondAttribute="bottom" constant="-5" id="MAI-Lo-Hks"/>
+                                                                <constraint firstAttribute="bottom" secondItem="UlP-Bh-NY1" secondAttribute="bottom" id="MAI-Lo-Hks"/>
                                                                 <constraint firstItem="bQu-SC-Nub" firstAttribute="centerX" secondItem="IhJ-dA-Wm2" secondAttribute="centerX" id="P1K-uC-BJw"/>
                                                                 <constraint firstItem="WrH-MA-Sz7" firstAttribute="centerX" secondItem="IhJ-dA-Wm2" secondAttribute="centerX" id="TJY-hE-DaN"/>
-                                                                <constraint firstAttribute="trailing" secondItem="UlP-Bh-NY1" secondAttribute="trailing" constant="-5" id="WEU-1x-tcA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="UlP-Bh-NY1" secondAttribute="trailing" id="WEU-1x-tcA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="npE-eR-QUk" secondAttribute="trailing" constant="7" id="bIN-9a-XCj"/>
                                                                 <constraint firstItem="bQu-SC-Nub" firstAttribute="top" secondItem="jxf-KZ-ksv" secondAttribute="bottom" constant="1" id="fVi-fm-yrf"/>
                                                                 <constraint firstItem="UlP-Bh-NY1" firstAttribute="width" secondItem="UlP-Bh-NY1" secondAttribute="height" id="fzp-0A-46W"/>
@@ -437,8 +454,8 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-Cv-AEH">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="164"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-Cv-AEH">
+                                        <rect key="frame" x="0.0" y="7900" width="375" height="164"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ib-Y1-S2e">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
@@ -536,6 +553,17 @@
                                     <constraint firstItem="Lh0-Cv-AEH" firstAttribute="leading" secondItem="OKB-TZ-GB5" secondAttribute="leading" id="rnJ-eK-9cS"/>
                                     <constraint firstItem="Lh0-Cv-AEH" firstAttribute="trailing" secondItem="2yQ-lT-BPJ" secondAttribute="trailing" id="s9a-pa-FtM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" name="HSBlackColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" name="HSBlackColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color3">
+                                        <color key="value" name="HSBlackColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-CP-Nwg" userLabel="ViewAmount">
                                 <rect key="frame" x="0.0" y="536" width="375" height="200"/>
@@ -685,6 +713,9 @@
                                             <fontDescription key="titleFontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="14"/>
                                             <color key="baseForegroundColor" name="HSBlackTextColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="continueButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K59-qx-Jcc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -815,6 +846,9 @@
         </namedColor>
         <namedColor name="HSGrayColor">
             <color red="0.73299998044967651" green="0.7369999885559082" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSMediumDarkBlue">
+            <color red="0.22400000691413879" green="0.23899999260902405" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HSNewDarkBlue">
             <color red="0.15686275064945221" green="0.16862747073173523" blue="0.21960783004760742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

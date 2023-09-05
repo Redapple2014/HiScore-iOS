@@ -19,8 +19,8 @@ class AddCashViewModel {
     var delegate: AddCashDelegate?
     var totalOfferCount = 4
     var amount = 0
-    var offerData: [OfferData]!
-    
+    private var offerData: [OfferData]!
+   
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
         networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
                                  model: AddCashResponseModel.self) { response in

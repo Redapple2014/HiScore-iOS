@@ -30,6 +30,7 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
     var viewModel: AddCashViewModel!
+    var responseModel: AddCashResponseModel!
     var offerDataList: [OfferListData]?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,7 @@ extension AddCashViewController {
         viewModel.getAddMoneyScreenData { response in
             switch response {
             case .success(let response):
+                self.responseModel = response
                 Log.d(response)
                 break
             case .failure(let error):
@@ -130,7 +132,14 @@ extension AddCashViewController {
         self.enterAmountTextField.text = ""
         self.view.endEditing(true)
     }
-
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        if Int(enterAmountTextField.text ?? "0") ?? 0 < responseModel.data?.minDepositAmt ?? 0 {
+            errorMinimumAmount.isHidden = false
+            labelMinimumErrorValue.text = "Please enter at least ₹\(responseModel.data?.minDepositAmt ?? 0)"
+        } else {
+            errorMinimumAmount.isHidden = true
+        }
+    }
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
          self.view.endEditing(true)
     }
@@ -190,5 +199,13 @@ extension AddCashViewController: AddCashDelegate {
     func updateOffers(offerList: [OfferListData]) {
         self.offerDataList = offerList
         self.collectionOfCashOffers.reloadData()
+        let filtered = offerList.filter { $0.isSelected }
+        if filtered.count > 0 {
+            stackAmountDetails.isHidden = false
+            viewYouGot.isHidden = false
+        } else {
+            stackAmountDetails.isHidden = true
+            viewYouGot.isHidden = true
+        }
     }
 }
