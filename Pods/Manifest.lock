@@ -1,6 +1,7 @@
 PODS:
   - ButtonProgressBar-iOS (1.0.1)
   - DTTextField (0.7.0)
+  - EasyTipView (2.1.0)
   - HGCircularSlider (2.2.0)
   - IQKeyboardManager (6.5.11)
   - Kingfisher (7.7.0)
@@ -21,6 +22,7 @@ PODS:
 DEPENDENCIES:
   - ButtonProgressBar-iOS
   - DTTextField
+  - EasyTipView (~> 2.1)
   - HGCircularSlider
   - IQKeyboardManager
   - Kingfisher
@@ -36,6 +38,7 @@ SPEC REPOS:
   trunk:
     - ButtonProgressBar-iOS
     - DTTextField
+    - EasyTipView
     - HGCircularSlider
     - IQKeyboardManager
     - Kingfisher
@@ -52,6 +55,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ButtonProgressBar-iOS: 1127f15c7ab843648febc857fc2018c8224675c7
   DTTextField: 768d5991211599145f289971e5936f8bb29990bb
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
@@ -65,6 +69,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
 
-PODFILE CHECKSUM: 1dd243c5829dbb5384424558775d0e611acd2b88
+PODFILE CHECKSUM: 36ed889b0b469f3b12e46b1d0787728db58201ec
 
 COCOAPODS: 1.12.1

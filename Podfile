@@ -55,4 +55,8 @@ pod 'Kingfisher'
 # NVActivityIndicatorView is a collection of awesome loading animations.
 # https://github.com/ninjaprox/NVActivityIndicatorView
 pod 'NVActivityIndicatorView'
+
+# EasyTipView is a fully customizable tooltip view written in Swift that can be used as a call to action or informative tip.
+# https://github.com/teodorpatras/EasyTipView
+pod 'EasyTipView', '~> 2.1'
 end

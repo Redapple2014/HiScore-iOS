@@ -21,6 +21,8 @@
 		AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */; };
 		AF4DE2F12AA5FAB200723DE0 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */; };
 		AF4DE2F32AA5FB4200723DE0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */; };
+		AF631FDC2AA72BB700BB195C /* WalletBreakDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */; };
+		AF631FDE2AA734F900BB195C /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF631FDD2AA734F900BB195C /* UserDataModel.swift */; };
 		AF7969D02A9CB170004BCF81 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7969CF2A9CB170004BCF81 /* Home.storyboard */; };
 		AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7969D32A9CB222004BCF81 /* MoreViewController.swift */; };
 		AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7969D52A9CB238004BCF81 /* HomeViewController.swift */; };
@@ -127,6 +129,8 @@
 		AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewModel.swift; sourceTree = "<group>"; };
 		AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBreakDownCell.swift; sourceTree = "<group>"; };
+		AF631FDD2AA734F900BB195C /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		AF7969CF2A9CB170004BCF81 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AF7969D32A9CB222004BCF81 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AF7969D52A9CB238004BCF81 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -473,9 +477,11 @@
 		C7196CC32A9CA96900BBC902 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */,
 				AF4DE2EF2AA5FA9E00723DE0 /* ViewModel */,
 				C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */,
-				AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */,
+				AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */,
+				AF631FDD2AA734F900BB195C /* UserDataModel.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1053,6 +1059,7 @@
 				C7D521832A94BDFB00454B67 /* RewardPopupView.swift in Sources */,
 				84D2A5CD2A9115060098A1F4 /* String+Extension.swift in Sources */,
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
+				AF631FDE2AA734F900BB195C /* UserDataModel.swift in Sources */,
 				C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */,
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
 				C7AD48DD2A8E3FAB0063CEBE /* UIDevice+Extension.swift in Sources */,
@@ -1076,6 +1083,7 @@
 				C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
+				AF631FDC2AA72BB700BB195C /* WalletBreakDownCell.swift in Sources */,
 				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,
 				AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */,

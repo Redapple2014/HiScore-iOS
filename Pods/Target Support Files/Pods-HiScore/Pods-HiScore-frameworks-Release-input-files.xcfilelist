@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-HiScore/Pods-HiScore-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/ButtonProgressBar-iOS/ButtonProgressBar_iOS.framework
 ${BUILT_PRODUCTS_DIR}/DTTextField/DTTextField.framework
+${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework
 ${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
