@@ -7,11 +7,11 @@
 
 import UIKit
 import MHLoadingButton
+import EasyTipView
 
 class WalletViewController: BaseViewController {
     @IBOutlet weak var buttonAddCash: LoadingButton!
     @IBOutlet weak var buttonWithdraw: LoadingButton!
-    @IBOutlet weak var tableViewWalletBreakdown: UITableView!
     @IBOutlet weak var heightwalletBreakdownView: NSLayoutConstraint!
     @IBOutlet weak var walletView: HSShadowView!
     @IBOutlet weak var detailsView: HSShadowView!
@@ -21,28 +21,70 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var kycStatus: UILabel!
     @IBOutlet weak var subkycStatus: UILabel!
     @IBOutlet weak var kycStatusIcon: UIImageView!
+   
+    @IBOutlet weak var buttonDepositeHint: UIButton!
+    @IBOutlet weak var buttonRummyCashHint: UIButton!
+    @IBOutlet weak var buttonWinningHint: UIButton!
+    
+    @IBOutlet weak var labelDepositAmount: UILabel!
+    @IBOutlet weak var labelWinningAmount: UILabel!
+    @IBOutlet weak var labelRummyCashAmount: UILabel!
+    
+    
     private var viewModel: WalletViewModel!
+    weak var tipView: EasyTipView?
+    
     override func updateUI() {
         super.updateUI()
     }
 }
 //MARK: - View Life Cycle -
 extension WalletViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let hiScoreNetworkService = HiScoreNetworkRepository()
         viewModel = WalletViewModel(networkService: hiScoreNetworkService)
-        viewModel.getWalletDetails { response in
-            DispatchQueue.main.async {
-                switch response {
-                case .success(let response):
-                    Log.d(response)
-                    self.loadData()
-                case .failure(let error):
-                    Log.d(error.localizedDescription)
-                }
-            }
-        }
+        getWalletDetails()
+        getKYCStatus()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        heightwalletBreakdownView.constant =  3 * 60 // arrayCount * tablerowHeight
+        buttonAddCash.layoutIfNeeded()
+        buttonAddCash.setNeedsLayout()
+        buttonWithdraw.layoutIfNeeded()
+        buttonWithdraw.setNeedsLayout()
+        buttonAddCash.setUpButtonWithGradientBackground(type: .yellow)
+        buttonWithdraw.setUpButtonWithGradientBackground(type: .yellow)
+    }
+}
+//MARK: - Button actions -
+extension WalletViewController {
+    @IBAction func addCash(_ sender: Any) {
+        //        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
+        //            return
+        //        }
+        //        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+
+private extension WalletViewController {
+
+    func loadData() {
+        let depositAmt = self.viewModel.walletData?.depositAmount ?? 0
+        let winningAmt = self.viewModel.walletData?.winningsAmount ?? 0
+        let rummyCash = self.viewModel.walletData?.rummyCash ?? 0.0
+        let totalBalance = Double(depositAmt) + Double(winningAmt) + rummyCash
+        self.hiscoreWallet.text = totalBalance.description
+        self.transactionProgress.text = "\(self.viewModel.walletData?.withdrawalProgress ?? 0) Transaction in progress"
+        self.labelDepositAmount.text = self.viewModel.walletData?.depositAmount.description
+        self.labelWinningAmount.text = self.viewModel.walletData?.winningsAmount.description
+        self.labelRummyCashAmount.text = self.viewModel.walletData?.rummyCash.description
+    }
+    func getKYCStatus() {
         viewModel.getKycStatus { result in
             DispatchQueue.main.async {
                 switch result {
@@ -55,7 +97,7 @@ extension WalletViewController {
                     } else {
                         self.kycStatus.text = ""
                         self.subkycStatus.text = ""
-                      //  self.kycStatusIcon.image = UIImage(named: "errorIcon")
+                        //  self.kycStatusIcon.image = UIImage(named: "errorIcon")
                     }
                 case .failure(let error):
                     Log.d(error)
@@ -63,65 +105,69 @@ extension WalletViewController {
             }
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        heightwalletBreakdownView.constant =  3 * 60 // arrayCount * tablerowHeight
-        buttonAddCash.layoutIfNeeded()
-        buttonAddCash.setNeedsLayout()
-        buttonWithdraw.layoutIfNeeded()
-        buttonWithdraw.setNeedsLayout()
-        buttonAddCash.setUpButtonWithGradientBackground(type: .yellow)
-        buttonWithdraw.setUpButtonWithGradientBackground(type: .yellow)
-        tableViewWalletBreakdown.layoutIfNeeded()
-        tableViewWalletBreakdown.setNeedsLayout()
-        tableViewWalletBreakdown.reloadData()
+    func getWalletDetails() {
+        viewModel.getWalletDetails { response in
+            DispatchQueue.main.async {
+                switch response {
+                case .success(let response):
+                    Log.d(response)
+                    self.loadData()
+                case .failure(let error):
+                    Log.d(error.localizedDescription)
+                }
+            }
+        }
     }
 }
-//MARK: - Button actions -
-extension WalletViewController {
-    @IBAction func addCash(_ sender: Any) {
-        //        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
-        //            return
-        //        }
-        //        self.navigationController?.pushViewController(viewController, animated: true)
-    }
-}
-//MARK: - Tableview delegate and datasource
 
-extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+extension WalletViewController: EasyTipViewDelegate {
+    func easyTipViewDidTap(_ tipView: EasyTipView) {
+        Log.d("\(tipView) did tap!")
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? WalletBreakDownCell else {
-            return WalletBreakDownCell()
-        }
-        switch indexPath.row {
-        case 0:
-            cell.type.text = "Deposit"
-            cell.amount.text = viewModel.walletData?.depositAmount.description
-        case 1:
-            cell.type.text = "Winnings"
-            cell.amount.text = viewModel.walletData?.winningsAmount.description
-        default:
-            cell.type.text = "Rummycash"
-            cell.amount.text = viewModel.walletData?.rummyCash.description
-        }
-        return cell
+    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
+        Log.d("\(tipView) did dismiss!")
     }
-}
-
-private extension WalletViewController {
-    func loadData() {
-        let depositAmt = self.viewModel.walletData?.depositAmount ?? 0
-        let winningAmt = self.viewModel.walletData?.winningsAmount ?? 0
-        let rummyCash = self.viewModel.walletData?.rummyCash ?? 0.0
-        let totalBalance = Double(depositAmt) + Double(winningAmt) + rummyCash
-        self.hiscoreWallet.text = totalBalance.description
-        self.transactionProgress.text = "\(self.viewModel.walletData?.withdrawalProgress ?? 0) Transaction in progress"
-        self.tableViewWalletBreakdown.reloadData()
+    @IBAction func buttonAction(sender : UIButton) {
+        showTooltip()
     }
-}
+    @objc func showDepositHint() {
+        let customHintView = TipView(frame: UIScreen.main.bounds)
+        customHintView.setMessage(title: "Deposit",
+                                  message: "Cash that you deposit into your HiScore wallet. You cannot withdraw it but can use it to join contests",
+                                  image: UIImage(named: "bankNotes")!)
+        
+        var preferences = EasyTipView.globalPreferences
+        preferences.drawing.backgroundColor = .clear
 
+        preferences.animating.dismissTransform = CGAffineTransform(translationX: 0, y: -15)
+        preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: 15)
+        preferences.animating.showInitialAlpha = 0
+        preferences.animating.showDuration = 1
+        preferences.animating.dismissDuration = 1
+        preferences.drawing.arrowPosition = .bottom
+
+        preferences.positioning.contentInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        let easyTip = EasyTipView(contentView: customHintView, preferences: preferences, delegate: nil)
+        easyTip.show(forView: buttonDepositeHint, withinSuperview: self.view)
+    }
+    @objc func showTooltip() {
+          // Create the tooltip content view.
+          let tooltipViewController = UIViewController()
+          let customHintView = TipView(frame: CGRect(x: 0, y: 0, width: 200, height: 80))
+          customHintView.setMessage(title: "Deposit",
+                                  message: "Cash that you deposit into your HiScore wallet. You cannot withdraw it but can use it to join contests",
+                                  image: UIImage(named: "bankNotes")!)
+          tooltipViewController.view = customHintView
+          
+          // Create a popover presentation controller.
+          let popover = tooltipViewController.popoverPresentationController
+          popover?.sourceView = buttonDepositeHint // The view from which the popover will appear.
+          popover?.sourceRect = buttonDepositeHint.bounds // The position within the source view.
+          popover?.permittedArrowDirections = .up // The arrow direction.
+          
+          // Present the tooltip.
+          present(tooltipViewController, animated: true, completion: nil)
+      }
+}

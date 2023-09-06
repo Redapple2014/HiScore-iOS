@@ -122,4 +122,7 @@ extension UIColor {
     static let HSGradientBlue: UIColor = {
         return UIColor(hex: "#3C425C")
     }()
+    static let HSLightGreen: UIColor = {
+       return UIColor(hex: "B2F3B1")
+    }()
 }

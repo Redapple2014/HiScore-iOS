@@ -21,7 +21,6 @@
 		AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */; };
 		AF4DE2F12AA5FAB200723DE0 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */; };
 		AF4DE2F32AA5FB4200723DE0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */; };
-		AF631FDC2AA72BB700BB195C /* WalletBreakDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */; };
 		AF631FDE2AA734F900BB195C /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF631FDD2AA734F900BB195C /* UserDataModel.swift */; };
 		AF7969D02A9CB170004BCF81 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7969CF2A9CB170004BCF81 /* Home.storyboard */; };
 		AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7969D32A9CB222004BCF81 /* MoreViewController.swift */; };
@@ -38,6 +37,8 @@
 		AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */; };
 		AF916C1F2A8E64C000125808 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF916C1E2A8E64C000125808 /* Tabbar.storyboard */; };
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
+		AFA73A252AA874C200B7F030 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA73A242AA874C200B7F030 /* TipView.xib */; };
+		AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA73A262AA88D0D00B7F030 /* TipView.swift */; };
 		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
@@ -129,7 +130,6 @@
 		AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewModel.swift; sourceTree = "<group>"; };
 		AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBreakDownCell.swift; sourceTree = "<group>"; };
 		AF631FDD2AA734F900BB195C /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		AF7969CF2A9CB170004BCF81 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AF7969D32A9CB222004BCF81 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +146,8 @@
 		AF916C1C2A8E3D1B00125808 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
 		AF916C1E2A8E64C000125808 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		AFA73A242AA874C200B7F030 /* TipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
+		AFA73A262AA88D0D00B7F030 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 		AF89AEE72A8CCCC200AE2318 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				AFA73A232AA85FE200B7F030 /* ToolTipView */,
 				C7196CD22A9CBF2200BBC902 /* FooterWallet */,
 				C7196CD72A9CC80D00BBC902 /* FetchLocation */,
 				C7D521812A94BC8700454B67 /* Popup */,
@@ -465,6 +468,15 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		AFA73A232AA85FE200B7F030 /* ToolTipView */ = {
+			isa = PBXGroup;
+			children = (
+				AFA73A242AA874C200B7F030 /* TipView.xib */,
+				AFA73A262AA88D0D00B7F030 /* TipView.swift */,
+			);
+			path = ToolTipView;
+			sourceTree = "<group>";
+		};
 		AFEE60262A9335A500CB1D9A /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,7 +492,6 @@
 				AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */,
 				AF4DE2EF2AA5FA9E00723DE0 /* ViewModel */,
 				C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */,
-				AF631FDB2AA72BB700BB195C /* WalletBreakDownCell.swift */,
 				AF631FDD2AA734F900BB195C /* UserDataModel.swift */,
 			);
 			path = Wallet;
@@ -980,6 +991,7 @@
 				C75F37202A791BC400925880 /* Assets.xcassets in Resources */,
 				AF916C1F2A8E64C000125808 /* Tabbar.storyboard in Resources */,
 				C7D521852A94BE0800454B67 /* RewardPopupView.xib in Resources */,
+				AFA73A252AA874C200B7F030 /* TipView.xib in Resources */,
 				C72618B02A84ED7B00738F7F /* Rajdhani-SemiBold.ttf in Resources */,
 				C75F371E2A791BC200925880 /* Main.storyboard in Resources */,
 				C72618B12A84ED7B00738F7F /* Rajdhani-Light.ttf in Resources */,
@@ -1069,6 +1081,7 @@
 				AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */,
 				C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */,
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
+				AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
@@ -1083,7 +1096,6 @@
 				C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
-				AF631FDC2AA72BB700BB195C /* WalletBreakDownCell.swift in Sources */,
 				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,
 				AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */,
@@ -1259,7 +1271,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K2D9U528Z9;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = K2D9U528Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HiScore/Info.plist;
@@ -1281,7 +1293,7 @@
 				MARKETING_VERSION = 1751;
 				PRODUCT_BUNDLE_IDENTIFIER = hiscore.ra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = hiscore_ra_dev;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = hiscore_ra_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1298,7 +1310,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K2D9U528Z9;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = K2D9U528Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HiScore/Info.plist;
@@ -1320,7 +1332,7 @@
 				MARKETING_VERSION = 1751;
 				PRODUCT_BUNDLE_IDENTIFIER = hiscore.ra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = hiscore_ra_dev;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = hiscore_ra_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
