@@ -127,7 +127,7 @@ extension UIColor {
 
 
     static let HSGreen: UIColor = {
-        return UIColor(hex: "#017A00FF").withAlphaComponent(1)
+        return UIColor(hex: "#027A00").withAlphaComponent(1)
     }()
 
     static let HSViolet: UIColor = {
@@ -136,6 +136,10 @@ extension UIColor {
 
     static let HSNewdarkBlue: UIColor = {
         return UIColor(hex: "#282B38")
+    }()
+    
+    static let HSYellowColor2: UIColor = {
+        return UIColor(hex: "#F2CB94")
     }()
 }
 

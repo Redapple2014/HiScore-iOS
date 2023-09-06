@@ -175,7 +175,9 @@ extension AddCashViewController {
     }
 }
 extension AddCashViewController {
-    //
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func buttonArrowOrITapped(_ sender: Any) {
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
             showNoMore()
