@@ -11,6 +11,11 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
 
+    @IBOutlet weak var labelYouGet: UILabel!
+    @IBOutlet weak var labelDeposit: UILabel!
+    @IBOutlet weak var labelCashBack: UILabel!
+    @IBOutlet weak var labelTicket: UILabel!
+    
     @IBOutlet weak var labelMinimumErrorValue: UILabel!
     @IBOutlet weak var errorMinimumAmount: UIView!
     @IBOutlet weak var vwGradientCircleNoOffers: HSGradientView!
@@ -161,6 +166,7 @@ extension AddCashViewController: UITextFieldDelegate {
         viewYouGot.isHidden = true
         stackAmountDetails.isHidden = true
         imageVwAmount.isHidden = true
+        errorMinimumAmount.isHidden = true
         self.view.layoutIfNeeded()
         
     }
@@ -204,16 +210,22 @@ extension AddCashViewController: AddCashDelegate {
         self.collectionOfCashOffers.reloadData()
         let filtered = offerList.filter { $0.isSelected }
         if filtered.count > 0 {
-            if constantOfbuttonContainerViewBottom.constant > 0 {
-                stackAmountDetails.isHidden = true
-                viewYouGot.isHidden = true
-            } else {
-                stackAmountDetails.isHidden = false
-                viewYouGot.isHidden = false
-            }
+            stackAmountDetails.isHidden = false
+            viewYouGot.isHidden = false
+            calculateTotalDeposit(data: filtered[0])
         } else {
             stackAmountDetails.isHidden = true
             viewYouGot.isHidden = true
         }
     }
+}
+
+extension AddCashViewController {
+    func calculateTotalDeposit(data: OfferListData) {
+        labelDeposit.text = "\(data.amount)"
+        labelCashBack.text = "\(data.bonusAmount)"
+        labelTicket.text = "0"
+        labelYouGet.text = "\(data.amount+data.bonusAmount)"
+    }
+
 }
