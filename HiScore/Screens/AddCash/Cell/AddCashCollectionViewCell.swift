@@ -32,22 +32,23 @@ class AddCashCollectionViewCell: UICollectionViewCell {
         }
     }
     func showSelectedUI() {
-        viewBG.backgroundColor = UIColor.clear
+       // viewBG.backgroundColor = UIColor.clear
         vwNotSelected.isHidden = true
         imageISelected.isHidden = false
         labelBonusPercentageAmount.textColor = .HSGreen
         labeOfferPercentage.alpha = 0.5
         labeOfferPercentage.textColor = .HSBlackColor
         labeITotalAmount.textColor =  .HSBlackColor
-
+        imageISelected.isHidden = false
     }
     func showNotSelectedUI() {
-        viewBG.backgroundColor = .clear
+      //  viewBG.backgroundColor = .clear
         vwNotSelected.isHidden = false
         imageISelected.isHidden = true
         labelBonusPercentageAmount.textColor =  .HSWhiteColor
         labeOfferPercentage.alpha = 1
         labeOfferPercentage.textColor = .HSYellowColor2
         labeITotalAmount.textColor =  .HSWhiteColor
+        imageISelected.isHidden = true
     }
 }

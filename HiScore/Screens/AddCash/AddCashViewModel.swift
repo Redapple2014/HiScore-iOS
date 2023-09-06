@@ -45,15 +45,20 @@ class AddCashViewModel {
         if self.amount == 0 {
             delegate?.updateOffers(offerList: showOffersForEmpty())
         } else  {
-            checkInputNumber()
-            checkAmountType()
+            if checkInputNumber() {
+                checkAmountType()
+            } else {
+                delegate?.updateOffers(offerList: showOffersForEmpty())
+            }
         }
     }
-    private func checkInputNumber() {
+    private func checkInputNumber() -> Bool {
         _ = offerData.sorted(by: { $0.minLimit ?? 0 > $1.minLimit ?? 0 })
         if offerData.count > 0 && amount < offerData[0].minLimit ?? 0 {
-            self.delegate?.errorInPut()
-            return
+            //self.delegate?.errorInPut()
+            return false
+        } else {
+            return true
         }
     }
     private func checkAmountType() {
