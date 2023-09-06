@@ -87,6 +87,11 @@ extension AddCashViewController {
             buttonArrowOrI.setBackgroundImage(UIImage(named: "rightArrow"), for: .normal)
             labelOfferTotal.text = "Rummy Offers"
         }
+        if self.responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 {
+            hideOffersData()
+        } else {
+            showOffersData()
+        }
     }
     private func initSettings() {
         viewModel.delegate = self
@@ -105,6 +110,7 @@ extension AddCashViewController {
         viewNoOffers.isHidden = true
         vwContainerCircleNoOffers.isHidden = true
         vwGradientCircleNoOffers.isHidden = true
+        labelOfferTotal.text = "No Offers available"
     }
     private func hideOffersData() {
         collectionOfCashOffers.isHidden = true
@@ -308,6 +314,4 @@ extension AddCashViewController: RewardPopupDelegate {
     func okayTapped() {
         self.viewReward.isHidden = true
     }
-    
-    
 }
