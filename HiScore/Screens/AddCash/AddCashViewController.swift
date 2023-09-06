@@ -11,6 +11,9 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
 
+    @IBOutlet weak var viewReward: RewardPopupView!
+    @IBOutlet weak var vwAmountSuperView: UIView!
+    @IBOutlet weak var buttonArrowOrI: UIButton!
     @IBOutlet weak var labelYouGet: UILabel!
     @IBOutlet weak var labelDeposit: UILabel!
     @IBOutlet weak var labelCashBack: UILabel!
@@ -62,6 +65,7 @@ extension AddCashViewController {
             switch response {
             case .success(let response):
                 self.responseModel = response
+                self.postApiUI()
                 Log.d(response)
                 break
             case .failure(let error):
@@ -72,8 +76,19 @@ extension AddCashViewController {
             }
         }
     }
-
-    func initSettings() {
+    private func postApiUI() {
+        if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
+            labelOfferTotal.text = "First Deposit"
+            buttonArrowOrI.setImage(UIImage(named: "errorYellow"))
+            buttonArrowOrI.imageView?.tintColor = .HSDarkYellowButtonColor
+            buttonArrowOrI.setBackgroundImage(nil, for: .normal)
+        } else {
+            buttonArrowOrI.setImage(nil)
+            buttonArrowOrI.setBackgroundImage(UIImage(named: "rightArrow"), for: .normal)
+            labelOfferTotal.text = "Rummy Offers"
+        }
+    }
+    private func initSettings() {
         viewModel.delegate = self
         IQKeyboardManager.shared().isEnableAutoToolbar = false
         IQKeyboardManager.shared().isEnabled = false
@@ -85,25 +100,25 @@ extension AddCashViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
-    func showOffersData() {
+    private func showOffersData() {
         collectionOfCashOffers.isHidden = false
         viewNoOffers.isHidden = true
         vwContainerCircleNoOffers.isHidden = true
         vwGradientCircleNoOffers.isHidden = true
     }
-    func hideOffersData() {
+    private func hideOffersData() {
         collectionOfCashOffers.isHidden = true
         viewNoOffers.isHidden = false
         vwContainerCircleNoOffers.isHidden = false
         vwGradientCircleNoOffers.isHidden = false
         showNoOffersImage()
     }
-    func initUI() {
+    private func initUI() {
+        labelUptoCash.text = "Click to apply offers"
         errorMinimumAmount.isHidden = true
         showOffersData()
         imageBGContinue.isHidden = true
-        stackAmountDetails.isHidden = true
-        viewYouGot.isHidden = true
+        hideAmountSection()
         buttonContinue.initLoadingButton()
         viewTextField.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
         viewTextField.layer.cornerRadius = 8
@@ -117,7 +132,7 @@ extension AddCashViewController {
          clearButton.isHidden = true
         view.setNeedsLayout()
     }
-    func showNoOffersImage() {
+    private func showNoOffersImage() {
         let view = UIView()
         view.backgroundColor = .clear
         view.frame = CGRect(x: 22, y: 20, width: 50, height: 50)
@@ -132,8 +147,42 @@ extension AddCashViewController {
         view.layer.addSublayer(layer0)
         self.vwContainerCircleNoOffers.addSubview(view)
     }
+    private func showNoMore() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.viewReward.buttonCross.transform = CGAffineTransform(translationX: 0, y: self.viewReward.buttonCross.frame.size.height)
+            UIView.animate(withDuration: 0.2, animations: {
+                self.viewReward.isHidden = true
+                self.viewReward.buttonCross.transform = .identity
+            })
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.viewReward.viewCintainer.transform = CGAffineTransform(translationX: 0, y: self.viewReward.viewCintainer.frame.size.height)
+            UIView.animate(withDuration: 0.4, animations: {
+                self.viewReward.isHidden = false
+                self.viewReward.viewCintainer.transform = .identity
+            })
+        }
+        
+        self.viewReward.delegate = self
+        guard let data = self.responseModel.data?.cashbackKnowMoreSection?.rewardList else { return }
+        self.viewReward.showDefaultData(data: data[0], type: .depositCash)
+        self.viewReward.showDefaultData(data: data[1], type: .winningCash)
+        self.viewReward.showDefaultData(data: data[2], type: .rummyCash)
+        self.viewReward.showDefaultData(data: data[3], type: .freeEntryTickets)
+        self.viewReward.showDefaultData(data: data[4], type: .vouchersAndOffers)
+
+    }
 }
 extension AddCashViewController {
+    //
+    @IBAction func buttonArrowOrITapped(_ sender: Any) {
+        if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
+            showNoMore()
+        } else {
+            // offer page
+        }
+    }
     @IBAction func clearButtonTapped(_ sender: Any) {
         self.enterAmountTextField.text = ""
         self.view.endEditing(true)
@@ -147,6 +196,7 @@ extension AddCashViewController {
         }
     }
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        
          self.view.endEditing(true)
     }
 }
@@ -163,8 +213,6 @@ extension AddCashViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         imageBGContinue.isHidden = false
         constantOfbuttonContainerViewBottom.constant = 216
-        viewYouGot.isHidden = true
-        stackAmountDetails.isHidden = true
         imageVwAmount.isHidden = true
         errorMinimumAmount.isHidden = true
         self.view.layoutIfNeeded()
@@ -173,7 +221,14 @@ extension AddCashViewController: UITextFieldDelegate {
     @objc func editingText(_ textField: UITextField) {
         let amount = textField.text
         viewModel.amount = Int(amount ?? "0") ?? 0
+        clearButton.isHidden = false
         viewModel.showOffers()
+        
+        if (textField.text?.count ?? 0) == 0 {
+            clearButton.isHidden = true
+        } else {
+            clearButton.isHidden = false
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -181,6 +236,7 @@ extension AddCashViewController: UITextFieldDelegate {
         imageBGContinue.isHidden = true
         constantOfbuttonContainerViewBottom.constant = 0
         imageVwAmount.isHidden = false
+        clearButton.isHidden = true
     }
 }
 // MARK: - CollectionView UICollectionViewDataSource -
@@ -205,18 +261,36 @@ extension AddCashViewController: UICollectionViewDelegateFlowLayout {
 }
  
 extension AddCashViewController: AddCashDelegate {
+    
     func updateOffers(offerList: [OfferListData]) {
         self.offerDataList = offerList
         self.collectionOfCashOffers.reloadData()
         let filtered = offerList.filter { $0.isSelected }
         if filtered.count > 0 {
-            stackAmountDetails.isHidden = false
-            viewYouGot.isHidden = false
+            showAmountSection()
             calculateTotalDeposit(data: filtered[0])
+            labelUptoCash.text = "Get upto ₹\(filtered[0].bonusAmount) Bonus Cash"
         } else {
-            stackAmountDetails.isHidden = true
-            viewYouGot.isHidden = true
+            hideAmountSection()
+            labelUptoCash.text =  "Click to apply offers"
         }
+    }
+    
+    func errorInPut() {
+        hideAmountSection()
+    }
+    
+    func showAmountSection() {
+        stackAmountDetails.isHidden = false
+        viewYouGot.isHidden = false
+        vwAmountSuperView.backgroundColor = .clear
+        imageVwAmount.backgroundColor = .black
+    }
+    func hideAmountSection() {
+        stackAmountDetails.isHidden = true
+        viewYouGot.isHidden = true
+        vwAmountSuperView.backgroundColor = .clear
+        imageVwAmount.backgroundColor = .clear
     }
 }
 
@@ -227,5 +301,11 @@ extension AddCashViewController {
         labelTicket.text = "0"
         labelYouGet.text = "\(data.amount+data.bonusAmount)"
     }
-
+}
+extension AddCashViewController: RewardPopupDelegate {
+    func okayTapped() {
+        self.viewReward.isHidden = true
+    }
+    
+    
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol AddCashDelegate {
     func updateOffers(offerList: [OfferListData])
+    func errorInPut()
 }
 class AddCashViewModel {
     private let networkService: HiScoreNetworkServiceprotocol
@@ -17,7 +18,7 @@ class AddCashViewModel {
         self.networkService = networkService
     }
     var delegate: AddCashDelegate?
-    var totalOfferCount = 4
+//    var totalOfferCount = 4
     var amount = 0
     private var offerData: [OfferData]!
    
@@ -44,7 +45,15 @@ class AddCashViewModel {
         if self.amount == 0 {
             delegate?.updateOffers(offerList: showOffersForEmpty())
         } else  {
+            checkInputNumber()
             checkAmountType()
+        }
+    }
+    private func checkInputNumber() {
+        _ = offerData.sorted(by: { $0.minLimit ?? 0 > $1.minLimit ?? 0 })
+        if offerData.count > 0 && amount < offerData[0].minLimit ?? 0 {
+            self.delegate?.errorInPut()
+            return
         }
     }
     private func checkAmountType() {
@@ -57,10 +66,6 @@ class AddCashViewModel {
     }
     private func findRange(min: Int, max: Int, index: Int) {
         let mid = (min+max)/2
-//        let distanceFromMin = amount-min
-//        let distanceFromMax = max-amount
-//        let distanceFromMid = abs(mid-amount)
-        
         if amount == min {
             minimumValueOffer(index:index)
         }  else if amount > min && amount < mid {

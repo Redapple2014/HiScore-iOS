@@ -38,7 +38,7 @@ struct AddCashDataClass: Codable {
 
 // MARK: - CashbackKnowMoreSection
 struct CashbackKnowMoreSection: Codable {
-    let rewardList: [RewardList]
+    let rewardList: [RewardsList]
 
     enum CodingKeys: String, CodingKey {
         case rewardList = "reward_list"
@@ -46,16 +46,16 @@ struct CashbackKnowMoreSection: Codable {
 }
 
 // MARK: - RewardList
-struct RewardList: Codable {
-    let rewardTitle, rewardDesc: String?
-    let rewardIcon: String?
-
-    enum CodingKeys: String, CodingKey {
-        case rewardTitle = "reward_title"
-        case rewardDesc = "reward_desc"
-        case rewardIcon = "reward_icon"
-    }
-}
+//struct RewardList: Codable {
+//    let rewardTitle, rewardDesc: String?
+//    let rewardIcon: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case rewardTitle = "reward_title"
+//        case rewardDesc = "reward_desc"
+//        case rewardIcon = "reward_icon"
+//    }
+//}
 
 // MARK: - OfferTypes
 struct OfferTypes: Codable {
