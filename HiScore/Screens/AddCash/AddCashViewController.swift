@@ -87,12 +87,13 @@ extension AddCashViewController {
     }
     private func postApiUI() {
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-            labelOfferTotal.text = "First Deposit"
+            labelOfferTotal.text = responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 ? "First Deposit" : "No Offers available"
             imageArrowOrI.image = UIImage(named: "errorYellow")
             imageArrowOrI.tintColor = .HSDarkYellowButtonColor
         } else {
             imageArrowOrI.image = UIImage(named: "rightArrow")
-            labelOfferTotal.text = "Rummy Offers"
+            labelOfferTotal.text = responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 ? "Rummy Offers" : "No Offers available"
+            
         }
         if self.responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 {
             showOffersData()
@@ -219,7 +220,11 @@ extension AddCashViewController {
         if Int(enterAmountTextField.text ?? "0") ?? 0 < responseModel.data?.minDepositAmt ?? 0 {
             errorMinimumAmount.isHidden = false
             labelMinimumErrorValue.text = "Please enter at least ₹\(responseModel.data?.minDepositAmt ?? 0)"
+            viewTextField.layer.borderColor = UIColor.HSRedColor.cgColor
         } else {
+            viewTextField.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
+            viewTextField.layer.cornerRadius = 8
+            viewTextField.layer.borderWidth = 1.0
             errorMinimumAmount.isHidden = true
         }
     }
@@ -260,6 +265,10 @@ extension AddCashViewController: UITextFieldDelegate {
         } else {
             clearButton.isHidden = false
         }
+        viewTextField.layer.borderColor = UIColor.HSWhiteColor.withAlphaComponent(0.75).cgColor
+        viewTextField.layer.cornerRadius = 8
+        viewTextField.layer.borderWidth = 1.0
+
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
