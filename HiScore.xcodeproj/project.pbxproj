@@ -87,6 +87,8 @@
 		C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0C1BD2A824CED0096E958 /* UIColor+Additions.swift */; };
 		C7C0C1C42A8252570096E958 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0C1C32A8252570096E958 /* Logger.swift */; };
 		C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0C1C62A82528A0096E958 /* NetworkReachability.swift */; };
+		C7C221FF2AA9B02500269D82 /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C221FE2AA9B02500269D82 /* AddOfferViewController.swift */; };
+		C7C222012AA9B07D00269D82 /* AddOffer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C222002AA9B07D00269D82 /* AddOffer.storyboard */; };
 		C7C5366B2A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C536682A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift */; };
 		C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */; };
 		C7C536702A8A34BA007391FC /* SlidesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */; };
@@ -196,6 +198,8 @@
 		C7C0C1BD2A824CED0096E958 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		C7C0C1C32A8252570096E958 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C7C0C1C62A82528A0096E958 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		C7C221FE2AA9B02500269D82 /* AddOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
+		C7C222002AA9B07D00269D82 /* AddOffer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOffer.storyboard; sourceTree = "<group>"; };
 		C7C536682A8A08D4007391FC /* OnboardingScreenSlidesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreenSlidesDataModel.swift; sourceTree = "<group>"; };
 		C7C5366A2A8A08D4007391FC /* OnBoardingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenViewModel.swift; sourceTree = "<group>"; };
 		C7C5366F2A8A34BA007391FC /* SlidesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -684,6 +688,14 @@
 			path = NetworkReachability;
 			sourceTree = "<group>";
 		};
+		C7C221FD2AA9AF9F00269D82 /* Add Offer */ = {
+			isa = PBXGroup;
+			children = (
+				C7C221FE2AA9B02500269D82 /* AddOfferViewController.swift */,
+			);
+			path = "Add Offer";
+			sourceTree = "<group>";
+		};
 		C7C536672A89FEBD007391FC /* Lottie Animation files */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +789,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C7C221FD2AA9AF9F00269D82 /* Add Offer */,
 				C7196CC82A9CBBBF00BBC902 /* AddCash */,
 				AF7969D22A9CB202004BCF81 /* More */,
 				AF7969D12A9CB1FB004BCF81 /* Home */,
@@ -816,6 +829,7 @@
 				AF7969CF2A9CB170004BCF81 /* Home.storyboard */,
 				AF7969D72A9CB2A7004BCF81 /* More.storyboard */,
 				C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */,
+				C7C222002AA9B07D00269D82 /* AddOffer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -975,6 +989,7 @@
 				AF916C1F2A8E64C000125808 /* Tabbar.storyboard in Resources */,
 				C7D521852A94BE0800454B67 /* RewardPopupView.xib in Resources */,
 				C72618B02A84ED7B00738F7F /* Rajdhani-SemiBold.ttf in Resources */,
+				C7C222012AA9B07D00269D82 /* AddOffer.storyboard in Resources */,
 				C75F371E2A791BC200925880 /* Main.storyboard in Resources */,
 				C72618B12A84ED7B00738F7F /* Rajdhani-Light.ttf in Resources */,
 				C7C5367F2A8A3C11007391FC /* Baloo2-ExtraBold.ttf in Resources */,
@@ -1075,6 +1090,7 @@
 				C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
+				C7C221FF2AA9B02500269D82 /* AddOfferViewController.swift in Sources */,
 				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,
 				AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */,

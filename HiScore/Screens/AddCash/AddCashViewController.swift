@@ -117,7 +117,7 @@ extension AddCashViewController {
         viewNoOffers.isHidden = true
         vwContainerCircleNoOffers.isHidden = true
         vwGradientCircleNoOffers.isHidden = true
-        labelOfferTotal.text = "No Offers available"
+       // labelOfferTotal.text = "No Offers available"
     }
     private func hideOffersData() {
         collectionOfCashOffers.isHidden = true
@@ -293,6 +293,7 @@ extension AddCashViewController: UICollectionViewDelegate {
         guard let data = self.offerDataList?[indexPath.row] else { return  }
         calculateTotalDeposit(data: data)
         self.showAmountSection()
+        labelUptoCash.text = "Get upto ₹\(data.bonusAmount) Bonus Cash"
     }
 }
 extension AddCashViewController: AddCashDelegate {
