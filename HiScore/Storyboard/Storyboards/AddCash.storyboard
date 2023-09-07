@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -558,25 +559,12 @@
                                             <constraint firstItem="hWM-V9-uGi" firstAttribute="centerX" secondItem="tZ1-ub-Xbo" secondAttribute="centerX" id="zvw-MQ-IPe"/>
                                         </constraints>
                                     </view>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="No offer available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-NU-0j5">
-                                        <rect key="frame" x="131.66666666666666" y="225.66666666666669" width="112" height="15.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="13"/>
-                                        <color key="textColor" name="HSWhiteColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One or two line text about Offer not available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXo-mg-4Ng">
-                                        <rect key="frame" x="55" y="241" width="265" height="14.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="12"/>
-                                        <color key="textColor" name="HSWhiteColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="JU4-XF-2RN" firstAttribute="top" secondItem="OKB-TZ-GB5" secondAttribute="top" id="0vV-6W-JEp"/>
                                     <constraint firstItem="Xyo-B9-vvc" firstAttribute="centerX" secondItem="1yI-g4-K87" secondAttribute="centerX" id="3Jh-7h-ChW"/>
                                     <constraint firstAttribute="bottom" secondItem="JU4-XF-2RN" secondAttribute="bottom" id="3M6-Bu-bM9"/>
-                                    <constraint firstItem="UXo-mg-4Ng" firstAttribute="centerX" secondItem="OKB-TZ-GB5" secondAttribute="centerX" id="4QE-Ql-Kfa"/>
                                     <constraint firstAttribute="bottom" secondItem="Lh0-Cv-AEH" secondAttribute="bottom" id="7LR-yU-83e"/>
                                     <constraint firstItem="wUF-Eb-SEu" firstAttribute="top" secondItem="1Kx-hJ-kiH" secondAttribute="bottom" id="D6Q-oP-AL3"/>
                                     <constraint firstItem="d1V-0G-R45" firstAttribute="top" secondItem="OKB-TZ-GB5" secondAttribute="top" id="Dhq-oP-kmu"/>
@@ -585,7 +573,6 @@
                                     <constraint firstItem="Qh2-OL-WZ6" firstAttribute="width" secondItem="Qh2-OL-WZ6" secondAttribute="height" id="LRe-51-i6y"/>
                                     <constraint firstItem="zjr-NR-Bqk" firstAttribute="leading" secondItem="OKB-TZ-GB5" secondAttribute="leading" constant="15" id="NFY-1d-9AI"/>
                                     <constraint firstItem="1Kx-hJ-kiH" firstAttribute="leading" secondItem="wUF-Eb-SEu" secondAttribute="leading" id="Nlx-uX-lRj"/>
-                                    <constraint firstItem="SgN-NU-0j5" firstAttribute="top" secondItem="Lh0-Cv-AEH" secondAttribute="bottom" constant="4.6666666666666856" id="Oz5-DF-h4x"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Qdn-na-NSX"/>
                                     <constraint firstItem="Lh0-Cv-AEH" firstAttribute="top" secondItem="2yQ-lT-BPJ" secondAttribute="top" id="R0j-0m-IBz"/>
                                     <constraint firstItem="1yI-g4-K87" firstAttribute="centerY" secondItem="zjr-NR-Bqk" secondAttribute="centerY" id="Vw8-Ir-KFm"/>
@@ -606,7 +593,6 @@
                                     <constraint firstAttribute="trailing" secondItem="2yQ-lT-BPJ" secondAttribute="trailing" id="rbX-BX-KUG"/>
                                     <constraint firstItem="Lh0-Cv-AEH" firstAttribute="leading" secondItem="OKB-TZ-GB5" secondAttribute="leading" id="rnJ-eK-9cS"/>
                                     <constraint firstItem="Lh0-Cv-AEH" firstAttribute="trailing" secondItem="2yQ-lT-BPJ" secondAttribute="trailing" id="s9a-pa-FtM"/>
-                                    <constraint firstItem="UXo-mg-4Ng" firstAttribute="top" secondItem="SgN-NU-0j5" secondAttribute="bottom" id="u7Q-sk-E0q"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color1">
@@ -620,6 +606,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lvO-Ty-cSZ">
+                                <rect key="frame" x="55" y="452" width="265" height="30.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No offer available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-NU-0j5">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="15.333333333333334"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="13"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One or two line text about Offer not available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXo-mg-4Ng">
+                                        <rect key="frame" x="0.0" y="15.333333333333314" width="265" height="15.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="12"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-CP-Nwg" userLabel="ViewAmount">
                                 <rect key="frame" x="0.0" y="516" width="375" height="220"/>
                                 <subviews>
@@ -831,6 +834,7 @@
                             <constraint firstItem="gDf-JG-IQg" firstAttribute="leading" secondItem="Ge4-y8-auA" secondAttribute="leading" id="VUO-aZ-rqw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OKB-TZ-GB5" secondAttribute="trailing" id="WGq-Ca-E6B"/>
                             <constraint firstItem="Ge4-y8-auA" firstAttribute="top" secondItem="PZ1-hi-P1h" secondAttribute="bottom" constant="30" id="adj-HP-WD5"/>
+                            <constraint firstItem="lvO-Ty-cSZ" firstAttribute="top" secondItem="OKB-TZ-GB5" secondAttribute="bottom" id="e6U-6d-AbA"/>
                             <constraint firstItem="Ge4-y8-auA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="gVE-p1-r35"/>
                             <constraint firstItem="OKB-TZ-GB5" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="bottom" constant="30" id="gdk-M5-tTI"/>
                             <constraint firstItem="866-wL-JAw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nkY-Cd-z0N"/>
@@ -838,6 +842,7 @@
                             <constraint firstItem="SVr-Ky-s7n" firstAttribute="centerX" secondItem="OKB-TZ-GB5" secondAttribute="centerX" id="rHG-EF-KAx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PZ1-hi-P1h" secondAttribute="trailing" id="rWm-an-wnQ"/>
                             <constraint firstItem="O9A-qC-zI9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tX3-X4-I3l"/>
+                            <constraint firstItem="lvO-Ty-cSZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y49-c7-BYH"/>
                             <constraint firstItem="gDf-JG-IQg" firstAttribute="top" secondItem="Ge4-y8-auA" secondAttribute="bottom" id="yTY-4i-AEZ"/>
                             <constraint firstItem="O9A-qC-zI9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zf4-lT-Yq8"/>
                         </constraints>
@@ -864,6 +869,7 @@
                         <outlet property="labelYouGet" destination="OFs-ZK-nMD" id="Qpm-BP-kbS"/>
                         <outlet property="labelbalance" destination="6Qd-5o-UWS" id="o2c-SK-Paz"/>
                         <outlet property="stackAmountDetails" destination="ggI-OC-nzb" id="0fl-k6-PHK"/>
+                        <outlet property="stackNoOfferMessage" destination="lvO-Ty-cSZ" id="dNT-xV-ZWd"/>
                         <outlet property="viewNoOffers" destination="Lh0-Cv-AEH" id="U4P-Zw-3Bv"/>
                         <outlet property="viewReward" destination="O9A-qC-zI9" id="Gzd-nF-M82"/>
                         <outlet property="viewTextField" destination="Ge4-y8-auA" id="nze-O4-bTG"/>

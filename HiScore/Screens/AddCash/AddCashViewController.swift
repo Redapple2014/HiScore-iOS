@@ -12,6 +12,7 @@ import IQKeyboardManager
 class AddCashViewController: BaseViewController {
     @IBOutlet weak var labelNoOfferText1: UILabel!
     @IBOutlet weak var imageArrowOrI: UIImageView!
+    @IBOutlet weak var stackNoOfferMessage: UIStackView!
     
     @IBOutlet weak var labelNoOfferText2: UILabel!
     @IBOutlet weak var viewReward: RewardPopupView!
@@ -122,8 +123,9 @@ extension AddCashViewController {
         vwContainerCircleNoOffers.isHidden = true
         vwGradientCircleNoOffers.isHidden = true
        // labelOfferTotal.text = "No Offers available"
-        labelNoOfferText1.isHidden = true
-        labelNoOfferText2.isHidden = true
+//        labelNoOfferText1.isHidden = true
+//        labelNoOfferText2.isHidden = true
+        stackNoOfferMessage.isHidden = true
 
     }
     private func hideOffersData() {
@@ -131,8 +133,9 @@ extension AddCashViewController {
         viewNoOffers.isHidden = false
         vwContainerCircleNoOffers.isHidden = false
         vwGradientCircleNoOffers.isHidden = false
-        labelNoOfferText1.isHidden = false
-        labelNoOfferText2.isHidden = false
+//        labelNoOfferText1.isHidden = false
+//        labelNoOfferText2.isHidden = false
+        stackNoOfferMessage.isHidden = false
         showNoOffersImage()
     }
     private func initUI() {
