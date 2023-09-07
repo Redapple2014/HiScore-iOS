@@ -26,7 +26,5 @@ class AddOfferViewController: BaseViewController {
         viwTextField.layer.shadowOffset = CGSize(width: 3, height: 3)
         viwTextField.layer.shadowOpacity = 0.7
         viwTextField.layer.shadowRadius = 4.0
-
     }
-    
 }

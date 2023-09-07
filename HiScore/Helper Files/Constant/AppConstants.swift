@@ -83,7 +83,6 @@ class ScreenDetails {
 
 class AdvertiseDetails {
     static let campaignName = "organic"
-     
 }
 
 class AnimationFiles {

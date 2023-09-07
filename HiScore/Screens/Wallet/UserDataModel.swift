@@ -208,7 +208,7 @@ enum  UserKycStatus {
     case required
     var description: String {
         switch self {
-        case .required : return "required"
+        case .required: return "required"
         }
     }
 }

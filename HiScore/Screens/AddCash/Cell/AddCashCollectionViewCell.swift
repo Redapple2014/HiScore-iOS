@@ -8,7 +8,6 @@
 import UIKit
 
 class AddCashCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var vwNotSelected: HSShadowView!
     @IBOutlet weak var viewBG: HSShadowView!
     @IBOutlet weak var viewTopHeader: HSShadowView!
@@ -18,13 +17,12 @@ class AddCashCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelBonusPercentageAmount: UILabel!
     @IBOutlet weak var labeOfferPercentage: UILabel!
     @IBOutlet weak var labeITotalAmount: UILabel!
-    
+
     func loadCell(data: OfferListData) {
-        labelBonusPercentageAmount.text = "₹ \(data.bonusAmount)"  
+        labelBonusPercentageAmount.text = "₹ \(data.bonusAmount)"
         labeOfferPercentage.text = "Get \(data.percentage) %"
         labeITotalAmount.text = "₹ \(data.amount)"
         vwNotSelected.backgroundColor = .clear
-
         if data.isSelected {
             showSelectedUI()
         } else {

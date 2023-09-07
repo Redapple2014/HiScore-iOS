@@ -15,10 +15,7 @@ protocol RewardPopupDelegate {
 class RewardPopupView: UIView {
     @IBOutlet weak var viewCintainer: UIView!
     @IBOutlet weak var buttonCross: UIButton!
-    
-    var delegate: RewardPopupDelegate?
     @IBOutlet var labelDescCollection: [UILabel]!
-    
     @IBOutlet weak var labelTitleDepositCash: UILabel!
     @IBOutlet weak var labelTitleWinningCash: UILabel!
     @IBOutlet weak var labelTitleRummyCashCash: UILabel!
@@ -37,29 +34,29 @@ class RewardPopupView: UIView {
     @IBOutlet weak var imageArrowRummyCashCash: UIImageView!
     @IBOutlet weak var imageArrowFreeEntryTickets: UIImageView!
     @IBOutlet weak var imageArrowVouchersAndOffers: UIImageView!
-    
+
     @IBOutlet var viewContainer:[ UIView]!
     @IBOutlet weak var viewDepositCash: UIView!
     @IBOutlet weak var viewWinningCash: UIView!
     @IBOutlet weak var viewRummyCashCash: UIView!
     @IBOutlet weak var viewFreeEntryTickets: UIView!
     @IBOutlet weak var viewVouchersAndOffers: UIView!
-    
+
     @IBOutlet weak var labelDepositCash: UILabel!
     @IBOutlet weak var labelWinningCash: UILabel!
     @IBOutlet weak var labelRummyCashCash: UILabel!
     @IBOutlet weak var labelFreeEntryTickets: UILabel!
     @IBOutlet weak var labelVouchersAndOffers: UILabel!
-    
+
     @IBOutlet weak var buttonVerify: LoadingButton!
     private let nibName = "RewardPopupView"
-    
+    var delegate: RewardPopupDelegate?
     private var dataDepositCash: RewardsList?
     private var dataRummyCash: RewardsList?
     private var dataWinningCash: RewardsList?
     private var dataFreeTicket: RewardsList?
     private var dataVouchers: RewardsList?
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -88,7 +85,7 @@ class RewardPopupView: UIView {
         let nib = UINib(nibName: nibName, bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-        
+
     @IBAction func buttonOkPressed(_ sender: Any) {
         delegate?.okayTapped()
     }
@@ -117,23 +114,18 @@ class RewardPopupView: UIView {
         case .depositCash:
             dataDepositCash = data
             showIcon(data: data, icon: imageIconDepositCash, label: labelTitleDepositCash)
-            break
         case .winningCash:
             dataWinningCash = data
             showIcon(data: data, icon: imageIconWinningCash, label: labelTitleWinningCash)
-            break
         case .rummyCash:
             dataRummyCash = data
             showIcon(data: data, icon: imageIconRummyCashCash, label: labelTitleRummyCashCash)
-            break
         case .freeEntryTickets:
             dataFreeTicket = data
             showIcon(data: data, icon: imageIconFreeEntryTickets, label: labelTitleFreeEntryTickets)
-            break
         case .vouchersAndOffers:
             dataVouchers = data
             showIcon(data: data, icon: imageIconVouchersAndOffers, label: labelTitleVouchersAndOffers)
-            break
         }
     }
     private func getArrowImage() -> UIImage {
@@ -152,27 +144,21 @@ class RewardPopupView: UIView {
         _ = labelDescCollection.map({$0.text = ""})
         _ = imageArrow.map({$0.image = UIImage(named: "arrowDownHS")})
         _ = viewContainer.map({$0.backgroundColor = .clear})
-       
     }
-   
+
     private func selectedUI(type: RewardType) {
         clearAllText()
         switch type {
         case .depositCash:
             depositCash()
-            break
         case .winningCash:
             winningCash()
-            break
         case .rummyCash:
             rummyCash()
-            break
         case .freeEntryTickets:
             freeEntryTickets()
-            break
         case .vouchersAndOffers:
             vouchersAndOffers()
-            break
         }
         
     }

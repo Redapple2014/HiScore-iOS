@@ -11,7 +11,7 @@ import Kingfisher
 class SplashScreenViewController: BaseViewController {
     @IBOutlet weak var splashImageView: UIImageView!
     private var viewModel: SpalshViewModel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
@@ -39,7 +39,6 @@ class SplashScreenViewController: BaseViewController {
             }
         }
     }
-    
     var isUserCreated: Bool {
         return User.shared.details?.data?.loginToken != nil ? true : false
     }
@@ -47,19 +46,22 @@ class SplashScreenViewController: BaseViewController {
         return UserDefaults.standard.bool(forKey: "isLocationAllowed")
     }
     func navigateToOnboarding() {
-        guard let viewController = self.storyboard(name: .main).instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
+        guard let viewController = self.storyboard(name: .main)
+                .instantiateViewController(withIdentifier: "EnterPhoneNumberViewController") as? EnterPhoneNumberViewController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     func navigateToLocation() {
-        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
+        guard let viewController = self.storyboard(name: .location)
+                .instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     func navigateToHome() {
-        guard let viewController = self.storyboard(name: .tabBar).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+        guard let viewController = self.storyboard(name: .tabBar)
+                .instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)

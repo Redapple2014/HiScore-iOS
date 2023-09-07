@@ -24,22 +24,11 @@ class FetchLocationPopUp: UIView {
         self.addSubview(mainView)
         commonInit()
     }
-    
     func commonInit() {
         self.backgroundColor = .clear
         backGroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-//        containerView.clipsToBounds = true
-//        containerView.layer.cornerRadius = 24
     }
     override func layoutSubviews() {
-//        super.layoutSubviews()
-//        containerView.layoutIfNeeded()
-//        containerView.setNeedsLayout()
-//        containerView.setGradiantColor(topColor: .HSMediumDarkBlue,
-//                                       bottomColor: .HSAppThemeColor,
-//                                       cornerRadius: 24,
-//                                       gradiantDirection: .topToBottom)
-       
     }
     func startLoading() {
         loaderImage.startAnimating()

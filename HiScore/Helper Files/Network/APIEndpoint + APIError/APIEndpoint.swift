@@ -21,30 +21,30 @@ enum APIEndpoint {
     var path: String {
         switch self {
         case .fetchSplashImage(let version):
-            return "\(version)/game/splash"
+            return "\(version.rawValue)/game/splash"
         case .sendOTP(let version):
-            return "\(version)/game/users/sendOTP"
+            return "\(version.rawValue)/game/users/sendOTP"
         case .login(let version):
-            return "\(version)/game/users/login"
+            return "\(version.rawValue)/game/users/login"
         case .validateAccess(let version):
-            return "\(version)/user/app/capability"
+            return "\(version.rawValue)/user/app/capability"
         case .reward(let version):
-            return "\(version)/game/users/rewardsInfoV2"
+            return "\(version.rawValue)/game/users/rewardsInfoV2"
         case .offer(let version):
-            return "\(version)/utils/onboardingDepositOffers"
+            return "\(version.rawValue)/utils/onboardingDepositOffers"
         case .wallet(let version):
-            return "\(version)/wallet/getUserWallet"
+            return "\(version.rawValue)/wallet/getUserWallet"
         case .kycStatus(let version):
-            return "\(version)/game/users"
+            return "\(version.rawValue)/game/users"
         case .getAddMoneyScreenData(let version):
-            return "\(version)/utils/getAddMoneyScreenData"
+            return "\(version.rawValue)/utils/getAddMoneyScreenData"
         case .getUserWallet(let version):
-            return "\(version)/wallet/getUserWallet"
+            return "\(version.rawValue)/wallet/getUserWallet"
         }
     }
     var baseHeader: [String: String] {
         return ["app_flavor": DeviceDetails.deviceOS,
-                "app_version":"1751",
+                "app_version": "1751",
                 "platform_name": DeviceDetails.deviceOS,
                 "Content-Type": "application/json"]
     }
@@ -53,7 +53,7 @@ enum APIEndpoint {
         switch self {
         case .fetchSplashImage, .sendOTP, .login, .validateAccess:
             break
-        case .reward, .offer, .wallet, .kycStatus, .getAddMoneyScreenData,.getUserWallet:
+        case .reward, .offer, .wallet, .kycStatus, .getAddMoneyScreenData, .getUserWallet:
             if let token = User.shared.details?.data?.loginToken {
                 allHeaders["authorization"] = token
             }
@@ -66,14 +66,14 @@ enum APIEndpoint {
     var onboardingUrlurl: URL? {
         return URL(string: APIEndpoint.onboardingSlide)
     }
-    
+
     static let baseURL = "https://nostrapi-ios.nostragamus-stage.in/"
     static let onboardingSlide = "https://cdn-static.nostragamus-stage.in/loginHomeSlides_iOS.json"
 }
-enum Version: Int {
-    case v1
-    case v2
-    case v3
-    case v4
-    case v5
+enum Version: String {
+    case version1 = "v1"
+    case version2 = "v2"
+    case version3 = "v3"
+    case version4 = "v4"
+    case version5 = "v5"
 }

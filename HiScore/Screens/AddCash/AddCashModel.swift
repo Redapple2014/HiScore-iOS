@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - AddCashResponseModel
 struct AddCashResponseModel: Codable {
     let status, message: String?
@@ -46,7 +44,7 @@ struct CashbackKnowMoreSection: Codable {
 }
 
 // MARK: - RewardList
-//struct RewardList: Codable {
+// struct RewardList: Codable {
 //    let rewardTitle, rewardDesc: String?
 //    let rewardIcon: String?
 //
@@ -55,7 +53,7 @@ struct CashbackKnowMoreSection: Codable {
 //        case rewardDesc = "reward_desc"
 //        case rewardIcon = "reward_icon"
 //    }
-//}
+// }
 
 // MARK: - OfferTypes
 struct OfferTypes: Codable {
@@ -118,8 +116,8 @@ class OfferListData {
     var percentage: Int
     var bonusAmount: Int
     var isSelected: Bool
-    
-    init(amount: Int,percentage: Int,bonusAmount: Int, isSelected: Bool = false) {
+
+    init(amount: Int, percentage: Int, bonusAmount: Int, isSelected: Bool = false) {
         self.amount = amount
         self.percentage = percentage
         self.bonusAmount = bonusAmount

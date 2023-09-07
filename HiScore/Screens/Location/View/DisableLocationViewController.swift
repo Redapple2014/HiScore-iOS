@@ -13,7 +13,7 @@ class DisableLocationViewController: BaseViewController {
     @IBOutlet weak var labelHeaderTitle: UILabel!
     @IBOutlet weak var labelDescriptionTitle: UILabel!
     @IBOutlet weak var labelDescriptionText: UILabel!
-   
+
     var viewModel = DisableLocationViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()

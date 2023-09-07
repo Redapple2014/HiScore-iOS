@@ -13,7 +13,8 @@ class User {
     var details: VerifyOtpAndLoginResponseModel? {
         do {
             guard let data = UserDefaults.standard.object(forKey: userDetailsKey) else { return nil }
-            guard let user = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as! Data) as? VerifyOtpAndLoginResponseModel else { return nil }
+            guard let user = try NSKeyedUnarchiver
+                    .unarchiveTopLevelObjectWithData(data as? Data ?? Data()) as? VerifyOtpAndLoginResponseModel else { return nil }
             return user
         } catch {
             fatalError("Unarchive error: " + error.localizedDescription)

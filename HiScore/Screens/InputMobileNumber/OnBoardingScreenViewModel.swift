@@ -39,7 +39,7 @@ class OnboardingScreenViewModel {
         let param = GetOtpRequestModel(mobile: phoneNumber,
                                        uid: "",//UUID().uuidString,
                                        dest: "")//"phone")
-        networkService.postData(to: .sendOTP(version: .v5),
+        networkService.postData(to: .sendOTP(version: .version5),
                                 with: param,
                                 responseModelType: GetOTPResponseModel.self) { result in
             switch result {

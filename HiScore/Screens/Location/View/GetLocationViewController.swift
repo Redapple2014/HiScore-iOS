@@ -83,7 +83,7 @@ extension GetLocationViewController: CLLocationManagerDelegate {
         alertController.setValue(attributedText, forKey: "attributedMessage")
         let cancelAction = UIAlertAction(title: Messages.cancel.description, style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        let settingsAction = UIAlertAction(title: Messages.settings.description, style: .default) { (alertAction) in
+        let settingsAction = UIAlertAction(title: Messages.settings.description, style: .default) { alertAction in
 
             if let appSettings = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(appSettings as URL)
@@ -94,7 +94,7 @@ extension GetLocationViewController: CLLocationManagerDelegate {
     }
 }
 extension GetLocationViewController {
-    @IBAction func shareLocationDidTap(_ sender: Any){
+    @IBAction func shareLocationDidTap(_ sender: Any) {
         fetchLocation()
         isLocationFetched = false
         switch locationManager.authorizationStatus {
@@ -102,7 +102,7 @@ extension GetLocationViewController {
             self.locationManager.requestWhenInUseAuthorization()
         case .denied:
             self.showAcessDeniedAlert()
-        case .authorizedAlways,.authorizedWhenInUse:
+        case .authorizedAlways, .authorizedWhenInUse:
             break
         @unknown default:
             break
@@ -126,21 +126,24 @@ extension GetLocationViewController {
                             if isNewUser {
                                 if isDuplicateUser {
                                     // Navigate to offer
-                                    guard let viewController = self.storyboard(name: .offer).instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
+                                    guard let viewController = self.storyboard(name: .offer)
+                                            .instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else {
                                         return
                                     }
                                     self.navigationController?.pushViewController(viewController, animated: true)
                                     return
                                 } else {
                                     // Navigate to reward
-                                    guard let viewController = self.storyboard(name: .reward).instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
+                                    guard let viewController = self.storyboard(name: .reward)
+                                            .instantiateViewController(withIdentifier: "RewardViewController") as? RewardViewController else {
                                         return
                                     }
                                     self.navigationController?.pushViewController(viewController, animated: true)
                                     return
                                 }
                             } else {
-                                guard let viewController = self.storyboard(name: .tabBar).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+                                guard let viewController = self.storyboard(name: .tabBar)
+                                        .instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
                                     return
                                 }
                                 self.navigationController?.pushViewController(viewController, animated: true)
@@ -148,7 +151,8 @@ extension GetLocationViewController {
 
                             }
                         }
-                        guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
+                        guard let viewController = self.storyboard(name: .location)
+                                .instantiateViewController(withIdentifier: "DisableLocationViewController") as? DisableLocationViewController else {
                             return
                         }
                         viewController.viewModel.errorText = response.data.rummy.error

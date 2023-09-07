@@ -21,26 +21,22 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var kycStatus: UILabel!
     @IBOutlet weak var subkycStatus: UILabel!
     @IBOutlet weak var kycStatusIcon: UIImageView!
-    
     @IBOutlet weak var buttonDepositeHint: UIButton!
     @IBOutlet weak var buttonRummyCashHint: UIButton!
     @IBOutlet weak var buttonWinningHint: UIButton!
-    
     @IBOutlet weak var labelDepositAmount: UILabel!
     @IBOutlet weak var labelWinningAmount: UILabel!
     @IBOutlet weak var labelRummyCashAmount: UILabel!
-    
-    
+
     private var viewModel: WalletViewModel!
     weak var tipView: EasyTipView?
-    
+    private var walletBalance = 0.0
     override func updateUI() {
         super.updateUI()
     }
 }
-//MARK: - View Life Cycle -
+// MARK: - View Life Cycle -
 extension WalletViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let hiScoreNetworkService = HiScoreNetworkRepository()
@@ -48,7 +44,6 @@ extension WalletViewController {
         getWalletDetails()
         getKYCStatus()
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         heightwalletBreakdownView.constant =  3 * 60 // arrayCount * tablerowHeight
@@ -60,24 +55,25 @@ extension WalletViewController {
         buttonWithdraw.setUpButtonWithGradientBackground(type: .yellow)
     }
 }
-//MARK: - Button actions -
+// MARK: - Button actions -
 extension WalletViewController {
     @IBAction func addCash(_ sender: Any) {
-        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
+        guard let viewController = self.storyboard(name: .addCash)
+                .instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
             return
         }
-        viewController.walletBalance = (self.viewModel.walletData?.depositAmount ?? 0) + (self.viewModel.walletData?.winningsAmount ?? 0) + Int((self.viewModel.walletData?.rummyCash ?? 0.0))
+        viewController.walletBalance = walletBalance
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 private extension WalletViewController {
-    
     func loadData() {
         let depositAmt = self.viewModel.walletData?.depositAmount ?? 0
         let winningAmt = self.viewModel.walletData?.winningsAmount ?? 0
         let rummyCash =  self.viewModel.walletData?.rummyCash ?? 0.0
         let totalBalance = Double(depositAmt) + Double(winningAmt) + rummyCash
+        self.walletBalance = totalBalance
         self.hiscoreWallet.text = totalBalance.description
         self.transactionProgress.text = "\(self.viewModel.walletData?.withdrawalProgress ?? 0) Transaction in progress"
         self.labelDepositAmount.text = self.viewModel.walletData?.depositAmount.description
@@ -124,11 +120,10 @@ extension WalletViewController: EasyTipViewDelegate {
     func easyTipViewDidTap(_ tipView: EasyTipView) {
         Log.d("\(tipView) did tap!")
     }
-    
     func easyTipViewDidDismiss(_ tipView: EasyTipView) {
         Log.d("\(tipView) did dismiss!")
     }
-    @IBAction func buttonAction(sender : UIButton) {
+    @IBAction func buttonAction(sender: UIButton) {
         showDepositHint()
     }
     @objc func showDepositHint() {
@@ -136,17 +131,14 @@ extension WalletViewController: EasyTipViewDelegate {
         customHintView.setMessage(title: "Deposit",
                                   message: "Cash that you deposit into your HiScore wallet. You cannot withdraw it but can use it to join contests",
                                   image: UIImage(named: "bankNotes")!)
-        
         var preferences = EasyTipView.globalPreferences
         preferences.drawing.backgroundColor = .clear
-        
         preferences.animating.dismissTransform = CGAffineTransform(translationX: 0, y: -15)
         preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: 15)
         preferences.animating.showInitialAlpha = 0
         preferences.animating.showDuration = 1
         preferences.animating.dismissDuration = 1
         preferences.drawing.arrowPosition = .any
-        
         let easyTip = EasyTipView(contentView: customHintView, preferences: preferences, delegate: self)
         easyTip.show(forView: buttonDepositeHint, withinSuperview: walletView.self)
     }

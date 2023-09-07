@@ -44,8 +44,8 @@ extension UIFont {
             return UIFont(name: FontsIdentifier.MavenProSemiBold, size: 16) ?? UIFont.systemFont(ofSize: 13)
         }()
     }
-    
-    struct Baloo_2 {
+
+    struct Baloo {
         static let Bold: UIFont = {
             return UIFont(name: FontsIdentifier.Baloo2Bold, size: 16) ?? UIFont.systemFont(ofSize: 13)
         }()
@@ -76,7 +76,7 @@ struct FontsIdentifier {
     static let MavenProMedium = "MavenPro-Medium"
     static let MavenProRegular = "MavenPro-Regular"
     static let MavenProSemiBold = "MavenPro-SemiBold"
-    
+
     static let Baloo2Bold = "Baloo2-Bold"
     static let Baloo2ExtraBold = "Baloo2-ExtraBold"
     static let Baloo2Medium = "Baloo2-Medium"

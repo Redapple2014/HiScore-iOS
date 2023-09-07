@@ -15,7 +15,7 @@ class RewardPopupViewModel {
     }
     
     func getRewardData(completion: @escaping (Result<RewardPopupResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .reward(version: .v5),
+        networkService.fetchData(from: .reward(version: .version5),
                                  model: RewardPopupResponseModel.self) { response in
             switch response {
             case .success(let data):

@@ -13,7 +13,6 @@ protocol AddCashDelegate {
 }
 class AddCashViewModel {
     private let networkService: HiScoreNetworkServiceprotocol
-    
     init(networkService: HiScoreNetworkServiceprotocol) {
         self.networkService = networkService
     }
@@ -21,9 +20,9 @@ class AddCashViewModel {
 //    var totalOfferCount = 4
     var amount = 0
     private var offerData = [OfferData]()
-   
+
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
+        networkService.fetchData(from: .getAddMoneyScreenData(version: .version1),
                                  model: AddCashResponseModel.self) { response in
             switch response {
             case .success(let data):
@@ -46,7 +45,7 @@ class AddCashViewModel {
     func showOffers() {
         if self.amount == 0 {
             delegate?.updateOffers(offerList: showOffersForEmpty())
-        } else  {
+        } else {
             if checkInputNumber() {
                 checkAmountType()
             } else {
@@ -57,16 +56,16 @@ class AddCashViewModel {
     private func checkInputNumber() -> Bool {
         _ = offerData.sorted(by: { $0.minLimit ?? 0 > $1.minLimit ?? 0 })
         if offerData.count > 0 && amount < offerData[0].minLimit ?? 0 {
-            //self.delegate?.errorInPut()
+            // self.delegate?.errorInPut()
             return false
         } else {
             return true
         }
     }
     private func checkAmountType() {
-        for i in 0..<(offerData.count) {
-            if ((offerData[i].minLimit ?? 0)...(offerData[i].maxLimit ?? 0)).contains(amount) {
-                findRange(min: (offerData[i].minLimit ?? 0), max: (offerData[i].maxLimit ?? 0), index: i)
+        for index in 0..<(offerData.count) {
+            if ((offerData[index].minLimit ?? 0)...(offerData[index].maxLimit ?? 0)).contains(amount) {
+                findRange(min: (offerData[index].minLimit ?? 0), max: (offerData[index].maxLimit ?? 0), index: index)
                 break
             }
         }
@@ -74,9 +73,9 @@ class AddCashViewModel {
     private func findRange(min: Int, max: Int, index: Int) {
         let mid = (min+max)/2
         if amount == min {
-            minimumValueOffer(index:index)
-        }  else if amount > min && amount < mid {
-            minimumToMidumValueOffer(index:index)
+            minimumValueOffer(index: index)
+        } else if amount > min && amount < mid {
+            minimumToMidumValueOffer(index: index)
         } else if amount >= mid && amount < max {
             midiumToMaximumValueOffer(index: index)
         } else if amount == max {

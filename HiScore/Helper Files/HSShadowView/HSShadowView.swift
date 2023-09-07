@@ -99,7 +99,6 @@ class HSShadowView: UIView {
             cornerRadius = radius
         }
     }
-    
     override func draw(_ rect: CGRect) {
         clipsToBounds = true
         layer.cornerRadius = cornerRadius
@@ -108,7 +107,7 @@ class HSShadowView: UIView {
         layer.shadowRadius = 6
         layer.shadowOpacity = 0.6
         layer.masksToBounds = false
-        
+
         gradientLayer = gradient()
         if let gradientLayer = gradientLayer {
             layer.insertSublayer(gradientLayer, at: 0)

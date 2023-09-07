@@ -19,7 +19,7 @@ class DashedLineView: UIView {
        dashedLayer.lineWidth = 5
        dashedLayer.cornerRadius = 5
        dashedLayer.lineCap = .round
-       dashedLayer.lineDashPattern = [5,10]
+       dashedLayer.lineDashPattern = [5, 10]
        dashedLayer.path = path.cgPath
        self.layer.addSublayer(dashedLayer)
    }

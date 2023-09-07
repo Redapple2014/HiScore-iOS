@@ -11,7 +11,6 @@ import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
     @IBOutlet weak var imageArrowOrI: UIImageView!
-    
     @IBOutlet weak var viewReward: RewardPopupView!
     @IBOutlet weak var vwAmountSuperView: UIView!
     @IBOutlet weak var buttonArrowOrI: UIButton!
@@ -19,7 +18,6 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var labelDeposit: UILabel!
     @IBOutlet weak var labelCashBack: UILabel!
     @IBOutlet weak var labelTicket: UILabel!
-    
     @IBOutlet weak var labelMinimumErrorValue: UILabel!
     @IBOutlet weak var errorMinimumAmount: UIView!
     @IBOutlet weak var vwGradientCircleNoOffers: HSGradientView!
@@ -48,7 +46,7 @@ class AddCashViewController: BaseViewController {
     private var viewModel: AddCashViewModel!
     private var responseModel: AddCashResponseModel!
     private var offerDataList: [OfferListData]?
-    var walletBalance = 0
+    var walletBalance = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
@@ -76,12 +74,9 @@ extension AddCashViewController {
                 self.responseModel = response
                 self.postApiUI()
                 Log.d(response)
-                break
             case .failure(let error):
                 self.showSnackbarError(title: "", subtitle: error.localizedDescription)
                 Log.d(error)
-                
-                break
             }
         }
     }
@@ -187,7 +182,8 @@ extension AddCashViewController {
     }
     private func goToAddOffer() {
         // AddOfferViewController
-        guard let viewController = self.storyboard(name: .addOffer).instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
+        guard let viewController = self.storyboard(name: .addOffer)
+                .instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
             return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -231,7 +227,7 @@ extension AddCashViewController {
 extension AddCashViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentCharacterCount = textField.text?.count ?? 0
-        if (range.length + range.location > currentCharacterCount){
+        if range.length + range.location > currentCharacterCount {
             return false
         }
         let newLength = currentCharacterCount + string.count - range.length
@@ -254,14 +250,12 @@ extension AddCashViewController: UITextFieldDelegate {
         viewModel.amount = Int(amount ?? "0") ?? 0
         clearButton.isHidden = false
         viewModel.showOffers()
-        
         if (textField.text?.count ?? 0) == 0 {
             clearButton.isHidden = true
         } else {
             clearButton.isHidden = false
         }
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         clearButton.isHidden = true
         imageBGContinue.isHidden = true
@@ -275,9 +269,11 @@ extension AddCashViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.offerDataList?.count ?? 0
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? AddCashCollectionViewCell else { return AddCashCollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
+                                                            for: indexPath) as? AddCashCollectionViewCell else {
+            return AddCashCollectionViewCell()
+        }
         if let array = self.offerDataList {
             cell.loadCell(data: array[indexPath.row])
         }
@@ -286,7 +282,9 @@ extension AddCashViewController: UICollectionViewDataSource {
 }
 // MARK: - CollectionView UICollectionViewDelegateFlowLayout -
 extension AddCashViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 85, height: 137)
     }
 }
@@ -308,7 +306,6 @@ extension AddCashViewController: UICollectionViewDelegate {
     }
 }
 extension AddCashViewController: AddCashDelegate {
-    
     func updateOffers(offerList: [OfferListData]) {
         self.offerDataList = offerList
         self.collectionOfCashOffers.reloadData()
@@ -322,11 +319,9 @@ extension AddCashViewController: AddCashDelegate {
             labelUptoCash.text =  "Click to apply offers"
         }
     }
-    
     func errorInPut() {
         hideAmountSection()
     }
-    
     func showAmountSection() {
         stackAmountDetails.isHidden = false
         viewYouGot.isHidden = false

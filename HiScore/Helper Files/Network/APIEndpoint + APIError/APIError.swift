@@ -17,7 +17,7 @@ public enum APIError: Error {
     case encodingError
     case custom(message: String)
     // Add more cases as needed for your specific API errors
-    
+
     var localizedDescription: String {
         switch self {
         case .invalidURL:
@@ -51,7 +51,7 @@ public enum HTTPStatusCode: Int {
     case notFound = 404
     case serverError = 500
     // Add more status codes as needed
-    
+
     var description: String {
         switch self {
         case .success:

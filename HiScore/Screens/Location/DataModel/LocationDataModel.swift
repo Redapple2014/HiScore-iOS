@@ -31,7 +31,7 @@ struct LocationAccess: Decodable {
 struct LocationAllowance: Decodable {
     let isAllowed: Bool
     let error: LocationError?
-    
+
     enum CodingKeys: String, CodingKey {
         case isAllowed = "is_allowed"
         case error
@@ -41,7 +41,7 @@ struct LocationError: Codable {
     let headerTitle: String?
     let descTitle: String?
     let descText: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case headerTitle = "header_title"
         case descTitle = "desc_title"

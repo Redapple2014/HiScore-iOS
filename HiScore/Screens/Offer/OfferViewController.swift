@@ -10,7 +10,7 @@ import UIKit
 import MHLoadingButton
 
 class OfferViewController: BaseViewController {
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var viewTimer: UIView!
     @IBOutlet weak var labelTimer: GradientLabel!
     @IBOutlet weak var labelTimerDescription: UILabel!
@@ -18,7 +18,6 @@ class OfferViewController: BaseViewController {
     @IBOutlet weak var labelSubHeader: UILabel!
     @IBOutlet weak var buttonStartPlaying: LoadingButton!
     @IBOutlet weak var collectionViewOffer: UICollectionView!
-    
     @IBOutlet weak var viewTopConstraintWithSafeArea: NSLayoutConstraint!
     @IBOutlet weak var viewTopConstraintWithTimerView: NSLayoutConstraint!
     
@@ -27,7 +26,7 @@ class OfferViewController: BaseViewController {
     private var time = 0
     private var timer: Timer?
 }
-//MARK: - View life cycles
+// MARK: - View life cycles
 extension OfferViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +65,7 @@ extension OfferViewController {
     }
 }
 
-//MARK: - Collection delegates and datasource
+// MARK: - Collection delegates and datasource
 extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let data = offer?.offers else { return 4 }
@@ -75,35 +74,42 @@ extension OfferViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let data = offer?.offers else {
-            guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "PlaceholderCell", for: indexPath) as? PlaceholderCell else {
+            guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "PlaceholderCell",
+                                                                     for: indexPath) as? PlaceholderCell else {
                 return PlaceholderCell(frame: .zero)
             }
             return cell
         }
-        guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "OfferCollectionCell", for: indexPath) as? OfferCollectionCell else {
+        guard let cell = collectionViewOffer.dequeueReusableCell(withReuseIdentifier: "OfferCollectionCell",
+                                                                 for: indexPath) as? OfferCollectionCell else {
             return OfferCollectionCell(frame: .zero)
         }
         cell.offer = data[indexPath.item]
         return cell
     }
 }
-//MARK: - Collection flow layout delegates
+// MARK: - Collection flow layout delegates
 extension OfferViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.width / 2) - 6
         return CGSize(width: width, height: width * 1.3)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
 }
 
-//MARK: - Private Methods
+// MARK: - Private Methods
 private extension OfferViewController {
-    @objc func startPlayingDidTap(){
-        guard let viewController = self.storyboard(name: .tabBar).instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
-            return
-        }
+    @objc func startPlayingDidTap() {
+        guard let viewController = self.storyboard(name: .tabBar)
+                .instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController else {
+                    return
+                }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     func getOfferDetails() {
@@ -156,7 +162,7 @@ private extension OfferViewController {
                 self.labelTimer.text = value
                 Log.d("\(value) seconds to left")
             }
-            time = time - 1
+            time -= 1
         } else {
             stopTimer()
         }

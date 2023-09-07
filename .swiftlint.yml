@@ -1,0 +1,14 @@
+excluded:
+  - Pods
+nesting:
+    type_level: 2
+line_length:
+  warning: 150
+disabled_rules:
+  - cyclomatic_complexity
+function_parameter_count:
+  warning: 10
+large_tuple:
+  warning: 4
+function_body_length:
+  warning: 60

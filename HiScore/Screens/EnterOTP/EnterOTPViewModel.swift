@@ -10,7 +10,7 @@ import UIKit
 
 class EnterOTPViewModel {
     private let networkService: HiScoreNetworkServiceprotocol
-    
+
     init(networkService: HiScoreNetworkServiceprotocol) {
         self.networkService = networkService
     }
@@ -19,7 +19,7 @@ class EnterOTPViewModel {
     var modelOTPResponse: GetOTPResponseModel?
     var otp = ""
     var phoneNumber = ""
-    
+
     func isValid() -> Bool {
         if (!otp.validateOTP) && (phoneNumber != "") {
             return false
@@ -57,7 +57,7 @@ class EnterOTPViewModel {
                             screenDPI: 0,
                             screenHeight: Int(ScreenDetails.height),
                             screenWidth: Int(ScreenDetails.width))
-        
+
         let param = VerifyOtpAndLoginRequestModel(accountDetails: accountDetais,
                                                   appType: DeviceDetails.deviceOS,
                                                   appsflyerAdset: "",
@@ -68,7 +68,7 @@ class EnterOTPViewModel {
                                                   device: device,
                                                   method: "1p",
                                                   walletInit: -1)
-        networkService.postData(to: .login(version: .v5),
+        networkService.postData(to: .login(version: .version5),
                                 with: param,
                                 responseModelType: VerifyOtpAndLoginResponseModel.self) { result in
             switch result {

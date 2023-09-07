@@ -39,8 +39,6 @@
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
 		AFA73A252AA874C200B7F030 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA73A242AA874C200B7F030 /* TipView.xib */; };
 		AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA73A262AA88D0D00B7F030 /* TipView.swift */; };
-		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
-		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
 		C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */; };
 		C7196CC72A9CBBA300BBC902 /* AddCash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */; };
@@ -151,8 +149,6 @@
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		AFA73A242AA874C200B7F030 /* TipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		AFA73A262AA88D0D00B7F030 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
-		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
-		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
 		C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCash.storyboard; sourceTree = "<group>"; };
@@ -265,7 +261,6 @@
 		840DD1562A8D463200B46FDD /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				AFEE60262A9335A500CB1D9A /* SwiftUI */,
 				AF89AEE72A8CCCC200AE2318 /* Custom Components */,
 				C7EBEE5D2A7BC9780045B449 /* Storyboards */,
 			);
@@ -481,15 +476,6 @@
 				AFA73A262AA88D0D00B7F030 /* TipView.swift */,
 			);
 			path = ToolTipView;
-			sourceTree = "<group>";
-		};
-		AFEE60262A9335A500CB1D9A /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				AFEE60242A9335A100CB1D9A /* OfferView.swift */,
-				AFEE60272A93446100CB1D9A /* CardView.swift */,
-			);
-			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		C7196CC32A9CA96900BBC902 /* Wallet */ = {
@@ -940,6 +926,7 @@
 			buildConfigurationList = C75F37272A791BC400925880 /* Build configuration list for PBXNativeTarget "HiScore" */;
 			buildPhases = (
 				2141D1BB35F4C85A79D228C2 /* [CP] Check Pods Manifest.lock */,
+				AF9AEB8E2AA9F08F0071C833 /* ShellScript */,
 				C75F370F2A791BC200925880 /* Sources */,
 				C75F37102A791BC200925880 /* Frameworks */,
 				C75F37112A791BC200925880 /* Resources */,
@@ -1074,6 +1061,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiScore/Pods-HiScore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF9AEB8E2AA9F08F0071C833 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1127,7 +1131,6 @@
 				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,
 				AF7969D62A9CB238004BCF81 /* HomeViewController.swift in Sources */,
-				AFEE60282A93446100CB1D9A /* CardView.swift in Sources */,
 				C7C0C1C72A82528A0096E958 /* NetworkReachability.swift in Sources */,
 				C7196CD12A9CBC7400BBC902 /* AddCashCollectionViewCell.swift in Sources */,
 				AF8D250F2A98F14600001CF0 /* DisableLocationViewController.swift in Sources */,
@@ -1150,7 +1153,6 @@
 				AF25812B2A94B9A4006113F2 /* OfferViewModel.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,
 				C79845A02A86592300F08457 /* APIEndpoint.swift in Sources */,
-				AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

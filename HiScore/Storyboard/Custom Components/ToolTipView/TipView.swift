@@ -14,17 +14,17 @@ class TipView: UIView {
     @IBOutlet weak var imageViewLogo: UIImageView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var toolTipView: UIView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
+
     private func commonInit() {
         Bundle.main.loadNibNamed("TipView", owner: self, options: nil)
         contentView.frame = frame
@@ -37,7 +37,7 @@ class TipView: UIView {
                                     cornerRadius: 6,
                                     borderWidth: 0)
     }
-    
+
     func setMessage(title: String, message: String, image: UIImage) {
         labelHedaer.text = title
         labelDescription.text = message

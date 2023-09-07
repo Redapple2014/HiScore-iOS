@@ -16,8 +16,8 @@ class BaseViewController: UIViewController {
     weak var mainWindow: UIWindow? = {
         let window =  UIApplication.shared.windows.first { $0.isKeyWindow }
         return window
-        
     }()
+
     func updateUI() {
         self.view.backgroundColor = .HSAppThemeColor
     }
@@ -43,7 +43,6 @@ extension BaseViewController {
     func showSnackbarError(title: String, subtitle: String) {
         showAlert(title: title, subtitle: subtitle, style: .danger, font: UIFont.MavenPro.SemiBold.withSize(18))
     }
-    
     func showSnackbarSuccessOnTop(title: String, subtitle: Messages) {
         showAlert(title: title, subtitle: subtitle.description, style: .success, font: UIFont.MavenPro.ExtraBold.withSize(18))
     }
@@ -88,7 +87,7 @@ extension BaseViewController {
 
 
 
-//extension BaseViewController {
+// extension BaseViewController {
 //     func placeHolderTextField(textField: TKFormTextField) {
 //        // UITextField traditional properties
 //        textField.placeholder = "Enter phone number"
@@ -117,8 +116,8 @@ extension BaseViewController {
 //     //   textField.addTarget(self, action: #selector(updateError), for: .editingChanged)
 //
 //    }
-//}
-//extension BaseViewController: GradientsOwner {
+// }
+// extension BaseViewController: GradientsOwner {
 //    var gradientLayers: [CAGradientLayer] {
 //        let grad = gradView.map({$0.gradientLayer})
 //      return grad
@@ -141,4 +140,4 @@ extension BaseViewController {
 //    }
 //
 //
-//}
+// }

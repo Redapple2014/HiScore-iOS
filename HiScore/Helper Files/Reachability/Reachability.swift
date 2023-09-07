@@ -6,35 +6,33 @@
 //
 
 import Foundation
-import SystemConfiguration
-
 import UIKit
 import SystemConfiguration.CaptiveNetwork
 
-public let ReachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
+public let reachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
 
 public enum ReachabilityType: CustomStringConvertible {
-    case WWAN
-    case WiFi
+    case wWAN
+    case wiFi
 
     public var description: String {
         switch self {
-        case .WWAN: return "WWAN"
-        case .WiFi: return "WiFi"
+        case .wWAN: return "WWAN"
+        case .wiFi: return "WiFi"
         }
     }
 }
 
-public enum ReachabilityStatus: CustomStringConvertible  {
-    case Offline
-    case Online(ReachabilityType)
-    case Unknown
+public enum ReachabilityStatus: CustomStringConvertible {
+    case offline
+    case online(ReachabilityType)
+    case unknown
 
     public var description: String {
         switch self {
-        case .Offline: return "Offline"
-        case .Online(let type): return "Online (\(type))"
-        case .Unknown: return "Unknown"
+        case .offline: return "Offline"
+        case .online(let type): return "Online (\(type))"
+        case .unknown: return "Unknown"
         }
     }
 }
@@ -51,12 +49,12 @@ public class Reachability {
                 SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
             }
         }) else {
-           return .Unknown
+           return .unknown
         }
 
-        var flags : SCNetworkReachabilityFlags = []
+        var flags: SCNetworkReachabilityFlags = []
         if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
-            return .Unknown
+            return .unknown
         }
 
         return ReachabilityStatus(reachabilityFlags: flags)
@@ -70,7 +68,9 @@ public class Reachability {
         SCNetworkReachabilitySetCallback(reachability, { (_, flags, _) in
             let status = ReachabilityStatus(reachabilityFlags: flags)
 
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil, userInfo: ["Status": status.description])}, &context)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: reachabilityStatusChangedNotification),
+                                            object: nil,
+                                            userInfo: ["Status": status.description])}, &context)
 
         SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
     }
@@ -85,13 +85,12 @@ extension ReachabilityStatus {
 
         if !connectionRequired && isReachable {
             if isWWAN {
-                self = .Online(.WWAN)
+                self = .online(.wWAN)
             } else {
-                self = .Online(.WiFi)
+                self = .online(.wiFi)
             }
         } else {
-            self =  .Offline
+            self =  .offline
         }
     }
 }
-

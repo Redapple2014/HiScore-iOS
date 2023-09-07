@@ -7,16 +7,16 @@
 
 import Foundation
 class SpalshViewModel {
-    
+
     private let networkService: HiScoreNetworkRepository
-    
+
     init(networkService: HiScoreNetworkRepository) {
         self.networkService = networkService
     }
     func getSplashScreenImages(completion: @escaping (Result<SplashResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .fetchSplashImage(version: .v3),
+        networkService.fetchData(from: .fetchSplashImage(version: .version3),
                                  model: SplashResponseModel.self) { response in
-            
+
             switch response {
             case .success(let data):
                 DispatchQueue.main.async {

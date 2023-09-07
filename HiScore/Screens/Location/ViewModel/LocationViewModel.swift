@@ -8,15 +8,15 @@
 import Foundation
 
 class LocationViewModel {
-    
+
     private let networkService: HiScoreNetworkRepository
-    
+
     init(networkService: HiScoreNetworkRepository) {
         self.networkService = networkService
     }
     func getLocationData(lat: String, long: String, completion: @escaping (Result<LocationResponseModel, APIError>) -> Void) {
         let param = LocationRequestModel(lat: lat, long: long)
-        networkService.postData(to: .validateAccess(version: .v2),
+        networkService.postData(to: .validateAccess(version: .version2),
                                 with: param,
                                 responseModelType: LocationResponseModel.self) { result in
             switch result {

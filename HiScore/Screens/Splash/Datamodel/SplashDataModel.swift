@@ -17,7 +17,11 @@ struct Event: Codable {
     let event: EventUrl
 }
 struct EventUrl: Codable {
-   private let splash_screen_url: String
+   private let splashScreen: String
+
+    enum CodingKeys: String, CodingKey {
+        case splashScreen = "splash_screen_url"
+    }
 }
 
 protocol EventUrlPresentable {
@@ -26,7 +30,7 @@ protocol EventUrlPresentable {
 
 extension EventUrl: EventUrlPresentable {
     var splashScreenUrl: URL {
-        let imageString = splash_screen_url
+        let imageString = splashScreen
         return URL(string: imageString)!
     }
 }

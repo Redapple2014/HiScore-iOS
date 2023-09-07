@@ -10,7 +10,7 @@ import OTPFieldView
 import MHLoadingButton
 
 class EnterOTPViewController: BaseViewController {
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var viewShowError: UIView!
     @IBOutlet weak var labelResend: UILabel!
     @IBOutlet weak var OTPTextField: OTPFieldView!
@@ -18,8 +18,8 @@ class EnterOTPViewController: BaseViewController {
     @IBOutlet weak var buttonVerify: LoadingButton!
     @IBOutlet weak var labelDisplayMobileNumber: UILabel!
     @IBOutlet weak var buttonChangeNumber: LoadingButton!
-    
-    //MARK: - Variables
+
+    // MARK: - Variables
     var errorMessage = Messages.invalidOtp.description
     var viewModelGetOtp: OnboardingScreenViewModel!
     var viewModelVerifyOtp: EnterOTPViewModel!
@@ -71,7 +71,7 @@ extension EnterOTPViewController: OTPFieldViewDelegate {
         self.viewModelVerifyOtp.otp = otpString
     }
 }
-//MARK: - @objc methods
+// MARK: - @objc methods
 extension EnterOTPViewController {
     @objc func updateCounter() {
         if counter > -1 {
@@ -93,7 +93,7 @@ extension EnterOTPViewController {
         resendOTP(phoneNumber: self.viewModelVerifyOtp.phoneNumber)
     }
 }
-//MARK: - Button Actions
+// MARK: - Button Actions
 extension EnterOTPViewController {
     @IBAction func buttonVerifyTapped(_ sender: Any) {
         verifyOTP()
@@ -170,7 +170,8 @@ private extension EnterOTPViewController {
                         self.showSnackbarError(title: "", subtitle: data.errorMsg ?? Messages.invalidResponse.description)
                         return
                     }
-                    guard let viewController = self.storyboard(name: .location).instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
+                    guard let viewController = self.storyboard(name: .location)
+                            .instantiateViewController(withIdentifier: "GetLocationViewController") as? GetLocationViewController else {
                         return
                     }
                     self.navigationController?.pushViewController(viewController, animated: true)

@@ -14,7 +14,7 @@ class OfferViewModel {
         self.networkService = networkService
     }
     func getOfferDetails(completion: @escaping (Result<OfferResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .offer(version: .v5),
+        networkService.fetchData(from: .offer(version: .version5),
                                  model: OfferResponseModel.self) { result in
             switch result {
             case .success(let response):
