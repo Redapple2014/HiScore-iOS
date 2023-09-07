@@ -52,10 +52,13 @@ enum Messages {
 }
 enum PlaceholderMessages {
     case phoneNumber
+    case enterAmount
     var desscription: String {
         switch self {
         case .phoneNumber:
             return "Enter phone number"
+        case .enterAmount:
+            return "Enter an amount"
         }
     }
 }

@@ -10,6 +10,7 @@ import MHLoadingButton
 import IQKeyboardManager
 
 class AddCashViewController: BaseViewController {
+    @IBOutlet weak var imageArrowOrI: UIImageView!
     
     @IBOutlet weak var viewReward: RewardPopupView!
     @IBOutlet weak var vwAmountSuperView: UIView!
@@ -34,7 +35,14 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var labelOfferTotal: UILabel!
     @IBOutlet weak var collectionOfCashOffers: UICollectionView!
     @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var enterAmountTextField: UITextField!
+    @IBOutlet weak var enterAmountTextField: UITextField! {
+        didSet {
+            let redPlaceholderText = NSAttributedString(string: PlaceholderMessages.enterAmount.desscription,
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.HSWhiteColor.withAlphaComponent(0.3),
+                                                                     NSAttributedString.Key.font: UIFont.MavenPro.ExtraBold.withSize(16)])
+            enterAmountTextField.attributedPlaceholder = redPlaceholderText
+        }
+    }
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
     var viewModel: AddCashViewModel!
@@ -79,12 +87,10 @@ extension AddCashViewController {
     private func postApiUI() {
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
             labelOfferTotal.text = "First Deposit"
-            buttonArrowOrI.setImage(UIImage(named: "errorYellow"))
-            buttonArrowOrI.imageView?.tintColor = .HSDarkYellowButtonColor
-            buttonArrowOrI.setBackgroundImage(nil, for: .normal)
+            imageArrowOrI.image = UIImage(named: "errorYellow")
+            imageArrowOrI.tintColor = .HSDarkYellowButtonColor
         } else {
-            buttonArrowOrI.setImage(nil)
-            buttonArrowOrI.setBackgroundImage(UIImage(named: "rightArrow"), for: .normal)
+            imageArrowOrI.image = UIImage(named: "rightArrow")
             labelOfferTotal.text = "Rummy Offers"
         }
         if self.responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 {
@@ -102,9 +108,9 @@ extension AddCashViewController {
         enterAmountTextField.delegate  = self
         collectionOfCashOffers.dataSource = self
         collectionOfCashOffers.delegate = self
-//        let tap = UIGestureRecognizer(target: self, action: #selector(self.tapped(gestureRecognizer:)))
-//        tap.delegate = self
-//        view.addGestureRecognizer(tap)
+        let tap = UIGestureRecognizer(target: self, action: #selector(self.tapped(gestureRecognizer:)))
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
     }
     private func showOffersData() {
         collectionOfCashOffers.isHidden = false
@@ -208,8 +214,7 @@ extension AddCashViewController {
         }
     }
     @objc func tapped(gestureRecognizer: UITapGestureRecognizer) {
-//        gestureRecognizer.view?.superview
-//        self.view.endEditing(true)
+        self.view.endEditing(true)
     }
 }
 // MARK: - UITextFieldDelegate -
@@ -278,14 +283,17 @@ extension AddCashViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - CollectionView UICollectionViewDelegate -
 extension AddCashViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selected = self.offerDataList?.filter({ $0.isSelected })
-        if selected?.count == 0 {
-            return
-        }
+        //        let selected = self.offerDataList?.filter({ $0.isSelected })
+        //        if selected?.count == 0 {
+        //            return
+        //        }
         _ =  self.offerDataList?.map({$0.isSelected = false})
         self.offerDataList?[indexPath.row].isSelected = true
         self.enterAmountTextField.text = "\(self.offerDataList?[indexPath.row].amount ?? 0)"
         collectionOfCashOffers.reloadData()
+        guard let data = self.offerDataList?[indexPath.row] else { return  }
+        calculateTotalDeposit(data: data)
+        self.showAmountSection()
     }
 }
 extension AddCashViewController: AddCashDelegate {
@@ -336,12 +344,13 @@ extension AddCashViewController: RewardPopupDelegate {
     }
 }
 extension AddCashViewController: UIGestureRecognizerDelegate {
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//        if touch.view!.superview!.superclass! .isSubclass(of: UIButton.self) {
-//            return false
-//        } else if touch.view!.superview!.superclass!.isSubclass(of: UICollectionView.self) {
-//            return false
-//        }
-//        return true
-//    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        // Check if the touch is on a UIButton or UICollectionView
+        if let view = touch.view, (view is UIButton || view is HSShadowView) {
+            return false // Don't recognize the tap gesture for these views
+        }
+        self.view.endEditing(true)
+        return true // Recognize the tap gesture for other views
+    }
 }
+// view is UICollectionView || view is UICollectionViewCell ||
