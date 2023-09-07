@@ -160,17 +160,17 @@ extension AddCashViewController {
         view.layer.addSublayer(layer0)
         self.vwContainerCircleNoOffers.addSubview(view)
     }
-    private func showNoMore() {
+    private func showKnowMore() {
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.viewReward.buttonCross.transform = CGAffineTransform(translationX: 0, y: self.viewReward.buttonCross.frame.size.height)
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.05, animations: {
                 self.viewReward.isHidden = true
                 self.viewReward.buttonCross.transform = .identity
             })
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.viewReward.viewCintainer.transform = CGAffineTransform(translationX: 0, y: self.viewReward.viewCintainer.frame.size.height)
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.viewReward.isHidden = false
                 self.viewReward.viewCintainer.transform = .identity
             })
@@ -182,7 +182,6 @@ extension AddCashViewController {
         self.viewReward.showDefaultData(data: data[2], type: .rummyCash)
         self.viewReward.showDefaultData(data: data[3], type: .freeEntryTickets)
         self.viewReward.showDefaultData(data: data[4], type: .vouchersAndOffers)
-        
     }
 }
 extension AddCashViewController {
@@ -192,7 +191,7 @@ extension AddCashViewController {
     @IBAction func buttonArrowOrITapped(_ sender: Any) {
         self.view.endEditing(true)
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-            showNoMore()
+            showKnowMore()
         } else {
             // offer page
         }
