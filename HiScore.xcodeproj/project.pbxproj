@@ -19,14 +19,6 @@
 		AF28DCC32A8A66A3003BFDCF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF28DCC22A8A66A3003BFDCF /* Location.storyboard */; };
 		AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */; };
 		AF2DB11D2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */; };
-		AF4C3FBF2AA9A1A000CD9CE4 /* TooltipDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FB72AA9A1A000CD9CE4 /* TooltipDirection.swift */; };
-		AF4C3FC02AA9A1A000CD9CE4 /* SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FB82AA9A1A000CD9CE4 /* SnapshotView.swift */; };
-		AF4C3FC12AA9A1A000CD9CE4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FB92AA9A1A000CD9CE4 /* UIViewExtensions.swift */; };
-		AF4C3FC22AA9A1A100CD9CE4 /* DarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FBA2AA9A1A000CD9CE4 /* DarkView.swift */; };
-		AF4C3FC32AA9A1A100CD9CE4 /* TooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4C3FBB2AA9A1A000CD9CE4 /* TooltipView.xib */; };
-		AF4C3FC42AA9A1A100CD9CE4 /* TooltipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FBC2AA9A1A000CD9CE4 /* TooltipManager.swift */; };
-		AF4C3FC52AA9A1A100CD9CE4 /* TooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FBD2AA9A1A000CD9CE4 /* TooltipView.swift */; };
-		AF4C3FC62AA9A1A100CD9CE4 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4C3FBE2AA9A1A000CD9CE4 /* TriangleView.swift */; };
 		AF4DE2F12AA5FAB200723DE0 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */; };
 		AF4DE2F32AA5FB4200723DE0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */; };
 		AF631FDE2AA734F900BB195C /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF631FDD2AA734F900BB195C /* UserDataModel.swift */; };
@@ -136,14 +128,6 @@
 		AF28DCC22A8A66A3003BFDCF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		AF2DB11A2A8F565700BFE1E1 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		AF2DB11C2A8FA7E400BFE1E1 /* DisableLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableLocationViewModel.swift; sourceTree = "<group>"; };
-		AF4C3FB72AA9A1A000CD9CE4 /* TooltipDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipDirection.swift; sourceTree = "<group>"; };
-		AF4C3FB82AA9A1A000CD9CE4 /* SnapshotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotView.swift; sourceTree = "<group>"; };
-		AF4C3FB92AA9A1A000CD9CE4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		AF4C3FBA2AA9A1A000CD9CE4 /* DarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkView.swift; sourceTree = "<group>"; };
-		AF4C3FBB2AA9A1A000CD9CE4 /* TooltipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TooltipView.xib; sourceTree = "<group>"; };
-		AF4C3FBC2AA9A1A000CD9CE4 /* TooltipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipManager.swift; sourceTree = "<group>"; };
-		AF4C3FBD2AA9A1A000CD9CE4 /* TooltipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipView.swift; sourceTree = "<group>"; };
-		AF4C3FBE2AA9A1A000CD9CE4 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		AF4DE2F02AA5FAB200723DE0 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		AF4DE2F22AA5FB4200723DE0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		AF631FDD2AA734F900BB195C /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
@@ -357,21 +341,6 @@
 				AF916C152A8E38EF00125808 /* ViewModel */,
 			);
 			path = Location;
-			sourceTree = "<group>";
-		};
-		AF4C3FB62AA9A1A000CD9CE4 /* Tooltip */ = {
-			isa = PBXGroup;
-			children = (
-				AF4C3FB72AA9A1A000CD9CE4 /* TooltipDirection.swift */,
-				AF4C3FB82AA9A1A000CD9CE4 /* SnapshotView.swift */,
-				AF4C3FB92AA9A1A000CD9CE4 /* UIViewExtensions.swift */,
-				AF4C3FBA2AA9A1A000CD9CE4 /* DarkView.swift */,
-				AF4C3FBB2AA9A1A000CD9CE4 /* TooltipView.xib */,
-				AF4C3FBC2AA9A1A000CD9CE4 /* TooltipManager.swift */,
-				AF4C3FBD2AA9A1A000CD9CE4 /* TooltipView.swift */,
-				AF4C3FBE2AA9A1A000CD9CE4 /* TriangleView.swift */,
-			);
-			path = Tooltip;
 			sourceTree = "<group>";
 		};
 		AF4DE2EF2AA5FA9E00723DE0 /* ViewModel */ = {
@@ -787,7 +756,6 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF4C3FB62AA9A1A000CD9CE4 /* Tooltip */,
 				AF8D25052A98F13500001CF0 /* HSGradientView */,
 				AF8D25072A98F13500001CF0 /* HSShadowView */,
 				AF8D24FF2A98F10A00001CF0 /* HSButton */,
@@ -1034,7 +1002,6 @@
 				AF2DB11B2A8F565700BFE1E1 /* Reward.storyboard in Resources */,
 				C72618AF2A84ED7B00738F7F /* Rajdhani-Medium.ttf in Resources */,
 				C7C0C1B82A821C260096E958 /* MavenPro-Medium.ttf in Resources */,
-				AF4C3FC32AA9A1A100CD9CE4 /* TooltipView.xib in Resources */,
 				C79845A42A86716100F08457 /* REward Gift Box.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1088,12 +1055,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF4C3FC02AA9A1A000CD9CE4 /* SnapshotView.swift in Sources */,
 				AF2581272A94B8D7006113F2 /* OfferCollectionCell.swift in Sources */,
 				AF916C1D2A8E3D1B00125808 /* LocationDataModel.swift in Sources */,
 				AF4DE2F12AA5FAB200723DE0 /* WalletViewModel.swift in Sources */,
 				AF89AEEB2A8CCD8D00AE2318 /* FetchLocationPopUp.swift in Sources */,
-				AF4C3FC12AA9A1A000CD9CE4 /* UIViewExtensions.swift in Sources */,
 				C7EC88342A9339F5009CFAFA /* RewardPopupViewController.swift in Sources */,
 				AF2581252A94B417006113F2 /* OfferViewController.swift in Sources */,
 				C75F37172A791BC200925880 /* AppDelegate.swift in Sources */,
@@ -1108,7 +1073,6 @@
 				C7C536902A8A4908007391FC /* SplashDataModel.swift in Sources */,
 				AF631FDE2AA734F900BB195C /* UserDataModel.swift in Sources */,
 				C7B4E5D92A8CB36D00FB4ABF /* OnboardingScreenResponseModel.swift in Sources */,
-				AF4C3FBF2AA9A1A000CD9CE4 /* TooltipDirection.swift in Sources */,
 				C7C5366D2A8A08D4007391FC /* OnBoardingScreenViewModel.swift in Sources */,
 				C7AD48DD2A8E3FAB0063CEBE /* UIDevice+Extension.swift in Sources */,
 				C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */,
@@ -1119,7 +1083,6 @@
 				C7B4E5DD2A8D04BD00FB4ABF /* EnterOTPViewModel.swift in Sources */,
 				AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
-				AF4C3FC42AA9A1A100CD9CE4 /* TooltipManager.swift in Sources */,
 				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C7196CCE2A9CBC3200BBC902 /* AddCashModel.swift in Sources */,
@@ -1127,7 +1090,6 @@
 				AF8D250A2A98F13500001CF0 /* HSShadowView.swift in Sources */,
 				C72618A72A84E1EC00738F7F /* EnterOTPViewController.swift in Sources */,
 				AF8D25092A98F13500001CF0 /* HSGradientView.swift in Sources */,
-				AF4C3FC22AA9A1A100CD9CE4 /* DarkView.swift in Sources */,
 				C7A9DF782A8361850066924E /* BaseViewController.swift in Sources */,
 				C7EC883F2A938652009CFAFA /* DashedLineView.swift in Sources */,
 				AF25812D2A94B9AE006113F2 /* Offer.swift in Sources */,
@@ -1154,11 +1116,9 @@
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
 				AF8D250E2A98F14600001CF0 /* GetLocationViewController.swift in Sources */,
-				AF4C3FC52AA9A1A100CD9CE4 /* TooltipView.swift in Sources */,
 				AF8D25042A98F10A00001CF0 /* HSGradientButton.swift in Sources */,
 				AF8D25032A98F10A00001CF0 /* HSButton.swift in Sources */,
 				84D2A5CA2A9113000098A1F4 /* UITextField+Extension.swift in Sources */,
-				AF4C3FC62AA9A1A100CD9CE4 /* TriangleView.swift in Sources */,
 				AF25812B2A94B9A4006113F2 /* OfferViewModel.swift in Sources */,
 				C7C0C1C42A8252570096E958 /* Logger.swift in Sources */,
 				C79845A02A86592300F08457 /* APIEndpoint.swift in Sources */,
