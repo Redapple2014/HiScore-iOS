@@ -67,6 +67,7 @@
 		C75F371E2A791BC200925880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F371C2A791BC200925880 /* Main.storyboard */; };
 		C75F37202A791BC400925880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75F371F2A791BC400925880 /* Assets.xcassets */; };
 		C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F37212A791BC400925880 /* LaunchScreen.storyboard */; };
+		C7789CE42AA9FEBD0088D384 /* AddOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7789CE32AA9FEBD0088D384 /* AddOffersTableViewCell.swift */; };
 		C77E2A532A8FA19300C8C96D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E2A522A8FA19300C8C96D /* User.swift */; };
 		C77E2A562A8FA6FE00C8C96D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */; };
 		C798459D2A86592300F08457 /* HiScoreNetworkServiceprotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */; };
@@ -181,6 +182,7 @@
 		C75F371F2A791BC400925880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C75F37222A791BC400925880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75F37242A791BC400925880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7789CE32AA9FEBD0088D384 /* AddOffersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOffersTableViewCell.swift; sourceTree = "<group>"; };
 		C77E2A522A8FA19300C8C96D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C77E2A552A8FA6FE00C8C96D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		C79845982A86592300F08457 /* HiScoreNetworkServiceprotocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiScoreNetworkServiceprotocol.swift; sourceTree = "<group>"; };
@@ -720,6 +722,7 @@
 			isa = PBXGroup;
 			children = (
 				C7C221FE2AA9B02500269D82 /* AddOfferViewController.swift */,
+				C7789CE32AA9FEBD0088D384 /* AddOffersTableViewCell.swift */,
 			);
 			path = "Add Offer";
 			sourceTree = "<group>";
@@ -1142,6 +1145,7 @@
 				C7C0C1BE2A824CED0096E958 /* UIColor+Additions.swift in Sources */,
 				C7EC88422A9388A5009CFAFA /* MyRewardsTableViewCell.swift in Sources */,
 				C77E2A532A8FA19300C8C96D /* User.swift in Sources */,
+				C7789CE42AA9FEBD0088D384 /* AddOffersTableViewCell.swift in Sources */,
 				C72618B62A84EE3300738F7F /* UIFont+Additions.swift in Sources */,
 				AF8D250E2A98F14600001CF0 /* GetLocationViewController.swift in Sources */,
 				AF8D25042A98F10A00001CF0 /* HSGradientButton.swift in Sources */,

@@ -144,4 +144,21 @@ extension UIColor {
     static let HSYellowColor2: UIColor = {
         return UIColor(hex: "#F2CB94")
     }()
+    
+//    static let HSNewOrangeA1: UIColor = {
+//        return UIColor(hex: "")
+//    }()
+//    static let HSNewOrangeA2: UIColor = {
+//        return UIColor(hex: "")
+//    }()
+//    static let HSNewOrangeA3: UIColor = {
+//        return UIColor(hex: "")
+//    }()
+//    static let HSNewGreenA1: UIColor = {
+//        return UIColor(hex: "")
+//    }()
+//    static let HSNewGreenA2: UIColor = {
+//        return UIColor(hex: "")
+//    }()
+    
 }
