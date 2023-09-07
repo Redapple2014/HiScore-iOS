@@ -123,8 +123,8 @@ extension UIColor {
         return UIColor(hex: "#3C425C")
     }()
     static let HSLightGreen: UIColor = {
-       return UIColor(hex: "B2F3B1")
-    
+        return UIColor(hex: "B2F3B1")
+    }()
     static let HSOrange: UIColor = {
         return UIColor(hex: "#E76000")
     }()

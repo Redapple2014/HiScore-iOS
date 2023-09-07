@@ -45,9 +45,10 @@ class AddCashViewController: BaseViewController {
     }
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
-    var viewModel: AddCashViewModel!
-    var responseModel: AddCashResponseModel!
-    var offerDataList: [OfferListData]?
+    private var viewModel: AddCashViewModel!
+    private var responseModel: AddCashResponseModel!
+    private var offerDataList: [OfferListData]?
+    var walletBalance = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
@@ -127,6 +128,7 @@ extension AddCashViewController {
         showNoOffersImage()
     }
     private func initUI() {
+        labelbalance.text = "\(walletBalance)"
         labelUptoCash.text = "Click to apply offers"
         errorMinimumAmount.isHidden = true
         showOffersData()

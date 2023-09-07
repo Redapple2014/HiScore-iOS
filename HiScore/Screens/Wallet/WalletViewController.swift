@@ -21,7 +21,7 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var kycStatus: UILabel!
     @IBOutlet weak var subkycStatus: UILabel!
     @IBOutlet weak var kycStatusIcon: UIImageView!
-   
+    
     @IBOutlet weak var buttonDepositeHint: UIButton!
     @IBOutlet weak var buttonRummyCashHint: UIButton!
     @IBOutlet weak var buttonWinningHint: UIButton!
@@ -63,20 +63,20 @@ extension WalletViewController {
 //MARK: - Button actions -
 extension WalletViewController {
     @IBAction func addCash(_ sender: Any) {
-        //        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
-        //            return
-        //        }
-        //        self.navigationController?.pushViewController(viewController, animated: true)
+        guard let viewController = self.storyboard(name: .addCash).instantiateViewController(withIdentifier: "AddCashViewController") as? AddCashViewController else {
+            return
+        }
+        viewController.walletBalance = (self.viewModel.walletData?.depositAmount ?? 0) + (self.viewModel.walletData?.winningsAmount ?? 0) + Int((self.viewModel.walletData?.rummyCash ?? 0.0))
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
-
 private extension WalletViewController {
-
+    
     func loadData() {
         let depositAmt = self.viewModel.walletData?.depositAmount ?? 0
         let winningAmt = self.viewModel.walletData?.winningsAmount ?? 0
-        let rummyCash = self.viewModel.walletData?.rummyCash ?? 0.0
+        let rummyCash =  self.viewModel.walletData?.rummyCash ?? 0.0
         let totalBalance = Double(depositAmt) + Double(winningAmt) + rummyCash
         self.hiscoreWallet.text = totalBalance.description
         self.transactionProgress.text = "\(self.viewModel.walletData?.withdrawalProgress ?? 0) Transaction in progress"
@@ -139,7 +139,7 @@ extension WalletViewController: EasyTipViewDelegate {
         
         var preferences = EasyTipView.globalPreferences
         preferences.drawing.backgroundColor = .clear
-
+        
         preferences.animating.dismissTransform = CGAffineTransform(translationX: 0, y: -15)
         preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: 15)
         preferences.animating.showInitialAlpha = 0
