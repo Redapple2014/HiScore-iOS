@@ -183,6 +183,14 @@ extension AddCashViewController {
         self.viewReward.showDefaultData(data: data[3], type: .freeEntryTickets)
         self.viewReward.showDefaultData(data: data[4], type: .vouchersAndOffers)
     }
+    private func goToAddOffer() {
+        // AddOfferViewController
+        guard let viewController = self.storyboard(name: .addOffer).instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+
+    }
 }
 extension AddCashViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -191,9 +199,10 @@ extension AddCashViewController {
     @IBAction func buttonArrowOrITapped(_ sender: Any) {
         self.view.endEditing(true)
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-            showKnowMore()
+            goToAddOffer() // showKnowMore()
         } else {
             // offer page
+            goToAddOffer()
         }
     }
     @IBAction func clearButtonTapped(_ sender: Any) {
