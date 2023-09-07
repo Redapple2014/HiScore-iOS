@@ -20,14 +20,16 @@ class AddCashViewModel {
     var delegate: AddCashDelegate?
 //    var totalOfferCount = 4
     var amount = 0
-    private var offerData: [OfferData]!
+    private var offerData = [OfferData]()
    
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
         networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
                                  model: AddCashResponseModel.self) { response in
             switch response {
             case .success(let data):
-                self.offerData = data.data?.offerTypes?.promotionalOffers?.offers
+                if let offerDetails = data.data?.offerTypes?.promotionalOffers?.offers {
+                    self.offerData = offerDetails
+                }
                 DispatchQueue.main.async {
                     self.amount =  0
                     self.showOffers()

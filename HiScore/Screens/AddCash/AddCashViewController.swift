@@ -128,7 +128,7 @@ extension AddCashViewController {
         showNoOffersImage()
     }
     private func initUI() {
-        labelbalance.text = "\(walletBalance)"
+        labelbalance.text = "Balance: ₹\(walletBalance)"
         labelUptoCash.text = "Click to apply offers"
         errorMinimumAmount.isHidden = true
         showOffersData()
