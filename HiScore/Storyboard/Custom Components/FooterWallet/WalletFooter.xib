@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-uM-Ce1">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV7-rr-CJh">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV7-rr-CJh">
                             <rect key="frame" x="17" y="14" width="51" height="14"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="gKB-jj-ZIl"/>
@@ -33,59 +33,56 @@
                             <color key="textColor" name="HSWhiteColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google_Pay_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="YT8-WP-Bvu">
-                            <rect key="frame" x="100" y="6" width="28" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="nQ1-DU-uIO"/>
-                                <constraint firstAttribute="width" constant="28" id="qib-Au-qmi"/>
-                            </constraints>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google_Pay_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="YT8-WP-Bvu">
+                            <rect key="frame" x="94" y="6" width="31.333333333333329" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paytm_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WsB-wk-rTa">
-                            <rect key="frame" x="151" y="6" width="31" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="Rjz-fb-Hbs"/>
-                                <constraint firstAttribute="width" constant="31" id="SwN-cb-hEi"/>
-                            </constraints>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phonepe" translatesAutoresizingMaskIntoConstraints="NO" id="Skz-Jc-Pvw">
+                            <rect key="frame" x="195.66666666666666" y="14.333333333333332" width="48.333333333333343" height="13.333333333333332"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phonepe" translatesAutoresizingMaskIntoConstraints="NO" id="Skz-Jc-Pvw">
-                            <rect key="frame" x="207" y="6" width="42" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="FXW-Le-a7R"/>
-                                <constraint firstAttribute="width" constant="42" id="VBp-rq-inD"/>
-                            </constraints>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Justpay" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-1g-7zp">
+                            <rect key="frame" x="264" y="16.333333333333332" width="44" height="9.6666666666666679"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cashFree" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-JV-eSc">
-                            <rect key="frame" x="314" y="7.6666666666666679" width="57.333333333333314" height="27.000000000000004"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="27" id="7e7-OT-AzO"/>
-                                <constraint firstAttribute="width" constant="57.329999999999998" id="fIz-WN-lpa"/>
-                            </constraints>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cashFree" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-JV-eSc">
+                            <rect key="frame" x="308.66666666666669" y="7.6666666666666679" width="57.333333333333314" height="27.000000000000004"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Justpay" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-1g-7zp">
-                            <rect key="frame" x="265" y="16" width="43.333333333333314" height="10"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="9.6699999999999999" id="RYN-qq-dcp"/>
-                                <constraint firstAttribute="width" constant="43.329999999999998" id="wFb-9C-QK8"/>
-                            </constraints>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paytm_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WsB-wk-rTa">
+                            <rect key="frame" x="137.33333333333334" y="15" width="38.333333333333343" height="12"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w28-ZE-VLG">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletFooter" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-dk-BJ7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ExH-dk-BJ7" firstAttribute="leading" secondItem="w28-ZE-VLG" secondAttribute="leading" id="Dgh-pz-2bS"/>
+                                <constraint firstAttribute="bottom" secondItem="ExH-dk-BJ7" secondAttribute="bottom" id="Pon-3D-TS1"/>
+                                <constraint firstAttribute="trailing" secondItem="ExH-dk-BJ7" secondAttribute="trailing" id="UEB-JU-zhs"/>
+                                <constraint firstItem="ExH-dk-BJ7" firstAttribute="top" secondItem="w28-ZE-VLG" secondAttribute="top" id="x4b-um-zTZ"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" name="HSAppThemeColor"/>
                     <constraints>
-                        <constraint firstItem="YT8-WP-Bvu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="yV7-rr-CJh" secondAttribute="trailing" constant="32" id="1sB-Le-rQw"/>
-                        <constraint firstItem="WsB-wk-rTa" firstAttribute="leading" relation="lessThanOrEqual" secondItem="YT8-WP-Bvu" secondAttribute="trailing" constant="23" id="2de-C8-5Ze"/>
-                        <constraint firstItem="7jw-JV-eSc" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="4yx-uw-CD7"/>
-                        <constraint firstItem="WsB-wk-rTa" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="AyQ-M1-jfO"/>
-                        <constraint firstItem="RaQ-1g-7zp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Skz-Jc-Pvw" secondAttribute="trailing" constant="16" id="Cur-ku-E7z"/>
-                        <constraint firstItem="Skz-Jc-Pvw" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WsB-wk-rTa" secondAttribute="trailing" constant="25" id="GJk-pb-5AW"/>
-                        <constraint firstAttribute="trailing" secondItem="7jw-JV-eSc" secondAttribute="trailing" constant="3.6699999999999999" id="Guz-4O-BVJ"/>
-                        <constraint firstAttribute="bottom" secondItem="YT8-WP-Bvu" secondAttribute="bottom" constant="6" id="Jxw-HV-OKC"/>
-                        <constraint firstAttribute="height" constant="42" id="Rlc-Rf-cer"/>
+                        <constraint firstAttribute="bottom" secondItem="w28-ZE-VLG" secondAttribute="bottom" id="6sV-4v-cNi"/>
+                        <constraint firstItem="WsB-wk-rTa" firstAttribute="leading" secondItem="YT8-WP-Bvu" secondAttribute="trailing" constant="12" id="9Af-iR-xGl"/>
+                        <constraint firstAttribute="bottom" secondItem="YT8-WP-Bvu" secondAttribute="bottom" constant="6" id="CUc-IT-bBA"/>
+                        <constraint firstItem="RaQ-1g-7zp" firstAttribute="leading" secondItem="Skz-Jc-Pvw" secondAttribute="trailing" constant="20" id="Ccf-He-kFM"/>
+                        <constraint firstItem="7jw-JV-eSc" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="Jgj-9d-wT1"/>
                         <constraint firstItem="yV7-rr-CJh" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="RxG-Xg-hX4"/>
-                        <constraint firstItem="Skz-Jc-Pvw" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="WKy-vf-OCX"/>
-                        <constraint firstItem="RaQ-1g-7zp" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="WgB-5x-9gv"/>
+                        <constraint firstAttribute="trailing" secondItem="7jw-JV-eSc" secondAttribute="trailing" constant="9" id="WHb-9K-dSV"/>
                         <constraint firstItem="yV7-rr-CJh" firstAttribute="leading" secondItem="cdE-uM-Ce1" secondAttribute="leading" constant="17" id="YcA-b5-Rsm"/>
-                        <constraint firstItem="7jw-JV-eSc" firstAttribute="leading" secondItem="RaQ-1g-7zp" secondAttribute="trailing" constant="5.6699999999999999" id="ybJ-QN-32t"/>
-                        <constraint firstItem="YT8-WP-Bvu" firstAttribute="top" secondItem="cdE-uM-Ce1" secondAttribute="top" constant="6" id="zHb-Yi-HaH"/>
+                        <constraint firstItem="YT8-WP-Bvu" firstAttribute="top" secondItem="cdE-uM-Ce1" secondAttribute="top" constant="6" id="ZcT-rG-t7x"/>
+                        <constraint firstItem="YT8-WP-Bvu" firstAttribute="leading" secondItem="yV7-rr-CJh" secondAttribute="trailing" constant="26" id="bjQ-Fn-CPK"/>
+                        <constraint firstItem="w28-ZE-VLG" firstAttribute="top" secondItem="cdE-uM-Ce1" secondAttribute="top" id="eNs-DM-5nh"/>
+                        <constraint firstItem="w28-ZE-VLG" firstAttribute="leading" secondItem="cdE-uM-Ce1" secondAttribute="leading" id="fwo-Sm-Rg0"/>
+                        <constraint firstItem="Skz-Jc-Pvw" firstAttribute="leading" secondItem="WsB-wk-rTa" secondAttribute="trailing" constant="20" id="lJI-hS-jbK"/>
+                        <constraint firstItem="WsB-wk-rTa" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="mHp-uH-sVM"/>
+                        <constraint firstAttribute="trailing" secondItem="w28-ZE-VLG" secondAttribute="trailing" id="qgM-lm-JZR"/>
+                        <constraint firstItem="Skz-Jc-Pvw" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="qsU-B7-rfq"/>
+                        <constraint firstItem="RaQ-1g-7zp" firstAttribute="centerY" secondItem="cdE-uM-Ce1" secondAttribute="centerY" id="snO-3V-mRW"/>
                     </constraints>
                 </view>
             </subviews>
@@ -98,7 +95,7 @@
                 <constraint firstItem="cdE-uM-Ce1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jyf-m8-DgN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-57.251908396946561" y="81.690140845070431"/>
+            <point key="canvasLocation" x="180.91603053435114" y="-22.535211267605636"/>
         </view>
     </objects>
     <resources>
@@ -107,6 +104,7 @@
         <image name="Paytm_Logo" width="38.333332061767578" height="12"/>
         <image name="cashFree" width="57.333332061767578" height="27"/>
         <image name="phonepe" width="48.333332061767578" height="13.333333015441895"/>
+        <image name="walletFooter" width="498.66665649414062" height="50.666667938232422"/>
         <namedColor name="HSAppThemeColor">
             <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

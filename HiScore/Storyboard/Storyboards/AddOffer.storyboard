@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-ExtraBold.ttf">
+            <string>MavenPro-ExtraBold</string>
+        </array>
+        <array key="MavenPro-SemiBold.ttf">
+            <string>MavenPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Offer View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddOfferViewController" id="Y6W-OH-hqX" customClass="AddOfferViewController" customModule="HiScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-lt-X7j">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="104"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsC-Me-pnU">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="104"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abe-IU-29P">
+                                        <rect key="frame" x="30" y="67" width="16" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="utP-fL-i5x"/>
+                                            <constraint firstAttribute="height" constant="14" id="zMq-Al-f6L"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="backTransperant"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ul-0d-VNt">
+                                        <rect key="frame" x="67" y="64.666666666666671" width="48.333333333333343" height="19"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" name="HSWhiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Abe-IU-29P" secondAttribute="bottom" constant="23" id="07m-fG-CFL"/>
+                                    <constraint firstItem="9Ul-0d-VNt" firstAttribute="leading" secondItem="Abe-IU-29P" secondAttribute="trailing" constant="21" id="5Yc-4L-Wl4"/>
+                                    <constraint firstItem="Abe-IU-29P" firstAttribute="leading" secondItem="aZt-lt-X7j" secondAttribute="leading" constant="30" id="69H-Ps-M8E"/>
+                                    <constraint firstItem="fsC-Me-pnU" firstAttribute="top" secondItem="aZt-lt-X7j" secondAttribute="top" id="6M4-6o-hxa"/>
+                                    <constraint firstAttribute="trailing" secondItem="fsC-Me-pnU" secondAttribute="trailing" id="HAL-3W-E9n"/>
+                                    <constraint firstItem="9Ul-0d-VNt" firstAttribute="centerY" secondItem="Abe-IU-29P" secondAttribute="centerY" id="RJz-99-eab"/>
+                                    <constraint firstAttribute="height" constant="104" id="SzC-BM-QnZ"/>
+                                    <constraint firstItem="fsC-Me-pnU" firstAttribute="leading" secondItem="aZt-lt-X7j" secondAttribute="leading" id="iW8-5l-Lfq"/>
+                                    <constraint firstAttribute="bottom" secondItem="fsC-Me-pnU" secondAttribute="bottom" id="qEa-AL-fAY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrf-kf-DCR">
+                                <rect key="frame" x="0.0" y="106" width="393" height="104"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNX-FW-6FF">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="104"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76h-4i-7IV">
+                                        <rect key="frame" x="18" y="25" width="357" height="54"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter an amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYv-DF-4lA">
+                                                <rect key="frame" x="17" y="16" width="323" height="23"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="HSWhiteColor"/>
+                                                <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S93-Pu-AzS">
+                                                <rect key="frame" x="281" y="17" width="60" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-e4-E3X">
+                                                <rect key="frame" x="281" y="17" width="60" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="6Qn-SB-26f"/>
+                                                    <constraint firstAttribute="height" constant="20" id="WnV-HM-XA7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Apply">
+                                                    <color key="titleColor" name="HSGoldenYellowTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="HSDarkGrayColor"/>
+                                        <constraints>
+                                            <constraint firstItem="S93-Pu-AzS" firstAttribute="centerX" secondItem="zhm-e4-E3X" secondAttribute="centerX" id="6B0-dW-gvr"/>
+                                            <constraint firstAttribute="trailing" secondItem="LYv-DF-4lA" secondAttribute="trailing" constant="17" id="EhF-DN-9zA"/>
+                                            <constraint firstItem="S93-Pu-AzS" firstAttribute="height" secondItem="zhm-e4-E3X" secondAttribute="height" id="G11-Fn-XWp"/>
+                                            <constraint firstAttribute="height" constant="54" id="PQB-ay-tId"/>
+                                            <constraint firstItem="LYv-DF-4lA" firstAttribute="top" secondItem="76h-4i-7IV" secondAttribute="top" constant="16" id="ZOR-Xp-Cuu"/>
+                                            <constraint firstAttribute="trailing" secondItem="zhm-e4-E3X" secondAttribute="trailing" constant="16" id="gTV-pc-FP2"/>
+                                            <constraint firstAttribute="bottom" secondItem="LYv-DF-4lA" secondAttribute="bottom" constant="15" id="j6V-f3-WaA"/>
+                                            <constraint firstItem="LYv-DF-4lA" firstAttribute="leading" secondItem="76h-4i-7IV" secondAttribute="leading" constant="17" id="meq-y0-E3r"/>
+                                            <constraint firstItem="zhm-e4-E3X" firstAttribute="centerY" secondItem="76h-4i-7IV" secondAttribute="centerY" id="oeQ-47-QMd"/>
+                                            <constraint firstItem="S93-Pu-AzS" firstAttribute="centerY" secondItem="zhm-e4-E3X" secondAttribute="centerY" id="rWD-iV-WCu"/>
+                                            <constraint firstItem="S93-Pu-AzS" firstAttribute="width" secondItem="zhm-e4-E3X" secondAttribute="width" id="xEV-RN-TVA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="76h-4i-7IV" firstAttribute="leading" secondItem="Lrf-kf-DCR" secondAttribute="leading" constant="18" id="67F-iM-cqa"/>
+                                    <constraint firstItem="76h-4i-7IV" firstAttribute="top" secondItem="Lrf-kf-DCR" secondAttribute="top" constant="25" id="9Wb-5t-znF"/>
+                                    <constraint firstItem="rNX-FW-6FF" firstAttribute="top" secondItem="Lrf-kf-DCR" secondAttribute="top" id="DFh-Ed-a2L"/>
+                                    <constraint firstAttribute="trailing" secondItem="76h-4i-7IV" secondAttribute="trailing" constant="18" id="Mwk-fo-uSK"/>
+                                    <constraint firstAttribute="bottom" secondItem="rNX-FW-6FF" secondAttribute="bottom" id="Wja-tX-OfW"/>
+                                    <constraint firstAttribute="bottom" secondItem="76h-4i-7IV" secondAttribute="bottom" constant="25" id="YDG-XK-BQu"/>
+                                    <constraint firstAttribute="height" constant="104" id="drh-Z3-tFJ"/>
+                                    <constraint firstItem="rNX-FW-6FF" firstAttribute="leading" secondItem="Lrf-kf-DCR" secondAttribute="leading" id="i5f-XO-UDb"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNX-FW-6FF" secondAttribute="trailing" id="tYu-v1-PUR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="HSAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="aZt-lt-X7j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3hu-UZ-USI"/>
+                            <constraint firstItem="Lrf-kf-DCR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HGl-gd-JnJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aZt-lt-X7j" secondAttribute="trailing" id="HfP-wE-mY3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lrf-kf-DCR" secondAttribute="trailing" id="YEy-gS-WVu"/>
+                            <constraint firstItem="aZt-lt-X7j" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="daX-dp-wQd"/>
+                            <constraint firstItem="Lrf-kf-DCR" firstAttribute="top" secondItem="aZt-lt-X7j" secondAttribute="bottom" constant="2" id="n9E-1U-IbG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viwTextField" destination="76h-4i-7IV" id="FEV-Wb-dX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backTransperant" width="18" height="16"/>
+        <namedColor name="HSAppThemeColor">
+            <color red="0.078000001609325409" green="0.093999996781349182" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSDarkGrayColor">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSGoldenYellowTextColor">
+            <color red="0.84700000286102295" green="0.68999999761581421" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HSWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

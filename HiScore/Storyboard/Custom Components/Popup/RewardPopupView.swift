@@ -94,9 +94,22 @@ class RewardPopupView: UIView {
     }
     
     @IBAction func closePopup(_ sender: Any) {
-        self.isHidden = true
+//        self.isHidden = true
+        hideViewWithAnimation()
         clearAllText()
     }
+    func hideViewWithAnimation() {
+        UIView.animate(withDuration: 0.5, animations: {
+            // Move the view downward
+         //   self.transform = CGAffineTransform(translationX: 0, y: self.frame.size.height)
+            // Fade out the view
+//            self.alpha = 0.0
+        }) { (_) in
+            // This code will run after the animation completes.
+            self.isHidden = true // Hide the view completely
+        }
+    }
+
     //
     func showDefaultData(data: RewardsList, type: RewardType) {
         loadUI()

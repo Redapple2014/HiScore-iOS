@@ -124,5 +124,24 @@ extension UIColor {
     }()
     static let HSLightGreen: UIColor = {
        return UIColor(hex: "B2F3B1")
+    
+    static let HSOrange: UIColor = {
+        return UIColor(hex: "#E76000")
+    }()
+
+    static let HSGreen: UIColor = {
+        return UIColor(hex: "#027A00")
+    }()
+
+    static let HSViolet: UIColor = {
+        return UIColor(hex: "#AB81FFFF")
+    }()
+
+    static let HSNewdarkBlue: UIColor = {
+        return UIColor(hex: "#282B38")
+    }()
+    
+    static let HSYellowColor2: UIColor = {
+        return UIColor(hex: "#F2CB94")
     }()
 }

@@ -16,6 +16,8 @@ enum APIEndpoint {
     case offer(version: Version)
     case wallet(version: Version)
     case kycStatus(version: Version)
+    case getAddMoneyScreenData(version: Version)
+    case getUserWallet(version: Version)
     var path: String {
         switch self {
         case .fetchSplashImage(let version):
@@ -34,6 +36,10 @@ enum APIEndpoint {
             return "\(version)/wallet/getUserWallet"
         case .kycStatus(let version):
             return "\(version)/game/users"
+        case .getAddMoneyScreenData(let version):
+            return "\(version)/utils/getAddMoneyScreenData"
+        case .getUserWallet(let version):
+            return "\(version)/wallet/getUserWallet"
         }
     }
     var baseHeader: [String: String] {
@@ -47,7 +53,7 @@ enum APIEndpoint {
         switch self {
         case .fetchSplashImage, .sendOTP, .login, .validateAccess:
             break
-        case .reward, .offer, .wallet, .kycStatus:
+        case .reward, .offer, .wallet, .kycStatus, .getAddMoneyScreenData,.getUserWallet:
             if let token = User.shared.details?.data?.loginToken {
                 allHeaders["authorization"] = token
             }

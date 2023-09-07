@@ -7,64 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E511A205-D5AF-4C10-B5E4-F5CAC2DE7E88"
+            uuid = "59CFE183-9D18-4A29-B0A9-17B2F1058A57"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/Reward/PopupViewcontroller/RewardPopupViewController.swift"
+            filePath = "HiScore/Screens/AddCash/AddCashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "createMiddleView()"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "gestureRecognizer(_:shouldReceive:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C5DBD747-BA84-4F70-B508-14A219DCDBC9"
+            uuid = "5B7D1F89-6EBB-4C75-85C5-C626C67BB6CB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/InputMobileNumber/EnterPhoneNumberViewController.swift"
+            filePath = "HiScore/Screens/AddCash/AddCashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
-            landmarkName = "textFieldDidBeginEditing(_:)"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "gestureRecognizer(_:shouldReceive:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2CA14157-3795-4FA8-A3D3-0A3E6BD9963E"
+            uuid = "9A977EBB-6E70-4891-BC2F-E1D93881F01E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/InputMobileNumber/EnterPhoneNumberViewController.swift"
+            filePath = "HiScore/Screens/AddCash/AddCashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "hideInPutError()"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "tapped(gestureRecognizer:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F42032D4-F235-41D5-B5B1-7E4A0D105DD4"
+            uuid = "FD5AE7EC-9977-4052-B610-DFA7D0DA76EE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HiScore/Screens/InputMobileNumber/EnterPhoneNumberViewController.swift"
+            filePath = "HiScore/Screens/AddCash/AddCashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "editingText(_:)"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "postApiUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5F36353-BB67-40F6-889A-49CE45D13CCD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HiScore/Screens/AddCash/AddCashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "showOffersData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
