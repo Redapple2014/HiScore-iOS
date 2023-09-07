@@ -129,10 +129,10 @@ extension WalletViewController: EasyTipViewDelegate {
         Log.d("\(tipView) did dismiss!")
     }
     @IBAction func buttonAction(sender : UIButton) {
-        showTooltip()
+        showDepositHint()
     }
     @objc func showDepositHint() {
-        let customHintView = TipView(frame: UIScreen.main.bounds)
+        let customHintView = TipView()
         customHintView.setMessage(title: "Deposit",
                                   message: "Cash that you deposit into your HiScore wallet. You cannot withdraw it but can use it to join contests",
                                   image: UIImage(named: "bankNotes")!)
@@ -145,29 +145,9 @@ extension WalletViewController: EasyTipViewDelegate {
         preferences.animating.showInitialAlpha = 0
         preferences.animating.showDuration = 1
         preferences.animating.dismissDuration = 1
-        preferences.drawing.arrowPosition = .bottom
-
-        preferences.positioning.contentInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        preferences.drawing.arrowPosition = .any
         
-        let easyTip = EasyTipView(contentView: customHintView, preferences: preferences, delegate: nil)
-        easyTip.show(forView: buttonDepositeHint, withinSuperview: self.view)
+        let easyTip = EasyTipView(contentView: customHintView, preferences: preferences, delegate: self)
+        easyTip.show(forView: buttonDepositeHint, withinSuperview: walletView.self)
     }
-    @objc func showTooltip() {
-          // Create the tooltip content view.
-          let tooltipViewController = UIViewController()
-          let customHintView = TipView(frame: CGRect(x: 0, y: 0, width: 200, height: 80))
-          customHintView.setMessage(title: "Deposit",
-                                  message: "Cash that you deposit into your HiScore wallet. You cannot withdraw it but can use it to join contests",
-                                  image: UIImage(named: "bankNotes")!)
-          tooltipViewController.view = customHintView
-          
-          // Create a popover presentation controller.
-          let popover = tooltipViewController.popoverPresentationController
-          popover?.sourceView = buttonDepositeHint // The view from which the popover will appear.
-          popover?.sourceRect = buttonDepositeHint.bounds // The position within the source view.
-          popover?.permittedArrowDirections = .up // The arrow direction.
-          
-          // Present the tooltip.
-          present(tooltipViewController, animated: true, completion: nil)
-      }
 }

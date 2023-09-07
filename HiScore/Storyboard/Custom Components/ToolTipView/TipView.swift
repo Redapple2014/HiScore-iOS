@@ -27,13 +27,15 @@ class TipView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("TipView", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.frame = frame
+        self.addSubview(contentView)
         toolTipView.setGradiantColor(topColor: .HSWhiteColor,
                                      bottomColor: .HSLightGreen,
                                      cornerRadius: 6,
                                      gradiantDirection: .leftToRight)
+        toolTipView.setCornerBorder(color: nil,
+                                    cornerRadius: 6,
+                                    borderWidth: 0)
     }
     
     func setMessage(title: String, message: String, image: UIImage) {
