@@ -30,6 +30,8 @@ extension AddOfferViewController {
         viwTextField.layer.cornerRadius = 8
         shadowView(vw: vwApply)
         shadowView(vw: viwTextField)
+        tableOffers.estimatedRowHeight = 999
+        tableOffers.rowHeight = UITableView.automaticDimension
     }
     func shadowView(vw:UIView) {
         // border

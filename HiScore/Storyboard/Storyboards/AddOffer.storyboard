@@ -134,7 +134,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-J8-sWA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-J8-sWA">
                                 <rect key="frame" x="18" y="228" width="357" height="572"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -175,7 +175,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-UY-jGm" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-UY-jGm" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="40" height="128"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -208,61 +208,71 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9u-Bo-CRf" customClass="HSShadowView" customModule="HiScore" customModuleProvider="target">
                                                     <rect key="frame" x="40" y="8" width="317" height="128"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Deposit ₹50 - 99c sd dsa dsf sd f sa asd 90" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiT-Rn-rA7">
-                                                            <rect key="frame" x="16" y="15" width="211" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit ₹50 -" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiT-Rn-rA7">
+                                                            <rect key="frame" x="16" y="15.000000000000002" width="189" height="20.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="16"/>
                                                             <color key="textColor" name="HSWhiteColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rummy Cash - Get 25% upto ₹49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7E-sD-a8J">
-                                                            <rect key="frame" x="16" y="39" width="285" height="14.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rummy Cash - Get 25% upto ₹49" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7E-sD-a8J">
+                                                            <rect key="frame" x="16" y="44" width="285" height="14.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="11"/>
                                                             <color key="textColor" name="HSColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dashLine" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-bz-p3R">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashLine" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-bz-p3R">
                                                             <rect key="frame" x="0.0" y="66" width="317" height="2"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="• Rummycash Expires in 12 Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNU-hh-Rsn">
-                                                            <rect key="frame" x="16" y="80.666666666666686" width="229" height="14.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="11"/>
-                                                            <color key="textColor" name="HSWhiteColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="• Deposit this amount and get benefits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omd-ZW-5z7">
-                                                            <rect key="frame" x="16" y="100.66666666666669" width="229" height="14.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="11"/>
-                                                            <color key="textColor" name="HSWhiteColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rummyP" translatesAutoresizingMaskIntoConstraints="NO" id="rBx-Em-0cV">
-                                                            <rect key="frame" x="261" y="72" width="56" height="56"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="rBx-Em-0cV" secondAttribute="height" id="4cc-hh-CqC"/>
-                                                                <constraint firstAttribute="width" constant="56" id="Chs-Ux-zrb"/>
+                                                                <constraint firstAttribute="height" constant="2" id="SmW-CA-p9u"/>
                                                             </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="• Rummycash Expires in 12 Days" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNU-hh-Rsn">
+                                                            <rect key="frame" x="16" y="80.666666666666671" width="285" height="14.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="11"/>
+                                                            <color key="textColor" name="HSWhiteColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Deposit this amount and get benefits" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omd-ZW-5z7">
+                                                            <rect key="frame" x="16" y="100.66666666666667" width="285" height="14.333333333333329"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14.33" id="c7P-KG-eL6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="11"/>
+                                                            <color key="textColor" name="HSWhiteColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rummyP" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-fd-8UD">
+                                                            <rect key="frame" x="261" y="72" width="56" height="56"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="0HU-6w-vPl"/>
+                                                                <constraint firstAttribute="width" secondItem="zRY-fd-8UD" secondAttribute="height" id="FEz-a3-5r6"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="28"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="MNU-hh-Rsn" firstAttribute="top" secondItem="H0u-bz-p3R" secondAttribute="bottom" constant="12.67" id="21F-Pc-Zil"/>
-                                                        <constraint firstItem="H0u-bz-p3R" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" id="3ww-5u-jat"/>
-                                                        <constraint firstItem="rBx-Em-0cV" firstAttribute="leading" secondItem="MNU-hh-Rsn" secondAttribute="trailing" constant="16" id="6OA-vq-h5Z"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Omd-ZW-5z7" secondAttribute="bottom" constant="13" id="8Vs-H2-eut"/>
-                                                        <constraint firstItem="EiT-Rn-rA7" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="FxM-UI-oWp"/>
-                                                        <constraint firstAttribute="trailing" secondItem="rBx-Em-0cV" secondAttribute="trailing" id="G47-sn-fC7"/>
-                                                        <constraint firstItem="MNU-hh-Rsn" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="QiC-gU-AiR"/>
-                                                        <constraint firstItem="A7E-sD-a8J" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="StM-Qh-3Ky"/>
-                                                        <constraint firstItem="H0u-bz-p3R" firstAttribute="top" secondItem="A7E-sD-a8J" secondAttribute="bottom" constant="12.67" id="W09-Lw-ReX"/>
-                                                        <constraint firstItem="Omd-ZW-5z7" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="Y3q-tJ-B0Z"/>
-                                                        <constraint firstItem="Omd-ZW-5z7" firstAttribute="top" secondItem="MNU-hh-Rsn" secondAttribute="bottom" constant="5.6699999999999999" id="YXx-Ms-1aq"/>
-                                                        <constraint firstAttribute="trailing" secondItem="A7E-sD-a8J" secondAttribute="trailing" constant="16" id="Z1z-3T-s2e"/>
-                                                        <constraint firstItem="A7E-sD-a8J" firstAttribute="top" secondItem="EiT-Rn-rA7" secondAttribute="bottom" constant="3" id="d5p-hg-oKK"/>
-                                                        <constraint firstItem="EiT-Rn-rA7" firstAttribute="top" secondItem="n9u-Bo-CRf" secondAttribute="top" constant="15" id="dIz-EI-m2C"/>
-                                                        <constraint firstAttribute="trailing" secondItem="H0u-bz-p3R" secondAttribute="trailing" id="hK2-MF-at3"/>
-                                                        <constraint firstAttribute="bottom" secondItem="rBx-Em-0cV" secondAttribute="bottom" id="qoZ-KQ-Enw"/>
-                                                        <constraint firstItem="rBx-Em-0cV" firstAttribute="leading" secondItem="Omd-ZW-5z7" secondAttribute="trailing" constant="16" id="y1j-EP-IK7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="A7E-sD-a8J" secondAttribute="trailing" constant="16" id="29C-i4-3PQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zRY-fd-8UD" secondAttribute="trailing" id="2di-M2-hiw"/>
+                                                        <constraint firstItem="H0u-bz-p3R" firstAttribute="top" secondItem="A7E-sD-a8J" secondAttribute="bottom" constant="7.6699999999999999" id="72K-H5-E80"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MNU-hh-Rsn" secondAttribute="trailing" constant="16" id="7b1-R3-GW9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Omd-ZW-5z7" secondAttribute="trailing" constant="16" id="7z6-Zz-6cX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zRY-fd-8UD" secondAttribute="bottom" id="9pw-an-uFJ"/>
+                                                        <constraint firstItem="A7E-sD-a8J" firstAttribute="top" secondItem="EiT-Rn-rA7" secondAttribute="bottom" constant="8.3300000000000001" id="ADp-bR-gjc"/>
+                                                        <constraint firstItem="MNU-hh-Rsn" firstAttribute="top" secondItem="H0u-bz-p3R" secondAttribute="bottom" constant="12.67" id="HLg-5Q-3f4"/>
+                                                        <constraint firstItem="A7E-sD-a8J" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="L2b-rx-bPw"/>
+                                                        <constraint firstItem="EiT-Rn-rA7" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="Pel-KQ-zi1"/>
+                                                        <constraint firstItem="H0u-bz-p3R" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" id="Zth-7d-Reh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="H0u-bz-p3R" secondAttribute="trailing" id="flb-zs-BqK"/>
+                                                        <constraint firstItem="Omd-ZW-5z7" firstAttribute="top" secondItem="MNU-hh-Rsn" secondAttribute="bottom" constant="5.6699999999999999" id="i4m-bk-vVB"/>
+                                                        <constraint firstItem="EiT-Rn-rA7" firstAttribute="top" secondItem="n9u-Bo-CRf" secondAttribute="top" constant="15" id="jY8-fp-7cp"/>
+                                                        <constraint firstItem="Omd-ZW-5z7" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="lP3-xf-IO4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Omd-ZW-5z7" secondAttribute="bottom" constant="13" id="nw3-hh-LPd"/>
+                                                        <constraint firstItem="MNU-hh-Rsn" firstAttribute="leading" secondItem="n9u-Bo-CRf" secondAttribute="leading" constant="16" id="rMU-RW-UQx"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="radius">
@@ -291,8 +301,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9by-JB-NcE">
-                                                    <rect key="frame" x="271" y="23" width="70" height="26"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9by-JB-NcE">
+                                                    <rect key="frame" x="251" y="23" width="90" height="26"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkTick" translatesAutoresizingMaskIntoConstraints="NO" id="H2Q-MK-iWQ">
                                                             <rect key="frame" x="5" y="8" width="14" height="14"/>
@@ -307,12 +317,12 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQa-E8-Cnc">
-                                                            <rect key="frame" x="22" y="5" width="40" height="16"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQa-E8-Cnc">
+                                                            <rect key="frame" x="22" y="5" width="60" height="16"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="MavenPro-ExtraBold" family="Maven Pro" pointSize="14"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="Apply">
+                                                            <state key="normal" title="app">
                                                                 <color key="titleColor" name="HSNewGreenA1"/>
                                                             </state>
                                                             <connections>
@@ -322,17 +332,18 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="sQa-E8-Cnc" secondAttribute="trailing" constant="8" id="BJZ-7C-S20"/>
-                                                        <constraint firstAttribute="bottom" secondItem="sQa-E8-Cnc" secondAttribute="bottom" constant="5" id="VqT-TW-ERa"/>
+                                                        <constraint firstItem="H2Q-MK-iWQ" firstAttribute="leading" secondItem="9by-JB-NcE" secondAttribute="leading" constant="5" id="OwV-QU-E0e"/>
+                                                        <constraint firstAttribute="bottom" secondItem="sQa-E8-Cnc" secondAttribute="bottom" constant="5" id="SaU-dO-aOI"/>
                                                         <constraint firstItem="H2Q-MK-iWQ" firstAttribute="centerY" secondItem="sQa-E8-Cnc" secondAttribute="centerY" constant="2" id="cp1-BN-nqB"/>
-                                                        <constraint firstItem="sQa-E8-Cnc" firstAttribute="top" secondItem="9by-JB-NcE" secondAttribute="top" constant="5" id="d15-Mk-PcN"/>
+                                                        <constraint firstItem="sQa-E8-Cnc" firstAttribute="top" secondItem="9by-JB-NcE" secondAttribute="top" constant="5" id="evp-rj-lkn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sQa-E8-Cnc" secondAttribute="trailing" constant="8" id="fss-Uk-Xhc"/>
+                                                        <constraint firstAttribute="width" constant="90" id="iJ8-5C-QSr"/>
+                                                        <constraint firstAttribute="height" constant="26" id="oXW-Qi-GkD"/>
                                                         <constraint firstItem="sQa-E8-Cnc" firstAttribute="leading" secondItem="H2Q-MK-iWQ" secondAttribute="trailing" constant="3" id="pDA-Pd-ph7"/>
-                                                        <constraint firstAttribute="height" constant="26" id="ydv-9R-OK7"/>
-                                                        <constraint firstItem="H2Q-MK-iWQ" firstAttribute="leading" secondItem="9by-JB-NcE" secondAttribute="leading" constant="5" id="zdK-Wq-pby"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25% EXTRA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="won-P6-vxT">
-                                                    <rect key="frame" x="-16.333333333333332" y="61.666666666666664" width="72.666666666666671" height="20.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="won-P6-vxT">
+                                                    <rect key="frame" x="6" y="61.666666666666657" width="28" height="21"/>
                                                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="16"/>
                                                     <color key="textColor" name="HSWhiteColor"/>
                                                     <nil key="highlightedColor"/>
@@ -340,13 +351,14 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="9by-JB-NcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Rn-rA7" secondAttribute="trailing" constant="8" id="C13-TF-mgo"/>
+                                                <constraint firstItem="9by-JB-NcE" firstAttribute="top" secondItem="2kw-1V-JJm" secondAttribute="top" constant="23" id="BG7-9g-rfr"/>
                                                 <constraint firstItem="iY3-UY-jGm" firstAttribute="centerY" secondItem="wmx-gE-sfz" secondAttribute="centerY" id="CVl-Fh-DPy"/>
+                                                <constraint firstAttribute="trailing" secondItem="9by-JB-NcE" secondAttribute="trailing" constant="16" id="EEi-lg-Ise"/>
                                                 <constraint firstItem="wmx-gE-sfz" firstAttribute="top" secondItem="2kw-1V-JJm" secondAttribute="top" constant="8" id="Hl6-yE-rT0"/>
                                                 <constraint firstAttribute="bottom" secondItem="n9u-Bo-CRf" secondAttribute="bottom" constant="8" id="LIQ-Og-VPH"/>
                                                 <constraint firstItem="n9u-Bo-CRf" firstAttribute="leading" secondItem="2kw-1V-JJm" secondAttribute="leading" constant="40" id="Lq4-Qe-h9R"/>
+                                                <constraint firstItem="9by-JB-NcE" firstAttribute="leading" secondItem="EiT-Rn-rA7" secondAttribute="trailing" constant="6" id="Mu2-z8-e9w"/>
                                                 <constraint firstItem="iY3-UY-jGm" firstAttribute="centerX" secondItem="wmx-gE-sfz" secondAttribute="centerX" id="O3x-Gd-P0o"/>
-                                                <constraint firstItem="9by-JB-NcE" firstAttribute="top" secondItem="EiT-Rn-rA7" secondAttribute="top" id="O9U-iw-pFc"/>
                                                 <constraint firstItem="wmx-gE-sfz" firstAttribute="leading" secondItem="2kw-1V-JJm" secondAttribute="leading" id="QqV-VC-Rj4"/>
                                                 <constraint firstItem="won-P6-vxT" firstAttribute="centerY" secondItem="iY3-UY-jGm" secondAttribute="centerY" id="S4E-Z9-6JR"/>
                                                 <constraint firstItem="iY3-UY-jGm" firstAttribute="height" secondItem="wmx-gE-sfz" secondAttribute="height" id="SPV-q5-gdc"/>
@@ -354,7 +366,6 @@
                                                 <constraint firstItem="n9u-Bo-CRf" firstAttribute="leading" secondItem="wmx-gE-sfz" secondAttribute="trailing" id="aTG-9s-1Qg"/>
                                                 <constraint firstAttribute="bottom" secondItem="wmx-gE-sfz" secondAttribute="bottom" constant="8" id="jOg-dN-p0L"/>
                                                 <constraint firstItem="n9u-Bo-CRf" firstAttribute="top" secondItem="2kw-1V-JJm" secondAttribute="top" constant="8" id="kXs-4d-hXg"/>
-                                                <constraint firstAttribute="trailing" secondItem="9by-JB-NcE" secondAttribute="trailing" constant="16" id="lnv-fZ-SRJ"/>
                                                 <constraint firstItem="won-P6-vxT" firstAttribute="centerX" secondItem="iY3-UY-jGm" secondAttribute="centerX" id="od0-Vy-DwC"/>
                                                 <constraint firstItem="iY3-UY-jGm" firstAttribute="width" secondItem="wmx-gE-sfz" secondAttribute="width" id="pUm-3q-kBI"/>
                                             </constraints>
