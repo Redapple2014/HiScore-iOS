@@ -59,4 +59,9 @@ pod 'NVActivityIndicatorView'
 # EasyTipView is a fully customizable tooltip view written in Swift that can be used as a call to action or informative tip.
 # https://github.com/teodorpatras/EasyTipView
 pod 'EasyTipView', '~> 2.1'
+
+#https://github.com/AjayBhanushali/ABTicketView
+# Create ticket view
+#pod 'ABTicketView'
+
 end

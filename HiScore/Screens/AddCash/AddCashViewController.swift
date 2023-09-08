@@ -197,6 +197,7 @@ extension AddCashViewController {
         }
         guard let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers else { return }
         viewController.offerData = array
+        viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -378,4 +379,8 @@ extension AddCashViewController: UIGestureRecognizerDelegate {
         return true // Recognize the tap gesture for other views
     }
 }
-// view is UICollectionView || view is UICollectionViewCell ||
+extension AddCashViewController: AddOfferDelegate {
+    func couponApplied(index: Int) {
+        self.responseModel.data?.offerTypes?.promotionalOffers?.offers?[index].isSelected = true
+    }
+}

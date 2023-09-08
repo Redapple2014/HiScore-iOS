@@ -41,6 +41,7 @@
 		AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA73A262AA88D0D00B7F030 /* TipView.swift */; };
 		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
+		C71388322AAB3F0A004B76CA /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71388312AAB3F0A004B76CA /* TicketView.swift */; };
 		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
 		C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */; };
 		C7196CC72A9CBBA300BBC902 /* AddCash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */; };
@@ -154,6 +155,7 @@
 		AFA73A262AA88D0D00B7F030 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C71388312AAB3F0A004B76CA /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
 		C7196CC42A9CA9AA00BBC902 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCash.storyboard; sourceTree = "<group>"; };
@@ -494,6 +496,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		C71388302AAB3EF5004B76CA /* TicketView */ = {
+			isa = PBXGroup;
+			children = (
+				C71388312AAB3F0A004B76CA /* TicketView.swift */,
+			);
+			path = TicketView;
+			sourceTree = "<group>";
+		};
 		C7196CC32A9CA96900BBC902 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,6 +791,7 @@
 		C7EBEE462A7BC7360045B449 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				C71388302AAB3EF5004B76CA /* TicketView */,
 				C72AA1992AA0741F00D75E5F /* JSONValidation */,
 				AF8D25052A98F13500001CF0 /* HSGradientView */,
 				AF8D25072A98F13500001CF0 /* HSShadowView */,
@@ -1126,6 +1137,7 @@
 				C7196CCA2A9CBBD800BBC902 /* AddCashViewController.swift in Sources */,
 				C7EC88382A934EF7009CFAFA /* RewardPopupModels.swift in Sources */,
 				C7C536912A8A4908007391FC /* SplashViewModel.swift in Sources */,
+				C71388322AAB3F0A004B76CA /* TicketView.swift in Sources */,
 				C7C221FF2AA9B02500269D82 /* AddOfferViewController.swift in Sources */,
 				C7196CD62A9CC7D500BBC902 /* WalletFooter.swift in Sources */,
 				AF7969D42A9CB222004BCF81 /* MoreViewController.swift in Sources */,

@@ -12,14 +12,14 @@ import Foundation
 // MARK: - AddCashResponseModel
 struct AddCashResponseModel: Codable {
     let status, message: String?
-    let data: AddCashDataClass?
+    var data: AddCashDataClass?
 }
 
 // MARK: - DataClass
 struct AddCashDataClass: Codable {
     let route: String?
     let minDepositAmt: Int?
-    let offerTypes: OfferTypes?
+    var offerTypes: OfferTypes?
     let extraInfo: JSONNull?
     let isFirstDepositDone: Bool?
     let cashbackKnowMoreSection: CashbackKnowMoreSection?
@@ -59,7 +59,7 @@ struct CashbackKnowMoreSection: Codable {
 
 // MARK: - OfferTypes
 struct OfferTypes: Codable {
-    let promotionalOffers: PromotionalOffers?
+    var promotionalOffers: PromotionalOffers?
 
     enum CodingKeys: String, CodingKey {
         case promotionalOffers = "promotional_offers"
