@@ -104,6 +104,8 @@ extension AddCashViewController {
             hideOffersData()
         }
     }
+    
+    
     private func initSettings() {
         viewModel.delegate = self
         IQKeyboardManager.shared().isEnableAutoToolbar = false
@@ -195,8 +197,12 @@ extension AddCashViewController {
         guard let viewController = self.storyboard(name: .addOffer).instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
             return
         }
-        guard let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers else { return }
-        viewController.offerData = array
+        if let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers {
+            viewController.offerData = array
+        }
+        if let array = self.responseModel.data?.offerTypes?.rummy?.offers {
+            viewController.offerData = array
+        }
         viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
@@ -208,7 +214,7 @@ extension AddCashViewController {
     @IBAction func buttonArrowOrITapped(_ sender: Any) {
         self.view.endEditing(true)
         if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-            goToAddOffer() // showKnowMore()
+             showKnowMore()
         } else {
             // offer page
             goToAddOffer()
@@ -381,6 +387,16 @@ extension AddCashViewController: UIGestureRecognizerDelegate {
 }
 extension AddCashViewController: AddOfferDelegate {
     func couponApplied(index: Int) {
-        self.responseModel.data?.offerTypes?.promotionalOffers?.offers?[index].isSelected = true
+        if var offer =  self.responseModel.data?.offerTypes?.promotionalOffers {
+            offer.offers?[index].isSelected = true
+        }
+        if var offer =  self.responseModel.data?.offerTypes?.rummy {
+            offer.offers?[index].isSelected = true
+        }
+        guard let data = self.offerDataList?[index] else { return  }
+        calculateTotalDeposit(data: data)
+        self.showAmountSection()
+        labelUptoCash.text = "Get upto ₹\(data.bonusAmount) Bonus Cash"
     }
+    
 }
