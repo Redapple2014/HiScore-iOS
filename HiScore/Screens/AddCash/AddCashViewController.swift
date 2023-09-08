@@ -122,19 +122,13 @@ extension AddCashViewController {
         viewNoOffers.isHidden = true
         vwContainerCircleNoOffers.isHidden = true
         vwGradientCircleNoOffers.isHidden = true
-       // labelOfferTotal.text = "No Offers available"
-//        labelNoOfferText1.isHidden = true
-//        labelNoOfferText2.isHidden = true
         stackNoOfferMessage.isHidden = true
-
     }
     private func hideOffersData() {
         collectionOfCashOffers.isHidden = true
         viewNoOffers.isHidden = false
         vwContainerCircleNoOffers.isHidden = false
         vwGradientCircleNoOffers.isHidden = false
-//        labelNoOfferText1.isHidden = false
-//        labelNoOfferText2.isHidden = false
         stackNoOfferMessage.isHidden = false
         showNoOffersImage()
     }
@@ -201,8 +195,9 @@ extension AddCashViewController {
         guard let viewController = self.storyboard(name: .addOffer).instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
             return
         }
+        guard let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers else { return }
+        viewController.offerData = array
         self.navigationController?.pushViewController(viewController, animated: true)
-
     }
 }
 extension AddCashViewController {

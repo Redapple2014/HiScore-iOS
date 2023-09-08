@@ -69,7 +69,7 @@ struct OfferTypes: Codable {
 // MARK: - PromotionalOffers
 struct PromotionalOffers: Codable {
     let typeName, typeDesc: String?
-    let offers: [OfferData]?
+    var offers: [OfferData]?
     let onboardingVoucherCodeApplied: Bool?
     let rewardType: String?
 
@@ -93,6 +93,7 @@ struct OfferData: Codable {
     let offerType: String?
     let secondaryCashback: JSONNull?
     let promoExpiryExtendedHrs: Int?
+    var isSelected: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case offerCode = "offer_code"

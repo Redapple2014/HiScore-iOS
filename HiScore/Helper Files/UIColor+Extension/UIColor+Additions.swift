@@ -145,20 +145,20 @@ extension UIColor {
         return UIColor(hex: "#F2CB94")
     }()
     
-//    static let HSNewOrangeA1: UIColor = {
-//        return UIColor(hex: "")
-//    }()
-//    static let HSNewOrangeA2: UIColor = {
-//        return UIColor(hex: "")
-//    }()
-//    static let HSNewOrangeA3: UIColor = {
-//        return UIColor(hex: "")
-//    }()
-//    static let HSNewGreenA1: UIColor = {
-//        return UIColor(hex: "")
-//    }()
-//    static let HSNewGreenA2: UIColor = {
-//        return UIColor(hex: "")
-//    }()
+    static let HSNewOrangeA1: UIColor = {
+        return UIColor(hex: "#EC8033")
+    }()
+    static let HSNewOrangeA2: UIColor = {
+        return UIColor(hex: "#EC8033").withAlphaComponent(0.2)
+    }()
+    static let HSNewOrangeA3: UIColor = {
+        return UIColor(hex: "#E76000").withAlphaComponent(0.2)
+    }()
+    static let HSNewGreenA1: UIColor = {
+        return UIColor(hex: "#3AEC67").withAlphaComponent(0.8)
+    }()
+    static let HSNewGreenA2: UIColor = {
+        return UIColor(hex: "#3AEC67").withAlphaComponent(0.2)
+    }()
     
 }

@@ -9,10 +9,12 @@ import UIKit
 
 class AddOfferViewController: BaseViewController {
 
+   
     @IBOutlet weak var tableOffers: UITableView!
     @IBOutlet weak var textEnterCouponCode: UITextField!
     @IBOutlet weak var vwApply: UIView!
     @IBOutlet weak var viwTextField: UIView!
+    var offerData: [OfferData]?
     
 }
 extension AddOfferViewController {
@@ -42,15 +44,21 @@ extension AddOfferViewController {
 }
 extension AddOfferViewController: UITableViewDataSource, UITableViewDelegate {
     private func tableView(_ tableView: UITableView, heightForRow section: Int) -> Int {
-        return 144
+        return Int(UITableView.automaticDimension)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.offerData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? AddOffersTableViewCell else { return AddOffersTableViewCell() }
+        guard var array = self.offerData else { return AddOffersTableViewCell() }
+        cell.loadCell(data: array[indexPath.row], index: indexPath.row)
+        cell.buttonTapped = { data, index  in
+            self.offerData?[index].isSelected = true
+            self.tableOffers.reloadData()
+        }
         return cell
     }
 }
