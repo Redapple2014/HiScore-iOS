@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddOfferDelegate {
-    func couponApplied(index:Int)
+    func couponApplied(index:Int, data: OfferData)
 }
 class AddOfferViewController: BaseViewController {
 
@@ -22,6 +22,7 @@ class AddOfferViewController: BaseViewController {
     @IBOutlet weak var vwApply: UIView!
     @IBOutlet weak var viwTextField: UIView!
     var offerData: [OfferData] = []
+    var amount = 0
     let iceCream = "🎉"
     var delegate: AddOfferDelegate?
 }
@@ -29,6 +30,7 @@ extension AddOfferViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUI()
+        checkPreSelectedvalue()
         checkSelectedCoupon()
     }
 }
@@ -46,6 +48,19 @@ extension AddOfferViewController {
     }
 }
 extension AddOfferViewController {
+    private func checkPreSelectedvalue() {
+//        let data = self.offerData.map({$0.isSelected = false})
+        for index in 0..<self.offerData.count {
+            offerData[index].isSelected = false
+        }
+      let indx =  self.offerData.firstIndex { amount >= $0.minLimit ?? 0 && amount <= $0.maxLimit ?? 0 }
+        guard let index = indx else { return }
+        offerData[index].isSelected = true
+
+
+
+
+    }
     private func checkSelectedCoupon() {
         let array = offerData.filter({$0.isSelected == true})
         if array.count > 0 {
@@ -92,7 +107,7 @@ extension AddOfferViewController: UITableViewDataSource, UITableViewDelegate {
                 self.offerData[i].isSelected = false
             }
             self.offerData[index].isSelected = true
-            self.delegate?.couponApplied(index: index)
+            self.delegate?.couponApplied(index: index, data: self.offerData[index])
             self.navigationController?.popViewController(animated: true)
            // self.tableOffers.reloadData()
         }

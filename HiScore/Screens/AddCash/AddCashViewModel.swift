@@ -253,7 +253,7 @@ class AddCashViewModel {
         return array
     }
     
-    private func percentageValue(percent: Int, number: Int, capValue: Int) -> Int {
+     func percentageValue(percent: Int, number: Int, capValue: Int) -> Int {
         return ((percent*number)/100) > capValue ? capValue : ((percent*number)/100)
     }
 }

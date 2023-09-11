@@ -224,6 +224,9 @@ extension AddCashViewController {
         default:
             Log.d("HOld now")
         }
+        if let amnt = Int(enterAmountTextField.text ?? "0") {
+            viewController.amount = amnt
+        }
         viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
@@ -407,19 +410,33 @@ extension AddCashViewController: UIGestureRecognizerDelegate {
     }
 }
 extension AddCashViewController: AddOfferDelegate {
-    func couponApplied(index: Int) {
+    func couponApplied(index: Int, data: OfferData) {
         switch viewModel.userOfferType {
         case .promotional:
-            self.responseModel.data?.offerTypes?.promotionalOffers?.offers?[index].isSelected = true
+            if let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers, array.count > 0 {
+                responseModel.data?.offerTypes?.promotionalOffers?.offers?[index].isSelected = true
+                enterAmountTextField.text = "\(data.minLimit ?? 0)"
+                labelUptoCash.text = "Get upto ₹\(viewModel.percentageValue(percent: data.percentage ?? 0,number: data.minLimit ?? 0 ,capValue: data.capValue ?? 0)) Bonus Cash"
+            }
         case .rummy:
-            self.responseModel.data?.offerTypes?.rummy?.offers?[index].isSelected = true
+            if let array = self.responseModel.data?.offerTypes?.rummy?.offers, array.count > 0 {
+                responseModel.data?.offerTypes?.rummy?.offers?[index].isSelected = true
+                enterAmountTextField.text = "\(data.minLimit ?? 0)"
+                labelUptoCash.text = "Get upto ₹\(viewModel.percentageValue(percent: data.percentage ?? 0,number: data.minLimit ?? 0 ,capValue: data.capValue ?? 0)) Bonus Cash"
+            }
+
         default:
             Log.d("No work now")
         }
-        guard let data = self.offerDataList?[index] else { return  }
-        calculateTotalDeposit(data: data)
-        self.showAmountSection()
-        labelUptoCash.text = "Get upto ₹\(data.bonusAmount) Bonus Cash"
+        let amount = enterAmountTextField.text
+        viewModel.amount = Int(amount ?? "0") ?? 0
+        viewModel.showOffers()
+
+        
+//        guard let data = self.offerDataList?[index] else { return  }
+//        calculateTotalDeposit(data: data)
+//        self.showAmountSection()
+//        labelUptoCash.text = "Get upto ₹\(data.bonusAmount) Bonus Cash"
     }
     
 }
