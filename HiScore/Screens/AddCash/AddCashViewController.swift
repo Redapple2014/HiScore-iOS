@@ -36,8 +36,9 @@ class AddCashViewController: BaseViewController {
     @IBOutlet weak var enterAmountTextField: UITextField! {
         didSet {
             let redPlaceholderText = NSAttributedString(string: PlaceholderMessages.enterAmount.desscription,
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.HSWhiteColor.withAlphaComponent(0.3),
-                                                                     NSAttributedString.Key.font: UIFont.MavenPro.ExtraBold.withSize(16)])
+                                                        attributes:
+                                                            [NSAttributedString.Key.foregroundColor: UIColor.HSWhiteColor.withAlphaComponent(0.3),
+                                                             NSAttributedString.Key.font: UIFont.MavenPro.ExtraBold.withSize(16)])
             enterAmountTextField.attributedPlaceholder = redPlaceholderText
         }
     }
