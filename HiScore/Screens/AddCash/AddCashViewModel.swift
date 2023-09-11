@@ -21,14 +21,23 @@ class AddCashViewModel {
 //    var totalOfferCount = 4
     var amount = 0
     private var offerData = [OfferData]()
-   
+    var userOfferType: UserOfferType?
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
         networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
                                  model: AddCashResponseModel.self) { response in
             switch response {
             case .success(let data):
-                if let offerDetails = data.data?.offerTypes?.promotionalOffers?.offers {
-                    self.offerData = offerDetails
+                if let promo = data.data?.offerTypes?.promotionalOffers {
+                    if let offerDetails = promo.offers {
+                        self.offerData = offerDetails
+                        self.userOfferType = .promotional
+                    }
+                }
+                if let rummy = data.data?.offerTypes?.rummy {
+                    if let offerDetails = rummy.offers {
+                        self.offerData = offerDetails
+                        self.userOfferType = .rummy
+                    }
                 }
                 DispatchQueue.main.async {
                     self.amount =  0
@@ -249,9 +258,9 @@ class AddCashViewModel {
     }
 }
 
-//enum OfferAMountType {
-//    case min
-//    case minToLessMid
-//    case fromMidToMax
-//    case max
-//}
+enum UserOfferType {
+    case promotional
+    case rummy
+    case poker
+    case ludo
+}

@@ -59,30 +59,17 @@ struct CashbackKnowMoreSection: Codable {
 
 // MARK: - OfferTypes
 struct OfferTypes: Codable {
-    var promotionalOffers: PromotionalOffers?
-    var rummy: Rummy?
+    var promotionalOffers: CommonOffers?
+    var rummy: CommonOffers?
+    var poker: CommonOffers?
+    var Ludo: CommonOffers?
     enum CodingKeys: String, CodingKey {
         case promotionalOffers = "promotional_offers"
         case rummy
     }
 }
-// MARK: - Rummy
-struct Rummy: Codable {
-    let typeName, typeDesc: String?
-    var offers: [OfferData]?
-    let onboardingVoucherCodeApplied: Bool?
-    let rewardType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case typeName = "type_name"
-        case typeDesc = "type_desc"
-        case offers
-        case onboardingVoucherCodeApplied = "onboarding_voucher_code_applied"
-        case rewardType = "reward_type"
-    }
-}
-// MARK: - PromotionalOffers
-struct PromotionalOffers: Codable {
+//MARK: - Common offers - (Promotional, Rummy, Ludo, Poker)
+struct CommonOffers: Codable {
     let typeName, typeDesc: String?
     var offers: [OfferData]?
     let onboardingVoucherCodeApplied: Bool?

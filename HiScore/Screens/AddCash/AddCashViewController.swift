@@ -52,6 +52,7 @@ class AddCashViewController: BaseViewController {
     private var responseModel: AddCashResponseModel!
     private var offerDataList: [OfferListData]?
     var walletBalance = 0
+    private var commonOffers: CommonOffers?
     override func viewDidLoad() {
         super.viewDidLoad()
         let networkService = HiScoreNetworkRepository()
@@ -89,22 +90,35 @@ extension AddCashViewController {
         }
     }
     private func postApiUI() {
-        if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-            labelOfferTotal.text = responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 ? "First Deposit" : "No Offers available"
+        switch viewModel.userOfferType {
+        case .promotional:
+            if let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers {
+                showSupportingData(offerData: array, text: "First Deposit")
+            }
             imageArrowOrI.image = UIImage(named: "errorYellow")
             imageArrowOrI.tintColor = .HSDarkYellowButtonColor
-        } else {
+        case .rummy:
+            if let array = self.responseModel.data?.offerTypes?.rummy?.offers {
+                showSupportingData(offerData: array, text: "Rummy Offers")
+            }
             imageArrowOrI.image = UIImage(named: "rightArrow")
-            labelOfferTotal.text = responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 ? "Rummy Offers" : "No Offers available"
-            
+        case .ludo:
+            Log.d("Do nothing now")
+        case .poker:
+            Log.d("Do nothing now")
+        case .none:
+            Log.d("Do nothing ever")
         }
-        if self.responseModel.data?.offerTypes?.promotionalOffers?.offers?.count ?? 0 > 0 {
+    }
+    
+    private func showSupportingData(offerData: [OfferData], text : String) {
+        if offerData.count > 0 {
+            labelOfferTotal.text = text
             showOffersData()
         } else {
             hideOffersData()
         }
     }
-    
     
     private func initSettings() {
         viewModel.delegate = self
@@ -127,6 +141,7 @@ extension AddCashViewController {
         stackNoOfferMessage.isHidden = true
     }
     private func hideOffersData() {
+        labelOfferTotal.text = "No Offers available"
         collectionOfCashOffers.isHidden = true
         viewNoOffers.isHidden = false
         vwContainerCircleNoOffers.isHidden = false
@@ -197,11 +212,17 @@ extension AddCashViewController {
         guard let viewController = self.storyboard(name: .addOffer).instantiateViewController(withIdentifier: "AddOfferViewController") as? AddOfferViewController else {
             return
         }
-        if let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers {
-            viewController.offerData = array
-        }
-        if let array = self.responseModel.data?.offerTypes?.rummy?.offers {
-            viewController.offerData = array
+        switch viewModel.userOfferType {
+        case .promotional:
+            if let array = self.responseModel.data?.offerTypes?.promotionalOffers?.offers {
+                viewController.offerData = array
+            }
+        case .rummy:
+            if let array = self.responseModel.data?.offerTypes?.rummy?.offers {
+                viewController.offerData = array
+            }
+        default:
+            Log.d("HOld now")
         }
         viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -213,10 +234,10 @@ extension AddCashViewController {
     }
     @IBAction func buttonArrowOrITapped(_ sender: Any) {
         self.view.endEditing(true)
-        if self.responseModel.data?.offerTypes?.promotionalOffers?.typeName == "First Deposit" {
-             showKnowMore()
-        } else {
-            // offer page
+        switch viewModel.userOfferType {
+        case .promotional:
+            showKnowMore()
+        default:
             goToAddOffer()
         }
     }
@@ -387,11 +408,13 @@ extension AddCashViewController: UIGestureRecognizerDelegate {
 }
 extension AddCashViewController: AddOfferDelegate {
     func couponApplied(index: Int) {
-        if var offer =  self.responseModel.data?.offerTypes?.promotionalOffers {
-            offer.offers?[index].isSelected = true
-        }
-        if var offer =  self.responseModel.data?.offerTypes?.rummy {
-            offer.offers?[index].isSelected = true
+        switch viewModel.userOfferType {
+        case .promotional:
+            self.responseModel.data?.offerTypes?.promotionalOffers?.offers?[index].isSelected = true
+        case .rummy:
+            self.responseModel.data?.offerTypes?.rummy?.offers?[index].isSelected = true
+        default:
+            Log.d("No work now")
         }
         guard let data = self.offerDataList?[index] else { return  }
         calculateTotalDeposit(data: data)

@@ -41,13 +41,15 @@ extension AddOfferViewController {
         viewCoupunAppliedSuccess.isHidden = true
         viwTextField.isHidden = false
     }
-
+    @IBAction func buttonBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 extension AddOfferViewController {
     private func checkSelectedCoupon() {
         let array = offerData.filter({$0.isSelected == true})
         if array.count > 0 {
-            labelCouponCode.text = "IOSOFFERALL Applied \(iceCream)"
+            labelCouponCode.text = "\(array[0].offerCode ?? "") \(iceCream)"//"IOSOFFERALL Applied \(iceCream)"
             couponDetails.text = array[0].offerDesc?.count ?? 0 > 0 ? array[0].offerDesc?[0] : ""
             viewCoupunAppliedSuccess.isHidden = false
             viwTextField.isHidden = true
