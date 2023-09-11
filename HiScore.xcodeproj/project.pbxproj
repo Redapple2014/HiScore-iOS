@@ -63,6 +63,7 @@
 		C72618BB2A85180100738F7F /* EnterPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */; };
 		C72AA19B2AA0750000D75E5F /* JSONValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AA19A2AA0750000D75E5F /* JSONValidation.swift */; };
 		C751DB152A9CC847001FECA8 /* FetchLocationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = C751DB142A9CC847001FECA8 /* FetchLocationPopUp.xib */; };
+		C75964DE2AAF43B4008723D6 /* AddOfferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75964DD2AAF43B4008723D6 /* AddOfferViewModel.swift */; };
 		C75F37172A791BC200925880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37162A791BC200925880 /* AppDelegate.swift */; };
 		C75F37192A791BC200925880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F37182A791BC200925880 /* SceneDelegate.swift */; };
 		C75F371E2A791BC200925880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75F371C2A791BC200925880 /* Main.storyboard */; };
@@ -177,6 +178,7 @@
 		C72618BA2A85180100738F7F /* EnterPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		C72AA19A2AA0750000D75E5F /* JSONValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValidation.swift; sourceTree = "<group>"; };
 		C751DB142A9CC847001FECA8 /* FetchLocationPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchLocationPopUp.xib; sourceTree = "<group>"; };
+		C75964DD2AAF43B4008723D6 /* AddOfferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOfferViewModel.swift; sourceTree = "<group>"; };
 		C75F37132A791BC200925880 /* HiScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75F37162A791BC200925880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75F37182A791BC200925880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 			children = (
 				C7C221FE2AA9B02500269D82 /* AddOfferViewController.swift */,
 				C7789CE32AA9FEBD0088D384 /* AddOffersTableViewCell.swift */,
+				C75964DD2AAF43B4008723D6 /* AddOfferViewModel.swift */,
 			);
 			path = "Add Offer";
 			sourceTree = "<group>";
@@ -1124,6 +1127,7 @@
 				AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C72AA19B2AA0750000D75E5F /* JSONValidation.swift in Sources */,
+				C75964DE2AAF43B4008723D6 /* AddOfferViewModel.swift in Sources */,
 				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C7196CCE2A9CBC3200BBC902 /* AddCashModel.swift in Sources */,

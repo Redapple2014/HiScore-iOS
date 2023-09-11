@@ -14,7 +14,7 @@ class SpalshViewModel {
         self.networkService = networkService
     }
     func getSplashScreenImages(completion: @escaping (Result<SplashResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .fetchSplashImage(version: .v3),
+        networkService.getData(from: .fetchSplashImage(version: .v3),
                                  model: SplashResponseModel.self) { response in
             
             switch response {

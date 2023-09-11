@@ -29,7 +29,7 @@ class WalletViewModel {
         }
     }
     func getKycStatus(completion: @escaping (Result<UserDataModel, APIError>) -> Void){
-        networkService.fetchData(from: .kycStatus(version: .v1),
+        networkService.getData(from: .kycStatus(version: .v1),
                                 model: UserDataModel.self) { result in
             switch result {
             case .success(let response):

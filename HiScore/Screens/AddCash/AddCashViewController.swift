@@ -48,6 +48,7 @@ class AddCashViewController: BaseViewController {
     }
     @IBOutlet weak var buttonContinue: LoadingButton!
     @IBOutlet weak var viewTextField: UIView!
+    
     private var viewModel: AddCashViewModel!
     private var responseModel: AddCashResponseModel!
     private var offerDataList: [OfferListData]?

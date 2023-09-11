@@ -21,7 +21,26 @@ extension HiScoreNetworkServiceprotocol {
         request.allHTTPHeaderFields = [:]
         fetchData(with: request, model: model, completion: completion)
     }
-    func fetchData<T:Codable>(from endpoint: APIEndpoint,
+    func getData<T:Codable>(from endpoint: APIEndpoint,
+                            model: T.Type,
+                            queryParam: [URLQueryItem]? = nil,
+                            completion: @escaping (Result<T, APIError>) -> Void){
+        guard let url = endpoint.url else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        var component = URLComponents(url: url, resolvingAgainstBaseURL: true)
+        component?.queryItems = queryParam
+        guard let url = component?.url else {
+             completion(.failure(.invalidURL))
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = HiScoreHTTPMethods.get.rawValue
+        request.allHTTPHeaderFields = endpoint.headers
+        fetchData(with: request, model: model, completion: completion)
+    }
+    func getData<T:Codable>(from endpoint: APIEndpoint,
                               model: T.Type,
                               completion: @escaping (Result<T, APIError>) -> Void) {
         guard let url = endpoint.url else {

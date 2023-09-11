@@ -20,7 +20,7 @@ struct AddCashDataClass: Codable {
     let route: String?
     let minDepositAmt: Int?
     var offerTypes: OfferTypes?
-    let extraInfo: JSONNull?
+    let extraInfo: ExtraInfo?//JSONNull?
     let isFirstDepositDone: Bool?
     let cashbackKnowMoreSection: CashbackKnowMoreSection?
     let promoExpiryDate: String?
@@ -33,6 +33,20 @@ struct AddCashDataClass: Codable {
         case isFirstDepositDone = "is_first_deposit_done"
         case cashbackKnowMoreSection = "cashback_know_more_section"
         case promoExpiryDate = "promo_expiry_date"
+    }
+}
+
+// MARK: - ExtraInfo
+struct ExtraInfo: Codable {
+    let isValidCode: Bool?
+    let voucherCode: String?
+    let status: Bool?
+    let message, hindiMessage: String?
+
+    enum CodingKeys: String, CodingKey {
+        case isValidCode
+        case voucherCode = "voucher_code"
+        case status, message, hindiMessage
     }
 }
 

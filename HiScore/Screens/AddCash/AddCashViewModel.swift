@@ -23,7 +23,7 @@ class AddCashViewModel {
     private var offerData = [OfferData]()
     var userOfferType: UserOfferType?
     func getAddMoneyScreenData(completion: @escaping (Result<AddCashResponseModel, APIError>) -> Void) {
-        networkService.fetchData(from: .getAddMoneyScreenData(version: .v1),
+        networkService.getData(from: .getAddMoneyScreenData(version: .v1),
                                  model: AddCashResponseModel.self) { response in
             switch response {
             case .success(let data):
