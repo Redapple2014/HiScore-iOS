@@ -69,6 +69,15 @@ extension WalletViewController {
         viewController.walletBalance = (self.viewModel.walletData?.depositAmount ?? 0) + (self.viewModel.walletData?.winningsAmount ?? 0) + Int((self.viewModel.walletData?.rummyCash ?? 0.0))
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    @IBAction func buttonTDSPolicyTapped(_ sender: Any) {
+        guard let viewController = self.storyboard(name: .webview).instantiateViewController(withIdentifier: "WebviewViewController") as? WebviewViewController else {
+            return
+        }
+        guard let urlstring = self.viewModel.walletData?.tdsKnowMoreURL,
+              let  url = URL(string: urlstring) else { return }
+        viewController.url = url
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 private extension WalletViewController {

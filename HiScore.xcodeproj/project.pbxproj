@@ -39,6 +39,8 @@
 		AF916C222A8E66E800125808 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF916C212A8E66E800125808 /* CustomTabBarController.swift */; };
 		AFA73A252AA874C200B7F030 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA73A242AA874C200B7F030 /* TipView.xib */; };
 		AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA73A262AA88D0D00B7F030 /* TipView.swift */; };
+		AFD031DA2AAEE6CE00A002D5 /* Webview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD031D92AAEE6CE00A002D5 /* Webview.storyboard */; };
+		AFD031DD2AAEEA8900A002D5 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD031DC2AAEEA8900A002D5 /* WebviewViewController.swift */; };
 		AFEE60252A9335A100CB1D9A /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60242A9335A100CB1D9A /* OfferView.swift */; };
 		AFEE60282A93446100CB1D9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE60272A93446100CB1D9A /* CardView.swift */; };
 		C7196CC22A9CA92D00BBC902 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */; };
@@ -151,6 +153,8 @@
 		AF916C212A8E66E800125808 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		AFA73A242AA874C200B7F030 /* TipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		AFA73A262AA88D0D00B7F030 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		AFD031D92AAEE6CE00A002D5 /* Webview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Webview.storyboard; sourceTree = "<group>"; };
+		AFD031DC2AAEEA8900A002D5 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		AFEE60242A9335A100CB1D9A /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		AFEE60272A93446100CB1D9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C7196CC12A9CA92D00BBC902 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
@@ -481,6 +485,14 @@
 				AFA73A262AA88D0D00B7F030 /* TipView.swift */,
 			);
 			path = ToolTipView;
+			sourceTree = "<group>";
+		};
+		AFD031DB2AAEEA7000A002D5 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				AFD031DC2AAEEA8900A002D5 /* WebviewViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		AFEE60262A9335A500CB1D9A /* SwiftUI */ = {
@@ -817,6 +829,7 @@
 		C7EBEE4E2A7BC8730045B449 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AFD031DB2AAEEA7000A002D5 /* WebView */,
 				C7C221FD2AA9AF9F00269D82 /* Add Offer */,
 				C7196CC82A9CBBBF00BBC902 /* AddCash */,
 				AF7969D22A9CB202004BCF81 /* More */,
@@ -858,6 +871,7 @@
 				AF7969D72A9CB2A7004BCF81 /* More.storyboard */,
 				C7196CC62A9CBBA300BBC902 /* AddCash.storyboard */,
 				C7C222002AA9B07D00269D82 /* AddOffer.storyboard */,
+				AFD031D92AAEE6CE00A002D5 /* Webview.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1002,6 +1016,7 @@
 				C75F37232A791BC400925880 /* LaunchScreen.storyboard in Resources */,
 				C79845A22A86703D00F08457 /* animation_ll6mjcvw.json in Resources */,
 				C7196CD42A9CBFC000BBC902 /* WalletFooter.xib in Resources */,
+				AFD031DA2AAEE6CE00A002D5 /* Webview.storyboard in Resources */,
 				C7C0C1B42A821C260096E958 /* MavenPro-Black.ttf in Resources */,
 				AF7969D82A9CB2A7004BCF81 /* More.storyboard in Resources */,
 				C7C5367C2A8A3C11007391FC /* Baloo2-SemiBold.ttf in Resources */,
@@ -1110,6 +1125,7 @@
 				AFA73A272AA88D0D00B7F030 /* TipView.swift in Sources */,
 				C7A9DF812A83A12E0066924E /* UIButton+Extension.swift in Sources */,
 				C72AA19B2AA0750000D75E5F /* JSONValidation.swift in Sources */,
+				AFD031DD2AAEEA8900A002D5 /* WebviewViewController.swift in Sources */,
 				C7196CC52A9CA9AA00BBC902 /* WalletViewController.swift in Sources */,
 				C798459F2A86592300F08457 /* APIError.swift in Sources */,
 				C7196CCE2A9CBC3200BBC902 /* AddCashModel.swift in Sources */,
@@ -1296,7 +1312,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Arup Roy (6MK42E8TFQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Arup Roy (6MK42E8TFQ)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2D9U528Z9;
@@ -1335,7 +1352,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Arup Roy (6MK42E8TFQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Arup Roy (6MK42E8TFQ)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2D9U528Z9;
